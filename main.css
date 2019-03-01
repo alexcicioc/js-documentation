@@ -1,0 +1,21 @@
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 50px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.arrow > li {
+  list-style-type: none;
+  list-style-image: url('images/arrow_1.png');
+}
+
+#html-details .nav.bs-docs-sidenav .nav,
+#css-details .nav.bs-docs-sidenav .nav{
+  padding-left: 15px;
+  font-size: 12px;
+}
