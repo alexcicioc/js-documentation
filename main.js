@@ -1,26 +1,21 @@
+var editorsMap = new Map();
+
 function ready() {
-   setupEditor();
+    setupEditor();
 }
 
 function update() {
 }
 
 function setupEditor() {
-    variable_editor = ace.edit("editor");
-    variable_editor.setTheme("ace/theme/xcode");
-    variable_editor.session.setMode("ace/mode/javascript");
-    variable_editor.setValue(`
-const x = "Test";
-var y = 2;
-let z = true;
-console.log("av");
-    `, 1);
 
+new Editor("editor", ` const x = "Test";
+    var y = 2;
+    let z = true;
+    console.log("av");
+`);
 
-    dataType_editor = ace.edit("js-datatypes-editor");
-    dataType_editor.setTheme("ace/theme/xcode");
-    dataType_editor.session.setMode("ace/mode/javascript");
-    dataType_editor.setValue(`typeof undefined // "undefined";
+new Editor("js-datatypes-editor", `typeof undefined // "undefined";
 
 typeof 0 // "number"
 
@@ -32,32 +27,25 @@ typeof Symbol("id") // "symbol";
 
 typeof { property : 'value'} // "object"
 
-typeof alert // "function"
-    `, 1);
+typeof alert // "function"`);
 
-    boolean_editor = ace.edit("js-boolean-editor");
-    boolean_editor.setTheme("ace/theme/xcode");
-    boolean_editor.session.setMode("ace/mode/javascript");
-    boolean_editor.setValue(`10>9 // "true";
+new Editor("js-boolean-editor", `
+10>9 // "true";
 
 const value = true;
     
-const anotherValue = new Boolean(false);`, 1)
+const anotherValue = new Boolean(false);
+`);
 
-array_editor = ace.edit("js-array-editor");
-array_editor.setTheme("ace/theme/xcode");
-array_editor.session.setMode("ace/mode/javascript");
-array_editor.setValue(`//Create an Array
+new Editor("js-array-editor",`
+//Create an Array
 var cars = ["Dacia", "Skoda"];
 
 // You can play with the methods described above
 alert(cars);
-`, 1)
+`);
 
-    number_editor = ace.edit("js-number-editor");
-    number_editor.setTheme("ace/theme/xcode");
-    number_editor.session.setMode("ace/mode/javascript");
-    number_editor.setValue(`let integerNumber = 123; //integer
+new Editor("js-number-editor", `let integerNumber = 123; //integer
 
 let floatingNumber = 12.345; //floating number
     
@@ -65,17 +53,18 @@ alert( 1 / 0 ); // Will result in Infinity
     
 alert( -1 / 0 ); // Will result in -Infinity
     
-alert("not a number" / 2); // Will result in NaN, because we try to divide string with number`, 1);
+alert("not a number" / 2); // Will result in NaN, because we try to divide string with number
+`);
 
-    string_editor = ace.edit("js-string-editor");
-    string_editor.setTheme("ace/theme/xcode");
-    string_editor.getSession().setMode("ace/mode/javascript");
-    string_editor.setValue("let str = \"JavaScript\";\n\nlet str2 = 'String with single quotes';\n\nlet phrase = `can embed ${str}`", 1);
+new Editor("js-string-editor", `let str = "JavaScript";
 
-    object_editor = ace.edit("js-object-editor");
-    object_editor.setTheme("ace/theme/xcode");
-    object_editor.session.setMode("ace/mode/javascript");
-    object_editor.setValue(`// Object Literal
+let str2 = 'String with single quotes';
+
+str2.toUpperCase();
+// STRING WITH SINGLE QUOTES
+`);
+
+new Editor("js-object-editor", `// Object Literal
 var Car = {
     brand: 'Toyota',
     color: 'black',
@@ -100,12 +89,9 @@ function Car(brand, color, doors){
 }
     
 let myCar = new Car("Audi", "black", 5);
-myCar.start();`, 1)
+myCar.start();`);
 
-    condition_editor = ace.edit("js-condition-editor");
-    condition_editor.setTheme("ace/theme/xcode");
-    condition_editor.session.setMode("ace/mode/javascript");
-    condition_editor.setValue(` let n = 5;
+new Editor("js-condition-editor", ` let n = 5;
 
 if(n>5){
     console.log("Greater then 5");
@@ -114,12 +100,9 @@ if(n>5){
 }
 
 //another way to write if/else statement
-(n>5) ? alert("Greater") : alert("Less then");`, 1)
+(n>5) ? alert("Greater") : alert("Less then");`, 1);
 
-    switch_editor = ace.edit("js-switch-editor");
-    switch_editor.setTheme("ace/theme/xcode");
-    switch_editor.session.setMode("ace/mode/javascript");
-    switch_editor.setValue(`var day = 4;
+new Editor("js-switch-editor", `var day = 4;
 
 switch (day) {
     case 0:
@@ -146,10 +129,7 @@ switch (day) {
     
     console.log(day); //what value should have day variable ?`, 1);
 
-    dowhile_editor = ace.edit("js-dowhile-editor");
-    dowhile_editor.setTheme("ace/theme/xcode");
-    dowhile_editor.session.setMode("ace/mode/javascript");
-    dowhile_editor.setValue(`var result = "";
+new Editor("js-dowhile-editor", `var result = "";
 var i = 0;
     
 do {
@@ -160,10 +140,7 @@ do {
 console.log(result);
 // expected result: "12345"`, 1);
 
-forin_editor = ace.edit("js-forin-editor");
-forin_editor.setTheme("ace/theme/xcode");
-forin_editor.session.setMode("ace/mode/javascript");
-forin_editor.setValue(`var text = "";
+new Editor("js-forin-editor", `var text = "";
 var car = { brand: "Audi", color: "black", doors: 5 };
     
 for (var prop in obj) {
@@ -173,17 +150,11 @@ for (var prop in obj) {
 console.log(text);
 // expected output: "Audi black 5"`, 1);
 
-for_editor = ace.edit("js-for-editor");
-for_editor.setTheme("ace/theme/xcode");
-for_editor.session.setMode("ace/mode/javascript");
-for_editor.setValue(`for(let i=0; i<10; i++){
+new Editor("js-for-editor", `for(let i=0; i<10; i++){
 console.log(i);
 }`, 1);
 
-forof_editor = ace.edit("js-forof-editor");
-forof_editor.setTheme("ace/theme/xcode");
-forof_editor.session.setMode("ace/mode/javascript");
-forof_editor.setValue(`var iterable = [10, 20, 30];
+new Editor("js-forof-editor", `var iterable = [10, 20, 30];
 
 for (let value of iterable) {
   value += 1;
@@ -203,10 +174,7 @@ for (let value of iterable) {
 
 `, 1);
 
-function_editor = ace.edit("js-function-editor");
-function_editor.setTheme("ace/theme/xcode");
-function_editor.session.setMode("ace/mode/javascript");
-function_editor.setValue(`// Function Declaration
+new Editor("js-function-editor", `// Function Declaration
 function firstFunction(parameters){
     statements
 }
@@ -233,11 +201,9 @@ var sum = new Function('a', 'b', 'return a + b');
 console.log(sum(2, 6));
 `, 1);
 
-functionreturn_editor = ace.edit("js-functionreturn-editor");
-functionreturn_editor.setTheme("ace/theme/xcode");
-functionreturn_editor.session.setMode("ace/mode/javascript");
-functionreturn_editor.setValue(`
-function test(){
+new Editor(
+"js-functionreturn-editor", 
+`function test(){
     return true;
 }
 test(); // true;
@@ -248,10 +214,104 @@ function double(num){
 
 double(); // undefined;
 `, 1);
+
+new Editor(
+"js-classes-editor",
+`class Pet {
+    constructor(name, age){
+        this.age=age;
+        this.name=name;
+    }
+
+    bark(){
+        alert(this.name + ' bark');
+    }
 }
 
-function switchOverview(event){
-    switch(event.text) {
+var myPet = new Pet('Mike', 2);
+myPet.bark();
+
+`, 1);
+
+new Editor(
+"js-class-methods-editor", 
+`class Animal { 
+    speak() {
+      return this;
+    }
+    static eat() {
+      return this;
+    }
+  }
+  
+  let obj = new Animal();
+  obj.speak(); // Animal {}
+  Animal.eat() // class Animal
+
+`, 1);
+
+new Editor(
+"js-getset-method-editor", 
+`// ES6 get and set
+class Person {
+  constructor(name) {
+    this._name = name;
+  }
+
+  get name() {
+    return this._name.toUpperCase();
+  }
+
+  set name(newName) {
+    this._name = newName;   // validation could be checked here such as only allowing non numerical values
+  }
+
+  walk() {
+    console.log(this._name + ' is walking.');
+  }
+}
+         
+let bob = new Person('Bob');
+console.log(bob.name);  // Outputs 'BOB'
+
+`, 1);
+
+new Editor(
+"js-class-inheritance-editor", 
+`
+class Person {
+    constructor(name) {
+      this.name = name;
+    }
+  
+    walk() {
+      alert(this.name + ' is walking.');
+    }
+  }
+           
+  class Programmer extends Person { 
+    constructor(name, programmingLanguage) {
+      super(name);
+      this.programmingLanguage = programmingLanguage;
+    }
+  
+    writeCode() {
+      alert(this.name + ' is coding in ' + this.programmingLanguage + '.');
+    }
+  }
+           
+  let alex = new Person('Alex');
+  bob.walk();
+           
+  let cory = new Programmer('Cory', 'JavaScript');
+  cory.walk();
+  cory.writeCode();
+
+`, 1);
+}
+
+function switchOverview(event) {
+    switch (event.text) {
         case 'HTML':
             document.getElementById('js-overview').style.display = 'none';
             document.getElementById('css-overview').style.display = 'none';
@@ -260,7 +320,7 @@ function switchOverview(event){
             document.getElementById('js-details').style.display = 'none';
             document.getElementById('css-details').style.display = 'none';
             break;
-        case 'JavaScript': 
+        case 'JavaScript':
             document.getElementById('html-overview').style.display = 'none';
             document.getElementById('css-overview').style.display = 'none';
             document.getElementById('js-overview').style.display = 'block';
@@ -268,7 +328,7 @@ function switchOverview(event){
             document.getElementById('html-details').style.display = 'none';
             document.getElementById('css-details').style.display = 'none';
             break;
-        case 'CSS': 
+        case 'CSS':
             document.getElementById('js-overview').style.display = 'none';
             document.getElementById('html-overview').style.display = 'none';
             document.getElementById('css-overview').style.display = 'block';
@@ -279,21 +339,32 @@ function switchOverview(event){
     }
 }
 
-function showHiddenList(el){
-    const hiddenUl=el.parentElement.children[1];
-    switch(hiddenUl.style.display){
-        case "none": 
+function showHiddenList(el) {
+    const hiddenUl = el.parentElement.children[1];
+    switch (hiddenUl.style.display) {
+        case "none":
             hiddenUl.style.display = "block";
             break;
         case "block":
-            hiddenUl.style.display="none";
+            hiddenUl.style.display = "none";
     }
 }
 
-function runCode(){
+function runCode() {
     var iFrameObject = document.getElementById("iframe");
     var idoc = iFrameObject.contentDocument || iFrameObject.contentWindow;
     idoc.open();
-    idoc.write("<script> " + variable_editor.getValue()+ "</script>");
+    idoc.write("<script> " + variable_editor.getValue() + "</script>");
     idoc.close();
+}
+
+
+function Editor(identifer, code) {
+    this.identifer = identifer;
+    this.code = code;
+    this.currentEditor = ace.edit(identifer);
+    this.currentEditor.setTheme("ace/theme/xcode");
+    this.currentEditor.session.setMode("ace/mode/javascript");
+    this.currentEditor.setValue(code, 1);
+    editorsMap.set(identifer, this.currentEditor);
 }

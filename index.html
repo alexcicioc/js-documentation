@@ -497,6 +497,17 @@
                             into
                             a string by wrapping them in <i>${…}</i></p>
 
+                        <p>Strings have some utils methods like :</p>
+                        <ul>
+                            <li style="list-style: decimal"><code>toUpperCase()</code> - method returns the calling string value converted to uppercase</li>
+                            <li style="list-style: decimal"><code>toLowerCase()</code> - method returns the calling string value converted to lower case.</li>
+                            <li style="list-style: decimal"><code>concat(arg1, arg2)</code> - method concatenates the string arguments to the calling string and returns a new string.</li>
+                            <li style="list-style: decimal"><code>trim()</code> - method removes whitespace from both ends of a string</li>
+                            <li style="list-style: decimal"><code>includes()</code> - method determines whether one string may be found within another string</li>
+                        </ul>
+                        <p> A lot more useful strings utils will be found here: 
+                            <a src="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Link</a>
+                        </p>
                         <button onclick="runCode()">Run</button>
                         <div id="js-string-editor" style="height: 150px;"></div>
                     </div>
@@ -756,6 +767,7 @@
                             <li><code>Function Constructor</code> - The Function constructor creates a new Function
                                 object.</li>
                         </ul>
+                        <button onclick="runCode()">Run</button>
                         <div id="js-function-editor" style="height: 320px;"></div>
                     </div>
                     <!-- End Define a function -->
@@ -779,13 +791,97 @@
                             Function Returns</h3>
                         <p>Every function in JavaScript returns <code>undefined</code> unless otherwise specified.</p>
                         <p>Below we'll find some examples</p>
+                        <button onclick="runCode()">Run</button>
                         <div id="js-functionreturn-editor" style="height: 180px;"></div>
                     </div>
                     <!-- Function Return -->
                 </div>
 
-            </div>
+                <!-- Class Overview Return-->
+                <div id="js-classes" style="display:block">
+                    <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        JavaScript OOP like</h2>
+                    <p>Whit <code>ES6</code> JavaScript has more human readable way to declare classes/objects, because
+                        with this version was introduced <code>class</code>
+                        < keyword.</p> <p>Now you can make use of it to program in a similar way as to how you might in
+                            <code>C#, Java, or PHP</code></p>
+                    <p>Classes in ES6 are definitely a step in the right direction to achieving true object oriented
+                        programming, but truth be told, these are not classes in the purest sense of the word</p>
 
+                    <img src="images/es6_class.png">
+                </div>
+                <div id="js-define-classes" style="display:block">
+                    <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        Class Definition</h2>
+                    <p>Creating a class is super easy. All you do is use the class keyword followed by a name for the
+                        class, and then your opening and closing curly braces.</p>
+                    <button onclick="runCode()">Run</button>
+                    <div id="js-classes-editor" style="height: 200px;"></div>
+                </div>
+
+                <div id="js-class-constructor" style="display:block">
+                    <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        Constructors</h4>
+                    <p>What you need to know about <code>constructor</code> function in JavaScript is the following</p>
+                    <ul>
+                        <li>Constructors are a key concept of classes</li>
+                        <li>There can only be one special method with the name <code>constructor</code> in a class</li>
+                        <li>Constructor <code>is a function</code> which automatically runs anytime an object is
+                            instantiated from that class</li>
+                        <li>Commonly <code>used to set up some default data</code> or
+                            <code>initialize needed variables</code></li>
+                    </ul>
+                    <p>You can test those by playing with the example above.</p>
+                </div>
+
+                <div id="js-class-methods" style="display:block">
+                    <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        Methods</h4>
+                    <p>In JavaScript <code>methods</code> are simple functions that contain code and can be invoked like
+                        usual.</p>
+                    <p>Also we can have static methods, The static keyword defines a static method for a class. Static
+                        methods are called without instantiating their class and cannot be called through a class
+                        instance. Static methods are often used to create utility functions for an application you can
+                        see how these are defined and works in the example above.</p>
+                    <button onclick="runCode()">Run</button>
+                    <div id="js-class-methods-editor" style="height: 200px;"></div>
+                </div>
+                <div id="js-getset-methods" style="display:block">
+                    <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        Getters and Setters</h4>
+                    <p>The <code>get</code> syntax binds an object property to a function that will be called when that
+                        property is looked up.</p>
+                    <p>The <code>set</code> syntax binds an object property to a function to be called when there is an
+                        attempt to set that property.</p>
+                    <button onclick="runCode()">Run</button>
+                    <div id="js-getset-method-editor" style="height: 325px;"></div>
+                </div>
+                <div id="js-class-inheritance" style="display:block">
+                    <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        Inheritance</h4>
+                    <p> <code>ES6</code> has made <code>JavaScript</code> look a lot simpler with the
+                        <code>class syntax</code> and its additional features.
+                        In the example below we are going to combine the <code>class syntax feature</code> with the
+                        concept of <code>inheritance</code>
+                    </p>
+                    <p>We'll combine all things that we achieve and learn so far to exemplify better the inheritance. </p>
+                    <button onclick="runCode()">Run</button>
+                    <div id="js-class-inheritance-editor" style="height: 400px;"></div>
+                </div>
+
+            </div>
             <div class="sticky col-md-3" role="complementary">
                 <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top">
                     <p><strong>Summary</strong></p>
@@ -798,6 +894,21 @@
                         </li>
                         <li>
                             <a href="#variables" onclick="showHiddenList(this)">Variables</a>
+                            <ul class="arrow" style="display:none">
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#blocks">Blocks</a>
+                            <ul class="arrow" style="display:none">
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#scope">Scope</a>
+                            <ul class="arrow" style="display:none">
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#context">Context</a>
                             <ul class="arrow" style="display:none">
                             </ul>
                         </li>
@@ -838,19 +949,18 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#forloop">Classes (ES6 syntax)</a>
+                            <a href="#js-classes">Classes (ES6 syntax)</a>
                             <ul class="arrow" style="display:true">
-                                <li><a href="#js-whatIsAFunction">Define a class</a></li>
-                                <li><a href="#js-whatIsAFunction">Constructors</a></li>
-                                <li><a href="#js-defineAfunction">Getters and Setters</a></li>
-                                <li><a href="#js-invokeAFunction">Methods</a></li>
-                                <li><a href="#js-functionReturn">Inheritance</a></li>
+                                <li><a href="#js-define-classes">Define a class</a></li>
+                                <li><a href="#js-class-constructor">Constructors</a></li>
+                                <li><a href="#js-class-methods">Methods/ Static Methods</a></li>
+                                <li><a href="#js-getset-methods">Getters and Setters</a></li>
+                                <li><a href="#js-class-inheritance">Inheritance</a></li>
                             </ul>
                         </li>
                     </ul>
                 </nav>
             </div>
-
         </div>
     </div>
 </body>
