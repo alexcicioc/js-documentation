@@ -1,8 +1,15 @@
 var editorsMap = new Map();
 
-function ready() {
-    setupEditor();
-}
+$(document).ready(function () {
+  //adds menu.html content into any "#menu" element
+  $('#doc-header').load('header.html');
+  $('#doc-overview').load('overview.html');
+  $('#doc-html').load('htmldoc.html');
+  $('#doc-css').load('cssdoc.html');
+  $('#doc-js').load('jsdoc.html');
+
+  setupEditor();
+});
 
 function update() {
 }

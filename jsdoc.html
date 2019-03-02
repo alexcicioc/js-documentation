@@ -1,0 +1,638 @@
+<div id="js-details" class="container bs-docs-container" style="display: none;">
+    <div class="row">
+        <div class="col-md-9" role="main">
+            <div class="bs-docs-section">
+                <div id="overview">
+                    <h1 class="page-header"><a class="anchorjs-link " href="#overview"
+                            aria-label="Anchor link for: overview" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>Overview
+                    </h1>
+                    <p>It’s impossible to be a software developer these days without using JavaScript in some way.
+                        According to Stack Overflow's 2018 Developer Survey, JavaScript is the most popular language
+                        among developers for the sixth year in a row. Nearly 70 percent of survey respondents
+                        reported
+                        that they had used JavaScript in the past year.</p>
+                    <p>More details can be found here: <a
+                            href="https://insights.stackoverflow.com/survey/2018#technology ">Stack Overflow's 2018
+                            Developer Survey</p>
+                    <p>
+                        <img src="images/overview.png" />
+                    </p>
+                </div>
+
+                <div id="what-is-javascript" style="display:block">
+                    <h2 class="page-header">
+                        <a class="anchorjs-link " href="#overview-doctype"
+                            aria-label="Anchor link for: overview doctype" data-anchorjs-icon="" style="font-style: normal; font-variant: normal; font-weight: normal; 
+                                font-stretch: normal; font-size: 1em; line-height: inherit; font-family: 
+                                anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;">
+                        </a>
+                        What is Javascript ?
+                    </h2>
+                    <p>
+                        JavaScript is a cross-platform, object-oriented scripting language used to make webpages
+                        interactive (e.g. having complex animations,
+                        clickable buttons, popup menus, etc.). There are also more advanced server side versions of
+                        JavaScript such as Node.Js which allow you to add
+                        more functionality to a website than simply downloading files (such as realtime
+                        collaboration
+                        between multiple computers)
+                    </p>
+                    <h3>The future of Javascript</h3>
+                    <P>Javascript is present everywhere:</P>
+                    <ul>
+                        <li>Web Apps</li>
+                        <li>Mobile: Ionic framework</li>
+                        <li>Desktop: Electron framework</li>
+                        <li>Server Side: NodeJS</li>
+                    </ul>
+                    <img src="images/javascriptEverywhere.png">
+                </div>
+                <div id="variables" style="display:block">
+                    <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        Variables</h2>
+                    <p class="lead"><i>Declare variables, not war</i></p>
+                    <p>
+                        You can declare a variable in two ways:
+                        <ul>
+                            <li>With the keyword <strong>var</strong>. Can be used to declare both
+                                <strong>local</strong> and <strong>global</strong> variables.</li>
+                            <li>With the keyword <strong>const</strong> or <strong>let</strong>. Can be used to
+                                declare
+                                a <strong>block-scope local variable</strong>.</li>
+                        </ul>
+                        <button onclick="runCode()">Run</button>
+                        <div id="editor" style="height: 75px;"></div>
+                        <p>Result</p>
+                        <iframe id="iframe"></iframe>
+                </div>
+
+                <div id="types" style="display:block">
+                    <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        Data Types</h2>
+
+                    <p>In JavaScript we have types for variables, even if a lot of people says that JavaScript is
+                        type-less</p>
+                    <p>There are 7 basic types in Javascript</p>
+                    <ul>
+                        <li><code>number</code> - for numbers of any kind: integer or floating-point.
+                        <li>
+                        <li><code>string</code> - for strings. A string may have one or more characters, there’s no
+                            separate single-character type.</li>
+                        <li><code>boolean</code> - for <code>true/false</code></li>
+                        <li><code>null</code> - for unknown values – a standalone type that has a single value null
+                        </li>
+                        <li><code>undefined</code> - for unassigned values</li>
+                        <li><code>object</code> - for more complex data structures.</li>
+                        <li><code>symbol</code> - for unique identifiers.</li>
+                    </ul>
+
+                    <button onclick="runCode()">Run</button>
+                    <div id="js-datatypes-editor" style="height: 250px;"></div>
+                </div>
+
+                <div id="js-boolean" style="display:block">
+                    <h3 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        Boolean</h3>
+
+                    <p>Like in all other programming languages a boolean type has only two values:
+                        <strong>true</strong>
+                        and <strong>false</strong></p>
+                    <p>You should know the fact that: </p>
+                    <ul>
+                        <li>
+                            Everything With a "Value" is <strong>True</strong>
+                        </li>
+                        <li>
+                            Everything Without a "Value" is <strong>False</strong>
+                        </li>
+                    </ul>
+
+                    <button onclick="runCode()">Run</button>
+                    <div id="js-boolean-editor" style="height: 100px;"></div>
+                </div>
+
+                <div id="js-number" style="display:block">
+                    <h3 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        Number</h3>
+                    <p>The number type represents both <strong>integer</strong> and <strong>floating point</strong>
+                        numbers.</p>
+                    <p>In JavaScript we have also special numbers like:</p>
+                    <ul>
+                        <li>
+                            Infinity
+                        </li>
+                        <li>
+                            -Infinity
+                        </li>
+                        <li>
+                            NaN (Not a Number)
+                        </li>
+                    </ul>
+
+                    <button onclick="runCode()">Run</button>
+                    <div id="js-number-editor" style="height: 150px;"></div>
+                </div>
+
+
+                <div id="js-string" style="display:block">
+                    <h3 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        String</h3>
+                    <p> A <strong>string</strong> is a data type used in programming, such as an integer and
+                        floating
+                        point unit, but is used to represent text rather than numbers. It is comprised of a set of
+                        characters that can also contain spaces and numbers.</p>
+                    <p>In JavaScript we can define strings in three ways</p>
+                    <ul>
+                        <li>
+                            Double quotes : <strong>"Javascript"</strong>
+                        </li>
+                        <li>
+                            Single quotes : <strong>'Javascript'</strong>
+                        </li>
+                        <li>
+                            Backticks : <strong>`Javascript`</strong>
+                        </li>
+                    </ul>
+
+                    <p>There's no difference between double and single quotes strings, for
+                        <strong>Backticks</strong>
+                        instead, those are used to extend quotes functionality and embed variables and expressions
+                        into
+                        a string by wrapping them in <i>${…}</i></p>
+
+                    <p>Strings have some utils methods like :</p>
+                    <ul>
+                        <li style="list-style: decimal"><code>toUpperCase()</code> - method returns the calling string value converted to uppercase</li>
+                        <li style="list-style: decimal"><code>toLowerCase()</code> - method returns the calling string value converted to lower case.</li>
+                        <li style="list-style: decimal"><code>concat(arg1, arg2)</code> - method concatenates the string arguments to the calling string and returns a new string.</li>
+                        <li style="list-style: decimal"><code>trim()</code> - method removes whitespace from both ends of a string</li>
+                        <li style="list-style: decimal"><code>includes()</code> - method determines whether one string may be found within another string</li>
+                    </ul>
+                    <p> A lot more useful strings utils will be found here: 
+                        <a src="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Link</a>
+                    </p>
+                    <button onclick="runCode()">Run</button>
+                    <div id="js-string-editor" style="height: 150px;"></div>
+                </div>
+
+                <div id="js-arrays" style="display:block">
+                    <h3 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        Array</h3>
+                    <p>An array is an ordered collection of data (either primitive or object depending upon the
+                        language). Arrays are used to store multiple values in a single variable. This is compared
+                        to a variable that can store only one value.
+                    </p>
+                    <p>Each item in an array has a number attached to it, called a numeric index, that allows you to
+                        access it. In JavaScript, arrays start at index zero and can be manipulated with various
+                        methods. </p>
+                    <p>Useful methods while are working with arrays, let's assume that we have the following array
+                        <code>var cars = ["Dacia", "Skoda"]</code></p>
+                    <ul>
+                        <li>Access (index into) an Array item = > <code>var first = cars[0]; //Dacia</code></li>
+                        <li>Loop over an Array = > <code>cars.forEach(function(item, index, array) {
+                            alert(item, index);
+                        });</code></li>
+                        <li>Add to the end of an Array = >
+                            <code>cars.push("BMW");//["Dacia", "Skoda", "BMW"];</code></li>
+                        <li>Remove from the end of an Array = > <code>cars.pop(); // ["Dacia", "Skoda"];</code></li>
+                        <li>Remove from the front of an Array = > <code>cars.shift(); // ["Skoda"]</code></li>
+                        <li>Add to the front of an Array = >
+                            <code>fruits.unshift('Ford'); // ["Ford", "Skoda"];</code></li>
+                        <li>Find the index of an item in the Array= > <code>cars.indexOf('Skoda'); // 1</code></li>
+                        <li>Remove an item by index position = >
+                            <code>var pos=1; cars.splice(pos, 1); //["Skoda"]</code></li>
+                        <li>Copy an Array = >
+                            <code>var first = var shallowCopy = cars.slice(); //make a copy </code></li>
+                    </ul>
+                    <button onclick="runCode()">Run</button>
+                    <div id="js-array-editor" style="height: 150px;"></div>
+                </div>
+
+                <!-- Object section Start -->
+
+                <div id="js-object" style="display:block">
+                    <h3 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        Object</h3>
+                    <p> An <strong>object</strong> type is special. It is used for more complex data structure </p>
+                    <p>JavaScript is designed on a simple object-based paradigm. An object is a collection of
+                        properties, and a property is an association between a name (or key) and a value. A
+                        property's
+                        value can be a function, in which case the property is known as a method</p>
+                    <p> In JavaScript you can define an object in two ways.</p>
+                    <ul>
+                        <li><strong>Object Literal</strong> - is a comma-separated list of name-value pairs wrapped
+                            in
+                            curly braces. Object literals encapsulate data, enclosing it in a tidy package. This
+                            minimizes the use of global variables which can cause problems when combining code.</li>
+                        <li><strong>Object constructors function</strong> - Constructor is nothing but a function
+                            and
+                            with help of <strong>new keyword</strong>, constructor function allows to create
+                            multiple
+                            objects of same type.</li>
+                    </ul>
+
+                    <button onclick="runCode()">Run</button>
+                    <div id="js-object-editor" style="height: 320px;"></div>
+                </div>
+
+                <!-- Object section End -->
+                <!-- If statement -->
+                <div id="js-ifelse" style="display:block">
+                    <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        If/Else Statement</h2>
+                    <p><code>If</code> statement is used when you want to take a decision based on a condition</p>
+                    <p>In JavaScript like in other programming languages if statement works the same.</p>
+                    <ul>
+                        <li>Use <code>if</code> to specify a block of code to be executed when the condition is
+                            <code>true</code></li>
+                        <li>Use <code>else</code> to specify a block of code to be executed when the same condition
+                            is <code>false</code></li>
+                        <li>Use <code>else if</code> to specify a new condition when the first condition is
+                            <code>false</code></li>
+                    </ul>
+
+                    <button onclick="runCode()">Run</button>
+                    <div id="js-condition-editor" style="height: 150px;"></div>
+                </div>
+                <!-- End If statement -->
+                <!-- Switch statement -->
+                <div id="js-switch-condition" style="display:block">
+                    <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        Switch Statement</h2>
+                    <p><code>Switch</code> statement is used to to perform different actions based on different
+                        conditions</p>
+                    <p>The <code>switch</code> expression is evaluated once, the value of the expression is compared
+                        with the values of each case, <code>if</code> there is a match, the associated block of code
+                        is executed</p>
+                    <button onclick="runCode()">Run</button>
+                    <div id="js-switch-editor" style="height: 370px;"></div>
+                </div>
+                <!-- End Switch statement -->
+
+                <!-- Loops statement -->
+                <div id="js-loops" style="display:block">
+                    <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        Loops</h2>
+                    <p>There are many different kinds of loops, but they all essentially do the same thing: they
+                        repeat an action some number of times (and it's actually possible that number could be
+                        zero).</p>
+                    <p>The various loop mechanisms offer different ways to determine the start and end
+                        points of the loop.
+                        <p>There are various situations that are more easily served by one type of
+                            loop over the others.</p>
+                </div>
+                <!-- End While statement -->
+
+                <!-- While statement -->
+                <div id="js-while-condition" style="display:block">
+                    <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        While loop</h2>
+                    <p>The while construct consists of a block of code and a condition/expression. The
+                        condition/expression is evaluated, and if the condition/expression is <code>true</code>, the
+                        code within the block is executed. This repeats until the condition/expression becomes
+                        false. Because the while loop checks the condition/expression before the block is executed,
+                        the control structure is often also known as a pre-test loop.</p>
+                    <img src="images/while-loop.png" />
+                </div>
+                <!-- End While statement -->
+
+                <!-- Do While statement -->
+                <div id="js-dowhile-condition" style="display:block">
+                    <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        Do While loop</h2>
+                    <p>The <code>do...while</code> statement creates a loop that executes a specified statement
+                        until the test
+                        condition evaluates to false.</p>
+                    <p>The condition is evaluated after executing the statement,
+                        resulting in the specified statement executing at least once</p>
+                    <img src="images/dowhile.jpg" /></br>
+                    <button onclick="runCode()">Run</button>
+                    <div id="js-dowhile-editor" style="height: 150px;"></div>
+                </div>
+                <!-- End While statement -->
+
+                <!-- For statement -->
+                <div id="js-for" style="display:block">
+                    <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        For loop</h2>
+                    <p>A <code>for loop</code> repeats until a specified condition evaluates to <code>false</code>.
+                        <p>The JavaScript for loop is similar to the Java and C for loop. </p>
+                        <img src="images/for.PNG" />
+                        <p>When a for loop executes, the following occurs:</p>
+                        <ul>
+                            <li style="list-style: decimal">The initializing expression
+                                <code>initialExpression</code> is executed. This expression usually initializes one
+                                or more loop counters. This expression can also declare variables</li>
+                            <li style="list-style: decimal">The <code>condition</code> expression is evaluated. If
+                                the value of <strong>condition</strong> is true, the loop statements execute. If the
+                                value of <strong>condition</strong> is false, the for loop terminates.</li>
+                            <li style="list-style: decimal">The <code>statement</code> executes. To execute multiple
+                                statements, <code>use a block statement ({ ... })</code> to group those statements.
+                            </li>
+                            <li style="list-style: decimal">If present, the update expression
+                                <code>incrementExpression</code> is executed.</li>
+                            <li style="list-style: decimal">Control returns to step 2.</li>
+                        </ul>
+                        <button onclick="runCode()">Run</button>
+                        <div id="js-for-editor" style="height: 50px;"></div>
+                </div>
+                <!-- End For statement -->
+
+                <!-- For...in statement -->
+                <div id="js-forin" style="display:block">
+                    <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        For...in</h2>
+                    <p>The for...in statement iterates over enumerable properties of an object.</p>
+                    <p>A different property name is assigned to variable(in our case <code>prop</code>) on each
+                        iteration.</p>
+                    <p>Object whose enumerable properties are iterated over.</p>
+                    <button onclick="runCode()">Run</button>
+                    <div id="js-forin-editor" style="height: 150px;"></div>
+                </div>
+                <!-- End For...in statement -->
+
+                <!-- For...of statement -->
+                <div id="js-forof" style="display:block">
+                    <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        For...of</h2>
+                    <p>The <code>for...of</code> statement creates a loop iterating over iterable objects,
+                        including: built-in String, Array, Array-like objects, etc</p>
+                    <h4>Syntax</h4>
+                    <img src="images/forof.PNG">
+                    <p><code>variable</code> - On each iteration a value of a different property is assigned to
+                        variable. variable may be declared with <code>const, let, or var.</code></p>
+                    <p><code>iterable</code> - Object whose iterable properties are iterated.</p>
+                    <button onclick="runCode()">Run</button>
+                    <div id="js-forof-editor" style="height: 280px;"></div>
+                </div>
+                <!-- End For...of statement -->
+
+                <!-- What is a function -->
+                <div id="js-whatIsAFunction" style="display:block">
+                    <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        What is a function ?</h2>
+                    <ul>
+                        <li style="list-style-type: decimal;">A function is a subprogram designed to perform a
+                            particular task.</li>
+                        <li style="list-style-type: decimal;">Functions are executed when they are called. This is
+                            known as invoking a function.</li>
+                        <li style="list-style-type: decimal;">Values can be <code>passed</code> into functions and
+                            used within the function.</li>
+                        <li style="list-style: decimal">in JavaScript we have <code>anonymous functions</code>,
+                            those functions doesn't have a name.</li>
+                        <li style="list-style-type: decimal;">Functions <b>always</b> <code>return</code> a value.
+                            <b style="font-size: 18px">In JavaScript, if no return value is specified, the function
+                                will return undefined.</b></li>
+                    </ul>
+                </div>
+                <!-- End What is a function -->
+
+                <!-- Define a function -->
+                <div id="js-defineAfunction" style="display:block">
+                    <h3 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        Define a function</h3>
+                    <p>In JavaScript we have different ways to declare a function, bellow are explained the function
+                        types and how to declare functions.</p>
+                    <p>To create a function declaration you use the <code>function</code> keyword followed by the
+                        name of the
+                        function. When using function declarations, the function definition is hoisted, thus
+                        allowing the function to be used before it is defined.</p>
+                    <ul>
+                        <li><code>Function Declaration</code> - defines a named function</li>
+                        <li><code>Function Expressions</code> - defines a named or anonymous function, Function
+                            Expressions are not hoisted, and therefore cannot be used before they are defined</li>
+                        <li><code>Arrow Function Expression</code> - is a shorter syntax for writing function
+                            expressions </li>
+                        <li><code>Function Constructor</code> - The Function constructor creates a new Function
+                            object.</li>
+                    </ul>
+                    <button onclick="runCode()">Run</button>
+                    <div id="js-function-editor" style="height: 320px;"></div>
+                </div>
+                <!-- End Define a function -->
+
+                <!-- Invoke a function -->
+                <div id="js-invokeAFunction" style="display:block">
+                    <h3 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        Invoke a function</h3>
+                    Functions execute when the function is called. This process is known as invocation. You can
+                    invoke a function by referencing the function name, followed by an open and closed parenthesis:
+                    <code>()</code>.
+                </div>
+                <!-- End Invoke a function -->
+                <!-- Function Return-->
+                <div id="js-functionReturn" style="display:block">
+                    <h3 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        Function Returns</h3>
+                    <p>Every function in JavaScript returns <code>undefined</code> unless otherwise specified.</p>
+                    <p>Below we'll find some examples</p>
+                    <button onclick="runCode()">Run</button>
+                    <div id="js-functionreturn-editor" style="height: 180px;"></div>
+                </div>
+                <!-- Function Return -->
+            </div>
+
+            <!-- Class Overview Return-->
+            <div id="js-classes" style="display:block">
+                <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                        aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                        style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                    JavaScript OOP like</h2>
+                <p>Whit <code>ES6</code> JavaScript has more human readable way to declare classes/objects, because
+                    with this version was introduced <code>class</code>
+                    < keyword.</p> <p>Now you can make use of it to program in a similar way as to how you might in
+                        <code>C#, Java, or PHP</code></p>
+                <p>Classes in ES6 are definitely a step in the right direction to achieving true object oriented
+                    programming, but truth be told, these are not classes in the purest sense of the word</p>
+
+                <img src="images/es6_class.png">
+            </div>
+            <div id="js-define-classes" style="display:block">
+                <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                        aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                        style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                    Class Definition</h2>
+                <p>Creating a class is super easy. All you do is use the class keyword followed by a name for the
+                    class, and then your opening and closing curly braces.</p>
+                <button onclick="runCode()">Run</button>
+                <div id="js-classes-editor" style="height: 200px;"></div>
+            </div>
+
+            <div id="js-class-constructor" style="display:block">
+                <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                        aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                        style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                    Constructors</h4>
+                <p>What you need to know about <code>constructor</code> function in JavaScript is the following</p>
+                <ul>
+                    <li>Constructors are a key concept of classes</li>
+                    <li>There can only be one special method with the name <code>constructor</code> in a class</li>
+                    <li>Constructor <code>is a function</code> which automatically runs anytime an object is
+                        instantiated from that class</li>
+                    <li>Commonly <code>used to set up some default data</code> or
+                        <code>initialize needed variables</code></li>
+                </ul>
+                <p>You can test those by playing with the example above.</p>
+            </div>
+
+            <div id="js-class-methods" style="display:block">
+                <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                        aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                        style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                    Methods</h4>
+                <p>In JavaScript <code>methods</code> are simple functions that contain code and can be invoked like
+                    usual.</p>
+                <p>Also we can have static methods, The static keyword defines a static method for a class. Static
+                    methods are called without instantiating their class and cannot be called through a class
+                    instance. Static methods are often used to create utility functions for an application you can
+                    see how these are defined and works in the example above.</p>
+                <button onclick="runCode()">Run</button>
+                <div id="js-class-methods-editor" style="height: 200px;"></div>
+            </div>
+            <div id="js-getset-methods" style="display:block">
+                <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                        aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                        style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                    Getters and Setters</h4>
+                <p>The <code>get</code> syntax binds an object property to a function that will be called when that
+                    property is looked up.</p>
+                <p>The <code>set</code> syntax binds an object property to a function to be called when there is an
+                    attempt to set that property.</p>
+                <button onclick="runCode()">Run</button>
+                <div id="js-getset-method-editor" style="height: 325px;"></div>
+            </div>
+            <div id="js-class-inheritance" style="display:block">
+                <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                        aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                        style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                    Inheritance</h4>
+                <p> <code>ES6</code> has made <code>JavaScript</code> look a lot simpler with the
+                    <code>class syntax</code> and its additional features.
+                    In the example below we are going to combine the <code>class syntax feature</code> with the
+                    concept of <code>inheritance</code>
+                </p>
+                <p>We'll combine all things that we achieve and learn so far to exemplify better the inheritance. </p>
+                <button onclick="runCode()">Run</button>
+                <div id="js-class-inheritance-editor" style="height: 400px;"></div>
+            </div>
+
+        </div>
+        <div class="sticky col-md-3" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top">
+                <p><strong>Summary</strong></p>
+                <ul class="nav bs-docs-sidenav">
+                    <li>
+                        <a href="#overview">Overview</a>
+                        <ul class="arrow">
+                            <li><a href="#what-is-javascript">What is Javascript ?</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#variables" onclick="showHiddenList(this)">Variables</a>
+                        <ul class="arrow" style="display:none">
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#blocks">Blocks</a>
+                        <ul class="arrow" style="display:none"></ul>
+                    </li>
+                    <li>
+                        <a href="#scope">Scope</a>
+                        <ul class="arrow" style="display:none">
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#context">Context</a>
+                        <ul class="arrow" style="display:none">
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#types">Data Types</a>
+                        <ul class="arrow">
+                            <li><a href="#js-boolean">Boolean</a></li>
+                            <li><a href="#js-number">Number</a></li>
+                            <li><a href="#js-string">String</a></li>
+                            <li><a href="#js-string">Arrays</a></li>
+                            <li><a href="#js-object">Object</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#js-ifelse">Conditions Statements</a>
+                        <ul class="arrow">
+                            <li><a href="#js-ifelse">If...Else</a></li>
+                            <li><a href="#js-switch-condition">Switch Statement</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#forloop">Loops</a>
+                        <ul class="arrow" style="display:true">
+                            <li><a href="#js-while-condition">While</a></li>
+                            <li><a href="#js-dowhile-condition">Do While</a></li>
+                            <li><a href="#js-for">For</a></li>
+                            <li><a href="#js-forin">For...in</a></li>
+                            <li><a href="#js-forof">For...off</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#forloop">Functions</a>
+                        <ul class="arrow" style="display:true">
+                            <li><a href="#js-whatIsAFunction">What is a Function?</a></li>
+                            <li><a href="#js-defineAfunction">Define a Function</a></li>
+                            <li><a href="#js-invokeAFunction">Invoking a Function</a></li>
+                            <li><a href="#js-functionReturn">Function Return</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#js-classes">Classes (ES6 syntax)</a>
+                        <ul class="arrow" style="display:true">
+                            <li><a href="#js-define-classes">Define a class</a></li>
+                            <li><a href="#js-class-constructor">Constructors</a></li>
+                            <li><a href="#js-class-methods">Methods/ Static Methods</a></li>
+                            <li><a href="#js-getset-methods">Getters and Setters</a></li>
+                            <li><a href="#js-class-inheritance">Inheritance</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
