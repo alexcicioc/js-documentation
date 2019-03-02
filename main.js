@@ -1,10 +1,7 @@
 var editorsMap = new Map();
 
-$(document).ready(function () {
+function ready(){
   setupEditor();
-});
-
-function update() {
 }
 
 function setupEditor() {
