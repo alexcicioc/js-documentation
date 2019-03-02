@@ -1,21 +1,24 @@
 var editorsMap = new Map();
 
 function ready() {
-    setupEditor();
+  setupEditor();
 }
 
-function update() {
-}
+function update() {}
 
 function setupEditor() {
-
-new Editor("editor", ` const x = "Test";
+  new Editor(
+    "editor",
+    ` const x = "Test";
     var y = 2;
     let z = true;
     console.log("av");
-`);
+`
+  );
 
-new Editor("js-datatypes-editor", `typeof undefined // "undefined";
+  new Editor(
+    "js-datatypes-editor",
+    `typeof undefined // "undefined";
 
 typeof 0 // "number"
 
@@ -27,25 +30,34 @@ typeof Symbol("id") // "symbol";
 
 typeof { property : 'value'} // "object"
 
-typeof alert // "function"`);
+typeof alert // "function"`
+  );
 
-new Editor("js-boolean-editor", `
+  new Editor(
+    "js-boolean-editor",
+    `
 10>9 // "true";
 
 const value = true;
     
 const anotherValue = new Boolean(false);
-`);
+`
+  );
 
-new Editor("js-array-editor",`
+  new Editor(
+    "js-array-editor",
+    `
 //Create an Array
 var cars = ["Dacia", "Skoda"];
 
 // You can play with the methods described above
 alert(cars);
-`);
+`
+  );
 
-new Editor("js-number-editor", `let integerNumber = 123; //integer
+  new Editor(
+    "js-number-editor",
+    `let integerNumber = 123; //integer
 
 let floatingNumber = 12.345; //floating number
     
@@ -54,17 +66,23 @@ alert( 1 / 0 ); // Will result in Infinity
 alert( -1 / 0 ); // Will result in -Infinity
     
 alert("not a number" / 2); // Will result in NaN, because we try to divide string with number
-`);
+`
+  );
 
-new Editor("js-string-editor", `let str = "JavaScript";
+  new Editor(
+    "js-string-editor",
+    `let str = "JavaScript";
 
 let str2 = 'String with single quotes';
 
 str2.toUpperCase();
 // STRING WITH SINGLE QUOTES
-`);
+`
+  );
 
-new Editor("js-object-editor", `// Object Literal
+  new Editor(
+    "js-object-editor",
+    `// Object Literal
 var Car = {
     brand: 'Toyota',
     color: 'black',
@@ -89,9 +107,12 @@ function Car(brand, color, doors){
 }
     
 let myCar = new Car("Audi", "black", 5);
-myCar.start();`);
+myCar.start();`
+  );
 
-new Editor("js-condition-editor", ` let n = 5;
+  new Editor(
+    "js-condition-editor",
+    ` let n = 5;
 
 if(n>5){
     console.log("Greater then 5");
@@ -100,9 +121,13 @@ if(n>5){
 }
 
 //another way to write if/else statement
-(n>5) ? alert("Greater") : alert("Less then");`, 1);
+(n>5) ? alert("Greater") : alert("Less then");`,
+    1
+  );
 
-new Editor("js-switch-editor", `var day = 4;
+  new Editor(
+    "js-switch-editor",
+    `var day = 4;
 
 switch (day) {
     case 0:
@@ -127,9 +152,13 @@ switch (day) {
         day = "Saturday";
     }
     
-    console.log(day); //what value should have day variable ?`, 1);
+    console.log(day); //what value should have day variable ?`,
+    1
+  );
 
-new Editor("js-dowhile-editor", `var result = "";
+  new Editor(
+    "js-dowhile-editor",
+    `var result = "";
 var i = 0;
     
 do {
@@ -138,9 +167,13 @@ do {
 } while (i < 5);
     
 console.log(result);
-// expected result: "12345"`, 1);
+// expected result: "12345"`,
+    1
+  );
 
-new Editor("js-forin-editor", `var text = "";
+  new Editor(
+    "js-forin-editor",
+    `var text = "";
 var car = { brand: "Audi", color: "black", doors: 5 };
     
 for (var prop in obj) {
@@ -148,13 +181,21 @@ for (var prop in obj) {
 }
     
 console.log(text);
-// expected output: "Audi black 5"`, 1);
+// expected output: "Audi black 5"`,
+    1
+  );
 
-new Editor("js-for-editor", `for(let i=0; i<10; i++){
+  new Editor(
+    "js-for-editor",
+    `for(let i=0; i<10; i++){
 console.log(i);
-}`, 1);
+}`,
+    1
+  );
 
-new Editor("js-forof-editor", `var iterable = [10, 20, 30];
+  new Editor(
+    "js-forof-editor",
+    `var iterable = [10, 20, 30];
 
 for (let value of iterable) {
   value += 1;
@@ -172,9 +213,13 @@ for (let value of iterable) {
 //"o"
 //"o"
 
-`, 1);
+`,
+    1
+  );
 
-new Editor("js-function-editor", `// Function Declaration
+  new Editor(
+    "js-function-editor",
+    `// Function Declaration
 function firstFunction(parameters){
     statements
 }
@@ -199,11 +244,13 @@ let thirdFunction = (parameters) => {
 var sum = new Function('a', 'b', 'return a + b');
 
 console.log(sum(2, 6));
-`, 1);
+`,
+    1
+  );
 
-new Editor(
-"js-functionreturn-editor", 
-`function test(){
+  new Editor(
+    "js-functionreturn-editor",
+    `function test(){
     return true;
 }
 test(); // true;
@@ -213,11 +260,13 @@ function double(num){
 }
 
 double(); // undefined;
-`, 1);
+`,
+    1
+  );
 
-new Editor(
-"js-classes-editor",
-`class Pet {
+  new Editor(
+    "js-classes-editor",
+    `class Pet {
     constructor(name, age){
         this.age=age;
         this.name=name;
@@ -231,11 +280,13 @@ new Editor(
 var myPet = new Pet('Mike', 2);
 myPet.bark();
 
-`, 1);
+`,
+    1
+  );
 
-new Editor(
-"js-class-methods-editor", 
-`class Animal { 
+  new Editor(
+    "js-class-methods-editor",
+    `class Animal { 
     speak() {
       return this;
     }
@@ -248,11 +299,13 @@ new Editor(
   obj.speak(); // Animal {}
   Animal.eat() // class Animal
 
-`, 1);
+`,
+    1
+  );
 
-new Editor(
-"js-getset-method-editor", 
-`// ES6 get and set
+  new Editor(
+    "js-getset-method-editor",
+    `// ES6 get and set
 class Person {
   constructor(name) {
     this._name = name;
@@ -274,11 +327,13 @@ class Person {
 let bob = new Person('Bob');
 console.log(bob.name);  // Outputs 'BOB'
 
-`, 1);
+`,
+    1
+  );
 
-new Editor(
-"js-class-inheritance-editor", 
-`
+  new Editor(
+    "js-class-inheritance-editor",
+    `
 class Person {
     constructor(name) {
       this.name = name;
@@ -307,64 +362,65 @@ class Person {
   cory.walk();
   cory.writeCode();
 
-`, 1);
+`,
+    1
+  );
 }
 
 function switchOverview(event) {
-    switch (event.text) {
-        case 'HTML':
-            document.getElementById('js-overview').style.display = 'none';
-            document.getElementById('css-overview').style.display = 'none';
-            document.getElementById('html-overview').style.display = 'block';
-            document.getElementById('html-details').style.display = 'block';
-            document.getElementById('js-details').style.display = 'none';
-            document.getElementById('css-details').style.display = 'none';
-            break;
-        case 'JavaScript':
-            document.getElementById('html-overview').style.display = 'none';
-            document.getElementById('css-overview').style.display = 'none';
-            document.getElementById('js-overview').style.display = 'block';
-            document.getElementById('js-details').style.display = 'block';
-            document.getElementById('html-details').style.display = 'none';
-            document.getElementById('css-details').style.display = 'none';
-            break;
-        case 'CSS':
-            document.getElementById('js-overview').style.display = 'none';
-            document.getElementById('html-overview').style.display = 'none';
-            document.getElementById('css-overview').style.display = 'block';
-            document.getElementById('js-details').style.display = 'none';
-            document.getElementById('html-details').style.display = 'none';
-            document.getElementById('css-details').style.display = 'block';
-            break;
-    }
+  switch (event.text) {
+    case "HTML":
+      document.getElementById("js-overview").style.display = "none";
+      document.getElementById("css-overview").style.display = "none";
+      document.getElementById("html-overview").style.display = "block";
+      document.getElementById("html-details").style.display = "block";
+      document.getElementById("js-details").style.display = "none";
+      document.getElementById("css-details").style.display = "none";
+      break;
+    case "JavaScript":
+      document.getElementById("html-overview").style.display = "none";
+      document.getElementById("css-overview").style.display = "none";
+      document.getElementById("js-overview").style.display = "block";
+      document.getElementById("js-details").style.display = "block";
+      document.getElementById("html-details").style.display = "none";
+      document.getElementById("css-details").style.display = "none";
+      break;
+    case "CSS":
+      document.getElementById("js-overview").style.display = "none";
+      document.getElementById("html-overview").style.display = "none";
+      document.getElementById("css-overview").style.display = "block";
+      document.getElementById("js-details").style.display = "none";
+      document.getElementById("html-details").style.display = "none";
+      document.getElementById("css-details").style.display = "block";
+      break;
+  }
 }
 
 function showHiddenList(el) {
-    const hiddenUl = el.parentElement.children[1];
-    switch (hiddenUl.style.display) {
-        case "none":
-            hiddenUl.style.display = "block";
-            break;
-        case "block":
-            hiddenUl.style.display = "none";
-    }
+  const hiddenUl = el.parentElement.children[1];
+  switch (hiddenUl.style.display) {
+    case "none":
+      hiddenUl.style.display = "block";
+      break;
+    case "block":
+      hiddenUl.style.display = "none";
+  }
 }
 
 function runCode() {
-    var iFrameObject = document.getElementById("iframe");
-    var idoc = iFrameObject.contentDocument || iFrameObject.contentWindow;
-    idoc.open();
-    idoc.write("<script> " + variable_editor.getValue() + "</script>");
-    idoc.close();
+  var iFrameObject = document.getElementById("iframe");
+  var idoc = iFrameObject.contentDocument || iFrameObject.contentWindow;
+  idoc.open();
+  idoc.write("<script> " + variable_editor.getValue() + "</script>");
+  idoc.close();
 }
 
-
 function Editor(identifer, code) {
-    this.identifer = identifer;
-    this.code = code;
-    this.currentEditor = ace.edit(identifer);
-    this.currentEditor.setTheme("ace/theme/xcode");
-    this.currentEditor.session.setMode("ace/mode/javascript");
-    this.currentEditor.setValue(code, 1);
-    editorsMap.set(identifer, this.currentEditor);
+  this.identifer = identifer;
+  this.code = code;
+  this.currentEditor = ace.edit(identifer);
+  this.currentEditor.setTheme("ace/theme/xcode");
+  this.currentEditor.session.setMode("ace/mode/javascript");
+  this.currentEditor.setValue(code, 1);
+  editorsMap.set(identifer, this.currentEditor);
 }
