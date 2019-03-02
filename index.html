@@ -533,12 +533,66 @@
                                     declare
                                     a <strong>block-scope local variable</strong>.</li>
                             </ul>
-                            <button onclick="runCode()">Run</button>
-                            <div id="editor" style="height: 75px;"></div>
-                            <p>Result</p>
-                            <iframe id="iframe"></iframe>
+                            <button onclick="runCode(event)">Run</button>
+                            <div id="editor" style="height: 85px;"></div>
+                            <div class="form-group">
+                                <label for="exampleInputFile">Result</label>
+                                <p class="help-block result">Click Run button to see the result.</p>
+                            </div>
                     </div>
     
+                    <div id="blocks" style="display:block">
+                        <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                                aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                                style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                            Blocks</h2>
+                        <p>A <code>block</code> statement is used to group zero or more statements. The block is
+                            delimited by a pair of <code>curly brackets {  }</code> and may optionally be labelled:</p>
+                        <p>A few example can be seen below</p>
+                        <button onclick="runCode(event)">Run</button>
+                        <div id="js-blocks" style="height: 75px;"></div>
+                        <div class="form-group"> <label for="exampleInputFile">Result</label>
+                            <p class="help-block result">Click Run button to see the result.</p>
+                        </div>
+                    </div>
+
+                    <div id="scope" style="display:block">
+                        <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                                aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                                style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                            Scope</h2>
+                        <p>In JavaScript <code>scope</code> means the visibility of a property</p>
+                        <p>We have two types of scope in JavaScript</p>
+                        <ul>
+                            <li>Local Scope</li>
+                            <li>Global Scope</li>
+                        </ul>
+                        <p>Note:</p>
+                        <ul>
+                            <li><code>JavaScript has function scope: Each function creates a new scope. They can only be accessed from within the function.</code>
+                            </li>
+                            <li><code>Variables defined inside a function are not accessible (visible) from outside the function, those become <code>LOCAL</code>
+                                to the function.</code></li>
+                        </ul>
+                        <button onclick="runCode(event)">Run</button>
+                        <div id="js-scope" style="height: 75px;"></div>
+                        <div class="form-group"> <label for="exampleInputFile">Result</label>
+                            <p class="help-block result">Click Run button to see the result.</p>
+                        </div>
+                    </div>
+
+                    <div id="local-scope" style="display:block">
+                        <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                                aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                                style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                            Local Scope</h4>
+                        <button onclick="runCode(event)">Run</button>
+                        <div id="js-scope-editor" style="height: 100px;"></div>
+                        <div class="form-group"> <label for="exampleInputFile">Result</label>
+                            <p class="help-block result">Click Run button to see the result.</p>
+                        </div>
+                    </div>
+
                     <div id="types" style="display:block">
                         <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
                                 aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
@@ -561,8 +615,11 @@
                             <li><code>symbol</code> - for unique identifiers.</li>
                         </ul>
     
-                        <button onclick="runCode()">Run</button>
+                        <button onclick="runCode(event)">Run</button>
                         <div id="js-datatypes-editor" style="height: 250px;"></div>
+                        <div class="form-group"> <label for="exampleInputFile">Result</label>
+                            <p class="help-block result">Click Run button to see the result.</p>
+                        </div>
                     </div>
     
                     <div id="js-boolean" style="display:block">
@@ -584,8 +641,11 @@
                             </li>
                         </ul>
     
-                        <button onclick="runCode()">Run</button>
+                        <button onclick="runCode(event)">Run</button>
                         <div id="js-boolean-editor" style="height: 100px;"></div>
+                        <div class="form-group"> <label for="exampleInputFile">Result</label>
+                            <p class="help-block result">Click Run button to see the result.</p>
+                        </div>
                     </div>
     
                     <div id="js-number" style="display:block">
@@ -608,8 +668,11 @@
                             </li>
                         </ul>
     
-                        <button onclick="runCode()">Run</button>
+                        <button onclick="runCode(event)">Run</button>
                         <div id="js-number-editor" style="height: 150px;"></div>
+                        <div class="form-group"> <label for="exampleInputFile">Result</label>
+                            <p class="help-block result">Click Run button to see the result.</p>
+                        </div>
                     </div>
     
     
@@ -643,17 +706,26 @@
     
                         <p>Strings have some utils methods like :</p>
                         <ul>
-                            <li style="list-style: decimal"><code>toUpperCase()</code> - method returns the calling string value converted to uppercase</li>
-                            <li style="list-style: decimal"><code>toLowerCase()</code> - method returns the calling string value converted to lower case.</li>
-                            <li style="list-style: decimal"><code>concat(arg1, arg2)</code> - method concatenates the string arguments to the calling string and returns a new string.</li>
-                            <li style="list-style: decimal"><code>trim()</code> - method removes whitespace from both ends of a string</li>
-                            <li style="list-style: decimal"><code>includes()</code> - method determines whether one string may be found within another string</li>
+                            <li style="list-style: decimal"><code>toUpperCase()</code> - method returns the calling
+                                string value converted to uppercase</li>
+                            <li style="list-style: decimal"><code>toLowerCase()</code> - method returns the calling
+                                string value converted to lower case.</li>
+                            <li style="list-style: decimal"><code>concat(arg1, arg2)</code> - method concatenates the
+                                string arguments to the calling string and returns a new string.</li>
+                            <li style="list-style: decimal"><code>trim()</code> - method removes whitespace from both
+                                ends of a string</li>
+                            <li style="list-style: decimal"><code>includes()</code> - method determines whether one
+                                string may be found within another string</li>
                         </ul>
-                        <p> A lot more useful strings utils will be found here: 
-                            <a src="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Link</a>
+                        <p> A lot more useful strings utils will be found here:
+                            <a
+                                src="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Link</a>
                         </p>
-                        <button onclick="runCode()">Run</button>
+                        <button onclick="runCode(event)">Run</button>
                         <div id="js-string-editor" style="height: 150px;"></div>
+                        <div class="form-group"> <label for="exampleInputFile">Result</label>
+                            <p class="help-block result">Click Run button to see the result.</p>
+                        </div>
                     </div>
     
                     <div id="js-arrays" style="display:block">
@@ -687,8 +759,11 @@
                             <li>Copy an Array = >
                                 <code>var first = var shallowCopy = cars.slice(); //make a copy </code></li>
                         </ul>
-                        <button onclick="runCode()">Run</button>
+                        <button onclick="runCode(event)">Run</button>
                         <div id="js-array-editor" style="height: 150px;"></div>
+                        <div class="form-group"> <label for="exampleInputFile">Result</label>
+                            <p class="help-block result">Click Run button to see the result.</p>
+                        </div>
                     </div>
     
                     <!-- Object section Start -->
@@ -716,8 +791,11 @@
                                 objects of same type.</li>
                         </ul>
     
-                        <button onclick="runCode()">Run</button>
+                        <button onclick="runCode(event)">Run</button>
                         <div id="js-object-editor" style="height: 320px;"></div>
+                        <div class="form-group"> <label for="exampleInputFile">Result</label>
+                            <p class="help-block result">Click Run button to see the result.</p>
+                        </div>
                     </div>
     
                     <!-- Object section End -->
@@ -738,8 +816,11 @@
                                 <code>false</code></li>
                         </ul>
     
-                        <button onclick="runCode()">Run</button>
+                        <button onclick="runCode(event)">Run</button>
                         <div id="js-condition-editor" style="height: 150px;"></div>
+                        <div class="form-group"> <label for="exampleInputFile">Result</label>
+                            <p class="help-block result">Click Run button to see the result.</p>
+                        </div>
                     </div>
                     <!-- End If statement -->
                     <!-- Switch statement -->
@@ -753,8 +834,11 @@
                         <p>The <code>switch</code> expression is evaluated once, the value of the expression is compared
                             with the values of each case, <code>if</code> there is a match, the associated block of code
                             is executed</p>
-                        <button onclick="runCode()">Run</button>
+                        <button onclick="runCode(event)">Run</button>
                         <div id="js-switch-editor" style="height: 370px;"></div>
+                        <div class="form-group"> <label for="exampleInputFile">Result</label>
+                            <p class="help-block result">Click Run button to see the result.</p>
+                        </div>
                     </div>
                     <!-- End Switch statement -->
     
@@ -801,8 +885,11 @@
                         <p>The condition is evaluated after executing the statement,
                             resulting in the specified statement executing at least once</p>
                         <img src="images/dowhile.jpg" /></br>
-                        <button onclick="runCode()">Run</button>
+                        <button onclick="runCode(event)">Run</button>
                         <div id="js-dowhile-editor" style="height: 150px;"></div>
+                        <div class="form-group"> <label for="exampleInputFile">Result</label>
+                            <p class="help-block result">Click Run button to see the result.</p>
+                        </div>
                     </div>
                     <!-- End While statement -->
     
@@ -830,8 +917,11 @@
                                     <code>incrementExpression</code> is executed.</li>
                                 <li style="list-style: decimal">Control returns to step 2.</li>
                             </ul>
-                            <button onclick="runCode()">Run</button>
+                            <button onclick="runCode(event)">Run</button>
                             <div id="js-for-editor" style="height: 50px;"></div>
+                            <div class="form-group"> <label for="exampleInputFile">Result</label>
+                                <p class="help-block result">Click Run button to see the result.</p>
+                            </div>
                     </div>
                     <!-- End For statement -->
     
@@ -845,8 +935,11 @@
                         <p>A different property name is assigned to variable(in our case <code>prop</code>) on each
                             iteration.</p>
                         <p>Object whose enumerable properties are iterated over.</p>
-                        <button onclick="runCode()">Run</button>
+                        <button onclick="runCode(event)">Run</button>
                         <div id="js-forin-editor" style="height: 150px;"></div>
+                        <div class="form-group"> <label for="exampleInputFile">Result</label>
+                            <p class="help-block result">Click Run button to see the result.</p>
+                        </div>
                     </div>
                     <!-- End For...in statement -->
     
@@ -863,8 +956,11 @@
                         <p><code>variable</code> - On each iteration a value of a different property is assigned to
                             variable. variable may be declared with <code>const, let, or var.</code></p>
                         <p><code>iterable</code> - Object whose iterable properties are iterated.</p>
-                        <button onclick="runCode()">Run</button>
+                        <button onclick="runCode(event)">Run</button>
                         <div id="js-forof-editor" style="height: 280px;"></div>
+                        <div class="form-group"> <label for="exampleInputFile">Result</label>
+                            <p class="help-block result">Click Run button to see the result.</p>
+                        </div>
                     </div>
                     <!-- End For...of statement -->
     
@@ -911,8 +1007,11 @@
                             <li><code>Function Constructor</code> - The Function constructor creates a new Function
                                 object.</li>
                         </ul>
-                        <button onclick="runCode()">Run</button>
+                        <button onclick="runCode(event)">Run</button>
                         <div id="js-function-editor" style="height: 320px;"></div>
+                        <div class="form-group"> <label for="exampleInputFile">Result</label>
+                            <p class="help-block result">Click Run button to see the result.</p>
+                        </div>
                     </div>
                     <!-- End Define a function -->
     
@@ -935,8 +1034,11 @@
                             Function Returns</h3>
                         <p>Every function in JavaScript returns <code>undefined</code> unless otherwise specified.</p>
                         <p>Below we'll find some examples</p>
-                        <button onclick="runCode()">Run</button>
+                        <button onclick="runCode(event)">Run</button>
                         <div id="js-functionreturn-editor" style="height: 180px;"></div>
+                        <div class="form-group"> <label for="exampleInputFile">Result</label>
+                            <p class="help-block result">Click Run button to see the result.</p>
+                        </div>
                     </div>
                     <!-- Function Return -->
                 </div>
@@ -963,8 +1065,11 @@
                         Class Definition</h2>
                     <p>Creating a class is super easy. All you do is use the class keyword followed by a name for the
                         class, and then your opening and closing curly braces.</p>
-                    <button onclick="runCode()">Run</button>
+                    <button onclick="runCode(event)">Run</button>
                     <div id="js-classes-editor" style="height: 200px;"></div>
+                    <div class="form-group"> <label for="exampleInputFile">Result</label>
+                        <p class="help-block result">Click Run button to see the result.</p>
+                    </div>
                 </div>
     
                 <div id="js-class-constructor" style="display:block">
@@ -995,8 +1100,11 @@
                         methods are called without instantiating their class and cannot be called through a class
                         instance. Static methods are often used to create utility functions for an application you can
                         see how these are defined and works in the example above.</p>
-                    <button onclick="runCode()">Run</button>
+                    <button onclick="runCode(event)">Run</button>
                     <div id="js-class-methods-editor" style="height: 200px;"></div>
+                    <div class="form-group"> <label for="exampleInputFile">Result</label>
+                        <p class="help-block result">Click Run button to see the result.</p>
+                    </div>
                 </div>
                 <div id="js-getset-methods" style="display:block">
                     <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
@@ -1007,8 +1115,11 @@
                         property is looked up.</p>
                     <p>The <code>set</code> syntax binds an object property to a function to be called when there is an
                         attempt to set that property.</p>
-                    <button onclick="runCode()">Run</button>
+                    <button onclick="runCode(event)">Run</button>
                     <div id="js-getset-method-editor" style="height: 325px;"></div>
+                    <div class="form-group"> <label for="exampleInputFile">Result</label>
+                        <p class="help-block result">Click Run button to see the result.</p>
+                    </div>
                 </div>
                 <div id="js-class-inheritance" style="display:block">
                     <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
@@ -1020,9 +1131,13 @@
                         In the example below we are going to combine the <code>class syntax feature</code> with the
                         concept of <code>inheritance</code>
                     </p>
-                    <p>We'll combine all things that we achieve and learn so far to exemplify better the inheritance. </p>
-                    <button onclick="runCode()">Run</button>
+                    <p>We'll combine all things that we achieve and learn so far to exemplify better the inheritance.
+                    </p>
+                    <button onclick="runCode(event)">Run</button>
                     <div id="js-class-inheritance-editor" style="height: 400px;"></div>
+                    <div class="form-group"> <label for="exampleInputFile">Result</label>
+                        <p class="help-block result">Click Run button to see the result.</p>
+                    </div>
                 </div>
     
             </div>
