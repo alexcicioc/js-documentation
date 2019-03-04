@@ -57,7 +57,7 @@
                 </span>
             </div>
         </div>
-        <div id="css-overview" class="container" style="display:none">
+        <div id="css-overview" class="container" style="display:block">
             <h1>CSS</h1>
             <div id="carbonads-css">
                 <span>
@@ -67,7 +67,7 @@
                 </span>
             </div>
         </div>
-        <div id="html-overview" class="container" style="display:block">
+        <div id="html-overview" class="container" style="display:none">
             <h1>HTML</h1>
             <div id="carbonads-html">
                 <span>
@@ -79,17 +79,13 @@
         </div>
     </div>
 
-    <div id="html-details" class="container bs-docs-container">
+    <div id="html-details" class="container bs-docs-container" style="display:none">
         <div class="row">
             <div class="col-md-9" role="main">
                 <div class="bs-docs-section">
-                    <div id="html-overview">
-                        <h1 class="page-header"><a class="anchorjs-link " href="#html-overview"
-                                aria-label="Anchor link for: html-overview" data-anchorjs-icon=""
-                                style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>HTML
-                            Overview
-                        </h1>
-                        <p>Text for html overview - to do</p>
+                    <div id="html-overview-start">
+                        <h1 class="page-header">HTML Overview</h1>
+                        <p>Originally, HTML was developed with the intent of defining the structure of documents like headings, paragraphs, lists, and so forth to facilitate the sharing of scientific information between researchers.<br/>Now, HTML is being widely used to format web pages with the help of different tags available in HTML language.</p>
                     </div>
     
                     <div id="html-what-is">
@@ -208,6 +204,145 @@
                                 this: name="value". Attributes are always added to the start tag of an HTML element and
                                 the value is surrounded by quotes. </p>
                         </div>
+                        <h2 id="html-id-attribute">Using The id Attribute</h2>
+                        <div>
+                            <p>The <code>id</code> attribute specifies a unique id for an HTML element (the value must be unique within the HTML document).<br/>The id value can be used by CSS and JavaScript to perform certain tasks for a unique element with the specified id value.<br/>In CSS, to select an element with a specific id, write a hash (#) character, followed by the id of the element:</p>
+                            <code>
+                                    &lt;style&gt;<br/>
+                                    &nbsp;&nbsp;#myHeader {<br/>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;background-color: lightblue;<br/>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;color: black;<br/>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;padding: 15px;<br/>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br/>
+                                    &nbsp;&nbsp;} <br/>
+                                    &lt;/style&gt;<br/>                              
+                                    &lt;h1 id="myHeader"&gt;My Header&lt;/h1&gt;<br/>
+                            </code>
+                            <br/><p>And the result of the above code would be this:</p>
+                            <style>
+                            #myHeader {
+                                background-color: lightblue;
+                                color: black;
+                                padding: 15px;
+                                text-align: center;
+                            } 
+                            </style>                            
+                            <h1 id="myHeader">My Header</h1>
+                            <p>Note:<br/>
+                                - The id attribute can be used on any HTML element.<br/>
+                                - The id value is case-sensitive.<br/>
+                                - The id value must contain at least one character, and must not contain whitespace (spaces, tabs, etc.).
+                            </p>
+                        </div>
+                        <h2 id="html-class-attribute">Using The class Attribute</h2>
+                        <div>
+                            <p>The HTML <code>class</code> attribute is used to define equal styles for elements with the same class name. So, all HTML elements with the same class attribute will have the same format and style. Here we have three <code>&lt;div&gt;</code> elements that point to the same class name:</p>
+                            <code>
+                                    &lt;!DOCTYPE html&gt;<br/>
+                                    &lt;html&gt;<br/>
+                                    &nbsp;&lt;head&gt; <br/>                                   
+                                    &nbsp;&nbsp;&lt;style&gt;<br/>
+                                    &nbsp;&nbsp;&nbsp;.cities {<br/>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;background-color: black;<br/>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;color: white;<br/>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;margin: 20px;<br/>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;padding: 20px;<br/>
+                                    &nbsp;&nbsp;&nbsp;}<br/>
+                                    &nbsp;&nbsp;&lt;/style&gt;<br/>
+                                    &nbsp;&lt;/head&gt;<br/>
+                                    &nbsp;&lt;body&gt;<br/>                                   
+                                        &nbsp;&nbsp;&lt;div class="cities"&gt;<br/>
+                                            &nbsp;&nbsp;&nbsp;&lt;h2>London&lt;/h2&gt;<br/>
+                                            &nbsp;&nbsp;&nbsp;&lt;p>London is the capital of England.&lt;/p&gt;<br/>
+                                        &nbsp;&nbsp;&lt;/div&gt;<br/>                                        
+                                        &nbsp;&nbsp;&lt;div class="cities"&gt;<br/>
+                                            &nbsp;&nbsp;&nbsp;&lt;h2>Paris&lt;/h2&gt;<br/>
+                                            &nbsp;&nbsp;&nbsp;&lt;p>Paris is the capital of France.&lt;/p&gt;<br/>
+                                        &nbsp;&nbsp;&lt;/div&gt;<br/>                                        
+                                        &nbsp;&nbsp;&lt;div class="cities"&gt;<br/>
+                                            &nbsp;&nbsp;&nbsp;&lt;h2>Tokyo&lt;/h2&gt;<br/>
+                                            &nbsp;&nbsp;&nbsp;&lt;p>Tokyo is the capital of Japan.&lt;/p&gt;<br/>
+                                        &nbsp;&nbsp;&lt;/div&gt;<br/>
+                                    &nbsp;&lt;/body&gt;<br/>
+                                &lt;/html&gt;<br/>
+                            </code>
+                            <br/><p>And the result of the above code would be this:</p>
+                            <style>
+                                .cities {
+                                    background-color: black;
+                                    color: white;
+                                    margin: 20px;
+                                    padding: 20px;
+                                } 
+                            </style>
+                            </head>
+                            <body>                            
+                            <div class="cities">
+                                <h2>London</h2>
+                                <p>London is the capital of England.</p>
+                            </div>                            
+                            <div class="cities">
+                                <h2>Paris</h2>
+                                <p>Paris is the capital of France.</p>
+                            </div>                            
+                            <div class="cities">
+                                <h2>Tokyo</h2>
+                                <p>Tokyo is the capital of Japan.</p>
+                            </div>                            
+                            <p>Note:<br/>
+                                - The class attribute can be used on any HTML element.<br/>
+                                - The class name is case sensitive!<br/>
+                                - Multiple Classes: HTML elements can have more than one class name, each class name must be separated by a space.<br/>
+                                &nbsp;&nbsp;<code>&lt;h2 class="city main"&gt;Londonl&lt;/h2&gt;</code>
+                            </p>
+                        </div>
+                        <h2 class="html-id-class-diffs">Difference Between <code>class</code> And <code>id</code></h2>
+                        <div>
+                            <p>An HTML element can only have one unique id that belongs to that single element, while a class name can be used by multiple elements:</p>
+                            <code>
+                                &lt;style&gt;<br/>
+                                &nbsp;/* Style the element with the id "myNewHeader" */<br/>
+                                &nbsp;#myNewHeader {<br/>
+                                    &nbsp;&nbsp;background-color: lightblue;<br/>
+                                    &nbsp;&nbsp;color: black;<br/>
+                                    &nbsp;&nbsp;padding: 40px;<br/>
+                                    &nbsp;&nbsp;text-align: center;<br/>
+                                &nbsp;}<br/>                            
+                                &nbsp;/* Style all elements with the class name "city" */<br/>
+                                &nbsp;.city {<br/>
+                                    &nbsp;&nbsp;background-color: tomato;<br/>
+                                    &nbsp;&nbsp;color: white;<br/>
+                                    &nbsp;&nbsp;padding: 10px;<br/>
+                                &nbsp;}<br/>
+                                &lt;/style&gt;<br/>                            
+                                &lt;!-- A unique element --&gt;<br/>
+                                &lt;h1 id="myNewHeader"&gt;My Cities&lt;/h1&gt;<br/>                            
+                                &lt;!-- Multiple similar elements --&gt;<br/>
+                                &lt;h2 class="city"&gt;London&lt;/h2&gt;<br/>
+                                &lt;p&gt;London is the capital of England.&lt;/p&gt;<br/>                           
+                                &lt;h2 class="city"&gt;Paris&lt;/h2&gt;<br/>
+                                &lt;p&gt;Paris is the capital of France.&lt;/p&gt;<br/>
+                            </code>
+                            <br/><p>And the result of the above code would be this:</p>
+                            <style>
+                            #myNewHeader {
+                                background-color: lightgreen;
+                                color: black;
+                                padding: 40px;
+                                text-align: center;
+                            }
+                            .city {
+                                background-color: tomato;
+                                color: white;
+                                padding: 10px;
+                            } 
+                            </style>
+                            <h1 id="myNewHeader">My Cities</h1>
+                            <h2 class="city">London</h2>
+                            <p>London is the capital of England.</p>                                
+                            <h2 class="city">Paris</h2>
+                            <p>Paris is the capital of France.</p>
+                        </div>
                     </div>
                     <div id="html-types-elements">
                         <h1 class="page-header">Types of elements: block vs inline</h1>
@@ -252,43 +387,72 @@
                 <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top">
                     <p><strong>Summary</strong></p>
                     <ul class="nav bs-docs-sidenav">
-                        <li><a href="#html-overview">HTML Overview</a></li>
+                        <li><a href="#html-overview-start">HTML Overview</a></li>
                         <li><a href="#html-what-is">What is HTML?</a></li>
                         <li><a href="#html-what-are-tags">What are tags?</a></li>
                         <li><a href="#html-basic-structure">HTML basic structure</a>
-                            <ul class="nav">
+                            <ul class="arrow">
                                 <li><a href="#html-simple-document">A Simple HTML Document</a></li>
                                 <li><a href="#html-example-explained">Example explained</a></li>
                             </ul>
                         </li>
-                        <li><a href="html-attributes">HTML attriibutes</a></li>
+                        <li><a href="#html-attributes">HTML attributes</a>
+                            <ul class="arrow">
+                                <li><a href="#html-id-attribute">Using The id Attribute</a></li>
+                                <li><a href="#html-class-attribute">Using The class Attribute</a></li>
+                                <li><a href="#html-id-class-diffs">Difference Between class And id</a></li>
+                            </ul>
+                        </li>
+
                         <li><a href="#html-types-elements">Types of elements: block vs inline</a>
-                            <ul class="nav">
+                            <ul class="arrow">
                                 <li><a href="#html-block-elements">Block elements</a></li>
                                 <li><a href="#html-inline-elements">Inline elements</a></li>
                             </ul>
                         </li>
-                        <li><a href="html-including-files">Including a external file</a></li>
+                        <li><a href="#html-including-files">Including a external file</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </div>
 
-    <div id="css-details" class="container bs-docs-container" style="display: none;">
+    <div id="css-details" class="container bs-docs-container">
         <div class="row">
             <div class="col-md-9" role="main">
                 <div class="bs-docs-section">
                     <div id="css-overview">
-                        <h1 class="page-header"><a class="anchorjs-link " href="#overview"
-                                aria-label="Anchor link for: overview" data-anchorjs-icon=""
-                                style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>CSS
-                            Overview
-                        </h1>
-                        <p>some text</p>
+                        <h1 class="page-header">CSS Overview</h1>
+                        <p>Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language like HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.
+                        <br/>  
+                        CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts. 
+                        <br/>                        
+                        The name cascading comes from the specified priority scheme to determine which style rule applies if more than one rule matches a particular element. This cascading priority scheme is predictable.</p>
                     </div>
-    
-                    <!-- TODO Add similar divs like the div with id=overview -->
+                    <div id="css-selectors">
+                        <h1 class="page-header">CSS Selectors</h1>
+                        <p>In CSS, selectors are used to target the HTML elements on our web pages that we want to style. There are a wide variety of CSS selectors available, allowing for fine grained precision when selecting elements to style. </p>                        
+                        <p>Selectors can be divided into the following categories:</p>
+                        <ul>
+                            <li><code>Simple selectors</code>: Match one or more elements based on element type, class, or id.</li>
+                            <li><code>Attribute selectors</code>: Match one or more elements based on their attributes/attribute values.</li>
+                            <li><code>Pseudo-classes</code>: Match one or more elements that exist in a certain state, such as an element that is being hovered over by the mouse pointer, or a checkbox that is currently disabled or checked, or an element that is the first child of its parent in the DOM tree.</li>
+                            <li><code>Pseudo-elements</code>: Match one or more parts of content that are in a certain position in relation to an element, for example the first word of each paragraph, or generated content appearing just before an element.</li>
+                            <li><code>Combinators</code>: These are not exactly selectors themselves, but ways of combining two or more selectors in useful ways for very specific selections. So for example, you could select only paragraphs that are direct descendants of divs, or paragraphs that come directly after headings.</li>
+                            <li><code>Multiple selectors</code>: Again, these are not separate selectors; the idea is that you can put multiple selectors on the same CSS rule, separated by commas, to apply a single set of declarations to all the elements selected by those selectors.</li>
+                        </ul>
+                        <h2 id="css-syntax">CSS syntax</h2>
+                        <p><code>selector { property: values;}</code></p>
+                        <p>
+                            Examples: <br> 
+                            <code>
+                                #fruitsList{ 
+                                    <br/>&nbsp;&nbsp;color: green; 
+                                    <br/>&nbsp;&nbsp;font-size: 14px;  
+                                <br/>}
+                            </code>
+                        </p>
+                    </div>
                 </div>
             </div>
     
@@ -296,13 +460,8 @@
                 <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top">
                     <p><strong>Summary</strong></p>
                     <ul class="nav bs-docs-sidenav">
-                        <li>
-                            <a href="#css-overview">CSS Overview</a>
-                            <ul class="nav">
-                                <!-- TODO Add similar li to point to the newly content added -->
-                                <li><a href="#what-is-javascript">What is CSS</a></li>
-                            </ul>
-                        </li>
+                        <li><a href="#css-overview">CSS Overview</a></li>
+                        <li><a href="#css-selectors">CSS Selectors</a></li>                                                    
                     </ul>
                 </nav>
             </div>
