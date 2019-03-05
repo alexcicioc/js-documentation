@@ -8,13 +8,12 @@ function update() {}
 
 function setupEditor() {
   new Editor(
-    "editor",
-    ` const x = "Test";
-    var y = 2;
-    let z = true;
-    console.log("av");
-`
-  );
+    "editor",`const x = "Test";
+var y = 2;
+let z = true;
+
+console.log("av");
+`, 1);
 
   new Editor(
     "js-datatypes-editor",
@@ -92,7 +91,7 @@ var Car = {
     }
 };
     
-console.log(Car.brand, Car.start());
+alert(Car.brand, Car.start());
     
     
 //The same example as above but using [Object constructors function]
@@ -102,7 +101,7 @@ function Car(brand, color, doors){
     this.doors=doors;
     
     function start() {
-        console.log("Starting...");
+        alert("Starting...");
     }
 }
     
@@ -115,9 +114,9 @@ myCar.start();`
     ` let n = 5;
 
 if(n>5){
-    console.log("Greater then 5");
+    alert("Greater then 5");
 } else {
-    console.log("Less or equal...");
+    alert("Less or equal...");
 }
 
 //another way to write if/else statement
@@ -152,7 +151,7 @@ switch (day) {
         day = "Saturday";
     }
     
-    console.log(day); //what value should have day variable ?`,
+    alert(day); //what value should have day variable ?`,
     1
   );
 
@@ -166,10 +165,10 @@ do {
     result = result + i;
 } while (i < 5);
     
-console.log(result);
+alert(result);
 // expected result: "12345"`,
     1
-  );
+  )
 
   new Editor(
     "js-forin-editor",
@@ -180,7 +179,7 @@ for (var prop in obj) {
     text += obj[prop]+ " ";
 }
     
-console.log(text);
+alert(text);
 // expected output: "Audi black 5"`,
     1
   );
@@ -188,7 +187,7 @@ console.log(text);
   new Editor(
     "js-for-editor",
     `for(let i=0; i<10; i++){
-console.log(i);
+alert(i);
 }`,
     1
   );
@@ -199,14 +198,14 @@ console.log(i);
 
 for (let value of iterable) {
   value += 1;
-  console.log(value);
+  alert(value);
 }
 // 11 21 31
 
 iterable = 'boo';
 
 for (let value of iterable) {
-  console.log(value);
+  alert(value);
 }
 
 //"b"
@@ -228,7 +227,7 @@ function firstFunction(parameters){
 const param1 = true;
 const param2 = false;
 function twoParams(param1, param2){
-  console.log(param1, param2);
+  alert(param1, param2);
 }
 
 // Function Expressions 
@@ -243,7 +242,7 @@ let thirdFunction = (parameters) => {
 
 var sum = new Function('a', 'b', 'return a + b');
 
-console.log(sum(2, 6));
+alert(sum(2, 6));
 `,
     1
   );
@@ -320,12 +319,12 @@ class Person {
   }
 
   walk() {
-    console.log(this._name + ' is walking.');
+    alert(this._name + ' is walking.');
   }
 }
          
 let bob = new Person('Bob');
-console.log(bob.name);  // Outputs 'BOB'
+alert(bob.name);  // Outputs 'BOB'
 
 `,
     1
@@ -365,6 +364,14 @@ class Person {
 `,
     1
   );
+  new Editor(
+    "js-scope-editor", `function showLog(){
+  var log ="I'am the log";
+  // Inside this function we have access tho the log 
+}
+
+//Here , we cannot access the log variable
+  `)
 }
 
 function switchOverview(event) {
@@ -407,12 +414,17 @@ function showHiddenList(el) {
   }
 }
 
-function runCode() {
-  var iFrameObject = document.getElementById("iframe");
-  var idoc = iFrameObject.contentDocument || iFrameObject.contentWindow;
-  idoc.open();
-  idoc.write("<script> " + variable_editor.getValue() + "</script>");
-  idoc.close();
+function runCode(event) {
+
+  var editorElement = event.target.parentNode.getElementsByClassName("ace_editor")[0];
+  var resultElement = event.target.parentNode.getElementsByClassName("result")[0];
+  console.log = function(message) {
+    resultElement.innerHTML = message;
+  };
+
+  var identifier= editorElement.getAttribute("id");
+  var editor = editorsMap.get(identifier);
+  eval(editor.getValue());
 }
 
 function Editor(identifer, code) {
@@ -424,3 +436,4 @@ function Editor(identifer, code) {
   this.currentEditor.setValue(code, 1);
   editorsMap.set(identifer, this.currentEditor);
 }
+
