@@ -416,7 +416,6 @@
             </div>
         </div>
     </div>
-
     <div id="css-details" class="container bs-docs-container">
         <div class="row">
             <div class="col-md-9" role="main">
@@ -429,19 +428,8 @@
                         <br/>                        
                         The name cascading comes from the specified priority scheme to determine which style rule applies if more than one rule matches a particular element. This cascading priority scheme is predictable.</p>
                     </div>
-                    <div id="css-selectors">
-                        <h1 class="page-header">CSS Selectors</h1>
-                        <p>In CSS, selectors are used to target the HTML elements on our web pages that we want to style. There are a wide variety of CSS selectors available, allowing for fine grained precision when selecting elements to style. </p>                        
-                        <p>Selectors can be divided into the following categories:</p>
-                        <ul>
-                            <li><code>Simple selectors</code>: Match one or more elements based on element type, class, or id.</li>
-                            <li><code>Attribute selectors</code>: Match one or more elements based on their attributes/attribute values.</li>
-                            <li><code>Pseudo-classes</code>: Match one or more elements that exist in a certain state, such as an element that is being hovered over by the mouse pointer, or a checkbox that is currently disabled or checked, or an element that is the first child of its parent in the DOM tree.</li>
-                            <li><code>Pseudo-elements</code>: Match one or more parts of content that are in a certain position in relation to an element, for example the first word of each paragraph, or generated content appearing just before an element.</li>
-                            <li><code>Combinators</code>: These are not exactly selectors themselves, but ways of combining two or more selectors in useful ways for very specific selections. So for example, you could select only paragraphs that are direct descendants of divs, or paragraphs that come directly after headings.</li>
-                            <li><code>Multiple selectors</code>: Again, these are not separate selectors; the idea is that you can put multiple selectors on the same CSS rule, separated by commas, to apply a single set of declarations to all the elements selected by those selectors.</li>
-                        </ul>
-                        <h2 id="css-syntax">CSS syntax</h2>
+                    <div id="css-syntax">
+                        <h1 id="page-header">CSS Syntax</h1>
                         <p><code>selector { property: values;}</code></p>
                         <p>
                             Examples: <br> 
@@ -452,22 +440,110 @@
                                 <br/>}
                             </code>
                         </p>
+                    </div>                                                                                 
+                    <div id="css-selectors">
+                        <h1 class="page-header">CSS Selectors</h1>                        
+                        <p>In CSS, selectors are used to target the HTML elements on our web pages that we want to style. There are a wide variety of CSS selectors available, allowing for fine grained precision when selecting elements to style. </p>                        
+                        <p>Selectors can be divided into the following categories:</p>
+                        
+                        <div id="css-simple-selectors">
+                            <h2><code>Simple selectors</code></h2> Match one or more elements based on element type, class, or id.
+                            <h3>Example:</h3>
+                            <h4>Here is some HTML:</h4>                                                                                    
+                            <code>&nbsp;&lt;p class="question"&gt;What color do you like?&lt;/p&gt;<br/>&nbsp;&lt;div id="question"&gt;I prefer BLACK!&lt;/div&gt;</code>
+                            <h4>A simple part of a style sheet:</h4>                                                                                    
+                            <code>                                
+                                .question {<br/> &nbsp;&nbsp;color: orange;<br/> }<br/>                                                                  
+                                #question {<br/> &nbsp;&nbsp;color: green; <br/> }<br/>                                
+                            </code>                            
+                            <h4>And the result would be this:</h4>
+                            <style>
+                                .question{color:orange;} #question{color: green;}
+                            </style>
+                            <div class="question">What color do you like?</div>
+                            <div id="question">I like blue.</div>
+                        </div>
+                        <h3>Give it a try!</h3>
+                        <div id="css-container-1" class="css-container css-grid">
+                            <form>
+                                <h4>HTML</h4>
+                                <textarea id="css-htmliframe-1"></textarea>
+                                <h4>CSS</h4>
+                                <textarea id="css-cssiframe-1"></textarea>
+                            </form>
+                        </div>
+                        <div class="css-output css-grid">
+                            <h4>Result:</h4>
+                            <iframe id="css-iframe-1"></iframe>
+                        </div>
+                        <div class="clear"></div>  
+                        <script>
+                        (function()  {
+                            var frame = $('#css-iframe-1'),
+                                contents = frame.contents(),
+                                body =  contents.find('body'),
+                                styleTag = contents.find('head').append('<style></style>').children('style');
+                            $('#css-container-1 textarea').focus(function() {
+                                var $this = $(this);
+                                $this.keyup(function() {
+                                if( $this.attr('id') === 'css-htmliframe-1' ) { 
+                                    body.html( $this.val() );
+                                }else{
+                                    styleTag.text( $this.val() );
+                                }
+                                });
+                            });
+                        })();
+                        </script>
+                        <div id="css-attribute-selectors">
+                            <h2><code>Attribute selectors</code></h2> Match one or more elements based on their attributes/attribute values.
+                            <br/>
+                            Example: 
+                        </div>
+                        <div id="css-pseudo-classes">
+                            <h2><code>Pseudo-classes</code></h2> Match one or more elements that exist in a certain state, such as an element that is being hovered over by the mouse pointer, or a checkbox that is currently disabled or checked, or an element that is the first child of its parent in the DOM tree.
+                            <br/>
+                            Example: 
+                        </div>
+                        <div id="css-pseudo-elements">
+                            <h2><code>Pseudo-elements</code></h2> Match one or more parts of content that are in a certain position in relation to an element, for example the first word of each paragraph, or generated content appearing just before an element.
+                            <br/>
+                            Example: 
+                        </div>
+                        <div id="css-combinators">
+                            <h2><code>Combinators</code></h2> These are not exactly selectors themselves, but ways of combining two or more selectors in useful ways for very specific selections. So for example, you could select only paragraphs that are direct descendants of divs, or paragraphs that come directly after headings.
+                            <br/>
+                            Example: 
+                        </div>
+                        <div id="css-multiple-selectors">
+                            <h2><code>Multiple selectors</code></h2> Again, these are not separate selectors; the idea is that you can put multiple selectors on the same CSS rule, separated by commas, to apply a single set of declarations to all the elements selected by those selectors.
+                            <br/>Example:                                                       
+                        </div> 
                     </div>
                 </div>
-            </div>
-    
+            </div>    
             <div class="sticky col-md-3" role="complementary">
                 <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top">
                     <p><strong>Summary</strong></p>
                     <ul class="nav bs-docs-sidenav">
                         <li><a href="#css-overview">CSS Overview</a></li>
-                        <li><a href="#css-selectors">CSS Selectors</a></li>                                                    
+                        <li><a href="#css-syntax">CSS Syntax</a></li>                                                    
+                        <li><a href="#css-selectors">CSS Selectors</a>                            
+                            <ul class="arrow">
+                                <li><a href="#css-simple-selectors">Simple selectors</a></li>
+                                <li><a href="#css-attribute-selectors">Attribute selectors</a></li>
+                                <li><a href="#css-pseudo-classes">Pseudo-classes</a></li>
+                                <li><a href="#css-pseudo-elements">Pseudo-elements</a></li>
+                                <li><a href="#css-combinators">Combinators</a></li>
+                                <li><a href="#css-multiple-selectors">Multiple selectors</a></li>                                
+                            </ul>                            
+                        </li>
                     </ul>
                 </nav>
             </div>
         </div>
     </div>
-
+    
     <div id="js-details" class="container bs-docs-container" style="display: none;">
         <div class="row">
             <div class="col-md-9" role="main">
