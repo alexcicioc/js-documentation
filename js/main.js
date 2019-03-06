@@ -50,7 +50,7 @@ const anotherValue = new Boolean(false);
 var cars = ["Dacia", "Skoda"];
 
 // You can play with the methods described above
-alert(cars);
+console.log(cars);
 `
   );
 
@@ -60,11 +60,11 @@ alert(cars);
 
 let floatingNumber = 12.345; //floating number
     
-alert( 1 / 0 ); // Will result in Infinity
+console.log( 1 / 0 ); // Will result in Infinity
     
-alert( -1 / 0 ); // Will result in -Infinity
+console.log( -1 / 0 ); // Will result in -Infinity
     
-alert("not a number" / 2); // Will result in NaN, because we try to divide string with number
+console.log("not a number" / 2); // Will result in NaN, because we try to divide string with number
 `
   );
 
@@ -87,11 +87,12 @@ var Car = {
     color: 'black',
     doors: 5,
     start: function(){
-        alert("Starting...");
+        console.log("Starting...");
     }
 };
     
-alert(Car.brand, Car.start());
+console.log(Car.brand);
+console.log(Car.start());
     
     
 //The same example as above but using [Object constructors function]
@@ -101,7 +102,7 @@ function Car(brand, color, doors){
     this.doors=doors;
     
     function start() {
-        alert("Starting...");
+        console.log("Starting...");
     }
 }
     
@@ -114,13 +115,13 @@ myCar.start();`
     ` let n = 5;
 
 if(n>5){
-    alert("Greater then 5");
+    console.log("Greater then 5");
 } else {
-    alert("Less or equal...");
+    console.log("Less or equal...");
 }
 
 //another way to write if/else statement
-(n>5) ? alert("Greater") : alert("Less then");`,
+(n>5) ? console.log("Greater") : console.log("Less then");`,
     1
   );
 
@@ -151,7 +152,7 @@ switch (day) {
         day = "Saturday";
     }
     
-    alert(day); //what value should have day variable ?`,
+    console.log(day); //what value should have day variable ?`,
     1
   );
 
@@ -165,7 +166,7 @@ do {
     result = result + i;
 } while (i < 5);
     
-alert(result);
+console.log(result);
 // expected result: "12345"`,
     1
   )
@@ -179,7 +180,7 @@ for (var prop in obj) {
     text += obj[prop]+ " ";
 }
     
-alert(text);
+console.log(text);
 // expected output: "Audi black 5"`,
     1
   );
@@ -187,7 +188,7 @@ alert(text);
   new Editor(
     "js-for-editor",
     `for(let i=0; i<10; i++){
-alert(i);
+console.log(i);
 }`,
     1
   );
@@ -198,14 +199,14 @@ alert(i);
 
 for (let value of iterable) {
   value += 1;
-  alert(value);
+  console.log(value);
 }
 // 11 21 31
 
 iterable = 'boo';
 
 for (let value of iterable) {
-  alert(value);
+  console.log(value);
 }
 
 //"b"
@@ -227,7 +228,7 @@ function firstFunction(parameters){
 const param1 = true;
 const param2 = false;
 function twoParams(param1, param2){
-  alert(param1, param2);
+  console.log(param1, param2);
 }
 
 // Function Expressions 
@@ -242,7 +243,7 @@ let thirdFunction = (parameters) => {
 
 var sum = new Function('a', 'b', 'return a + b');
 
-alert(sum(2, 6));
+console.log(sum(2, 6));
 `,
     1
   );
@@ -272,7 +273,7 @@ double(); // undefined;
     }
 
     bark(){
-        alert(this.name + ' bark');
+        console.log(this.name + ' bark');
     }
 }
 
@@ -319,12 +320,12 @@ class Person {
   }
 
   walk() {
-    alert(this._name + ' is walking.');
+    console.log(this._name + ' is walking.');
   }
 }
          
 let bob = new Person('Bob');
-alert(bob.name);  // Outputs 'BOB'
+console.log(bob.name);  // Outputs 'BOB'
 
 `,
     1
@@ -339,7 +340,7 @@ class Person {
     }
   
     walk() {
-      alert(this.name + ' is walking.');
+      console.log(this.name + ' is walking.');
     }
   }
            
@@ -350,7 +351,7 @@ class Person {
     }
   
     writeCode() {
-      alert(this.name + ' is coding in ' + this.programmingLanguage + '.');
+      console.log(this.name + ' is coding in ' + this.programmingLanguage + '.');
     }
   }
            
@@ -365,13 +366,31 @@ class Person {
     1
   );
   new Editor(
-    "js-scope-editor", `function showLog(){
-  var log ="I'am the log";
-  // Inside this function we have access tho the log 
+    "js-scope-editor", `var test= "global test";
+
+function showLog(){
+  var test ="I'am the log";
+  // Inside this function we have access to the test 
+  console.log(test);
+}
+    
+showLog();
+console.log(test);
+  `, 1);
+
+  new Editor(
+    "js-global-scope-editor", `var test = "I'm the test";
+
+// we can use "test" here
+console.log(test);
+function myFunction() {
+    
+  // also we can use "test" here 
+  console.log(test);
 }
 
-//Here , we cannot access the log variable
-  `)
+myFunction();
+  `, 1);
 }
 
 function switchOverview(event) {
@@ -418,8 +437,9 @@ function runCode(event) {
 
   var editorElement = event.target.parentNode.getElementsByClassName("ace_editor")[0];
   var resultElement = event.target.parentNode.getElementsByClassName("result")[0];
+  resultElement.innerHTML="";
   console.log = function(message) {
-    resultElement.innerHTML = message;
+    resultElement.innerHTML += message + "</br>";
   };
 
   var identifier= editorElement.getAttribute("id");

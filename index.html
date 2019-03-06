@@ -613,7 +613,7 @@
                             <div id="editor" style="height: 85px;"></div>
                             <div class="form-group">
                                 <label for="exampleInputFile">Result</label>
-                                <p class="help-block result">Click Run button to see the result.</p>
+                                <p class="help-block result"></p>
                             </div>
                     </div>
     
@@ -628,7 +628,7 @@
                         <button onclick="runCode(event)">Run</button>
                         <div id="js-blocks" style="height: 75px;"></div>
                         <div class="form-group"> <label for="exampleInputFile">Result</label>
-                            <p class="help-block result">Click Run button to see the result.</p>
+                            <p class="help-block result"></p>
                         </div>
                     </div>
 
@@ -638,23 +638,23 @@
                                 style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
                             Scope</h2>
                         <p>In JavaScript <code>scope</code> means the visibility of a property</p>
+                        <p>Scope determines the accessibility of variables, objects, and functions from different parts of the code.</p>
                         <p>We have two types of scope in JavaScript</p>
                         <ul>
                             <li>Local Scope</li>
                             <li>Global Scope</li>
                         </ul>
-                        <p>Note:</p>
+                        <p>Local scope</p>
                         <ul>
-                            <li><code>JavaScript has function scope: Each function creates a new scope. They can only be accessed from within the function.</code>
-                            </li>
+                            <li><code>JavaScript has function scope: Each function creates a new scope. They can only be accessed from within the function.</code></li>
                             <li><code>Variables defined inside a function are not accessible (visible) from outside the function, those become <code>LOCAL</code>
                                 to the function.</code></li>
                         </ul>
-                        <button onclick="runCode(event)">Run</button>
-                        <div id="js-scope" style="height: 75px;"></div>
-                        <div class="form-group"> <label for="exampleInputFile">Result</label>
-                            <p class="help-block result">Click Run button to see the result.</p>
-                        </div>
+                        <p>Global scope:</p>
+                        <ul>
+                            <li><code>A variable declared outside a function, becomes GLOBAL.</code></li>
+                            <li><code>A global variable has global scope: All scripts and functions on a web page can access it.</code></li>
+                        </ul>
                     </div>
 
                     <div id="local-scope" style="display:block">
@@ -663,9 +663,21 @@
                                 style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
                             Local Scope</h4>
                         <button onclick="runCode(event)">Run</button>
-                        <div id="js-scope-editor" style="height: 100px;"></div>
+                        <div id="js-scope-editor" style="height: 170px;"></div>
                         <div class="form-group"> <label for="exampleInputFile">Result</label>
-                            <p class="help-block result">Click Run button to see the result.</p>
+                            <p class="help-block result"></p>
+                        </div>
+                    </div>
+
+                    <div id="global-scope" style="display:block">
+                        <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                                aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                                style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                            Global Scope</h4>
+                        <button onclick="runCode(event)">Run</button>
+                        <div id="js-global-scope-editor" style="height: 170px;"></div>
+                        <div class="form-group"> <label for="exampleInputFile">Result</label>
+                            <p class="help-block result"></p>
                         </div>
                     </div>
 
@@ -694,7 +706,7 @@
                         <button onclick="runCode(event)">Run</button>
                         <div id="js-datatypes-editor" style="height: 250px;"></div>
                         <div class="form-group"> <label for="exampleInputFile">Result</label>
-                            <p class="help-block result">Click Run button to see the result.</p>
+                            <p class="help-block result"></p>
                         </div>
                     </div>
     
@@ -720,7 +732,7 @@
                         <button onclick="runCode(event)">Run</button>
                         <div id="js-boolean-editor" style="height: 100px;"></div>
                         <div class="form-group"> <label for="exampleInputFile">Result</label>
-                            <p class="help-block result">Click Run button to see the result.</p>
+                            <p class="help-block result"></p>
                         </div>
                     </div>
     
@@ -747,7 +759,7 @@
                         <button onclick="runCode(event)">Run</button>
                         <div id="js-number-editor" style="height: 150px;"></div>
                         <div class="form-group"> <label for="exampleInputFile">Result</label>
-                            <p class="help-block result">Click Run button to see the result.</p>
+                            <p class="help-block result"></p>
                         </div>
                     </div>
     
@@ -800,7 +812,7 @@
                         <button onclick="runCode(event)">Run</button>
                         <div id="js-string-editor" style="height: 150px;"></div>
                         <div class="form-group"> <label for="exampleInputFile">Result</label>
-                            <p class="help-block result">Click Run button to see the result.</p>
+                            <p class="help-block result"></p>
                         </div>
                     </div>
     
@@ -838,7 +850,7 @@
                         <button onclick="runCode(event)">Run</button>
                         <div id="js-array-editor" style="height: 150px;"></div>
                         <div class="form-group"> <label for="exampleInputFile">Result</label>
-                            <p class="help-block result">Click Run button to see the result.</p>
+                            <p class="help-block result"></p>
                         </div>
                     </div>
     
@@ -870,7 +882,7 @@
                         <button onclick="runCode(event)">Run</button>
                         <div id="js-object-editor" style="height: 320px;"></div>
                         <div class="form-group"> <label for="exampleInputFile">Result</label>
-                            <p class="help-block result">Click Run button to see the result.</p>
+                            <p class="help-block result"></p>
                         </div>
                     </div>
     
@@ -895,7 +907,7 @@
                         <button onclick="runCode(event)">Run</button>
                         <div id="js-condition-editor" style="height: 150px;"></div>
                         <div class="form-group"> <label for="exampleInputFile">Result</label>
-                            <p class="help-block result">Click Run button to see the result.</p>
+                            <p class="help-block result"></p>
                         </div>
                     </div>
                     <!-- End If statement -->
@@ -913,7 +925,7 @@
                         <button onclick="runCode(event)">Run</button>
                         <div id="js-switch-editor" style="height: 370px;"></div>
                         <div class="form-group"> <label for="exampleInputFile">Result</label>
-                            <p class="help-block result">Click Run button to see the result.</p>
+                            <p class="help-block result"></p>
                         </div>
                     </div>
                     <!-- End Switch statement -->
@@ -964,7 +976,7 @@
                         <button onclick="runCode(event)">Run</button>
                         <div id="js-dowhile-editor" style="height: 150px;"></div>
                         <div class="form-group"> <label for="exampleInputFile">Result</label>
-                            <p class="help-block result">Click Run button to see the result.</p>
+                            <p class="help-block result"></p>
                         </div>
                     </div>
                     <!-- End While statement -->
@@ -996,7 +1008,7 @@
                             <button onclick="runCode(event)">Run</button>
                             <div id="js-for-editor" style="height: 50px;"></div>
                             <div class="form-group"> <label for="exampleInputFile">Result</label>
-                                <p class="help-block result">Click Run button to see the result.</p>
+                                <p class="help-block result"></p>
                             </div>
                     </div>
                     <!-- End For statement -->
@@ -1014,7 +1026,7 @@
                         <button onclick="runCode(event)">Run</button>
                         <div id="js-forin-editor" style="height: 150px;"></div>
                         <div class="form-group"> <label for="exampleInputFile">Result</label>
-                            <p class="help-block result">Click Run button to see the result.</p>
+                            <p class="help-block result"></p>
                         </div>
                     </div>
                     <!-- End For...in statement -->
@@ -1035,7 +1047,7 @@
                         <button onclick="runCode(event)">Run</button>
                         <div id="js-forof-editor" style="height: 280px;"></div>
                         <div class="form-group"> <label for="exampleInputFile">Result</label>
-                            <p class="help-block result">Click Run button to see the result.</p>
+                            <p class="help-block result"></p>
                         </div>
                     </div>
                     <!-- End For...of statement -->
@@ -1086,7 +1098,7 @@
                         <button onclick="runCode(event)">Run</button>
                         <div id="js-function-editor" style="height: 320px;"></div>
                         <div class="form-group"> <label for="exampleInputFile">Result</label>
-                            <p class="help-block result">Click Run button to see the result.</p>
+                            <p class="help-block result"></p>
                         </div>
                     </div>
                     <!-- End Define a function -->
@@ -1113,7 +1125,7 @@
                         <button onclick="runCode(event)">Run</button>
                         <div id="js-functionreturn-editor" style="height: 180px;"></div>
                         <div class="form-group"> <label for="exampleInputFile">Result</label>
-                            <p class="help-block result">Click Run button to see the result.</p>
+                            <p class="help-block result"></p>
                         </div>
                     </div>
                     <!-- Function Return -->
@@ -1144,7 +1156,7 @@
                     <button onclick="runCode(event)">Run</button>
                     <div id="js-classes-editor" style="height: 200px;"></div>
                     <div class="form-group"> <label for="exampleInputFile">Result</label>
-                        <p class="help-block result">Click Run button to see the result.</p>
+                        <p class="help-block result"></p>
                     </div>
                 </div>
     
@@ -1179,7 +1191,7 @@
                     <button onclick="runCode(event)">Run</button>
                     <div id="js-class-methods-editor" style="height: 200px;"></div>
                     <div class="form-group"> <label for="exampleInputFile">Result</label>
-                        <p class="help-block result">Click Run button to see the result.</p>
+                        <p class="help-block result"></p>
                     </div>
                 </div>
                 <div id="js-getset-methods" style="display:block">
@@ -1194,7 +1206,7 @@
                     <button onclick="runCode(event)">Run</button>
                     <div id="js-getset-method-editor" style="height: 325px;"></div>
                     <div class="form-group"> <label for="exampleInputFile">Result</label>
-                        <p class="help-block result">Click Run button to see the result.</p>
+                        <p class="help-block result"></p>
                     </div>
                 </div>
                 <div id="js-class-inheritance" style="display:block">
@@ -1212,7 +1224,7 @@
                     <button onclick="runCode(event)">Run</button>
                     <div id="js-class-inheritance-editor" style="height: 400px;"></div>
                     <div class="form-group"> <label for="exampleInputFile">Result</label>
-                        <p class="help-block result">Click Run button to see the result.</p>
+                        <p class="help-block result"></p>
                     </div>
                 </div>
     
@@ -1247,8 +1259,8 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#types">Data Types</a>
-                            <ul class="arrow">
+                            <a href="#types" onclick="showHiddenList(this)">Data Types</a>
+                            <ul class="arrow" style="display: none">
                                 <li><a href="#js-boolean">Boolean</a></li>
                                 <li><a href="#js-number">Number</a></li>
                                 <li><a href="#js-string">String</a></li>
@@ -1257,15 +1269,15 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#js-ifelse">Conditions Statements</a>
-                            <ul class="arrow">
+                            <a href="#js-ifelse" onclick="showHiddenList(this)">Conditions Statements</a>
+                            <ul class="arrow" style="display: none">
                                 <li><a href="#js-ifelse">If...Else</a></li>
                                 <li><a href="#js-switch-condition">Switch Statement</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#forloop">Loops</a>
-                            <ul class="arrow" style="display:true">
+                            <a href="#forloop" onclick="showHiddenList(this)">Loops</a>
+                            <ul class="arrow" style="display:none">
                                 <li><a href="#js-while-condition">While</a></li>
                                 <li><a href="#js-dowhile-condition">Do While</a></li>
                                 <li><a href="#js-for">For</a></li>
@@ -1274,8 +1286,8 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#forloop">Functions</a>
-                            <ul class="arrow" style="display:true">
+                            <a href="#forloop" onclick="showHiddenList(this)">Functions</a>
+                            <ul class="arrow" style="display:none">
                                 <li><a href="#js-whatIsAFunction">What is a Function?</a></li>
                                 <li><a href="#js-defineAfunction">Define a Function</a></li>
                                 <li><a href="#js-invokeAFunction">Invoking a Function</a></li>
@@ -1283,8 +1295,8 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#js-classes">Classes (ES6 syntax)</a>
-                            <ul class="arrow" style="display:true">
+                            <a href="#js-classes" onclick="showHiddenList(this)">Classes (ES6 syntax)</a>
+                            <ul class="arrow" style="display:none">
                                 <li><a href="#js-define-classes">Define a class</a></li>
                                 <li><a href="#js-class-constructor">Constructors</a></li>
                                 <li><a href="#js-class-methods">Methods/ Static Methods</a></li>
