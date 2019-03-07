@@ -1,0 +1,355 @@
+<div class="bs-docs-header" id="content" tabindex="-1">
+
+<div id="html-overview" class="container">
+  <h1>HTML</h1>
+  <div id="carbonads-html">
+    <span>
+      <span class="carbon-wrap">
+        <img
+          src="images/html.png"
+          alt=""
+          style="border-radius: 10px;"
+          width="75%"
+        />
+      </span>
+    </span>
+  </div>
+</div>
+</div>
+<div id="html-details" class="container bs-docs-container">
+  <div class="row">
+      <div class="col-md-9" role="main">
+          <div class="bs-docs-section">
+              <div id="html-overview-start">
+                  <h1 class="page-header">HTML Overview</h1>
+                  <p>Originally, HTML was developed with the intent of defining the structure of documents like headings, paragraphs, lists, and so forth to facilitate the sharing of scientific information between researchers.<br/>Now, HTML is being widely used to format web pages with the help of different tags available in HTML language.</p>
+              </div>
+
+              <div id="html-what-is">
+                  <h1 class="page-header">What is HTML?</h1>
+                  <div>
+                      <p><b>HTML</b> is the standard markup language for creating Web pages.</p>
+                      <ul>
+                          <li>HTML stands for <b>H</b>yper <b>T</b>ext <b>M</b>arkup <b>L</b>anguage</li>
+                          <li>HTML describes the structure of Web pages using markup</li>
+                          <li>HTML elements are the building blocks of HTML pages</li>
+                          <li>HTML elements are represented by tags</li>
+                          <li>HTML tags label pieces of content such as "heading", "paragraph", "table", and so on
+                          </li>
+                          <li>Browsers do not display the HTML tags, but use them to render the content of the
+                              page</li>
+                      </ul>
+                      <p><b>Note</b>: a markup language is a language that annotates text so that the computer can
+                          manipulate that text. Most markup languages are human readable because the annotations
+                          are written in a way to distinguish them from the text itself. For example, with HTML,
+                          XML, and XHTML, the markup tags are &lt; and &gt;. Any text that appears within one of
+                          those characters is considered part of the markup language and not part of the annotated
+                          text.<br> For example:
+                          <code>&lt;p&gt;This is a paragraph written in HTML&lt;/p&gt;</code>
+                      </p>
+                  </div>
+              </div>
+              <div id="html-what-are-tags">
+                  <h1 class="page-header">What are tags?</h1>
+                  <div>
+                      <p>HTML <b>tags</b> are keywords surrounded by angle brackets.</p>
+                      <p>Most tags come in pairs (<code>&lt;b&gt;</code> and <code>&lt;/b&gt;</code>) called
+                          opening tag & closing tag</p>
+                      <p>Between the opening and closing tag we can have text or other tags</p>
+                  </div>
+              </div>
+              <div id="html-basic-structure">
+                  <h1 class="page-header">HTML basic structure</h1>
+                  <div>
+                      <h3>HTML Documents</h3>
+                      <p>All HTML documents must start with a document type declaration:
+                          <code>&lt;!DOCTYPE html&gt;</code>.</p>
+                      <p>The HTML document itself begins with <code>&lt;html&gt;</code> and ends with
+                          <code>&lt;/html&gt;</code>.</p>
+                      <p>The visible part of the HTML document is between <code>&lt;body&gt;</code> and
+                          <code>&lt;/body&gt;</code></p>
+                  </div>
+                  <div id="html-simple-document">
+                      <h3>A Simple HTML Document:</h3>
+                      <code>
+                      &lt;!DOCTYPE html&gt;
+                      <br/>
+                      &lt;html&gt;
+                      <br/>
+                          &nbsp;&nbsp;&lt;head&gt;
+                              <br/>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Page Title&lt;/title&gt;
+                              <br/>
+                          &nbsp;&nbsp;&lt;/head&gt;
+                              <br/>
+                          &nbsp;&nbsp;&lt;body&gt; 
+                              <br/>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;This is my first heading.&lt;/h1&gt;                      
+                              <br/>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;My first paragraph.&lt;/p&gt;                                
+                              <br/>
+                          &nbsp;&nbsp;&lt;/body&gt;
+                          <br/>
+                      &lt;/html&gt;
+                  </code>
+                  </div>
+                  <div id="html-example-explained">
+                      <h3>Example explained</h3>
+                      <p>
+                          <ul>
+                              <li>The <code>&lt;!DOCTYPE html&gt;</code> declaration defines this document to be
+                                  HTML5</li>
+                              <li>The <code>&lt;html&gt;</code> element is the root element of an HTML page. This
+                                  tag is the foundation of the entire Web page. The <code>&lt;html&gt;</code> and
+                                  <code>&lt;/html&gt;</code> combination indicates that everything in the page is
+                                  defined as HTML code.</li>
+                              <li>The <code>&lt;head&gt;</code> element contains meta information about the
+                                  document. The pair <code>&lt;head&gt;</code> and <code>&lt;/head&gt;</code>
+                                  defines a special part of the Web page called the head (or sometimes header).
+                                  This part of the Web page could be compared with the engine compartment of a
+                                  car, but it’s not where the main document lives.</li>
+                              <li>The <code>&lt;title&gt;</code> element is used to determine the page’s title.
+                                  The title usually contains ordinary text. Whatever you define as the title will
+                                  appear in some special ways. Many browsers put the title text in the browser’s
+                                  title bar. Search engines often use the title to describe the page. </li>
+                              <li>The <code>&lt;body&gt;</code> element contains the visible page content. The
+                                  page’s main content is contained within these tags: <code>&lt;body&gt;</code>
+                                  and <code>&lt;/body&gt;</code>. Most of the HTML code and the stuff the user
+                                  sees are in the body area. If the header area is the engine compartment, the
+                                  body is where the passengers go.</li>
+                              <li>The <code>&lt;h1&gt;</code> element stands for heading level one. Any text
+                                  contained within this markup is treated as a prominent headline. There are other
+                                  levels of headings, from big to small size:
+                                  <code>&lt;h1&gt;&lt;/h1&gt; &lt;h2&gt;&lt;/h2&gt; &lt;h3&gt;&lt;/h3&gt; &lt;h4&gt;&lt;/h4&gt; &lt;h5&gt;&lt;/h5&gt; &lt;h6&gt;&lt;/h6&gt;</code>
+                              </li>
+                              <li>The <code>&lt;p&gt;</code> element defines a paragraph. </li>
+                          </ul>
+                      </p>
+                  </div>
+              </div>
+              <div id="html-attributes">
+                  <h1 class="page-header">HTML attributes</h1>
+                  <div>
+                      <p>Tags can have attributes. Attributes can provide additional information about the HTML
+                          elements on your page. The <code>&lt;tag&gt;</code> tells the browser to do something,
+                          while the attribute tells the browser how to do it. For instance, if we add the bgcolor
+                          attribute, we can tell the browser that the background color of your page should be
+                          blue, like this: <code>&lt;body bgcolor="blue"&gt;</code>. </p>
+                      <p>This tag defines an HTML table: <code>&lt;table&gt;</code>. With an added border
+                          attribute, you can tell the browser that the table should have no borders:
+                          <code>&lt;table border="0"&gt;</code>. Attributes always come in name/value pairs like
+                          this: name="value". Attributes are always added to the start tag of an HTML element and
+                          the value is surrounded by quotes. </p>
+                  </div>
+                  <h2 id="html-id-attribute">Using The id Attribute</h2>
+                  <div>
+                      <p>The <code>id</code> attribute specifies a unique id for an HTML element (the value must be unique within the HTML document).<br/>The id value can be used by CSS and JavaScript to perform certain tasks for a unique element with the specified id value.<br/>In CSS, to select an element with a specific id, write a hash (#) character, followed by the id of the element:</p>
+                      <code>
+                              &lt;style&gt;<br/>
+                              &nbsp;&nbsp;#myHeader {<br/>
+                                  &nbsp;&nbsp;&nbsp;&nbsp;background-color: lightblue;<br/>
+                                  &nbsp;&nbsp;&nbsp;&nbsp;color: black;<br/>
+                                  &nbsp;&nbsp;&nbsp;&nbsp;padding: 15px;<br/>
+                                  &nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br/>
+                              &nbsp;&nbsp;} <br/>
+                              &lt;/style&gt;<br/>                              
+                              &lt;h1 id="myHeader"&gt;My Header&lt;/h1&gt;<br/>
+                      </code>
+                      <br/><p>And the result of the above code would be this:</p>
+                      <style>
+                      #myHeader {
+                          background-color: lightblue;
+                          color: black;
+                          padding: 15px;
+                          text-align: center;
+                      } 
+                      </style>                            
+                      <h1 id="myHeader">My Header</h1>
+                      <p>Note:<br/>
+                          - The id attribute can be used on any HTML element.<br/>
+                          - The id value is case-sensitive.<br/>
+                          - The id value must contain at least one character, and must not contain whitespace (spaces, tabs, etc.).
+                      </p>
+                  </div>
+                  <h2 id="html-class-attribute">Using The class Attribute</h2>
+                  <div>
+                      <p>The HTML <code>class</code> attribute is used to define equal styles for elements with the same class name. So, all HTML elements with the same class attribute will have the same format and style. Here we have three <code>&lt;div&gt;</code> elements that point to the same class name:</p>
+                      <code>
+                              &lt;!DOCTYPE html&gt;<br/>
+                              &lt;html&gt;<br/>
+                              &nbsp;&lt;head&gt; <br/>                                   
+                              &nbsp;&nbsp;&lt;style&gt;<br/>
+                              &nbsp;&nbsp;&nbsp;.cities {<br/>
+                                  &nbsp;&nbsp;&nbsp;&nbsp;background-color: black;<br/>
+                                  &nbsp;&nbsp;&nbsp;&nbsp;color: white;<br/>
+                                  &nbsp;&nbsp;&nbsp;&nbsp;margin: 20px;<br/>
+                                  &nbsp;&nbsp;&nbsp;&nbsp;padding: 20px;<br/>
+                              &nbsp;&nbsp;&nbsp;}<br/>
+                              &nbsp;&nbsp;&lt;/style&gt;<br/>
+                              &nbsp;&lt;/head&gt;<br/>
+                              &nbsp;&lt;body&gt;<br/>                                   
+                                  &nbsp;&nbsp;&lt;div class="cities"&gt;<br/>
+                                      &nbsp;&nbsp;&nbsp;&lt;h2>London&lt;/h2&gt;<br/>
+                                      &nbsp;&nbsp;&nbsp;&lt;p>London is the capital of England.&lt;/p&gt;<br/>
+                                  &nbsp;&nbsp;&lt;/div&gt;<br/>                                        
+                                  &nbsp;&nbsp;&lt;div class="cities"&gt;<br/>
+                                      &nbsp;&nbsp;&nbsp;&lt;h2>Paris&lt;/h2&gt;<br/>
+                                      &nbsp;&nbsp;&nbsp;&lt;p>Paris is the capital of France.&lt;/p&gt;<br/>
+                                  &nbsp;&nbsp;&lt;/div&gt;<br/>                                        
+                                  &nbsp;&nbsp;&lt;div class="cities"&gt;<br/>
+                                      &nbsp;&nbsp;&nbsp;&lt;h2>Tokyo&lt;/h2&gt;<br/>
+                                      &nbsp;&nbsp;&nbsp;&lt;p>Tokyo is the capital of Japan.&lt;/p&gt;<br/>
+                                  &nbsp;&nbsp;&lt;/div&gt;<br/>
+                              &nbsp;&lt;/body&gt;<br/>
+                          &lt;/html&gt;<br/>
+                      </code>
+                      <br/><p>And the result of the above code would be this:</p>
+                      <style>
+                          .cities {
+                              background-color: black;
+                              color: white;
+                              margin: 20px;
+                              padding: 20px;
+                          } 
+                      </style>
+                      </head>
+                      <body>                            
+                      <div class="cities">
+                          <h2>London</h2>
+                          <p>London is the capital of England.</p>
+                      </div>                            
+                      <div class="cities">
+                          <h2>Paris</h2>
+                          <p>Paris is the capital of France.</p>
+                      </div>                            
+                      <div class="cities">
+                          <h2>Tokyo</h2>
+                          <p>Tokyo is the capital of Japan.</p>
+                      </div>                            
+                      <p>Note:<br/>
+                          - The class attribute can be used on any HTML element.<br/>
+                          - The class name is case sensitive!<br/>
+                          - Multiple Classes: HTML elements can have more than one class name, each class name must be separated by a space.<br/>
+                          &nbsp;&nbsp;<code>&lt;h2 class="city main"&gt;Londonl&lt;/h2&gt;</code>
+                      </p>
+                  </div>
+                  <h2 class="html-id-class-diffs">Difference Between <code>class</code> And <code>id</code></h2>
+                  <div>
+                      <p>An HTML element can only have one unique id that belongs to that single element, while a class name can be used by multiple elements:</p>
+                      <code>
+                          &lt;style&gt;<br/>
+                          &nbsp;/* Style the element with the id "myNewHeader" */<br/>
+                          &nbsp;#myNewHeader {<br/>
+                              &nbsp;&nbsp;background-color: lightblue;<br/>
+                              &nbsp;&nbsp;color: black;<br/>
+                              &nbsp;&nbsp;padding: 40px;<br/>
+                              &nbsp;&nbsp;text-align: center;<br/>
+                          &nbsp;}<br/>                            
+                          &nbsp;/* Style all elements with the class name "city" */<br/>
+                          &nbsp;.city {<br/>
+                              &nbsp;&nbsp;background-color: tomato;<br/>
+                              &nbsp;&nbsp;color: white;<br/>
+                              &nbsp;&nbsp;padding: 10px;<br/>
+                          &nbsp;}<br/>
+                          &lt;/style&gt;<br/>                            
+                          &lt;!-- A unique element --&gt;<br/>
+                          &lt;h1 id="myNewHeader"&gt;My Cities&lt;/h1&gt;<br/>                            
+                          &lt;!-- Multiple similar elements --&gt;<br/>
+                          &lt;h2 class="city"&gt;London&lt;/h2&gt;<br/>
+                          &lt;p&gt;London is the capital of England.&lt;/p&gt;<br/>                           
+                          &lt;h2 class="city"&gt;Paris&lt;/h2&gt;<br/>
+                          &lt;p&gt;Paris is the capital of France.&lt;/p&gt;<br/>
+                      </code>
+                      <br/><p>And the result of the above code would be this:</p>
+                      <style>
+                      #myNewHeader {
+                          background-color: lightgreen;
+                          color: black;
+                          padding: 40px;
+                          text-align: center;
+                      }
+                      .city {
+                          background-color: tomato;
+                          color: white;
+                          padding: 10px;
+                      } 
+                      </style>
+                      <h1 id="myNewHeader">My Cities</h1>
+                      <h2 class="city">London</h2>
+                      <p>London is the capital of England.</p>                                
+                      <h2 class="city">Paris</h2>
+                      <p>Paris is the capital of France.</p>
+                  </div>
+              </div>
+              <div id="html-types-elements">
+                  <h1 class="page-header">Types of elements: block vs inline</h1>
+                  <div>
+                      <p>Every HTML element has a default display value depending on what type of element it
+                          is.<br /> The default display value for most elements is block or inline.</p>
+                      <img src="images/blockinline.jpeg" height="350" />
+                      <h3 id="html-block-elements">Block elements</h3>
+                      <p>A block-level element always starts on a new line and takes up the full width of a page,
+                          from left to right. A block-level element can take up one line or multiple lines and has
+                          a line break before and after the element.</p>
+                      <p>The <code>&lt;div&gt;</code> element is a block-level element and the same are the tags
+                          below:</p>
+                      <img src="images/block.png" />
+                      <h3 id="html-inline-elements">Inline elements</h3>
+                      <p>Basically, an inline element does not cause a line break (start on a new line) and does
+                          not take up the full width of a page, only the space bounded by its opening and closing
+                          tag. It is usually used within other HTML elements.</p>
+                      <p>The <code>&lt;span&gt;</code> element is a inline element and the same are the tags
+                          below:</p>
+                      <img src="images/inline.png" />
+                  </div>
+              </div>
+              <div id="html-including-files">
+                  <h1 class="page-header">External files</h1>
+                  <div>
+                      <h4>Including a style sheet file</h4>
+                      <p>An external style sheet file may be linked to an HTML document through HTML's
+                          <code>&lt;link&gt;</code> element:</p>
+                      <code>&lt;link rel="stylesheet" type="text/css" href="css_file.css"></code>
+                      <h4>Including a javascript file</h4>
+                      <p>An external javascript file may be linked to an HTML document through HTML's
+                          <code>&lt;script&gt;</code> element:</p>
+                      <code>&lt;script type="text/javascript" src="js_file.css">&lt;/script&gt;</code>
+                  </div>
+              </div>
+              <br /><br /><br /><br /><br /><br />
+          </div>
+      </div>
+
+      <div class="sticky col-md-3" role="complementary">
+          <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top">
+              <p><strong>Summary</strong></p>
+              <ul class="nav bs-docs-sidenav">
+                  <li><a href="#html-overview-start">HTML Overview</a></li>
+                  <li><a href="#html-what-is">What is HTML?</a></li>
+                  <li><a href="#html-what-are-tags">What are tags?</a></li>
+                  <li><a href="#html-basic-structure">HTML basic structure</a>
+                      <ul class="arrow">
+                          <li><a href="#html-simple-document">A Simple HTML Document</a></li>
+                          <li><a href="#html-example-explained">Example explained</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="#html-attributes">HTML attributes</a>
+                      <ul class="arrow">
+                          <li><a href="#html-id-attribute">Using The id Attribute</a></li>
+                          <li><a href="#html-class-attribute">Using The class Attribute</a></li>
+                          <li><a href="#html-id-class-diffs">Difference Between class And id</a></li>
+                      </ul>
+                  </li>
+
+                  <li><a href="#html-types-elements">Types of elements: block vs inline</a>
+                      <ul class="arrow">
+                          <li><a href="#html-block-elements">Block elements</a></li>
+                          <li><a href="#html-inline-elements">Inline elements</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="#html-including-files">Including a external file</a></li>
+              </ul>
+          </nav>
+      </div>
+  </div>
+</div>

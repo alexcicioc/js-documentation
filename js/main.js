@@ -8,12 +8,15 @@ function update() {}
 
 function setupEditor() {
   new Editor(
-    "editor",`const x = "Test";
+    "editor",
+    `const x = "Test";
 var y = 2;
 let z = true;
 
 console.log("av");
-`, 1);
+`,
+    1
+  );
 
   new Editor(
     "js-datatypes-editor",
@@ -168,7 +171,7 @@ do {
 alert(result);
 // expected result: "12345"`,
     1
-  )
+  );
 
   new Editor(
     "js-forin-editor",
@@ -365,42 +368,15 @@ class Person {
     1
   );
   new Editor(
-    "js-scope-editor", `function showLog(){
+    "js-scope-editor",
+    `function showLog(){
   var log ="I'am the log";
   // Inside this function we have access tho the log 
 }
 
 //Here , we cannot access the log variable
-  `)
-}
-
-function switchOverview(event) {
-  switch (event.text) {
-    case "HTML":
-      document.getElementById("js-overview").style.display = "none";
-      document.getElementById("css-overview").style.display = "none";
-      document.getElementById("html-overview").style.display = "block";
-      document.getElementById("html-details").style.display = "block";
-      document.getElementById("js-details").style.display = "none";
-      document.getElementById("css-details").style.display = "none";
-      break;
-    case "JavaScript":
-      document.getElementById("html-overview").style.display = "none";
-      document.getElementById("css-overview").style.display = "none";
-      document.getElementById("js-overview").style.display = "block";
-      document.getElementById("js-details").style.display = "block";
-      document.getElementById("html-details").style.display = "none";
-      document.getElementById("css-details").style.display = "none";
-      break;
-    case "CSS":
-      document.getElementById("js-overview").style.display = "none";
-      document.getElementById("html-overview").style.display = "none";
-      document.getElementById("css-overview").style.display = "block";
-      document.getElementById("js-details").style.display = "none";
-      document.getElementById("html-details").style.display = "none";
-      document.getElementById("css-details").style.display = "block";
-      break;
-  }
+  `
+  );
 }
 
 function showHiddenList(el) {
@@ -415,14 +391,17 @@ function showHiddenList(el) {
 }
 
 function runCode(event) {
-
-  var editorElement = event.target.parentNode.getElementsByClassName("ace_editor")[0];
-  var resultElement = event.target.parentNode.getElementsByClassName("result")[0];
+  var editorElement = event.target.parentNode.getElementsByClassName(
+    "ace_editor"
+  )[0];
+  var resultElement = event.target.parentNode.getElementsByClassName(
+    "result"
+  )[0];
   console.log = function(message) {
     resultElement.innerHTML = message;
   };
 
-  var identifier= editorElement.getAttribute("id");
+  var identifier = editorElement.getAttribute("id");
   var editor = editorsMap.get(identifier);
   eval(editor.getValue());
 }
@@ -438,21 +417,29 @@ function Editor(identifer, code) {
 }
 
 function htmlcss() {
-  $('.css-container textarea').focus(function() {
-      var $this = $(this);
+  $(".css-container textarea").focus(function() {
+    var $this = $(this);
 
-      var frame = $this.parent().parent().parent().children('.css-output').children('.css-iframe'),
-          contents = frame.contents(),
-          body = contents.find('body'),
-          styleTag = contents.find('head').append('<style></style>').children('style');
+    var frame = $this
+        .parent()
+        .parent()
+        .parent()
+        .children(".css-output")
+        .children(".css-iframe"),
+      contents = frame.contents(),
+      body = contents.find("body"),
+      styleTag = contents
+        .find("head")
+        .append("<style></style>")
+        .children("style");
 
-      $this.keyup(function() {
-          if( $this.attr('class') === 'css-htmliframe' ) {
-              body.html( $this.val() );
-          }else{
-              styleTag.text( $this.val() );
-          }
-      });
+    $this.keyup(function() {
+      if ($this.attr("class") === "css-htmliframe") {
+        body.html($this.val());
+      } else {
+        styleTag.text($this.val());
+      }
+    });
   });
 }
 htmlcss();
