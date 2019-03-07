@@ -437,3 +437,22 @@ function Editor(identifer, code) {
   editorsMap.set(identifer, this.currentEditor);
 }
 
+function htmlcss() {
+  $('.css-container textarea').focus(function() {
+      var $this = $(this);
+
+      var frame = $this.parent().parent().parent().children('.css-output').children('.css-iframe'),
+          contents = frame.contents(),
+          body = contents.find('body'),
+          styleTag = contents.find('head').append('<style></style>').children('style');
+
+      $this.keyup(function() {
+          if( $this.attr('class') === 'css-htmliframe' ) {
+              body.html( $this.val() );
+          }else{
+              styleTag.text( $this.val() );
+          }
+      });
+  });
+}
+htmlcss();

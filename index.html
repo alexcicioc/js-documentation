@@ -9,12 +9,8 @@
         Javascript Documentation
     </title>
 
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="src/ace.js"></script>
-    <script src="js/main.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-    <script src="js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -464,37 +460,21 @@
                             <div id="question">I like blue.</div>
                         </div>
                         <h3>Give it a try!</h3>
-                        <div id="css-container-1" class="css-container css-grid">
-                            <form>
-                                <h4>HTML</h4>
-                                <textarea id="css-htmliframe-1"></textarea>
-                                <h4>CSS</h4>
-                                <textarea id="css-cssiframe-1"></textarea>
-                            </form>
+                        <div>
+                            <div class="css-container css-grid">
+                                <form>
+                                    <h4>HTML</h4>
+                                    <textarea class="css-htmliframe"></textarea>
+                                    <h4>CSS</h4>
+                                    <textarea class="css-cssiframe"></textarea>
+                                </form>
+                            </div>
+                            <div class="css-output css-grid">
+                                <h4>Result:</h4>
+                                <iframe class="css-iframe"></iframe>
+                            </div>
                         </div>
-                        <div class="css-output css-grid">
-                            <h4>Result:</h4>
-                            <iframe id="css-iframe-1"></iframe>
-                        </div>
-                        <div class="clear"></div>  
-                        <script>
-                        (function()  {
-                            var frame = $('#css-iframe-1'),
-                                contents = frame.contents(),
-                                body =  contents.find('body'),
-                                styleTag = contents.find('head').append('<style></style>').children('style');
-                            $('#css-container-1 textarea').focus(function() {
-                                var $this = $(this);
-                                $this.keyup(function() {
-                                if( $this.attr('id') === 'css-htmliframe-1' ) { 
-                                    body.html( $this.val() );
-                                }else{
-                                    styleTag.text( $this.val() );
-                                }
-                                });
-                            });
-                        })();
-                        </script>
+                        <div class="clear"></div>                          
                         <div id="css-attribute-selectors">
                             <h2><code>Attribute selectors</code></h2> Match one or more elements based on their attributes/attribute values.
                             <br/>
@@ -553,37 +533,21 @@
                             </code>
                         </div>
                         <h3>Give it a try!</h3>
-                        <div id="css-container-2" class="css-container css-grid">
-                            <form>
-                                <h4>HTML</h4>
-                                <textarea id="css-htmliframe-2"></textarea>
-                                <h4>CSS</h4>
-                                <textarea id="css-cssiframe-2"></textarea>
-                            </form>
-                        </div>
-                        <div class="css-output css-grid">
-                            <h4>Result:</h4>
-                            <iframe id="css-iframe-2"></iframe>
+                        <div>
+                            <div class="css-container css-grid">
+                                <form>
+                                    <h4>HTML</h4>
+                                    <textarea class="css-htmliframe"></textarea>
+                                    <h4>CSS</h4>
+                                    <textarea class="css-cssiframe"></textarea>
+                                </form>
+                            </div>
+                            <div class="css-output css-grid">
+                                <h4>Result:</h4>
+                                <iframe class="css-iframe"></iframe>
+                            </div>
                         </div>
                         <div class="clear"></div>  
-                        <script>
-                        (function()  {
-                            var frame = $('#css-iframe-2'),
-                                contents = frame.contents(),
-                                body =  contents.find('body'),
-                                styleTag = contents.find('head').append('<style></style>').children('style');
-                            $('#css-container-2 textarea').focus(function() {
-                                var $this = $(this);
-                                $this.keyup(function() {
-                                if( $this.attr('id') === 'css-htmliframe-2' ) { 
-                                    body.html( $this.val() );
-                                }else{
-                                    styleTag.text( $this.val() );
-                                }
-                                });
-                            });
-                        })();
-                        </script>
                         <div id="css-pseudo-classes">
                             <h2><code>Pseudo-classes</code></h2> Match one or more elements that exist in a certain state, such as an element that is being hovered over by the mouse pointer, or a checkbox that is currently disabled or checked, or an element that is the first child of its parent in the DOM tree.
                             <br/>
@@ -1380,8 +1344,11 @@
                 </nav>
             </div>
         </div>
-    </div>
-    
+    </div>    
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="src/ace.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
