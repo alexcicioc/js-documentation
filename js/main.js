@@ -4,8 +4,6 @@ function ready() {
   setupEditor();
 }
 
-function update() {}
-
 function setupEditor() {
   new Editor(
     "editor",
@@ -442,4 +440,3 @@ function htmlcss() {
     });
   });
 }
-htmlcss();
