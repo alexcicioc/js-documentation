@@ -84,7 +84,15 @@
         <p>You can select all <code class="inline">&lt;p&gt;</code> elements on a page like this:</p>
         <p><b>Example</b></p>
         <p>When a user clicks on a button, all <code class="inline">&lt;p&gt;</code> elements will be hidden:</p>
-        <iframe src="content/editor.html?value=JChkb2N1bWVudCkucmVhZHkoZnVuY3Rpb24oKXsKICAkKCJidXR0b24iKS5jbGljayhmdW5jdGlvbigpewogICAgJCgicCIpLmhpZGUoKTsKICB9KTsKfSk7"></iframe>
+        <pre><code>$(document).ready(function(){
+    $("button").click(function(){
+    $("p").hide();
+  });
+});</code></pre>
+        <a class="btn btn-primary" target="_blank"
+          href="https://www.w3schools.com/jquERY/tryit.asp?filename=tryjquery_hide_p">
+          Try example
+        </a>
       </div>
     </div>
   </div>

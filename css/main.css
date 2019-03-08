@@ -63,11 +63,17 @@ html {
   border-left: none;
   padding: 0 15px;
 }
-
+/* 
 iframe {
   border: none;
   height: 238px;
   width: 100%;
+} */
+
+iframe.editor {
+  border: none;
+  width: 550px;
+  height: 400px;
 }
 
 .main-menu {
