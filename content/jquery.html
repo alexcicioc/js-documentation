@@ -93,6 +93,100 @@
           href="https://www.w3schools.com/jquERY/tryit.asp?filename=tryjquery_hide_p">
           Try example
         </a>
+
+        <h2>The #id Selector</h2>
+        <p>The jQuery <code class="inline">#<em>id</em></code> selector uses the id attribute of an HTML tag to find the
+          specific element.</p>
+        <p>An id should be unique within a page, so you should use the #id selector when you want to find a single,
+          unique element.</p>
+        <p>To find an element with a specific id, write a hash character, followed by the id of the
+          HTML element:</p>
+        <pre><code>$("#test")</code></pre>
+        <p><b>Example</b></p>
+        <p>When a user clicks on a button, the element with id="test" will be hidden:</p>
+        <a class="btn btn-primary" target="_blank"
+          href="https://www.w3schools.com/jquERY/tryit.asp?filename=tryjquery_hide_id">
+          Try example
+        </a>
+        <h2>The .class Selector</h2>
+        <p>The jQuery <code class="inline"><em>.class</em></code> selector finds elements with a specific class.</p>
+        <p>To find elements with a specific class, write a period character, followed by the name of the class:</p>
+        <pre><code>$(".test")</code></pre>
+        <b>Example</b>
+        <p>When a user clicks on a button, the elements with class="test" will be hidden:</p>
+        
+        <a class="btn btn-primary" target="_blank"
+          href="https://www.w3schools.com/jquERY/tryit.asp?filename=tryjquery_hide_class">
+          Try example
+        </a>
+        <h2>More Examples of jQuery Selectors</h2>
+        <table class="table table-striped table-bordered">
+            <tbody><tr>
+            <th style="width:25%">Syntax</th>
+            <th style="width:65%">Description</th>
+            <th>Example</th>
+            </tr>
+            <tr>
+            <td>$("*")</td>
+            <td>Selects all elements</td>
+            <td><a target="_blank" class="w3-btn" href="https://www.w3schools.com/jquERY/tryit.asp?filename=tryjquery_sel_all2">Try it</a></td>
+            </tr>
+            <tr>
+            <td>$(this)</td>
+            <td>Selects the current HTML element</td>
+            <td><a target="_blank" class="w3-btn" href="https://www.w3schools.com/jquERY/tryit.asp?filename=tryjquery_sel_this">Try it</a></td>
+            </tr>
+            <tr>
+            <td>$("p.intro")</td>
+            <td>Selects all &lt;p&gt; elements with class="intro"</td>
+            <td><a target="_blank" class="w3-btn" href="https://www.w3schools.com/jquERY/tryit.asp?filename=tryjquery_sel_pclass">Try it</a></td>
+            </tr>
+            <tr>
+            <td>$("p:first")</td>
+            <td>Selects the first &lt;p&gt; element</td>
+            <td><a target="_blank" class="w3-btn" href="https://www.w3schools.com/jquERY/tryit.asp?filename=tryjquery_sel_pfirst">Try it</a></td>
+            </tr>
+            <tr>
+            <td>$("ul li:first")</td>
+            <td>Selects the first &lt;li&gt; element of the first &lt;ul&gt;</td>
+            <td><a target="_blank" class="w3-btn" href="https://www.w3schools.com/jquERY/tryit.asp?filename=tryjquery_sel_ullifirst">Try it</a></td>
+            </tr>
+            <tr>
+            <td>$("ul li:first-child")</td>
+            <td>Selects the first &lt;li&gt; element of every &lt;ul&gt;</td>
+            <td><a target="_blank" class="w3-btn" href="https://www.w3schools.com/jquERY/tryit.asp?filename=tryjquery_sel_ullifirstchild">Try it</a></td>
+            </tr>
+            <tr>
+            <td>$("[href]")</td>
+            <td>Selects all elements with an href attribute</td>
+            <td><a target="_blank" class="w3-btn" href="tryit.asp?filename=tryjquery_sel_hrefattr">Try it</a></td>
+            </tr>
+            <tr>
+            <td>$("a[target='_blank']")</td>
+            <td>Selects all &lt;a&gt; elements with a target attribute value equal to "_blank"</td>
+            <td><a target="_blank" class="w3-btn" href="tryit.asp?filename=tryjquery_sel_hrefattrblank">Try it</a></td>
+            </tr>
+            <tr>
+            <td>$("a[target!='_blank']")</td>
+            <td>Selects all &lt;a&gt; elements with a target attribute value NOT equal to "_blank"</td>
+            <td><a target="_blank" class="w3-btn" href="tryit.asp?filename=tryjquery_sel_hrefattrnotblank">Try it</a></td>
+            </tr>
+            <tr>
+            <td>$(":button")</td>
+            <td>Selects all &lt;button&gt; elements and &lt;input&gt; elements of type="button"</td>
+            <td><a target="_blank" class="w3-btn" href="tryit.asp?filename=tryjquery_sel_button2">Try it</a></td>
+            </tr>
+            <tr>
+            <td>$("tr:even")</td>
+            <td>Selects all even &lt;tr&gt; elements</td>
+            <td><a target="_blank" class="w3-btn" href="tryit.asp?filename=tryjquery_sel_even">Try it</a></td>
+            </tr>
+            <tr>
+            <td>$("tr:odd")</td>
+            <td>Selects all odd &lt;tr&gt; elements</td>
+            <td><a target="_blank" class="w3-btn" href="tryit.asp?filename=tryjquery_sel_odd">Try it</a></td>
+            </tr>
+            </tbody></table>
       </div>
     </div>
   </div>
