@@ -13,7 +13,8 @@
   <div class="row">
     <div class="col-md-9" role="main">
       <div class="bs-docs-section">
-        <div id="overview">
+
+        <div class="section">
           <h1 class="page-header"><a class="anchorjs-link " href="#overview" aria-label="Anchor link for: overview"
               data-anchorjs-icon=""
               style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>What
@@ -36,34 +37,61 @@
           </ul>
         </div>
 
-        <div id="what-is-javascript" style="display:block">
+        <div class="section">
           <h2 class="page-header">
             <a class="anchorjs-link " href="#overview-doctype" aria-label="Anchor link for: overview doctype"
               data-anchorjs-icon="" style="font-style: normal; font-variant: normal; font-weight: normal; 
                                   font-stretch: normal; font-size: 1em; line-height: inherit; font-family: 
                                   anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;">
             </a>
-            Downloading jQuery
+            Importing jQuery
           </h2>
-          <p>There are two versions of jQuery available for downloading: </p>
+          <p>There are two ways of importing jQuery:</p>
           <ul>
-            <li>Production version - this is for your live website because it has been minified and compressed</li>
-            <li>Development version - this is for testing and development (uncompressed and readable code)</li>
+            <li>Download the jQuery library locally, where jquery-3.3.1.min.js is in the same folder than the HTML file
+              importing it
+              <pre class="code"><code class="html">&lt;head&gt;
+  &lt;script src=&quot;jquery-3.3.1.min.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;</code></pre>
+            </li>
+            <li>Use the jQuery CDN (content delivery network)
+              <pre><code class="html">&lt;head&gt;
+  &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;</code></pre>
+            </li>
           </ul>
           <p>Both versions can be downloaded from <a target="_blank" href="http://jquery.com/download/">jQuery.com</a>.
           </p>
-          <pre class="code"><code class="html">&lt;head&gt;
-  &lt;script src=&quot;jquery-3.3.1.min.js&quot;&gt;&lt;/script&gt;
-&lt;/head&gt;</code></pre>
         </div>
-
+        <div class="section">
+          <h2 class="page-header">
+            <a class="anchorjs-link " href="#overview-doctype" aria-label="Anchor link for: overview doctype"
+              data-anchorjs-icon="" style="font-style: normal; font-variant: normal; font-weight: normal; 
+                                    font-stretch: normal; font-size: 1em; line-height: inherit; font-family: 
+                                    anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;">
+            </a>
+            jQuery Selectors
+          </h2>
+          <p>jQuery selectors allow you to select and manipulate HTML element(s).</p>
+          <p>jQuery selectors are used to "find" (or select) HTML elements based on their
+            name, id, classes, types, attributes, values of attributes and much more.
+            It's based on the existing CSS Selectors, and in addition, it has
+            some own custom selectors.</p>
+          <p>All selectors in jQuery start with the dollar sign and parentheses: $().</p>
+        </div>
+        <h2>The element Selector</h2>
+        <p>The jQuery element selector selects elements based on the element name.</p>
+        <p>You can select all <code class="inline">&lt;p&gt;</code> elements on a page like this:</p>
+        <p><b>Example</b></p>
+        <p>When a user clicks on a button, all <code class="inline">&lt;p&gt;</code> elements will be hidden:</p>
+        <iframe src="content/editor.html?value=JChkb2N1bWVudCkucmVhZHkoZnVuY3Rpb24oKXsKICAkKCJidXR0b24iKS5jbGljayhmdW5jdGlvbigpewogICAgJCgicCIpLmhpZGUoKTsKICB9KTsKfSk7"></iframe>
       </div>
     </div>
   </div>
 </div>
 
 <script>
-    document.querySelectorAll('code').forEach((block) => {
-      hljs.highlightBlock(block);
-    });
-  </script>
+  document.querySelectorAll('code').forEach((block) => {
+    hljs.highlightBlock(block);
+  });
+</script>

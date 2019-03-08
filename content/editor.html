@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Code Editor</title>
+  <style type="text/css" media="screen">
+    #editor {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <button onclick="runCode(event)">Run</button>
+  <div id="editor">function foo(items) {
+    var x = "All this is syntax highlighted";
+    return x;
+    }</div>
+  <div class="form-group">
+    <label for="exampleInputFile">Result</label>
+    <p class="help-block result">Click Run button to see the result.</p>
+  </div>
+
+
+  <script src="../js/jquery-3.3.1.min.js"></script>
+  <script src="../src/ace.js"></script>
+
+  <script type="text/javascript">
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/monokai");
+    editor.session.setMode("ace/mode/javascript");
+
+    function findGetParameter(parameterName) {
+      var result = null,
+        tmp = [];
+      location.search
+        .substr(1)
+        .split("&")
+        .forEach(function (item) {
+          tmp = item.split("=");
+          if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+        });
+      return result;
+    }
+
+    const editorValue = atob(findGetParameter('value'));
+    editor.session.setValue(editorValue);
+  </script>
+
+</body>
+
+</html>
