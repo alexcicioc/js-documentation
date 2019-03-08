@@ -38,7 +38,7 @@
         </div>
         <div id="css-syntax">
           <h1 id="page-header">CSS Syntax</h1>
-          <p><code>selector { property: values;}</code></p>
+          <p><code class="inline">selector { property: values;}</code></p>
           <p>
             Examples: <br />
             <code>
@@ -59,7 +59,7 @@
           <p>Selectors can be divided into the following categories:</p>
 
           <div id="css-simple-selectors">
-            <h2><code>Simple selectors</code></h2>
+            <h2><code class="inline">Simple selectors</code></h2>
             Match one or more elements based on element type, class, or id.
             <h3>Example:</h3>
             <h4>Here is some HTML:</h4>
@@ -106,14 +106,14 @@
           </div>
           <div class="clear"></div>
           <div id="css-attribute-selectors">
-            <h2><code>Attribute selectors</code></h2>
+            <h2><code class="inline">Attribute selectors</code></h2>
             Match one or more elements based on their attributes/attribute
             values.
             <br />
-            <h4>CSS <code>[attribute]</code> Selector</h4>
-            The <code>[attribute]</code> selector is used to select elements
+            <h4>CSS <code class="inline">[attribute]</code> Selector</h4>
+            The <code class="inline">[attribute]</code> selector is used to select elements
             with a specified attribute.<br />
-            The following example selects all <code>&lt;a&gt;</code> elements
+            The following example selects all <code class="inline">&lt;a&gt;</code> elements
             with a target attribute:<br />
             <code>
               a[target] { <br />
@@ -121,8 +121,8 @@
               }<br />
             </code>
             <br />
-            <h4>CSS <code>[attribute="value"]</code> Selector</h4>
-            The <code>[attribute="value"]</code> selector is used to select
+            <h4>CSS <code class="inline">[attribute="value"]</code> Selector</h4>
+            The <code class="inline">[attribute="value"]</code> selector is used to select
             elements with an attribute value containing a specified word.<br />
             The following example selects all elements with a title attribute
             that contains a space-separated list of words, one of which is
@@ -133,8 +133,8 @@
               }<br />
             </code>
             <br />
-            <h4>CSS <code>[attribute|="value"]</code> Selector</h4>
-            The <code>[attribute|="value"]</code> selector is used to select
+            <h4>CSS <code class="inline">[attribute|="value"]</code> Selector</h4>
+            The <code class="inline">[attribute|="value"]</code> selector is used to select
             elements with the specified attribute starting with the specified
             value. <br />
             The following example selects all elements with a class attribute
@@ -145,8 +145,8 @@
               }<br />
             </code>
             <br />
-            <h4>CSS <code>[attribute^="value"]</code> Selector</h4>
-            The <code>[attribute^="value"]</code> selector is used to select
+            <h4>CSS <code class="inline">[attribute^="value"]</code> Selector</h4>
+            The <code class="inline">[attribute^="value"]</code> selector is used to select
             elements whose attribute value begins with a specified value. <br />
             The following example selects all elements with a class attribute
             value that begins with "top":<br />
@@ -156,8 +156,8 @@
               }<br />
             </code>
             <br />
-            <h4>CSS <code>[attribute$="value"]</code> Selector</h4>
-            The <code>[attribute$="value"]</code> selector is used to select
+            <h4>CSS <code class="inline">[attribute$="value"]</code> Selector</h4>
+            The <code class="inline">[attribute$="value"]</code> selector is used to select
             elements whose attribute value ends with a specified value. <br />
             The following example selects all elements with a class attribute
             value that ends with "test":<br />
@@ -167,8 +167,8 @@
               }<br />
             </code>
             <br />
-            <h4>CSS <code>[attribute*="value"]</code> Selector</h4>
-            The <code>[attribute*="value"]</code> selector is used to select
+            <h4>CSS <code class="inline">[attribute*="value"]</code> Selector</h4>
+            The <code class="inline">[attribute*="value"]</code> selector is used to select
             elements whose attribute value contains a specified value. <br />
             The following example selects all elements with a class attribute
             value that contains "te":<br /><b>Note</b>: The value does not have
@@ -196,7 +196,7 @@
           </div>
           <div class="clear"></div>
           <div id="css-pseudo-classes">
-            <h2><code>Pseudo-classes</code></h2>
+            <h2><code class="inline">Pseudo-classes</code></h2>
             Match one or more elements that exist in a certain state, such as an
             element that is being hovered over by the mouse pointer, or a
             checkbox that is currently disabled or checked, or an element that
@@ -205,7 +205,7 @@
             Example:
           </div>
           <div id="css-pseudo-elements">
-            <h2><code>Pseudo-elements</code></h2>
+            <h2><code class="inline">Pseudo-elements</code></h2>
             Match one or more parts of content that are in a certain position in
             relation to an element, for example the first word of each
             paragraph, or generated content appearing just before an element.
@@ -213,7 +213,7 @@
             Example:
           </div>
           <div id="css-combinators">
-            <h2><code>Combinators</code></h2>
+            <h2><code class="inline">Combinators</code></h2>
             These are not exactly selectors themselves, but ways of combining
             two or more selectors in useful ways for very specific selections.
             So for example, you could select only paragraphs that are direct
@@ -223,7 +223,7 @@
             Example:
           </div>
           <div id="css-multiple-selectors">
-            <h2><code>Multiple selectors</code></h2>
+            <h2><code class="inline">Multiple selectors</code></h2>
             Again, these are not separate selectors; the idea is that you can
             put multiple selectors on the same CSS rule, separated by commas, to
             apply a single set of declarations to all the elements selected by
@@ -258,4 +258,7 @@
 </div>
 <script>
   htmlcss();
+  document.querySelectorAll('code').forEach((block) => {
+      hljs.highlightBlock(block);
+  });
 </script>

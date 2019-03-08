@@ -79,3 +79,6 @@ iframe {
 .main-menu a {
   font-size: 26px;
 }
+code.inline{
+  display: inline;
+}
