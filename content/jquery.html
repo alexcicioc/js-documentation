@@ -1,0 +1,69 @@
+<div class="bs-docs-header" id="content" tabindex="-1">
+  <div id="js-overview" class="container">
+    <h1>jQuery</h1>
+    <div id="carbonads">
+      <span class="carbon-wrap">
+        <img src="images/jquery.png" alt="" style="border-radius: 10px;" width="75%" />
+      </span>
+    </div>
+  </div>
+</div>
+
+<div class="container bs-docs-container">
+  <div class="row">
+    <div class="col-md-9" role="main">
+      <div class="bs-docs-section">
+        <div id="overview">
+          <h1 class="page-header"><a class="anchorjs-link " href="#overview" aria-label="Anchor link for: overview"
+              data-anchorjs-icon=""
+              style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>What
+            is jQuery?
+          </h1>
+          <p>jQuery is a lightweight, "write less, do more", JavaScript library.</p>
+          <p>The purpose of jQuery is to make it much easier to use JavaScript on your website.</p>
+          <p>jQuery takes a lot of common tasks that require many lines of JavaScript code to accomplish,
+            and wraps them into methods that you can call with a single line of code.</p>
+          <p>jQuery also simplifies a lot of the complicated things from JavaScript, like AJAX calls and DOM
+            manipulation.</p>
+          <p>The jQuery library contains the following features:</p>
+          <ul>
+            <li>HTML/DOM manipulation</li>
+            <li>CSS manipulation</li>
+            <li>HTML event methods</li>
+            <li>Effects and animations</li>
+            <li>AJAX</li>
+            <li>Utilities</li>
+          </ul>
+        </div>
+
+        <div id="what-is-javascript" style="display:block">
+          <h2 class="page-header">
+            <a class="anchorjs-link " href="#overview-doctype" aria-label="Anchor link for: overview doctype"
+              data-anchorjs-icon="" style="font-style: normal; font-variant: normal; font-weight: normal; 
+                                  font-stretch: normal; font-size: 1em; line-height: inherit; font-family: 
+                                  anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;">
+            </a>
+            Downloading jQuery
+          </h2>
+          <p>There are two versions of jQuery available for downloading: </p>
+          <ul>
+            <li>Production version - this is for your live website because it has been minified and compressed</li>
+            <li>Development version - this is for testing and development (uncompressed and readable code)</li>
+          </ul>
+          <p>Both versions can be downloaded from <a target="_blank" href="http://jquery.com/download/">jQuery.com</a>.
+          </p>
+          <pre class="code"><code class="html">&lt;head&gt;
+  &lt;script src=&quot;jquery-3.3.1.min.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;</code></pre>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+    document.querySelectorAll('code').forEach((block) => {
+      hljs.highlightBlock(block);
+    });
+  </script>

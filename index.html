@@ -1,17 +1,21 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Web Course Documentation</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css" />
-    <link rel="stylesheet" href="css/main.css" />
-  </head>
 
-  <body>
-    <div class="main-menu">
-      <ul class="nav nav-pills nav-stacked">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Web Course Documentation</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/highlight/atom-one-light.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <ul class="nav nav-pills">
         <li role="presentation" class="active">
           <a href="content/html.html">HTML</a>
         </li>
@@ -26,23 +30,29 @@
         </li>
       </ul>
     </div>
-    <div id="content"></div>
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(() => {
-        $("#content").load("content/html.html");
-      });
-      $(".nav a").click(function(event) {
-        event.preventDefault();
-        $("#content").load($(this).attr("href"));
-        $(".nav li.active").removeClass("active");
-        $(this)
-          .parent()
-          .addClass("active");
-      });
-    </script>
-    <script src="src/ace.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
-  </body>
+  </nav>
+  
+
+  <div style="margin-top: 50px;" id="content"></div>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(() => {
+      $("#content").load("content/html.html");
+    });
+    $(".nav a").click(function (event) {
+      event.preventDefault();
+      $("#content").load($(this).attr("href"));
+      $(".nav li.active").removeClass("active");
+      $(this)
+        .parent()
+        .addClass("active");
+    });
+  </script>
+  <script src="src/ace.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/highlight.pack.js"></script>
+
+</body>
+
 </html>
