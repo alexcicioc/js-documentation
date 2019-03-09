@@ -32,13 +32,16 @@
       </ul>
     </div>
   </nav>
-  
+
 
   <div style="margin-top: 50px;" id="content"></div>
   <script src="js/jquery-3.3.1.min.js"></script>
   <script type="text/javascript">
     $(document).ready(() => {
-      $("#content").load("content/html.html");
+      const currentUrl = window.location.href.split('/')[1];
+      const contentUrl = `content/${currentUrl ? currentUrl : 'html.html'}`;
+      console.log(contentUrl);
+      $("#content").load(contentUrl);
     });
     $(".nav a").click(function (event) {
       event.preventDefault();
@@ -47,6 +50,7 @@
       $(this)
         .parent()
         .addClass("active");
+      window.history.pushState("", "", $(this).attr("href").split('/')[1]);
     });
   </script>
   <script src="src/ace.js"></script>
