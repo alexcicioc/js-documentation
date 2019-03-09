@@ -38,9 +38,9 @@
   <script src="js/jquery-3.3.1.min.js"></script>
   <script type="text/javascript">
     $(document).ready(() => {
-      const currentUrl = window.location.href.split('/')[1];
-      const contentUrl = `content/${currentUrl ? currentUrl : 'html.html'}`;
-      console.log(contentUrl);
+      const urlSplit = window.location.href.split('/');
+      const fileName = urlSplit[urlSplit.length - 1];
+      const contentUrl = `content/${fileName ? fileName : 'html.html'}`;
       $("#content").load(contentUrl);
     });
     $(".nav a").click(function (event) {

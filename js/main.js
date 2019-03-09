@@ -395,7 +395,7 @@ function runCode(event) {
     var resultElement = event.target.parentNode.getElementsByClassName(
         "result"
     )[0];
-    console.log = function(message) {
+    console.log = function (message) {
         resultElement.innerHTML = message;
     };
 
@@ -415,7 +415,7 @@ function Editor(identifer, code) {
 }
 
 function htmlcss() {
-    $(".css-container textarea").focus(function() {
+    $(".css-container textarea").focus(function () {
         var $this = $(this);
 
         var frame = $this
@@ -427,11 +427,11 @@ function htmlcss() {
             contents = frame.contents(),
             body = contents.find("body"),
             styleTag = contents
-            .find("head")
-            .append("<style></style>")
-            .children("style");
+                .find("head")
+                .append("<style></style>")
+                .children("style");
 
-        $this.keyup(function() {
+        $this.keyup(function () {
             if ($this.attr("class") === "css-htmliframe") {
                 body.html($this.val());
             } else {
@@ -444,12 +444,9 @@ function htmlcss() {
 
 function createSummary() {
     $("h2").each((index, element) => {
-        console.log($(element).attr('class'));
         if ($(element).hasClass('ignore-summary')) {
-            console.log('intra');
             return;
         }
-        console.log('intra2');
         const id = $(element).text().replace(/[^a-z0-9+]+/gi, '') + getRandomInt(99999);
         $(element).attr('id', id);
         const list = $("<li></li>").html(`<a href="#${id}">${$(element).text()}</a>`);
