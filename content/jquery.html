@@ -1,296 +1,266 @@
 <div class="bs-docs-header" id="content" tabindex="-1">
-  <div id="js-overview" class="container">
-    <h1>jQuery</h1>
-    <div id="carbonads">
-      <span class="carbon-wrap">
-        <img src="images/jquery.png" alt="" style="border-radius: 10px;" width="75%" />
-      </span>
+    <div id="js-overview" class="container">
+        <h1>jQuery</h1>
+        <div id="carbonads">
+            <span class="carbon-wrap">
+                <img src="images/jquery.png" alt="" style="border-radius: 10px;"
+                    width="75%" />
+            </span>
+        </div>
     </div>
-  </div>
 </div>
 
 <div class="container bs-docs-container">
-  <div class="row">
-    <div class="col-md-9" role="main">
-      <div class="bs-docs-section">
-
-        <div class="section">
-          <h1 class="page-header"><a class="anchorjs-link " href="#overview" aria-label="Anchor link for: overview"
-              data-anchorjs-icon=""
-              style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>What
-            is jQuery?
-          </h1>
-          <p>jQuery is a lightweight, "write less, do more", JavaScript library.</p>
-          <p>The purpose of jQuery is to make it much easier to use JavaScript on your website.</p>
-          <p>jQuery takes a lot of common tasks that require many lines of JavaScript code to accomplish,
-            and wraps them into methods that you can call with a single line of code.</p>
-          <p>jQuery also simplifies a lot of the complicated things from JavaScript, like AJAX calls and DOM
-            manipulation.</p>
-          <p>The jQuery library contains the following features:</p>
-          <ul>
-            <li>HTML/DOM manipulation</li>
-            <li>CSS manipulation</li>
-            <li>HTML event methods</li>
-            <li>Effects and animations</li>
-            <li>AJAX</li>
-            <li>Utilities</li>
-          </ul>
-        </div>
-
-        <div class="section">
-          <h2 class="page-header">
-            <a class="anchorjs-link " href="#overview-doctype" aria-label="Anchor link for: overview doctype"
-              data-anchorjs-icon="" style="font-style: normal; font-variant: normal; font-weight: normal; 
-                                  font-stretch: normal; font-size: 1em; line-height: inherit; font-family: 
-                                  anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;">
-            </a>
-            Importing jQuery
-          </h2>
-          <p>There are two ways of importing jQuery:</p>
-          <ul>
-            <li>Download the jQuery library locally, where jquery-3.3.1.min.js is in the same folder than the HTML file
-              importing it
-              <pre class="code"><code class="html">&lt;head&gt;
+    <div class="row">
+        <div class="col-md-9" role="main">
+            <div class="section">
+                <h2 class="page-header">What is jQuery?
+                </h2>
+                <p>jQuery is a lightweight, "write less, do more", JavaScript library.</p>
+                <p>The purpose of jQuery is to make it much easier to use JavaScript on your website.</p>
+                <p>jQuery takes a lot of common tasks that require many lines of JavaScript code to accomplish, and wraps them into methods that you can call with a single line of code.</p>
+                <p>jQuery also simplifies a lot of the complicated things from JavaScript, like AJAX calls and DOM manipulation.
+                </p>
+                <p>The jQuery library contains the following features:</p>
+                <ul>
+                    <li>HTML/DOM manipulation</li>
+                    <li>CSS manipulation</li>
+                    <li>HTML event methods</li>
+                    <li>Effects and animations</li>
+                    <li>AJAX</li>
+                    <li>Utilities</li>
+                </ul>
+            </div>
+            <div class="section">
+                <h2 class="page-header">
+                    Importing jQuery
+                </h2>
+                <p>There are two ways of importing jQuery:</p>
+                <ul>
+                    <li>Download the jQuery library locally, where jquery-3.3.1.min.js is in the same folder than the HTML file importing it
+                        <pre class="code"><code class="html">&lt;head&gt;
   &lt;script src=&quot;jquery-3.3.1.min.js&quot;&gt;&lt;/script&gt;
 &lt;/head&gt;</code></pre>
-            </li>
-            <li>Use the jQuery CDN (content delivery network)
-              <pre><code class="html">&lt;head&gt;
+                    </li>
+                    <li>Use the jQuery CDN (content delivery network)
+                        <pre><code class="html">&lt;head&gt;
   &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js&quot;&gt;&lt;/script&gt;
 &lt;/head&gt;</code></pre>
-            </li>
-          </ul>
-          <p>Both versions can be downloaded from <a target="_blank" href="http://jquery.com/download/">jQuery.com</a>.
-          </p>
-        </div>
-        <div class="section">
-          <h2 class="page-header">
-            <a class="anchorjs-link " href="#overview-doctype" aria-label="Anchor link for: overview doctype"
-              data-anchorjs-icon="" style="font-style: normal; font-variant: normal; font-weight: normal; 
-                                    font-stretch: normal; font-size: 1em; line-height: inherit; font-family: 
-                                    anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;">
-            </a>
-            jQuery Selectors
-          </h2>
-          <p>jQuery selectors allow you to select and manipulate HTML element(s).</p>
-          <p>jQuery selectors are used to "find" (or select) HTML elements based on their
-            name, id, classes, types, attributes, values of attributes and much more.
-            It's based on the existing CSS Selectors, and in addition, it has
-            some own custom selectors.</p>
-          <p>All selectors in jQuery start with the dollar sign and parentheses: $().</p>
-        </div>
-        <h2>The element Selector</h2>
-        <p>The jQuery element selector selects elements based on the element name.</p>
-        <p>You can select all <code class="inline">&lt;p&gt;</code> elements on a page like this:</p>
-        <p><b>Example</b></p>
-        <p>When a user clicks on a button, all <code class="inline">&lt;p&gt;</code> elements will be hidden:</p>
-        <pre><code>$(document).ready(function(){
+                    </li>
+                </ul>
+                <p>Both versions can be downloaded from <a target="_blank" href="http://jquery.com/download/">jQuery.com</a>.
+                </p>
+            </div>
+            <div class="section">
+                <h2 class="page-header">
+                    jQuery Selectors
+                </h2>
+                <p>jQuery selectors allow you to select and manipulate HTML element(s).
+                </p>
+                <p>jQuery selectors are used to "find" (or select) HTML elements based on their name, id, classes, types, attributes, values of attributes and much more. It's based on the existing CSS Selectors, and in addition, it has some own custom selectors.
+                </p>
+                <p>All selectors in jQuery start with the dollar sign and parentheses: $().</p>
+                <h3>The element Selector</h3>
+                <p>The jQuery element selector selects elements based on the element name.</p>
+                <p>You can select all <code class="inline">&lt;p&gt;</code> elements on a page like this:</p>
+                <p><b>Example</b></p>
+                <p>When a user clicks on a button, all <code class="inline">&lt;p&gt;</code> elements will be hidden:
+                </p>
+                <pre><code>$(document).ready(function(){
     $("button").click(function(){
     $("p").hide();
   });
 });</code></pre>
-        <a class="btn btn-primary" target="_blank"
-          href="https://www.w3schools.com/jquERY/tryit.asp?filename=tryjquery_hide_p">
-          Try example
-        </a>
+                <a class="btn btn-primary" target="_blank" href="https://www.w3schools.com/jquERY/tryit.asp?filename=tryjquery_hide_p">
+                    Try example
+                </a>
 
-        <h2>The #id Selector</h2>
-        <p>The jQuery <code class="inline">#<em>id</em></code> selector uses the id attribute of an HTML tag to find the
-          specific element.</p>
-        <p>An id should be unique within a page, so you should use the #id selector when you want to find a single,
-          unique element.</p>
-        <p>To find an element with a specific id, write a hash character, followed by the id of the
-          HTML element:</p>
-        <pre><code>$("#test")</code></pre>
-        <p><b>Example</b></p>
-        <p>When a user clicks on a button, the element with id="test" will be hidden:</p>
-        <a class="btn btn-primary" target="_blank"
-          href="https://www.w3schools.com/jquERY/tryit.asp?filename=tryjquery_hide_id">
-          Try example
-        </a>
-        <h2>The .class Selector</h2>
-        <p>The jQuery <code class="inline"><em>.class</em></code> selector finds elements with a specific class.</p>
-        <p>To find elements with a specific class, write a period character, followed by the name of the class:</p>
-        <pre><code>$(".test")</code></pre>
-        <b>Example</b>
-        <p>When a user clicks on a button, the elements with class="test" will be hidden:</p>
+                <h3>The #id Selector</h3>
+                <p>The jQuery <code class="inline">#<em>id</em></code> selector uses the id attribute of an HTML tag to find the specific element.</p>
+                <p>An id should be unique within a page, so you should use the #id selector when you want to find a single, unique element.</p>
+                <p>To find an element with a specific id, write a hash character, followed by the id of the HTML element:
+                </p>
+                <pre><code>$("#test")</code></pre>
+                <p><b>Example</b></p>
+                <p>When a user clicks on a button, the element with id="test" will be hidden:</p>
+                <a class="btn btn-primary" target="_blank" href="https://www.w3schools.com/jquERY/tryit.asp?filename=tryjquery_hide_id">
+                    Try example
+                </a>
+                <h3>The .class Selector</h3>
+                <p>The jQuery <code class="inline"><em>.class</em></code> selector finds elements with a specific class.
+                </p>
+                <p>To find elements with a specific class, write a period character, followed by the name of the class:
+                </p>
+                <pre><code>$(".test")</code></pre>
+                <b>Example</b>
+                <p>When a user clicks on a button, the elements with class="test" will be hidden:</p>
 
-        <a class="btn btn-primary" target="_blank"
-          href="https://www.w3schools.com/jquERY/tryit.asp?filename=tryjquery_hide_class">
-          Try example
-        </a>
-        <h2>More Examples of jQuery Selectors</h2>
-        <table class="table table-striped table-bordered">
-          <tbody>
-            <tr>
-              <th style="width:25%">Syntax</th>
-              <th style="width:65%">Description</th>
-              <th>Example</th>
-            </tr>
-            <tr>
-              <td>$("*")</td>
-              <td>Selects all elements</td>
-              <td><a target="_blank" class="w3-btn"
-                  href="https://www.w3schools.com/jquERY/tryit.asp?filename=tryjquery_sel_all2">Try it</a></td>
-            </tr>
-            <tr>
-              <td>$(this)</td>
-              <td>Selects the current HTML element</td>
-              <td><a target="_blank" class="w3-btn"
-                  href="https://www.w3schools.com/jquERY/tryit.asp?filename=tryjquery_sel_this">Try it</a></td>
-            </tr>
-            <tr>
-              <td>$("p.intro")</td>
-              <td>Selects all &lt;p&gt; elements with class="intro"</td>
-              <td><a target="_blank" class="w3-btn"
-                  href="https://www.w3schools.com/jquERY/tryit.asp?filename=tryjquery_sel_pclass">Try it</a></td>
-            </tr>
-            <tr>
-              <td>$("p:first")</td>
-              <td>Selects the first &lt;p&gt; element</td>
-              <td><a target="_blank" class="w3-btn"
-                  href="https://www.w3schools.com/jquERY/tryit.asp?filename=tryjquery_sel_pfirst">Try it</a></td>
-            </tr>
-            <tr>
-              <td>$("ul li:first")</td>
-              <td>Selects the first &lt;li&gt; element of the first &lt;ul&gt;</td>
-              <td><a target="_blank" class="w3-btn"
-                  href="https://www.w3schools.com/jquERY/tryit.asp?filename=tryjquery_sel_ullifirst">Try it</a></td>
-            </tr>
-            <tr>
-              <td>$("ul li:first-child")</td>
-              <td>Selects the first &lt;li&gt; element of every &lt;ul&gt;</td>
-              <td><a target="_blank" class="w3-btn"
-                  href="https://www.w3schools.com/jquERY/tryit.asp?filename=tryjquery_sel_ullifirstchild">Try it</a>
-              </td>
-            </tr>
-            <tr>
-              <td>$("[href]")</td>
-              <td>Selects all elements with an href attribute</td>
-              <td><a target="_blank" class="w3-btn" href="tryit.asp?filename=tryjquery_sel_hrefattr">Try it</a></td>
-            </tr>
-            <tr>
-              <td>$("a[target='_blank']")</td>
-              <td>Selects all &lt;a&gt; elements with a target attribute value equal to "_blank"</td>
-              <td><a target="_blank" class="w3-btn" href="tryit.asp?filename=tryjquery_sel_hrefattrblank">Try it</a>
-              </td>
-            </tr>
-            <tr>
-              <td>$("a[target!='_blank']")</td>
-              <td>Selects all &lt;a&gt; elements with a target attribute value NOT equal to "_blank"</td>
-              <td><a target="_blank" class="w3-btn" href="tryit.asp?filename=tryjquery_sel_hrefattrnotblank">Try it</a>
-              </td>
-            </tr>
-            <tr>
-              <td>$(":button")</td>
-              <td>Selects all &lt;button&gt; elements and &lt;input&gt; elements of type="button"</td>
-              <td><a target="_blank" class="w3-btn" href="tryit.asp?filename=tryjquery_sel_button2">Try it</a></td>
-            </tr>
-            <tr>
-              <td>$("tr:even")</td>
-              <td>Selects all even &lt;tr&gt; elements</td>
-              <td><a target="_blank" class="w3-btn" href="tryit.asp?filename=tryjquery_sel_even">Try it</a></td>
-            </tr>
-            <tr>
-              <td>$("tr:odd")</td>
-              <td>Selects all odd &lt;tr&gt; elements</td>
-              <td><a target="_blank" class="w3-btn" href="tryit.asp?filename=tryjquery_sel_odd">Try it</a></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="section">
-        <h2 class="page-header">
-          <a class="anchorjs-link " href="#overview-doctype" aria-label="Anchor link for: overview doctype"
-            data-anchorjs-icon="" style="font-style: normal; font-variant: normal; font-weight: normal; 
-                                    font-stretch: normal; font-size: 1em; line-height: inherit; font-family: 
-                                    anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;">
-          </a>
-          jQuery Effects
-        </h2>
-        <h2>jQuery hide() and show()</h2>
-        <p>With jQuery, you can hide and show HTML elements with the <code class="inline">$(element).hide()</code> and
-          <code class="inline">$(element).show()</code> methods.</p>
-        <p>The hide method changes the element's css display property to none:
-          <pre><code>&lt;p style=&quot;display: none;&quot;&gt;If you click on the &quot;Hide&quot; button, I will disappear.&lt;/p&gt;</code></pre>
+                <a class="btn btn-primary" target="_blank" href="https://www.w3schools.com/jquERY/tryit.asp?filename=tryjquery_hide_class">
+                    Try example
+                </a>
+                <h3>More Examples of jQuery Selectors</h3>
+                <table class="table table-striped table-bordered">
+                    <tbody>
+                        <tr>
+                            <th style="width:25%">Syntax</th>
+                            <th style="width:65%">Description</th>
+                            <th>Example</th>
+                        </tr>
+                        <tr>
+                            <td>$("*")</td>
+                            <td>Selects all elements</td>
+                            <td><a target="_blank" class="w3-btn" href="https://www.w3schools.com/jquERY/tryit.asp?filename=tryjquery_sel_all2">Try
+                                    it</a></td>
+                        </tr>
+                        <tr>
+                            <td>$(this)</td>
+                            <td>Selects the current HTML element</td>
+                            <td><a target="_blank" class="w3-btn" href="https://www.w3schools.com/jquERY/tryit.asp?filename=tryjquery_sel_this">Try
+                                    it</a></td>
+                        </tr>
+                        <tr>
+                            <td>$("p.intro")</td>
+                            <td>Selects all &lt;p&gt; elements with class="intro"
+                            </td>
+                            <td><a target="_blank" class="w3-btn" href="https://www.w3schools.com/jquERY/tryit.asp?filename=tryjquery_sel_pclass">Try
+                                    it</a></td>
+                        </tr>
+                        <tr>
+                            <td>$("p:first")</td>
+                            <td>Selects the first &lt;p&gt; element</td>
+                            <td><a target="_blank" class="w3-btn" href="https://www.w3schools.com/jquERY/tryit.asp?filename=tryjquery_sel_pfirst">Try
+                                    it</a></td>
+                        </tr>
+                        <tr>
+                            <td>$("ul li:first")</td>
+                            <td>Selects the first &lt;li&gt; element of the first &lt;ul&gt;</td>
+                            <td><a target="_blank" class="w3-btn" href="https://www.w3schools.com/jquERY/tryit.asp?filename=tryjquery_sel_ullifirst">Try
+                                    it</a></td>
+                        </tr>
+                        <tr>
+                            <td>$("ul li:first-child")</td>
+                            <td>Selects the first &lt;li&gt; element of every &lt;ul&gt;</td>
+                            <td><a target="_blank" class="w3-btn" href="https://www.w3schools.com/jquERY/tryit.asp?filename=tryjquery_sel_ullifirstchild">Try
+                                    it</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>$("[href]")</td>
+                            <td>Selects all elements with an href attribute</td>
+                            <td><a target="_blank" class="w3-btn" href="tryit.asp?filename=tryjquery_sel_hrefattr">Try
+                                    it</a></td>
+                        </tr>
+                        <tr>
+                            <td>$("a[target='_blank']")</td>
+                            <td>Selects all &lt;a&gt; elements with a target attribute value equal to "_blank"</td>
+                            <td><a target="_blank" class="w3-btn" href="tryit.asp?filename=tryjquery_sel_hrefattrblank">Try
+                                    it</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>$("a[target!='_blank']")</td>
+                            <td>Selects all &lt;a&gt; elements with a target attribute value NOT equal to "_blank"
+                            </td>
+                            <td><a target="_blank" class="w3-btn" href="tryit.asp?filename=tryjquery_sel_hrefattrnotblank">Try
+                                    it</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>$(":button")</td>
+                            <td>Selects all &lt;button&gt; elements and &lt;input&gt; elements of type="button"</td>
+                            <td><a target="_blank" class="w3-btn" href="tryit.asp?filename=tryjquery_sel_button2">Try
+                                    it</a></td>
+                        </tr>
+                        <tr>
+                            <td>$("tr:even")</td>
+                            <td>Selects all even &lt;tr&gt; elements</td>
+                            <td><a target="_blank" class="w3-btn" href="tryit.asp?filename=tryjquery_sel_even">Try
+                                    it</a></td>
+                        </tr>
+                        <tr>
+                            <td>$("tr:odd")</td>
+                            <td>Selects all odd &lt;tr&gt; elements</td>
+                            <td><a target="_blank" class="w3-btn" href="tryit.asp?filename=tryjquery_sel_odd">Try
+                                    it</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-          While the show method removes the display property:
-          <pre><code>&lt;p&gt;If you click on the &quot;Hide&quot; button, I will disappear.&lt;/p&gt;</code></pre>
-        </p>
-        <h3>Example:</h3>
-        <pre><code>$("#hide").click(function(){
+            <div class="section">
+                <h2 class="page-header">
+                    jQuery Effects
+                </h2>
+                <h3>jQuery hide() and show()</h3>
+                <p>With jQuery, you can hide and show HTML elements with the
+                    <code class="inline">$(element).hide()</code> and
+                    <code class="inline">$(element).show()</code> methods.</p>
+                <p>The hide method changes the element's css display property to none:
+                    <pre><code>&lt;p style=&quot;display: none;&quot;&gt;If you click on the &quot;Hide&quot; button, I will disappear.&lt;/p&gt;</code></pre> While the show method removes the display property:
+                    <pre><code>&lt;p&gt;If you click on the &quot;Hide&quot; button, I will disappear.&lt;/p&gt;</code></pre>
+                </p>
+                <h3>Example</h3>
+                <pre><code>$("#hide").click(function(){
   $("p").hide();
 });
           
 $("#show").click(function(){
   $("p").show();
 });</code></pre>
-        <a class="btn btn-primary" target="_blank"
-          href="https://www.w3schools.com/jquERY/tryit.asp?filename=tryjquery_hide_show">
-          Try example
-        </a>
-      </div>
+                <a class="btn btn-primary" target="_blank" href="https://www.w3schools.com/jquERY/tryit.asp?filename=tryjquery_hide_show">
+                    Try example
+                </a>
+            </div>
 
-      <div class="section">
-        <h2 class="page-header">
-          <a class="anchorjs-link " href="#overview-doctype" aria-label="Anchor link for: overview doctype"
-            data-anchorjs-icon="" style="font-style: normal; font-variant: normal; font-weight: normal; 
-                                      font-stretch: normal; font-size: 1em; line-height: inherit; font-family: 
-                                      anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;">
-          </a>
-          jQuery DOM Manipulation
-        </h2>
+            <div class="section">
+                <h2 class="page-header">
+                    jQuery DOM Manipulation
+                </h2>
 
-        <p>One very important part of jQuery is the possibility to manipulate the DOM.</p>
-        <p>jQuery comes with a bunch of DOM related methods that make it easy to
-          access and manipulate elements and attributes.</p>
-        <div class="alert alert-info">
-          <p><b>DOM = Document Object Model</b><br><br>
-            The DOM defines a standard for accessing HTML and XML documents:<br><br>
-            <i>"The W3C Document Object Model (DOM) is a platform and language-neutral
-              interface that allows programs and scripts to dynamically access and update the
-              content, structure, and style of a document."</i></p>
-        </div>
+                <p>One very important part of jQuery is the possibility to manipulate the DOM.</p>
+                <p>jQuery comes with a bunch of DOM related methods that make it easy to access and manipulate elements and attributes.</p>
+                <div class="alert alert-info">
+                    <p><b>DOM = Document Object Model</b><br><br> The DOM defines a standard for accessing HTML and XML documents:<br><br>
+                        <i>"The W3C Document Object Model (DOM) is a
+                            platform and language-neutral
+                            interface that allows programs and scripts to
+                            dynamically access and update the
+                            content, structure, and style of a document."</i></p>
+                </div>
 
-        <h2>Get Content - text(), html(), and val()</h2>
-        <p>Three simple, but useful, jQuery methods for DOM manipulation are:</p>
-        <ul>
-          <li><code class="inline">$(element).text()</code> - Sets or returns the text content of selected elements</li>
-          <li><code class="inline">$(element).html()</code> - Sets or returns the content of selected elements
-            (including HTML markup)</li>
-          <li><code class="inline">$(element).val()</code> - Sets or returns the value of form fields</li>
-        </ul>
-        <p>The following example demonstrates how to get content with the jQuery <code class="inline">text()</code> and
-          <code class="inline">html()</code> methods:</p>
-        <pre><code>$("#btn1").click(function(){
+                <h3>Get Content - text(), html(), and val()</h3>
+                <p>Three simple, but useful, jQuery methods for DOM manipulation are:</p>
+                <ul>
+                    <li><code class="inline">$(element).text()</code> - Sets or returns the text content of selected elements
+                    </li>
+                    <li><code class="inline">$(element).html()</code> - Sets or returns the content of selected elements (including HTML markup)</li>
+                    <li><code class="inline">$(element).val()</code> - Sets or returns the value of form fields</li>
+                </ul>
+                <p>The following example demonstrates how to get content with the jQuery <code class="inline">text()</code> and
+                    <code class="inline">html()</code> methods:</p>
+                <pre><code>$("#btn1").click(function(){
   alert("Text: " + $("#test").text());
 });
 
 $("#btn2").click(function(){
   alert("HTML: " + $("#test").html());
 });</code></pre>
-
-        <a class="btn btn-primary" target="_blank"
-          href="https://www.w3schools.com/jquERY/tryit.asp?filename=tryjquery_dom_html_get">
-          Try example
-        </a>
-        <hr />
-        <p>The following example demonstrates how to get the value of an input field with the jQuery <code
-            class="inline">val()</code> method:</p>
-        <pre><code>$("#btn1").click(function(){
+                <a class="btn btn-primary" target="_blank" href="https://www.w3schools.com/jquERY/tryit.asp?filename=tryjquery_dom_html_get">
+                    Try example
+                </a>
+                <hr />
+                <p>The following example demonstrates how to get the value of an input field with the jQuery <code class="inline">val()</code> method:</p>
+                <pre><code>$("#btn1").click(function(){
   alert("Value: " + $("#test").val());
 });</code></pre>
+                <a class="btn btn-primary" target="_blank" href="https://www.w3schools.com/jquERY/tryit.asp?filename=tryjquery_dom_val_get">
+                    Try example
+                </a>
 
-        <a class="btn btn-primary" target="_blank"
-          href="https://www.w3schools.com/jquERY/tryit.asp?filename=tryjquery_dom_val_get">
-          Try example
-        </a>
-      </div>
-      <hr />
-      <p>The following example demonstrates how to set content with the jQuery <code class="inline">text()</code>,
-        <code class="inline">html()</code>,
-        and <code class="inline">val()</code> methods:</p>
-      <pre><code>$("#btn1").click(function(){
+                <hr />
+                <p>The following example demonstrates how to set content with the jQuery <code class="inline">text()</code>,
+                    <code class="inline">html()</code>, and <code class="inline">val()</code> methods:</p>
+                <pre><code>$("#btn1").click(function(){
   $("#test1").text("Hello world!");
 });
 
@@ -301,38 +271,25 @@ $("#btn2").click(function(){
 $("#btn3").click(function(){
   $("#test3").val("Dolly Duck");
 });</code></pre>
-
-      <a class="btn btn-primary" target="_blank"
-        href="https://www.w3schools.com/jquERY/tryit.asp?filename=tryjquery_dom_html_set">
-        Try example
-      </a>
+                <a class="btn btn-primary" target="_blank" href="https://www.w3schools.com/jquERY/tryit.asp?filename=tryjquery_dom_html_set">
+                    Try example
+                </a>
+            </div>
+        </div>
+        <div class="sticky col-md-3" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm
+                affix-top">
+                <p><strong>Summary</strong></p>
+                <ul id="rightNav" class="nav bs-docs-sidenav"></ul>
+            </nav>
+        </div>
     </div>
-
-    <div class="sticky col-md-3" role="complementary">
-      <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top">
-        <p><strong>Summary</strong></p>
-        <ul id="rightNav" class="nav bs-docs-sidenav"></ul>
-      </nav>
-    </div>
-  </div>
 </div>
 
 <script>
-  document.querySelectorAll('code').forEach((block) => {
-    hljs.highlightBlock(block);
-  });
+    document.querySelectorAll('code').forEach((block) => {
+        hljs.highlightBlock(block);
+    });
 
-  function getRandomInt(max) {
-    return Math.floor(Math.random() * Math.floor(max));
-  }
-
-  $(document).ready(() => {
-    $("h2").each((index, element) => {
-      const id = 'element' + getRandomInt(100000);
-      $(element).attr('id', id);
-      const list = $("<li></li>").html(`<a href="#${id}">${$(element).text()}</a>`);
-      $("#rightNav").append(list);
-    })
-  })
-
+    createSummary();
 </script>

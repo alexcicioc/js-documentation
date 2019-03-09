@@ -1,24 +1,24 @@
 var editorsMap = new Map();
 
 function ready() {
-  setupEditor();
+    setupEditor();
 }
 
 function setupEditor() {
-  new Editor(
-    "editor",
-    `const x = "Test";
+    new Editor(
+        "editor",
+        `const x = "Test";
 var y = 2;
 let z = true;
 
 console.log("av");
 `,
-    1
-  );
+        1
+    );
 
-  new Editor(
-    "js-datatypes-editor",
-    `typeof undefined // "undefined";
+    new Editor(
+        "js-datatypes-editor",
+        `typeof undefined // "undefined";
 
 typeof 0 // "number"
 
@@ -31,33 +31,33 @@ typeof Symbol("id") // "symbol";
 typeof { property : 'value'} // "object"
 
 typeof alert // "function"`
-  );
+    );
 
-  new Editor(
-    "js-boolean-editor",
-    `
+    new Editor(
+        "js-boolean-editor",
+        `
 10>9 // "true";
 
 const value = true;
     
 const anotherValue = new Boolean(false);
 `
-  );
+    );
 
-  new Editor(
-    "js-array-editor",
-    `
+    new Editor(
+        "js-array-editor",
+        `
 //Create an Array
 var cars = ["Dacia", "Skoda"];
 
 // You can play with the methods described above
 alert(cars);
 `
-  );
+    );
 
-  new Editor(
-    "js-number-editor",
-    `let integerNumber = 123; //integer
+    new Editor(
+        "js-number-editor",
+        `let integerNumber = 123; //integer
 
 let floatingNumber = 12.345; //floating number
     
@@ -67,22 +67,22 @@ alert( -1 / 0 ); // Will result in -Infinity
     
 alert("not a number" / 2); // Will result in NaN, because we try to divide string with number
 `
-  );
+    );
 
-  new Editor(
-    "js-string-editor",
-    `let str = "JavaScript";
+    new Editor(
+        "js-string-editor",
+        `let str = "JavaScript";
 
 let str2 = 'String with single quotes';
 
 str2.toUpperCase();
 // STRING WITH SINGLE QUOTES
 `
-  );
+    );
 
-  new Editor(
-    "js-object-editor",
-    `// Object Literal
+    new Editor(
+        "js-object-editor",
+        `// Object Literal
 var Car = {
     brand: 'Toyota',
     color: 'black',
@@ -108,11 +108,11 @@ function Car(brand, color, doors){
     
 let myCar = new Car("Audi", "black", 5);
 myCar.start();`
-  );
+    );
 
-  new Editor(
-    "js-condition-editor",
-    ` let n = 5;
+    new Editor(
+        "js-condition-editor",
+        ` let n = 5;
 
 if(n>5){
     alert("Greater then 5");
@@ -122,12 +122,12 @@ if(n>5){
 
 //another way to write if/else statement
 (n>5) ? alert("Greater") : alert("Less then");`,
-    1
-  );
+        1
+    );
 
-  new Editor(
-    "js-switch-editor",
-    `var day = 4;
+    new Editor(
+        "js-switch-editor",
+        `var day = 4;
 
 switch (day) {
     case 0:
@@ -153,12 +153,12 @@ switch (day) {
     }
     
     alert(day); //what value should have day variable ?`,
-    1
-  );
+        1
+    );
 
-  new Editor(
-    "js-dowhile-editor",
-    `var result = "";
+    new Editor(
+        "js-dowhile-editor",
+        `var result = "";
 var i = 0;
     
 do {
@@ -168,12 +168,12 @@ do {
     
 alert(result);
 // expected result: "12345"`,
-    1
-  );
+        1
+    );
 
-  new Editor(
-    "js-forin-editor",
-    `var text = "";
+    new Editor(
+        "js-forin-editor",
+        `var text = "";
 var car = { brand: "Audi", color: "black", doors: 5 };
     
 for (var prop in obj) {
@@ -182,20 +182,20 @@ for (var prop in obj) {
     
 alert(text);
 // expected output: "Audi black 5"`,
-    1
-  );
+        1
+    );
 
-  new Editor(
-    "js-for-editor",
-    `for(let i=0; i<10; i++){
+    new Editor(
+        "js-for-editor",
+        `for(let i=0; i<10; i++){
 alert(i);
 }`,
-    1
-  );
+        1
+    );
 
-  new Editor(
-    "js-forof-editor",
-    `var iterable = [10, 20, 30];
+    new Editor(
+        "js-forof-editor",
+        `var iterable = [10, 20, 30];
 
 for (let value of iterable) {
   value += 1;
@@ -214,12 +214,12 @@ for (let value of iterable) {
 //"o"
 
 `,
-    1
-  );
+        1
+    );
 
-  new Editor(
-    "js-function-editor",
-    `// Function Declaration
+    new Editor(
+        "js-function-editor",
+        `// Function Declaration
 function firstFunction(parameters){
     statements
 }
@@ -245,12 +245,12 @@ var sum = new Function('a', 'b', 'return a + b');
 
 alert(sum(2, 6));
 `,
-    1
-  );
+        1
+    );
 
-  new Editor(
-    "js-functionreturn-editor",
-    `function test(){
+    new Editor(
+        "js-functionreturn-editor",
+        `function test(){
     return true;
 }
 test(); // true;
@@ -261,12 +261,12 @@ function double(num){
 
 double(); // undefined;
 `,
-    1
-  );
+        1
+    );
 
-  new Editor(
-    "js-classes-editor",
-    `class Pet {
+    new Editor(
+        "js-classes-editor",
+        `class Pet {
     constructor(name, age){
         this.age=age;
         this.name=name;
@@ -281,12 +281,12 @@ var myPet = new Pet('Mike', 2);
 myPet.bark();
 
 `,
-    1
-  );
+        1
+    );
 
-  new Editor(
-    "js-class-methods-editor",
-    `class Animal { 
+    new Editor(
+        "js-class-methods-editor",
+        `class Animal { 
     speak() {
       return this;
     }
@@ -300,12 +300,12 @@ myPet.bark();
   Animal.eat() // class Animal
 
 `,
-    1
-  );
+        1
+    );
 
-  new Editor(
-    "js-getset-method-editor",
-    `// ES6 get and set
+    new Editor(
+        "js-getset-method-editor",
+        `// ES6 get and set
 class Person {
   constructor(name) {
     this._name = name;
@@ -328,12 +328,12 @@ let bob = new Person('Bob');
 alert(bob.name);  // Outputs 'BOB'
 
 `,
-    1
-  );
+        1
+    );
 
-  new Editor(
-    "js-class-inheritance-editor",
-    `
+    new Editor(
+        "js-class-inheritance-editor",
+        `
 class Person {
     constructor(name) {
       this.name = name;
@@ -363,80 +363,115 @@ class Person {
   cory.writeCode();
 
 `,
-    1
-  );
-  new Editor(
-    "js-scope-editor",
-    `function showLog(){
+        1
+    );
+    new Editor(
+        "js-scope-editor",
+        `function showLog(){
   var log ="I'am the log";
   // Inside this function we have access tho the log 
 }
 
 //Here , we cannot access the log variable
   `
-  );
+    );
 }
 
 function showHiddenList(el) {
-  const hiddenUl = el.parentElement.children[1];
-  switch (hiddenUl.style.display) {
-    case "none":
-      hiddenUl.style.display = "block";
-      break;
-    case "block":
-      hiddenUl.style.display = "none";
-  }
+    const hiddenUl = el.parentElement.children[1];
+    switch (hiddenUl.style.display) {
+        case "none":
+            hiddenUl.style.display = "block";
+            break;
+        case "block":
+            hiddenUl.style.display = "none";
+    }
 }
 
 function runCode(event) {
-  var editorElement = event.target.parentNode.getElementsByClassName(
-    "ace_editor"
-  )[0];
-  var resultElement = event.target.parentNode.getElementsByClassName(
-    "result"
-  )[0];
-  console.log = function(message) {
-    resultElement.innerHTML = message;
-  };
+    var editorElement = event.target.parentNode.getElementsByClassName(
+        "ace_editor"
+    )[0];
+    var resultElement = event.target.parentNode.getElementsByClassName(
+        "result"
+    )[0];
+    console.log = function(message) {
+        resultElement.innerHTML = message;
+    };
 
-  var identifier = editorElement.getAttribute("id");
-  var editor = editorsMap.get(identifier);
-  eval(editor.getValue());
+    var identifier = editorElement.getAttribute("id");
+    var editor = editorsMap.get(identifier);
+    eval(editor.getValue());
 }
 
 function Editor(identifer, code) {
-  this.identifer = identifer;
-  this.code = code;
-  this.currentEditor = ace.edit(identifer);
-  this.currentEditor.setTheme("ace/theme/xcode");
-  this.currentEditor.session.setMode("ace/mode/javascript");
-  this.currentEditor.setValue(code, 1);
-  editorsMap.set(identifer, this.currentEditor);
+    this.identifer = identifer;
+    this.code = code;
+    this.currentEditor = ace.edit(identifer);
+    this.currentEditor.setTheme("ace/theme/xcode");
+    this.currentEditor.session.setMode("ace/mode/javascript");
+    this.currentEditor.setValue(code, 1);
+    editorsMap.set(identifer, this.currentEditor);
 }
 
 function htmlcss() {
-  $(".css-container textarea").focus(function() {
-    var $this = $(this);
+    $(".css-container textarea").focus(function() {
+        var $this = $(this);
 
-    var frame = $this
-        .parent()
-        .parent()
-        .parent()
-        .children(".css-output")
-        .children(".css-iframe"),
-      contents = frame.contents(),
-      body = contents.find("body"),
-      styleTag = contents
-        .find("head")
-        .append("<style></style>")
-        .children("style");
+        var frame = $this
+            .parent()
+            .parent()
+            .parent()
+            .children(".css-output")
+            .children(".css-iframe"),
+            contents = frame.contents(),
+            body = contents.find("body"),
+            styleTag = contents
+            .find("head")
+            .append("<style></style>")
+            .children("style");
 
-    $this.keyup(function() {
-      if ($this.attr("class") === "css-htmliframe") {
-        body.html($this.val());
-      } else {
-        styleTag.text($this.val());
-      }
+        $this.keyup(function() {
+            if ($this.attr("class") === "css-htmliframe") {
+                body.html($this.val());
+            } else {
+                styleTag.text($this.val());
+            }
+        });
     });
-  });
+}
+
+
+function createSummary() {
+    $("h2").each((index, element) => {
+        console.log($(element).attr('class'));
+        if ($(element).hasClass('ignore-summary')) {
+            console.log('intra');
+            return;
+        }
+        console.log('intra2');
+        const id = $(element).text().replace(/[^a-z0-9+]+/gi, '') + getRandomInt(99999);
+        $(element).attr('id', id);
+        const list = $("<li></li>").html(`<a href="#${id}">${$(element).text()}</a>`);
+        const sublist = $('<ul></ul>').addClass('arrow');
+
+        $(element).parent().find('h3').each((index, subElement) => {
+            if ($(element).hasClass('ignore-summary')) {
+                return;
+            }
+            const id = $(subElement).text().replace(/[^a-z0-9+]+/gi, '') + getRandomInt(9999);
+            $(subElement).attr('id', id);
+            sublist.append(`<li><a href="#${id}">${$(subElement).text()}</a></li>`)
+        });
+
+        if (sublist.children().length > 0) {
+            const newLi = $("<li></li>").append(sublist);
+            list.append(newLi);
+        }
+        $("#rightNav").append(list);
+    })
+}
+
+function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
 }
