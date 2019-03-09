@@ -17,7 +17,7 @@
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <ul class="nav nav-pills">
-        <li role="presentation" class="active">
+        <li role="presentation">
           <a href="content/html.html">HTML</a>
         </li>
         <li role="presentation">
@@ -42,6 +42,9 @@
       const fileName = urlSplit[urlSplit.length - 1];
       const contentUrl = `content/${fileName ? fileName : 'html.html'}`;
       $("#content").load(contentUrl);
+      $(".nav li.active").removeClass("active");
+      const cleanContentUrl = contentUrl.split('#')[0];
+      $('.navbar-fixed-top a[href="' + cleanContentUrl + '"]').parent().addClass('active');
     });
     $(".nav a").click(function (event) {
       event.preventDefault();
