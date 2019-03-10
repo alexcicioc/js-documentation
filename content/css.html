@@ -4,13 +4,7 @@
     <div id="carbonads-css">
       <span>
         <span class="carbon-wrap">
-          <img
-            src="images/css.png"
-            alt=""
-            style="border-radius: 10px;"
-            height="280"
-            width="75%"
-          />
+          <img src="images/css.png" alt="" style="border-radius: 10px;" height="280" width="75%" />
         </span>
       </span>
     </div>
@@ -27,17 +21,18 @@
             describing the presentation of a document written in a markup
             language like HTML. CSS is a cornerstone technology of the World
             Wide Web, alongside HTML and JavaScript.
-            <br />
+          </p>
+          <p>
             CSS is designed to enable the separation of presentation and
-            content, including layout, colors, and fonts.
-            <br />
+            content, including layout, colors, and fonts.</p>
+          <p>
             The name cascading comes from the specified priority scheme to
             determine which style rule applies if more than one rule matches a
             particular element. This cascading priority scheme is predictable.
           </p>
         </div>
-        <div id="css-syntax">
-          <h1 id="page-header">CSS Syntax</h1>
+        <div class="section">
+          <h2>CSS Syntax</h2>
           <p><code class="inline">selector { property: values;}</code></p>
           <p>
             Examples: <br />
@@ -48,8 +43,8 @@
             </code>
           </p>
         </div>
-        <div id="css-selectors">
-          <h1 class="page-header">CSS Selectors</h1>
+        <div class="section">
+          <h2>CSS Selectors</h2>
           <p>
             In CSS, selectors are used to target the HTML elements on our web
             pages that we want to style. There are a wide variety of CSS
@@ -58,18 +53,15 @@
           </p>
           <p>Selectors can be divided into the following categories:</p>
 
-          <div id="css-simple-selectors">
-            <h2><code class="inline">Simple selectors</code></h2>
-            Match one or more elements based on element type, class, or id.
-            <h3>Example:</h3>
-            <h4>Here is some HTML:</h4>
-            <code
-              >&nbsp;&lt;p class="question"&gt;What color do you
+          <h3>Simple selectors</h3>
+          Match one or more elements based on element type, class, or id.
+          <h4>Example:</h4>
+          <h4>Here is some HTML:</h4>
+          <code>&nbsp;&lt;p class="question"&gt;What color do you
               like?&lt;/p&gt;<br />&nbsp;&lt;div id="question"&gt;I prefer
-              BLACK!&lt;/div&gt;</code
-            >
-            <h4>A simple part of a style sheet:</h4>
-            <code>
+              BLACK!&lt;/div&gt;</code>
+          <h4>A simple part of a style sheet:</h4>
+          <code>
               .question {<br />
               &nbsp;&nbsp;color: orange;<br />
               }<br />
@@ -77,36 +69,34 @@
               &nbsp;&nbsp;color: green; <br />
               }<br />
             </code>
-            <h4>And the result would be this:</h4>
-            <style>
-              .question {
-                color: orange;
-              }
-              #question {
-                color: green;
-              }
-            </style>
-            <div class="question">What color do you like?</div>
-            <div id="question">I like blue.</div>
+          <h4>And the result would be this:</h4>
+          <style>
+            .question {
+              color: orange;
+            }
+
+            #question {
+              color: green;
+            }
+          </style>
+          <div class="question">What color do you like?</div>
+          <div id="question">I like blue.</div>
+          <h4>Give it a try!</h4>
+          <div class="css-container css-grid">
+            <form>
+              <h4>HTML</h4>
+              <textarea class="css-htmliframe"></textarea>
+              <h4>CSS</h4>
+              <textarea class="css-cssiframe"></textarea>
+            </form>
           </div>
-          <h3>Give it a try!</h3>
-          <div>
-            <div class="css-container css-grid">
-              <form>
-                <h4>HTML</h4>
-                <textarea class="css-htmliframe"></textarea>
-                <h4>CSS</h4>
-                <textarea class="css-cssiframe"></textarea>
-              </form>
-            </div>
-            <div class="css-output css-grid">
-              <h4>Result:</h4>
-              <iframe class="css-iframe"></iframe>
-            </div>
+          <div class="css-output css-grid">
+            <h4>Result:</h4>
+            <iframe class="css-iframe"></iframe>
           </div>
           <div class="clear"></div>
           <div id="css-attribute-selectors">
-            <h2><code class="inline">Attribute selectors</code></h2>
+            <h3>Attribute selectors</h3>
             Match one or more elements based on their attributes/attribute
             values.
             <br />
@@ -179,86 +169,63 @@
               }<br />
             </code>
           </div>
-          <h3>Give it a try!</h3>
-          <div>
-            <div class="css-container css-grid">
-              <form>
-                <h4>HTML</h4>
-                <textarea class="css-htmliframe"></textarea>
-                <h4>CSS</h4>
-                <textarea class="css-cssiframe"></textarea>
-              </form>
-            </div>
-            <div class="css-output css-grid">
-              <h4>Result:</h4>
-              <iframe class="css-iframe"></iframe>
-            </div>
+          <h4>Give it a try!</h4>
+          <div class="css-container css-grid">
+            <form>
+              <h4>HTML</h4>
+              <textarea class="css-htmliframe"></textarea>
+              <h4>CSS</h4>
+              <textarea class="css-cssiframe"></textarea>
+            </form>
+          </div>
+          <div class="css-output css-grid">
+            <h4>Result:</h4>
+            <iframe class="css-iframe"></iframe>
           </div>
           <div class="clear"></div>
-          <div id="css-pseudo-classes">
-            <h2><code class="inline">Pseudo-classes</code></h2>
-            Match one or more elements that exist in a certain state, such as an
-            element that is being hovered over by the mouse pointer, or a
-            checkbox that is currently disabled or checked, or an element that
-            is the first child of its parent in the DOM tree.
-            <br />
-            Example:
-          </div>
-          <div id="css-pseudo-elements">
-            <h2><code class="inline">Pseudo-elements</code></h2>
-            Match one or more parts of content that are in a certain position in
-            relation to an element, for example the first word of each
-            paragraph, or generated content appearing just before an element.
-            <br />
-            Example:
-          </div>
-          <div id="css-combinators">
-            <h2><code class="inline">Combinators</code></h2>
-            These are not exactly selectors themselves, but ways of combining
-            two or more selectors in useful ways for very specific selections.
-            So for example, you could select only paragraphs that are direct
-            descendants of divs, or paragraphs that come directly after
-            headings.
-            <br />
-            Example:
-          </div>
-          <div id="css-multiple-selectors">
-            <h2><code class="inline">Multiple selectors</code></h2>
-            Again, these are not separate selectors; the idea is that you can
-            put multiple selectors on the same CSS rule, separated by commas, to
-            apply a single set of declarations to all the elements selected by
-            those selectors. <br />Example:
-          </div>
+          <h3><code class="inline">Pseudo-classes</code></h3>
+          Match one or more elements that exist in a certain state, such as an
+          element that is being hovered over by the mouse pointer, or a
+          checkbox that is currently disabled or checked, or an element that
+          is the first child of its parent in the DOM tree.
+          <br />
+          Example:
+          <h3><code class="inline">Pseudo-elements</code></h3>
+          Match one or more parts of content that are in a certain position in
+          relation to an element, for example the first word of each
+          paragraph, or generated content appearing just before an element.
+          <br />
+          Example:
+          <h3><code class="inline">Combinators</code></h3>
+          These are not exactly selectors themselves, but ways of combining
+          two or more selectors in useful ways for very specific selections.
+          So for example, you could select only paragraphs that are direct
+          descendants of divs, or paragraphs that come directly after
+          headings.
+          <br />
+          Example:
+          <h3><code class="inline">Multiple selectors</code></h3>
+          Again, these are not separate selectors; the idea is that you can
+          put multiple selectors on the same CSS rule, separated by commas, to
+          apply a single set of declarations to all the elements selected by
+          those selectors. <br />Example:
         </div>
       </div>
     </div>
     <div class="sticky col-md-3" role="complementary">
-      <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top">
+      <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm
+          affix-top">
         <p><strong>Summary</strong></p>
-        <ul class="nav bs-docs-sidenav">
-          <li><a href="#css-overview">CSS Overview</a></li>
-          <li><a href="#css-syntax">CSS Syntax</a></li>
-          <li>
-            <a href="#css-selectors">CSS Selectors</a>
-            <ul class="arrow">
-              <li><a href="#css-simple-selectors">Simple selectors</a></li>
-              <li>
-                <a href="#css-attribute-selectors">Attribute selectors</a>
-              </li>
-              <li><a href="#css-pseudo-classes">Pseudo-classes</a></li>
-              <li><a href="#css-pseudo-elements">Pseudo-elements</a></li>
-              <li><a href="#css-combinators">Combinators</a></li>
-              <li><a href="#css-multiple-selectors">Multiple selectors</a></li>
-            </ul>
-          </li>
-        </ul>
+        <ul id="rightNav" class="nav bs-docs-sidenav"></ul>
       </nav>
     </div>
   </div>
 </div>
 <script>
   htmlcss();
+  createSummary();
+
   document.querySelectorAll('code').forEach((block) => {
-      hljs.highlightBlock(block);
+    hljs.highlightBlock(block);
   });
 </script>
