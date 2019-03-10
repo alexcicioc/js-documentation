@@ -93,3 +93,7 @@ iframe.editor {
 code.inline {
   display: inline;
 }
+
+a:hover {
+  cursor: pointer;
+}
