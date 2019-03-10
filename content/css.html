@@ -183,32 +183,125 @@
             <iframe class="css-iframe"></iframe>
           </div>
           <div class="clear"></div>
-          <h3><code class="inline">Pseudo-classes</code></h3>
+          <h3>Pseudo-classes</h3>
           Match one or more elements that exist in a certain state, such as an
           element that is being hovered over by the mouse pointer, or a
           checkbox that is currently disabled or checked, or an element that
           is the first child of its parent in the DOM tree.
           <br />
+          <img src="images/pseudo_classes.png" />
+          <br />
           Example:
-          <h3><code class="inline">Pseudo-elements</code></h3>
+          <br />
+          <code class="inline">
+            &lt;a id="pseudoClassExample" href="https://www.w3schools.com/css/css_pseudo_classes.asp" target="_blank"&gt;w3schools Pseudo Classes&lt;/a&gt;
+          </code>
+          <code>
+            a#pseudoClassExample {<br />
+              &nbsp;&nbsp;color: blue;<br />
+              &nbsp;&nbsp;font-weight: bold;<br />            
+            }<br />
+            a#pseudoClassExample:visited{<br />
+              &nbsp;&nbsp;color: blue;<br />
+            }<br />
+            a#pseudoClassExample:hover,<br />
+            a#pseudoClassExample:active,<br />
+            a#pseudoClassExample:focus{<br />
+              &nbsp;&nbsp;color: darkred;<br />
+              &nbsp;&nbsp;text-decoration: none;<br />
+            }<br />
+          </code>
+          <style>
+            a#pseudoClassExample {
+              color: blue;
+              font-weight: bold;
+            }
+
+            a#pseudoClassExample:visited {
+              color: green;
+            }
+
+            a#pseudoClassExample:hover,
+            a#pseudoClassExample:active,
+            a#pseudoClassExample:focus {
+              color: darkred;
+              text-decoration: none;
+            }
+          </style>
+          Here is the result: <br />
+          <a id="pseudoClassExample" href="https://www.w3schools.com/css/css_pseudo_classes.asp"
+            target="_blank">w3schools Pseudo Classes </a>
+          <h3>Pseudo-elements</h3>
           Match one or more parts of content that are in a certain position in
           relation to an element, for example the first word of each
           paragraph, or generated content appearing just before an element.
           <br />
-          Example:
-          <h3><code class="inline">Combinators</code></h3>
+          <img src="images/pseudo_elements.png" />
+          <br />
+          Example: All elements with an attribute "href" from the id="pseudoElementExample" with values
+          starting with "http" will have an arrow added after their content (to indicate they are external links)
+          <br />
+          <code class="inline">
+            &lt;ul id="pseudoElementExample"&gt;<br/>
+              &nbsp;&nbsp;&lt;li&gt;W3schools&lt;a href="https://www.w3schools.com/css/"&gt;CSS&lt;/a&gt;tutorial&lt;/li&gt;<br/>
+              &nbsp;&nbsp;&lt;li&gt;W3schools&lt;a href="https://www.w3schools.com/html/"&gt;HTML&lt;/a&gt; tutorial&lt;/li&gt;<br/>
+            &lt;/ul&gt;
+            <br/>            
+            #pseudoElementExample [href^=http]::after {<br/>
+              &nbsp;&nbsp;content: '⤴';<br/>
+            }
+          </code>
+          <br />
+          Here is the result:
+          <br />
+          <style>
+            #pseudoElementExample [href^=http]::after {
+              content: '⤴';
+            }
+          </style>
+          <ul id="pseudoElementExample">
+            &nbsp;&nbsp;<li>W3schools <a href="https://www.w3schools.com/css/">CSS</a> tutorial</li>
+            &nbsp;&nbsp;<li>W3schools <a href="https://www.w3schools.com/html/">HTML</a> tutorial</li>
+          </ul>          
+          <h3>Combinators</h3>
           These are not exactly selectors themselves, but ways of combining
           two or more selectors in useful ways for very specific selections.
           So for example, you could select only paragraphs that are direct
           descendants of divs, or paragraphs that come directly after
           headings.
           <br />
+          <img src="images/combinators.png" />
+          <br />
           Example:
-          <h3><code class="inline">Multiple selectors</code></h3>
-          Again, these are not separate selectors; the idea is that you can
-          put multiple selectors on the same CSS rule, separated by commas, to
-          apply a single set of declarations to all the elements selected by
-          those selectors. <br />Example:
+          <br/>          
+          <code>
+              div p {<br/>
+                &nbsp;&nbsp;background-color: yellow;<br/>
+              }<br>                                  
+              div > p {<br/>
+                &nbsp;&nbsp;background-color: pink;<br/>
+              }<br>                        
+              div + p {<br/>
+                &nbsp;&nbsp;background-color: green;<br/>
+              }<br>                        
+              div ~ p {<br/>
+                &nbsp;&nbsp;background-color: red;<br/>
+              }<br>              
+          </code>
+          <h4>Give it a try!</h4>
+          <div class="css-container css-grid">
+            <form>
+              <h4>HTML</h4>
+              <textarea class="css-htmliframe"></textarea>
+              <h4>CSS</h4>
+              <textarea class="css-cssiframe"></textarea>
+            </form>
+          </div>
+          <div class="css-output css-grid">
+            <h4>Result:</h4>
+            <iframe class="css-iframe"></iframe>
+          </div>
+          <div class="clear"></div>  
         </div>
       </div>
     </div>

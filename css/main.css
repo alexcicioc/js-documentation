@@ -68,7 +68,8 @@ html {
   padding: 0 15px;
 }
 
-iframe {
+#html-details iframe,
+#css-details iframe {
   border: none;
   height: 238px;
   width: 100%;
