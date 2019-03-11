@@ -14,8 +14,8 @@
   <div class="row">
     <div class="col-md-9" role="main">
       <div class="bs-docs-section">
-        <div id="css-overview">
-          <h1 class="page-header">CSS Overview</h1>
+        <div class="section">
+          <h2 class="page-header">CSS Overview</h2>
           <p>
             Cascading Style Sheets (CSS) is a style sheet language used for
             describing the presentation of a document written in a markup
@@ -32,7 +32,7 @@
           </p>
         </div>
         <div class="section">
-          <h2>CSS Syntax</h2>
+          <h2 class="page-header">CSS Syntax</h2>
           <p><code class="inline">selector { property: values;}</code></p>
           <p>
             Examples: <br />
@@ -44,7 +44,7 @@
           </p>
         </div>
         <div class="section">
-          <h2>CSS Selectors</h2>
+          <h2 class="page-header">CSS Selectors</h2>
           <p>
             In CSS, selectors are used to target the HTML elements on our web
             pages that we want to style. There are a wide variety of CSS
@@ -302,6 +302,79 @@
             <iframe class="css-iframe"></iframe>
           </div>
           <div class="clear"></div>  
+        </div>
+        <div class="section">
+          <h2 class="page-header">CSS Backgrounds</h2>
+          <div>
+            The CSS background properties are used to define the background effects for elements.<br/>
+            CSS background properties:<br/>
+              <ul>
+                <li>
+                  <h4>background-color</h4>
+                  <code>
+                    body {<br>
+                      &nbsp;&nbsp;background-color: lightblue;<br/>
+                    }<br/>
+                  </code>
+                  <br/>Note: With CSS, a color is most often specified by:<br/>
+                        &nbsp;&nbsp;- a valid color name - like "red" <br/>
+                        &nbsp;&nbsp;- a HEX value - like "#ff0000" <br/>
+                        &nbsp;&nbsp;- an RGB value - like "rgb(255,0,0)" <br/>
+                  <br/><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_background-color_body" target="_blank">Try it Yourself »</a><br/><br/>
+                </li>
+                <li>
+                  <h4>background-image</h4>
+                  <code>
+                      body { <br/>
+                        &nbsp;&nbsp;background-image: url("paper.gif"); <br/>
+                        &nbsp;&nbsp;background-color: #cccccc; <br/>
+                       } <br/>
+                  </code>
+                  <br/><a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_background-image" target="_blank">Try it Yourself »</a><br/><br/>
+                  Note: See how two backgrounds images are set for the <code class="inline">&lt;body&gt;</code> element <br/>
+                  <code>
+                    body { <br/>
+                      background-image: url("img_tree.gif"), url("paper.gif"); <br/>
+                      background-color: #cccccc; <br/>
+                    } <br/>
+                  </code>
+                  <br/><a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_background_multiple" target="_blank">Try it Yourself »</a><br/><br/>
+                </li>
+                <li>
+                  <h4>background-repeat</h4>
+                  <code>
+                      body {<br/>
+                        &nbsp;&nbsp;background-image: url("paper.gif"); <br/>
+                        &nbsp;&nbsp;background-repeat: repeat-y; <br/>
+                      }<br/>
+                  </code>
+                  <br/><a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_background-repeaty" target="_blank">Try it Yourself »</a><br/><br/>
+                </li>
+                <li>
+                  <h4>background-attachment</h4>
+                  <code>
+                      body { <br/>
+                        &nbsp;&nbsp;background-image: url("img_tree.gif"); <br/>
+                        &nbsp;&nbsp;background-repeat: no-repeat; <br/>
+                        &nbsp;&nbsp;background-attachment: fixed; <br/>
+                      } <br/>
+                  </code>
+                  <br/><a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_background-attachment" target="_blank">Try it Yourself »</a><br/><br/>
+                </li>
+                <li>
+                  <h4>background-position</h4>
+                  <code>
+                    body { <br/>
+                      &nbsp;&nbsp;background-image: url('w3css.gif'); <br/>
+                      &nbsp;&nbsp;background-repeat: no-repeat; <br/>
+                      &nbsp;&nbsp;background-attachment: fixed; <br/> 
+                      &nbsp;&nbsp;background-position: center; <br/>
+                    } <br/>
+                  </code>
+                  <br/><a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_background-position" target="_blank">Try it Yourself »</a><br/><br/>
+                </li>
+              </ul>
+          </div>
         </div>
       </div>
     </div>
