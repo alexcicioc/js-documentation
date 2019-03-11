@@ -8,17 +8,40 @@
       height: 300px;
       width: 500px;
     }
+
+    .output {
+      background: #272822;
+      color: #F8F8F2;
+      padding: 5px;
+      min-height: 290px;
+    }
   </style>
 </head>
 
 <body>
-
-  <button onclick="runCode(event)">Run</button>
-  <div id="editor"></div>
-  <div class="form-group">
-    <label for="exampleInputFile">Result</label>
-    <p class="help-block result">Click Run button to see the result.</p>
-  </div>
+  <table style="width: 100%; border:0;" cellpadding="0" rowpadding="0">
+    <colgroup>
+      <col width="500" />
+      <col />
+    </colgroup>
+    <tr>
+      <td>
+        <div id="editor"></div>
+      </td>
+      <td style="vertical-align: top;">
+        <div class="form-group output">
+          <label for="exampleInputFile">Console output:</label>
+          <p class="help-block result">Click Run button to see the result.</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <button onclick="runCode(event)">Run</button>
+      </td>
+    </tr>
+  </table>
 
 
   <script src="../js/jquery-3.3.1.min.js"></script>
@@ -44,14 +67,18 @@
 
     const editorValue = atob(findGetParameter('value'));
     editor.session.setValue(editorValue);
-    
+
     function runCode() {
       $('.result').html('');
       const codeValue = editor.getValue();
-      eval(codeValue);
+      try {
+        eval(codeValue);
+      } catch (error) {
+        $('.result').append(`<div>Error: ${error}</div>`);
+      }
     }
     console.log = (message) => {
-      $('.result').append(`<p>${message}<p>`);
+      $('.result').append(`<div>${message}</div>`);
     }
   </script>
 

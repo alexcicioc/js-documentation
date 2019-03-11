@@ -96,30 +96,16 @@ let z = true;</code></pre>
                     <p>A few examples can be seen below:</p>
                     <pre><code>if (true) {
     // this is a block
-    // these are only accesible inside the while statement
-    let variable = 0;
-    const pi = 3.14;
-    // this will be accesible globally
-    var test = 'a string';
 }
 
 while (true) {
     // this is a block
-    // these are only accesible inside the while statement
-    let variable = 0;
-    const pi = 3.14;
-    // this will be accesible globally
-    var test = 'a string';
 }
 
 function sum(a, b) {
     // this is a block
-    // these are only accessible within the function:
-    let variable = 0;
-    const pi = 3.14;
-    var test = 'a string'; // notice that this time the var declaration is withing the function's context
 }
-                    </code></pre>
+</code></pre>
                 </div>
 
                 <div id="scope" style="display:block">
@@ -156,11 +142,9 @@ function sum(a, b) {
                             aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
                             style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
                         Local Scope</h4>
-                    <button onclick="runCode(event)">Run</button>
-                    <div id="js-scope-editor" style="height: 170px;"></div>
-                    <div class="form-group"> <label for="exampleInputFile" style="display: none;">Result</label>
-                        <p class="help-block result"></p>
-                    </div>
+                    <iframe class="editor"
+                        src="content/editor.html?value=aWYgKHRydWUpIHsKICAgIC8vIHRoaXMgaXMgYSBibG9jawogICAgLy8gdGhlc2UgYXJlIG9ubHkgYWNjZXNpYmxlIGluc2lkZSB0aGUgd2hpbGUgc3RhdGVtZW50CiAgICBsZXQgdmFyaWFibGUgPSAwOwogICAgY29uc3QgcGkgPSAzLjE0OwogICAgY29uc29sZS5sb2coJ2Jsb2NrIHZhcmlhYmxlOiAnICsgdmFyaWFibGUpOwogICAgY29uc29sZS5sb2coJ2Jsb2NrIHBpOiAnICsgcGkpOwp9CmNvbnNvbGUubG9nKCdvdXRzaWRlOiAnICsgdGVzdCk7IC8vIHRoaXMgd2lsbCB0aHJvdyBhbiBlcnJvcgovLyB0aGUgc2NyaXB0IHN0b3BzIGV4ZWN1dGluZwpjb25zb2xlLmxvZygnb3V0c2lkZTogJyArIHBpKTsgLy8gdGhpcyB3aWxsIHRocm93IGFuIGVycm9y">
+                    </iframe>
                 </div>
 
                 <div id="global-scope" style="display:block">

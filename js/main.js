@@ -355,18 +355,6 @@ class Person {
 `,
         1
     );
-    new Editor(
-        "js-scope-editor", `var test= "global test";
-
-function showLog(){
-  var test ="I'am the log";
-  // Inside this function we have access to the test 
-  console.log(test);
-}
-    
-showLog();
-console.log(test);
-  `, 1);
 
     new Editor(
         "js-global-scope-editor", `var test = "I'm the test";
