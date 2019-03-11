@@ -262,7 +262,7 @@
           <ul id="pseudoElementExample">
             &nbsp;&nbsp;<li>W3schools <a href="https://www.w3schools.com/css/">CSS</a> tutorial</li>
             &nbsp;&nbsp;<li>W3schools <a href="https://www.w3schools.com/html/">HTML</a> tutorial</li>
-          </ul>          
+          </ul>
           <h3>Combinators</h3>
           These are not exactly selectors themselves, but ways of combining
           two or more selectors in useful ways for very specific selections.
@@ -273,7 +273,7 @@
           <img src="images/combinators.png" />
           <br />
           Example:
-          <br/>          
+          <br />
           <code>
               div p {<br/>
                 &nbsp;&nbsp;background-color: yellow;<br/>
@@ -301,69 +301,80 @@
             <h4>Result:</h4>
             <iframe class="css-iframe"></iframe>
           </div>
-          <div class="clear"></div>  
+          <div class="clear"></div>
         </div>
         <div class="section">
           <h2 class="page-header">CSS Backgrounds</h2>
           <div>
-            The CSS background properties are used to define the background effects for elements.<br/>
-            CSS background properties:<br/>
-              <ul>
-                <li>
-                  <h4>background-color</h4>
-                  <code>
+            The CSS background properties are used to define the background effects for elements.<br />
+            CSS background properties:<br />
+            <ul>
+              <li>
+                <h4>background-color</h4>
+                <code>
                     body {<br/>
                       &nbsp;&nbsp;background-color: lightblue;<br/>
                     }<br/>
                   </code>
-                  <br/>Note: With CSS, a color is most often specified by:<br/>
-                        &nbsp;&nbsp;- a valid color name - like "red" <br/>
-                        &nbsp;&nbsp;- a HEX value - like "#ff0000" <br/>
-                        &nbsp;&nbsp;- an RGB value - like "rgb(255,0,0)" <br/>
-                  <br/><a class="btn btn-primary" href="https://www.w3schools.com/css/tryit.asp?filename=trycss_background-color_body" target="_blank">Try it Yourself »</a><br/><br/>
-                </li>
-                <li>
-                  <h4>background-image</h4>
-                  <code>
+                <br />Note: With CSS, a color is most often specified by:<br />
+                &nbsp;&nbsp;- a valid color name - like "red" <br />
+                &nbsp;&nbsp;- a HEX value - like "#ff0000" <br />
+                &nbsp;&nbsp;- an RGB value - like "rgb(255,0,0)" <br />
+                <br /><a class="btn btn-primary"
+                  href="https://www.w3schools.com/css/tryit.asp?filename=trycss_background-color_body"
+                  target="_blank">Try it Yourself »</a><br /><br />
+              </li>
+              <li>
+                <h4>background-image</h4>
+                <code>
                       body { <br/>
                         &nbsp;&nbsp;background-image: url("paper.gif"); <br/>
                         &nbsp;&nbsp;background-color: #cccccc; <br/>
                        } <br/>
                   </code>
-                  <br/><a class="btn btn-primary" href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_background-image" target="_blank">Try it Yourself »</a><br/><br/>
-                  Note: See how two backgrounds images are set for the <code class="inline">&lt;body&gt;</code> element <br/>
-                  <code>
+                <br /><a class="btn btn-primary"
+                  href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_background-image" target="_blank">Try
+                  it Yourself »</a><br /><br />
+                Note: See how two backgrounds images are set for the <code class="inline">&lt;body&gt;</code> element
+                <br />
+                <code>
                     body { <br/>
                       background-image: url("img_tree.gif"), url("paper.gif"); <br/>
                       background-color: #cccccc; <br/>
                     } <br/>
                   </code>
-                  <br/><a class="btn btn-primary" href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_background_multiple" target="_blank">Try it Yourself »</a><br/><br/>
-                </li>
-                <li>
-                  <h4>background-repeat</h4>
-                  <code>
+                <br /><a class="btn btn-primary"
+                  href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_background_multiple"
+                  target="_blank">Try it Yourself »</a><br /><br />
+              </li>
+              <li>
+                <h4>background-repeat</h4>
+                <code>
                       body {<br/>
                         &nbsp;&nbsp;background-image: url("paper.gif"); <br/>
                         &nbsp;&nbsp;background-repeat: repeat-y; <br/>
                       }<br/>
                   </code>
-                  <br/><a class="btn btn-primary" href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_background-repeaty" target="_blank">Try it Yourself »</a><br/><br/>
-                </li>
-                <li>
-                  <h4>background-attachment</h4>
-                  <code>
+                <br /><a class="btn btn-primary"
+                  href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_background-repeaty"
+                  target="_blank">Try it Yourself »</a><br /><br />
+              </li>
+              <li>
+                <h4>background-attachment</h4>
+                <code>
                       body { <br/>
                         &nbsp;&nbsp;background-image: url("img_tree.gif"); <br/>
                         &nbsp;&nbsp;background-repeat: no-repeat; <br/>
                         &nbsp;&nbsp;background-attachment: fixed; <br/>
                       } <br/>
                   </code>
-                  <br/><a class="btn btn-primary" href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_background-attachment" target="_blank">Try it Yourself »</a><br/><br/>
-                </li>
-                <li>
-                  <h4>background-position</h4>
-                  <code>
+                <br /><a class="btn btn-primary"
+                  href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_background-attachment"
+                  target="_blank">Try it Yourself »</a><br /><br />
+              </li>
+              <li>
+                <h4>background-position</h4>
+                <code>
                     body { <br/>
                       &nbsp;&nbsp;background-image: url('w3css.gif'); <br/>
                       &nbsp;&nbsp;background-repeat: no-repeat; <br/>
@@ -371,44 +382,51 @@
                       &nbsp;&nbsp;background-position: center; <br/>
                     } <br/>
                   </code>
-                  <br/><a class="btn btn-primary" href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_background-position" target="_blank">Try it Yourself »</a><br/><br/>
-                </li>
-              </ul>
+                <br /><a class="btn btn-primary"
+                  href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_background-position"
+                  target="_blank">Try it Yourself »</a><br /><br />
+              </li>
+            </ul>
           </div>
         </div>
         <div class="section">
-            <h2 class="page-header">CSS Display</h2>
-            <p>
-              The <code class="inline">display</code> property specifies the display behavior (the type of rendering box) of an element. In HTML, the default display property value is taken from the HTML specifications or from the browser/user default style sheet. 
-            </p>
-            <code>
+          <h2 class="page-header">CSS Display</h2>
+          <p>
+            The <code class="inline">display</code> property specifies the display behavior (the type of rendering box)
+            of an element. In HTML, the default display property value is taken from the HTML specifications or from the
+            browser/user default style sheet.
+          </p>
+          <code>
               p.ex1 {display: none;} <br/>
               p.ex2 {display: inline;} <br/>
               p.ex3 {display: block;} <br/>
               p.ex4 {display: inline-block;} <br/>
             </code>
-            <br/><a class="btn btn-primary" href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_display" target="_blank">Try it Yourself »</a><br/>
-          </div>
-          <div class="section">
-            <h2 class="page-header">CSS Float</h2>
-            <p>
-                The <code class="inline">float</code> property specifies how an element should float.<br/>
-                Note: Absolutely positioned elements ignores the float property!
-            </p>
-            <code>
+          <br /><a class="btn btn-primary" href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_display"
+            target="_blank">Try it Yourself »</a><br />
+        </div>
+        <div class="section">
+          <h2 class="page-header">CSS Float</h2>
+          <p>
+            The <code class="inline">float</code> property specifies how an element should float.<br />
+            Note: Absolutely positioned elements ignores the float property!
+          </p>
+          <code>
                 img  { <br/>
                   &nbsp;&nbsp;float: right; <br/>
                 } <br/>
             </code>
-            <br/><a class="btn btn-primary" href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_float" target="_blank">Try it Yourself »</a><br/>
-          </div>
-          <div class="section">
-              <h2 class="page-header">CSS Border</h2>
-              <p>The CSS <code class="inline">border</code> properties allow you to specify the style, width, and color of an element's border.</p>
-              <ul>
-                <li>
-                  <h4>border-style</h4>
-                  <code>
+          <br /><a class="btn btn-primary" href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_float"
+            target="_blank">Try it Yourself »</a><br />
+        </div>
+        <div class="section">
+          <h2 class="page-header">CSS Border</h2>
+          <p>The CSS <code class="inline">border</code> properties allow you to specify the style, width, and color of
+            an element's border.</p>
+          <ul>
+            <li>
+              <h4>border-style</h4>
+              <code>
                     p.dotted {border-style: dotted;} <br/>
                     p.dashed {border-style: dashed;} <br/>
                     p.solid {border-style: solid;} <br/>
@@ -421,11 +439,13 @@
                     p.hidden {border-style: hidden;} <br/>
                     p.mix {border-style: dotted dashed solid double;} <br/>
                   </code>
-                  <br/><a class="btn btn-primary" href="https://www.w3schools.com/css/tryit.asp?filename=trycss_border-style" target="_blank">Try it Yourself »</a><br/><br/>
-                </li>
-                <li>
-                  <h4>border-width</h4>
-                  <code>
+              <br /><a class="btn btn-primary"
+                href="https://www.w3schools.com/css/tryit.asp?filename=trycss_border-style" target="_blank">Try it
+                Yourself »</a><br /><br />
+            </li>
+            <li>
+              <h4>border-width</h4>
+              <code>
                       p.one { <br/>
                         border-style: solid; <br/>
                         border-width: 5px; <br/>
@@ -439,11 +459,13 @@
                         border-width: 2px 10px 4px 20px; <br/>
                       } <br/>
                   </code>
-                  <br/><a class="btn btn-primary" href="https://www.w3schools.com/css/tryit.asp?filename=trycss_border-width" target="_blank">Try it Yourself »</a><br/><br/>
-                </li>  
-                <li>
-                  <h4>border-color</h4>
-                  <code>
+              <br /><a class="btn btn-primary"
+                href="https://www.w3schools.com/css/tryit.asp?filename=trycss_border-width" target="_blank">Try it
+                Yourself »</a><br /><br />
+            </li>
+            <li>
+              <h4>border-color</h4>
+              <code>
                       p.one { <br/>
                         border-style: solid; <br/>
                         border-color: red; <br/>
@@ -457,19 +479,88 @@
                         border-color: red green blue yellow; <br/>
                       } <br/>
                   </code>
-                  <br/><a class="btn btn-primary" href="https://www.w3schools.com/css/tryit.asp?filename=trycss_border-color1" target="_blank">Try it Yourself »</a><br/>
-                </li>
-                <li>
-                  <h4>border (shorthand property)</h4>
-                  <code>
+              <br /><a class="btn btn-primary"
+                href="https://www.w3schools.com/css/tryit.asp?filename=trycss_border-color1" target="_blank">Try it
+                Yourself »</a><br />
+            </li>
+            <li>
+              <h4>border (shorthand property)</h4>
+              <code>
                       p { <br/>
                         border: 5px solid red; <br/>
                       } <br/>
                   </code>
-                  <br/><a class="btn btn-primary" href="https://www.w3schools.com/css/tryit.asp?filename=trycss_border" target="_blank">Try it Yourself »</a><br/>
-                </li>
-              </ul>
-            </div>
+              <br /><a class="btn btn-primary" href="https://www.w3schools.com/css/tryit.asp?filename=trycss_border"
+                target="_blank">Try it Yourself »</a><br />
+            </li>
+          </ul>
+        </div>
+        <div class="section">
+          <h2 class="page-header">CSS Padding</h2>
+          <p>
+            The CSS <code class="inline">padding</code> properties are used to generate space around an element's
+            content, inside of any defined borders. With CSS, you have full control over the padding. There are
+            properties for setting the padding for each side of an element (top, right, bottom, and left).
+          </p>
+          <h3>Individual Sides</h3>
+          <p>All the padding properties can have the following values:
+            <ul>
+              <li>length - specifies a padding in px, pt, cm, etc.</li>
+              <li>% - specifies a padding in % of the width of the containing element</li>
+              <li>inherit - specifies that the padding should be inherited from the parent element</li>
+            </ul>
+            <br />
+            Note: Negative values are not allowed.
+          </p>
+          <code>
+            div { <br/>
+              &nbsp;&nbsp;padding-top: 50px; <br/>
+              &nbsp;&nbsp;padding-right: 30px; <br/>
+              &nbsp;&nbsp;padding-bottom: 50px; <br/>
+              &nbsp;&nbsp;padding-left: 80px; <br/>
+            } <br/>
+          </code>
+          <br /><a class="btn btn-primary" href="https://www.w3schools.com/css/tryit.asp?filename=trycss_padding_sides"
+            target="_blank">Try it Yourself »</a><br />
+          <h3>Shorthand Property</h3>
+          <p>To shorten the code, it is possible to specify all the padding properties in one property.
+            <br />If the padding property has four values:<br />
+            <h4><code>padding: 25px 50px 75px 100px;</code></h4>
+            <ul>
+              <li>top padding is 25px</li>
+              <li>right padding is 50px</li>
+              <li>bottom padding is 75px</li>
+              <li>left padding is 100px</li>
+            </ul>
+          </p>
+          <code>
+            div { <br/>
+              &nbsp;&nbsp;padding: 25px 50px 75px 100px;<br/>
+            } <br/>
+          </code>
+          <br /><a class="btn btn-primary"
+            href="https://www.w3schools.com/css/tryit.asp?filename=trycss_padding_shorthand_4val" target="_blank">Try it
+            Yourself »</a><br />
+          <h3>Element Width</h3>
+          <p>
+            The CSS width property specifies the width of the element's content area. The content area is the portion
+            inside the padding, border, and margin of an element (the box model).
+            <br />
+            So, if an element has a specified width, the padding added to that element will be added to the total width
+            of the element. This is often an undesirable result.
+            <br />
+            In the following example, the <code class="inline">&lt;div&gt;</code> element is given a width of 300px. However, the actual rendered width of
+              the <code class="inline">&lt;div&gt;</code> element will be 350px (300px + 25px of left padding + 25px of right padding):
+          </p>
+          <code>
+            div { <br/>
+              &nbsp;&nbsp;width: 300px; <br/>
+              &nbsp;&nbsp;padding: 25px;<br/>
+            } <br/>
+          </code>
+          <br /><a class="btn btn-primary" href="https://www.w3schools.com/css/tryit.asp?filename=trycss_padding_width"
+            target="_blank">Try it Yourself »</a><br />
+        </div>        
       </div>
     </div>
     <div class="sticky col-md-3" role="complementary">
