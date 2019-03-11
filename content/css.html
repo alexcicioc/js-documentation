@@ -746,6 +746,66 @@
         </div>
         <div class="section">
           <h2 class="page-header">CSS Animations</h2>
+          <p>CSS animations allows animation of most HTML elements without using JavaScript or Flash! <br/>
+            An animation lets an element gradually change from one style to another. <br/>
+            You can change as many CSS properties you want, as many times you want. <br/>
+            To use CSS animation, you must first specify some keyframes for the animation. <br/>
+            Keyframes hold what styles the element will have at certain times. <br/>
+          </p>
+          <h3>The @keyframes Rule</h3>
+          <p>
+            When you specify CSS styles inside the @keyframes rule, the animation will gradually change from the current style to the new style at certain times.
+            To get an animation to work, you must bind the animation to an element.
+            The following example binds the "example" animation to the <code class="inline">&lt;div&gt;</code> element. The animation will last for 4 seconds, and it will gradually change the background-color of the <code class="inline">&lt;div&gt;</code> element from "red" to "yellow":
+          </p>
+          <code>
+            /* The animation code */<br/>
+            @keyframes example {<br/>
+              &nbsp;&nbsp;from {background-color: red;}<br/>
+              &nbsp;&nbsp;to {background-color: yellow;}<br/>
+            }<br/>
+            /* The element to apply the animation to */<br/>
+            div {<br/>
+              &nbsp;&nbsp;width: 100px;<br/>
+              &nbsp;&nbsp;height: 100px;<br/>
+              &nbsp;&nbsp;background-color: red;<br/>
+              &nbsp;&nbsp;animation-name: example;<br/>
+              &nbsp;&nbsp;animation-duration: 4s;<br/>
+            }<br/>
+          </code>
+          <p>Note: The <code class="inline">animation-duration</code> property defines how long time an animation should take to complete. If the <code class="inline">animation-duration</code> property is not specified, no animation will occur, because the default value is 0s (0 seconds). </p>
+          <br /><a class="btn btn-primary"
+            href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_animation1" target="_blank">Try it
+            Yourself »</a><br />  
+          <p>The following example will change both the background-color and the position of the <code class="inline">&lt;div&gt;</code> element when the animation is 25% complete, 50% complete, and again when the animation is 100% complete:</p>    
+          <code>
+            /* The animation code */ <br/>
+            @keyframes example { <br/>
+              &nbsp;&nbsp;0%   {background-color:red; left:0px; top:0px;} <br/>
+              &nbsp;&nbsp;25%  {background-color:yellow; left:200px; top:0px;} <br/>
+              &nbsp;&nbsp;50%  {background-color:blue; left:200px; top:200px;} <br/>
+              &nbsp;&nbsp;75%  {background-color:green; left:0px; top:200px;} <br/>
+              &nbsp;&nbsp;100% {background-color:red; left:0px; top:0px;} <br/>
+            }<br/>
+            /* The element to apply the animation to */<br/>
+            div {<br/>
+              &nbsp;&nbsp;width: 100px;<br/>
+              &nbsp;&nbsp;height: 100px;<br/>
+              &nbsp;&nbsp;position: relative;<br/>
+              &nbsp;&nbsp;background-color: red;<br/>
+              &nbsp;&nbsp;animation-name: example;<br/>
+              &nbsp;&nbsp;animation-duration: 4s;<br/>
+            }
+          </code>
+          <br /><a class="btn btn-primary"
+            href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_animation3" target="_blank">Try it
+            Yourself »</a><br />  
+          <h3>Delay an Animation</h3>  
+          <h3>Times to run the app</h3>  
+          <h3>Direction of animation</h3>  
+          <h3>Speed curve</h3>  
+          <h3>Fill-mode option</h3>  
+          <h3>Shorthand Property</h3>  
         </div>
         <div class="section">
           <h2 class="page-header">CSS Opacity</h2>
