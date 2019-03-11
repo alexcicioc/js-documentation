@@ -549,8 +549,10 @@
             So, if an element has a specified width, the padding added to that element will be added to the total width
             of the element. This is often an undesirable result.
             <br />
-            In the following example, the <code class="inline">&lt;div&gt;</code> element is given a width of 300px. However, the actual rendered width of
-              the <code class="inline">&lt;div&gt;</code> element will be 350px (300px + 25px of left padding + 25px of right padding):
+            In the following example, the <code class="inline">&lt;div&gt;</code> element is given a width of 300px.
+            However, the actual rendered width of
+            the <code class="inline">&lt;div&gt;</code> element will be 350px (300px + 25px of left padding + 25px of
+            right padding):
           </p>
           <code>
             div { <br/>
@@ -564,7 +566,10 @@
         <div class="section">
           <h2 class="page-header">CSS Margin</h2>
           <p>
-            The CSS <code class="inline">margin</code> properties are used to create space around elements, outside of any defined borders. With CSS, you have full control over the padding. With CSS, you have full control over the margins. There are properties for setting the margin for each side of an element (top, right, bottom, and left).
+            The CSS <code class="inline">margin</code> properties are used to create space around elements, outside of
+            any defined borders. With CSS, you have full control over the padding. With CSS, you have full control over
+            the margins. There are properties for setting the margin for each side of an element (top, right, bottom,
+            and left).
           </p>
           <h3>Individual Sides</h3>
           <p>All the <code class="inline">margin</code> properties can have the following values:
@@ -610,7 +615,8 @@
           <p>
             You can set the margin property to auto to horizontally center the element within its container.
             <br />
-            The element will then take up the specified width, and the remaining space will be split equally between the left and right margins:
+            The element will then take up the specified width, and the remaining space will be split equally between the
+            left and right margins:
           </p>
           <code>
             div { <br/>
@@ -622,7 +628,8 @@
           <br /><a class="btn btn-primary" href="https://www.w3schools.com/css/tryit.asp?filename=trycss_margin_auto"
             target="_blank">Try it Yourself »</a><br />
           <h3>Inherit Value</h3>
-          <p>This example lets the left margin of the <code class="inline">&lt;p class="ex1"&gt;</code> element be inherited from the parent element (&lt;div&gt;):</p>
+          <p>This example lets the left margin of the <code class="inline">&lt;p class="ex1"&gt;</code> element be
+            inherited from the parent element (&lt;div&gt;):</p>
           <code>
             div {<br/>
               &nbsp;&nbsp;border: 1px solid red;<br/>
@@ -632,10 +639,13 @@
               &nbsp;&nbsp;margin-left: inherit;<br/>
             } <br/>
           </code>
-          <br /><a class="btn btn-primary" href="https://www.w3schools.com/css/tryit.asp?filename=trycss_margin-left_inherit"
-            target="_blank">Try it Yourself »</a><br />
+          <br /><a class="btn btn-primary"
+            href="https://www.w3schools.com/css/tryit.asp?filename=trycss_margin-left_inherit" target="_blank">Try it
+            Yourself »</a><br />
           <h3>Margin Collapse</h3>
-          <p>Top and bottom margins of elements are sometimes collapsed into a single margin that is equal to the largest of the two margins.<br/>This does not happen on left and right margins! Only top and bottom margins!</p>
+          <p>Top and bottom margins of elements are sometimes collapsed into a single margin that is equal to the
+            largest of the two margins.<br />This does not happen on left and right margins! Only top and bottom
+            margins!</p>
           <code>
             h1 {<br/>
               &nbsp;&nbsp;margin: 0 0 50px 0;<br/>
@@ -644,9 +654,108 @@
               &nbsp;&nbsp;margin: 20px 0 0 0;<br/>
             } <br/>
           </code>
-          <br /><a class="btn btn-primary" href="https://www.w3schools.com/css/tryit.asp?filename=trycss_margin_collapse"
-            target="_blank">Try it Yourself »</a><br />    
-        </div>        
+          <br /><a class="btn btn-primary"
+            href="https://www.w3schools.com/css/tryit.asp?filename=trycss_margin_collapse" target="_blank">Try it
+            Yourself »</a><br />
+        </div>
+        <div class="section">
+          <h2 class="page-header">CSS Position</h2>
+          <p>
+            The <code class="inline">position</code> property specifies the type of positioning method used for an
+            element (static, relative, fixed, absolute or sticky).<br />
+            There are five different position values:
+          </p>
+          <h3>Position Static</h3>
+          <p>HTML elements are positioned static by default. Static positioned elements are not affected by the top,
+            bottom, left, and right properties.<br /> An element with <code class="inline">position: static;</code> is
+            not positioned in any special way; it is always positioned according to the normal flow of the page:
+          </p>
+          <code>
+            div.static { <br/>
+              &nbsp;&nbsp;position: static;<br/>
+              &nbsp;&nbsp;border: 3px solid #73AD21;<br/>
+            } <br/>
+          </code>
+          <br /><a class="btn btn-primary"
+            href="https://www.w3schools.com/css/tryit.asp?filename=trycss_position_static" target="_blank">Try it
+            Yourself »</a><br />
+          <h3>Position Relative</h3>
+          <p>An element with <code class="inline">position: relative;</code> is positioned relative to its normal
+            position. <br /> Setting the top, right, bottom, and left properties of a relatively-positioned element will
+            cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any
+            gap left by the element. </p>
+          <code>
+            div.relative { <br/>
+              &nbsp;&nbsp;position: relative; <br/>
+              &nbsp;&nbsp;left: 30px; <br/>
+              &nbsp;&nbsp;border: 3px solid #73AD21; <br/>
+            } <br/>
+          </code>
+          <br /><a class="btn btn-primary"
+            href="https://www.w3schools.com/css/tryit.asp?filename=trycss_position_relative" target="_blank">Try it
+            Yourself »</a><br />
+          <h3>Position Fixed</h3>
+          <p>An element with <code class="inline">position: fixed;</code> is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element. <br/>A fixed element does not leave a gap in the page where it would normally have been located. </p>
+          <code>
+            div.fixed { <br/> 
+              &nbsp;&nbsp;position: fixed; <br/> 
+              &nbsp;&nbsp;bottom: 0; <br/> 
+              &nbsp;&nbsp;right: 0; <br/>
+              &nbsp;&nbsp;width: 300px; <br/>
+              &nbsp;&nbsp;border: 3px solid #73AD21; <br/>
+            } <br/>
+          </code>
+          <br /><a class="btn btn-primary"
+            href="https://www.w3schools.com/css/tryit.asp?filename=trycss_position_fixed" target="_blank">Try it
+            Yourself »</a><br />  
+          <h3>Position Absolute</h3>
+          <p>An element with <code class="inline">position: absolute;</code> is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed). <br/> However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling. </p>
+          <code>
+            div.relative {<br/>
+              &nbsp;&nbsp;position: relative;<br/>
+              &nbsp;&nbsp;width: 400px;<br/>
+              &nbsp;&nbsp;height: 200px;<br/>
+              &nbsp;&nbsp;border: 3px solid #73AD21;<br/>
+            }<br/>
+            div.absolute {<br/>
+              &nbsp;&nbsp;position: absolute;<br/>
+              &nbsp;&nbsp;top: 80px;<br/>
+              &nbsp;&nbsp;right: 0;<br/>
+              &nbsp;&nbsp;width: 200px;<br/>
+              &nbsp;&nbsp;height: 100px;<br/>
+              &nbsp;&nbsp;border: 3px solid #73AD21;<br/>
+            }<br/>
+          </code>
+          <br /><a class="btn btn-primary"
+            href="https://www.w3schools.com/css/tryit.asp?filename=trycss_position_absolute" target="_blank">Try it
+            Yourself »</a><br />
+          <h3>Position Sticky</h3>
+          <p>An element with <code class="inline">position: sticky;</code> is positioned based on the user's scroll position. <br/> A sticky element toggles between <code class="inline">relative</code> and <code class="inline">fixed</code>, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).</p>
+          <code>
+            div.sticky { <br/>
+              position: -webkit-sticky; <br/>
+              position: sticky; <br/>
+              top: 0; <br/>
+              background-color: green; <br/>
+              border: 2px solid #4CAF50; <br/>
+            }<br/>
+          </code>
+          <br /><a class="btn btn-primary"
+            href="https://www.w3schools.com/css/tryit.asp?filename=trycss_position_absolute" target="_blank">Try it
+            Yourself »</a><br />            
+        </div>
+        <div class="section">
+          <h2 class="page-header">CSS Animations</h2>
+        </div>
+        <div class="section">
+          <h2 class="page-header">CSS Opacity</h2>
+        </div>
+        <div class="section">
+          <h2 class="page-header">CSS RGB, RGBA</h2>
+        </div>
+        <div class="section">
+          <h2 class="page-header">CSS Gradients</h2>
+        </div>
       </div>
     </div>
     <div class="sticky col-md-3" role="complementary">
