@@ -5,16 +5,6 @@ function ready() {
 }
 
 function setupEditor() {
-    new Editor(
-        "editor",
-        `const x = "Test";
-var y = 2;
-let z = true;
-
-console.log("av");
-`,
-        1
-    );
 
     new Editor(
         "js-datatypes-editor",
@@ -363,10 +353,10 @@ class Person {
   cory.writeCode();
 
 `,
-    1
-  );
-  new Editor(
-    "js-scope-editor", `var test= "global test";
+        1
+    );
+    new Editor(
+        "js-scope-editor", `var test= "global test";
 
 function showLog(){
   var test ="I'am the log";
@@ -378,8 +368,8 @@ showLog();
 console.log(test);
   `, 1);
 
-  new Editor(
-    "js-global-scope-editor", `var test = "I'm the test";
+    new Editor(
+        "js-global-scope-editor", `var test = "I'm the test";
 
 // we can use "test" here
 console.log(test);
@@ -391,22 +381,9 @@ function myFunction() {
 
 myFunction();
   `, 1);
-  new Editor(
-    "js-blocks", `{
 
-var statement = "test";
-
-}
-
-function blockWithMultipleStatements() {
-  var statement1 = "test";
-  var statement2 = "test";
-}
-
-`, 1);
-
-new Editor(
-  "ctx-editor", `drink = 'wine';
+    new Editor(
+        "ctx-editor", `drink = 'wine';
 
 var foo = {
   drink: "beer",
@@ -419,8 +396,8 @@ console.log( foo.getDrink() ); //what should see here ?
 
 `, 1);
 
-new Editor(
-  "ctx-editor-1", `drink = 'wine';
+    new Editor(
+        "ctx-editor-1", `drink = 'wine';
 
 var foo = {
   drink: "beer",
@@ -433,8 +410,8 @@ console.log( foo.getDrink() );
 
 `, 1);
 
-new Editor(
-  "ctx-editor-2", `drink = 'wine';
+    new Editor(
+        "ctx-editor-2", `drink = 'wine';
 
 var foo = {};
  
@@ -448,8 +425,8 @@ console.log( foo.getDrink() );
 
 `, 1);
 
-new Editor(
-  "this-function-editor", `function myFunction() {
+    new Editor(
+        "this-function-editor", `function myFunction() {
   console.log(this);
   return this;
 }
@@ -457,8 +434,8 @@ new Editor(
 myFunction();
 `, 1);
 
-new Editor(
-  "this-object-editor", `var person = {
+    new Editor(
+        "this-object-editor", `var person = {
   firstName: "John",
   lastName: "Doe",
   myFunction: function() {
@@ -469,8 +446,8 @@ new Editor(
 console.log(person.myFunction());
 `, 1);
 
-new Editor(
-  "this-object-method-editor", `var person = {
+    new Editor(
+        "this-object-method-editor", `var person = {
   firstName: "John",
   lastName: "Doe",
   myFunction: function() {
@@ -485,16 +462,16 @@ new Editor(
 console.log(person.fullName());
 `, 1);
 
-new Editor(
-  "this-alone-editor", `var x = this;
+    new Editor(
+        "this-alone-editor", `var x = this;
 console.log(x);
 `, 1);
 
-new Editor(
-  "js-math-editor", `// test your code here`, 1);
+    new Editor(
+        "js-math-editor", `// test your code here`, 1);
 
-new Editor(
-  "this-alone-editor", `var x = this;
+    new Editor(
+        "this-alone-editor", `var x = this;
 console.log(x);
 `, 1);
 }
@@ -511,18 +488,18 @@ function showHiddenList(el) {
 }
 
 function runCode(event) {
-  var editorElement = event.target.parentNode.getElementsByClassName("ace_editor")[0];
-  var resultElement = event.target.parentNode.getElementsByClassName("result")[0];
-  var resultLabel = event.target.parentNode.getElementsByTagName("label")[0];
-  resultLabel.style="display:block";
-  resultElement.innerHTML="";
-  console.log = function(message) {
-    resultElement.innerHTML += message + "</br>";
-  };
+    var editorElement = event.target.parentNode.getElementsByClassName("ace_editor")[0];
+    var resultElement = event.target.parentNode.getElementsByClassName("result")[0];
+    var resultLabel = event.target.parentNode.getElementsByTagName("label")[0];
+    resultLabel.style = "display:block";
+    resultElement.innerHTML = "";
+    console.log = function (message) {
+        resultElement.innerHTML += message + "</br>";
+    };
 
-  var identifier= editorElement.getAttribute("id");
-  var editor = editorsMap.get(identifier);
-  eval(editor.getValue());
+    var identifier = editorElement.getAttribute("id");
+    var editor = editorsMap.get(identifier);
+    eval(editor.getValue());
 }
 
 function Editor(identifer, code) {
