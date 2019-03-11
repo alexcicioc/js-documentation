@@ -503,7 +503,7 @@
             properties for setting the padding for each side of an element (top, right, bottom, and left).
           </p>
           <h3>Individual Sides</h3>
-          <p>All the padding properties can have the following values:
+          <p>All the <code class="inline">padding</code> properties can have the following values:
             <ul>
               <li>length - specifies a padding in px, pt, cm, etc.</li>
               <li>% - specifies a padding in % of the width of the containing element</li>
@@ -560,6 +560,92 @@
           </code>
           <br /><a class="btn btn-primary" href="https://www.w3schools.com/css/tryit.asp?filename=trycss_padding_width"
             target="_blank">Try it Yourself »</a><br />
+        </div>
+        <div class="section">
+          <h2 class="page-header">CSS Margin</h2>
+          <p>
+            The CSS <code class="inline">margin</code> properties are used to create space around elements, outside of any defined borders. With CSS, you have full control over the padding. With CSS, you have full control over the margins. There are properties for setting the margin for each side of an element (top, right, bottom, and left).
+          </p>
+          <h3>Individual Sides</h3>
+          <p>All the <code class="inline">margin</code> properties can have the following values:
+            <ul>
+              <li>auto - the browser calculates the margin</li>
+              <li>length - specifies a margin in px, pt, cm, etc.</li>
+              <li>% - specifies a margin in % of the width of the containing element</li>
+              <li>inherit - specifies that the margin should be inherited from the parent element</li>
+            </ul>
+            <br />
+            Note: Negative values are allowed.
+          </p>
+          <code>
+            p { <br/>
+              &nbsp;&nbsp;margin-top: 100px;<br/>
+              &nbsp;&nbsp;margin-bottom: 100px;<br/>
+              &nbsp;&nbsp;margin-right: 150px; <br/>
+              &nbsp;&nbsp;margin-left: 80px; <br/>
+            } <br/>
+          </code>
+          <br /><a class="btn btn-primary" href="https://www.w3schools.com/css/tryit.asp?filename=trycss_margin_sides"
+            target="_blank">Try it Yourself »</a><br />
+          <h3>Shorthand Property</h3>
+          <p>To shorten the code, it is possible to specify all the margin properties in one property.
+            <br />If the <code class="inline">margin</code> property has four values:<br />
+            <h4><code>margin: 25px 50px 75px 100px;</code></h4>
+            <ul>
+              <li>top margin is 25px</li>
+              <li>right margin is 50px</li>
+              <li>bottom margin is 75px</li>
+              <li>left margin is 100px</li>
+            </ul>
+          </p>
+          <code>
+            p { <br/>
+              &nbsp;&nbsp;margin: 25px 50px 75px 100px;<br/>
+            } <br/>
+          </code>
+          <br /><a class="btn btn-primary"
+            href="https://www.w3schools.com/css/tryit.asp?filename=trycss_margin_shorthand_4val" target="_blank">Try it
+            Yourself »</a><br />
+          <h3>Auto Value</h3>
+          <p>
+            You can set the margin property to auto to horizontally center the element within its container.
+            <br />
+            The element will then take up the specified width, and the remaining space will be split equally between the left and right margins:
+          </p>
+          <code>
+            div { <br/>
+              &nbsp;&nbsp;width: 300px; <br/>
+              &nbsp;&nbsp;margin: auto;<br/>
+              &nbsp;&nbsp;border: 1px solid red;<br/>
+            } <br/>
+          </code>
+          <br /><a class="btn btn-primary" href="https://www.w3schools.com/css/tryit.asp?filename=trycss_margin_auto"
+            target="_blank">Try it Yourself »</a><br />
+          <h3>Inherit Value</h3>
+          <p>This example lets the left margin of the <code class="inline">&lt;p class="ex1"&gt;</code> element be inherited from the parent element (&lt;div&gt;):</p>
+          <code>
+            div {<br/>
+              &nbsp;&nbsp;border: 1px solid red;<br/>
+              &nbsp;&nbsp;margin-left: 100px;<br/>
+            }<br/>
+            p.ex1 {<br/>
+              &nbsp;&nbsp;margin-left: inherit;<br/>
+            } <br/>
+          </code>
+          <br /><a class="btn btn-primary" href="https://www.w3schools.com/css/tryit.asp?filename=trycss_margin-left_inherit"
+            target="_blank">Try it Yourself »</a><br />
+          <h3>Margin Collapse</h3>
+          <p>Top and bottom margins of elements are sometimes collapsed into a single margin that is equal to the largest of the two margins.<br/>This does not happen on left and right margins! Only top and bottom margins!</p>
+          <code>
+            h1 {<br/>
+              &nbsp;&nbsp;margin: 0 0 50px 0;<br/>
+            }<br/>            
+            h2 {<br/>
+              &nbsp;&nbsp;margin: 20px 0 0 0;<br/>
+            } <br/>
+          </code>
+          <br /><a class="btn btn-primary" href="https://www.w3schools.com/css/tryit.asp?filename=trycss_margin_collapse"
+            target="_blank">Try it Yourself »</a><br />    
         </div>        
       </div>
     </div>
