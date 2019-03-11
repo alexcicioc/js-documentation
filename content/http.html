@@ -1,0 +1,524 @@
+<div class="bs-docs-header" id="content" tabindex="-1">
+
+    <div id="http-overview" class="container">
+        <h1>HTTP Protocol</h1>
+        <div id="carbonads-js">
+            <span>
+                <span class="carbon-wrap">
+                    <img src="images/HTTP_logo.png" alt="" style="border-radius: 10px;" width="75%" />
+                </span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div id="http-details" class="container bs-docs-container">
+    <div class="row">
+        <div class="col-md-9" role="main">
+            <div class="bs-docs-section">
+                <div id="http-overview">
+                    <h1 class="page-header"><a class="anchorjs-link " href="#overview"
+                            aria-label="Anchor link for: overview" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>Overview
+                    </h1>
+                    <p>The Hypertext Transfer Protocol (HTTP) is an application-level protocol for distributed,
+                        collaborative, hypermedia information systems</p>
+                    <p>Basically, <code>HTTP is a TCP/IP</code> based communication protocol, that is used to deliver
+                        data (HTML
+                        files, image files, query results, etc.) on the World Wide Web.</p>
+
+                </div>
+                <div id="http-architecture" style="display:block">
+                    <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        Basic Architecture</h2>
+                    <p>The HTTP protocol is a request/response protocol based on the client/server based architecture
+                        where web browsers, robots and search engines, etc. act like HTTP clients, and the Web server
+                        acts as a server.</p>
+                    <img src="images/basic_arhitecture.gif"></img>
+                    <p></p>
+                    <p>The HTTP protocol is a <code>request/response</code> protocol based on the client/server based
+                        architecture where web browsers, robots and search engines, etc. act like HTTP clients, and the
+                        Web server acts as a server.</p>
+                    <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        Client</h4>
+                    <p>The HTTP client sends a request to the server in the form of a request method, URI, and protocol
+                        version, followed by a MIME-like message containing request modifiers, client information, and
+                        possible body content over a TCP/IP connection.</p>
+                    <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        Server</h4>
+                    <p>The HTTP server responds with a status line, including the message's protocol version and a
+                        success or error code, followed by a MIME-like message containing server information, entity
+                        meta information, and possible entity-body content.</p>
+                </div>
+                <div id="http-flow" style="display:block">
+                    <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        Basic features</h2>
+                    <ul>
+                        <li><code><b>HTTP is connectionless</b></code>
+                            <ul style="list-style-type: decimal">
+                                <li>The HTTP client, i.e., a browser initiates an HTTP request and after a request is
+                                    made, the client waits for the response
+                                <li>The server processes the request
+                                    <img src="images/request.png">
+                                </li>
+                        </li>
+                        <li>
+                            The server sends a response back after which client disconnect the connection
+                            <img src="images/response.png">
+                        </li>
+                    </ul>
+                    <p> So client and server knows about each other during current request and response only.
+                        <img src="images/client-and-server.png" style="border-radius: 10px;" width="75%">
+                        </br>
+                        <code>Further requests are made on new connection like client and server are new to each
+                                        other.</code></p>
+                    </li>
+                    <li><code><b>HTTP is media independent</b></code> -> It means, any type of data can be sent by
+                        HTTP as long as both the client and the server know how to handle the data content</li>
+                    <li><code><b>HTTP is stateless</b></code> -> The server and client are aware of each other only
+                        during a current request.</li>
+                    </ul>
+                    <blockquote>HTTP/1.0 uses a new connection for each request/response exchange, where as HTTP/1.1
+                        connection may be used for one or more request/response exchanges.</blockquote>
+                </div>
+                <div id="http-messages" style="display:block">
+                    <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        HTTP Messages</h2>
+                    <p>There are two types of HTTP messages, requests and responses, each with its own format.</p>
+                    <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        Request</h4>
+                    <p>Requests consists of the following elements</p>
+                    <ul>
+                        <li>An <code>HTTP method</code>, usually a verb like <code>GET, POST</code></li>
+                        <li>The <code>path</code> of the resource to fetch; the URL of the resource stripped from
+                            elements
+                            that are
+                            obvious from the context, for example without the protocol (<code>http://</code>), the
+                            domain
+                            (here
+                            <code>developer.mozilla.org</code>)</li>
+                        <li>The <code>version</code> of the HTTP protocol.</li>
+                        <li>Optional <code>headers</code> that convey additional information for the servers.</li>
+                        <li>Or a body, for some methods like <code>POST</code>, similar to those in responses, which
+                            contain
+                            the resource sent.</li>
+                    </ul>
+                    <img src="images/HTTP_request.png">
+                    <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        Response</h4>
+                    <p>Responses consist of the following elements/p>
+                        <ul>
+                            <li>The <code>version</code> of the HTTP protocol.</li>
+                            <li>A <code>status code</code>, indicating if the request has been successful, or not, and
+                                why.</li>
+                            <li>A status message, a non-authoritative short description of the status code.</li>
+                            <li>HTTP <code>headers</code>, like those for requests.</li>
+                            <li>Optionally, a body containing the fetched resource.</li>
+
+                        </ul>
+                        <img src="images/HTTP_response.png">
+                </div>
+                <div id="http-status-code" style="display:block">
+                    <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        Status code</h2>
+                    <p>The Status-Code element in a server response, is a 3-digit integer where the first digit of the
+                        Status-Code defines the class of response and the last two digits do not have any categorization
+                        role. There are 5 values for the first digit:</p>
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <th>S.N.</th>
+                                <th>Code and Description</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td><b style="color:lightblue">1xx: Informational</b>
+                                    <p> It means the request has been received and the process is continuing.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><b style="color:green">2xx: Success</b>
+                                    <p> It means the action was successfully received, understood, and accepted.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><b style="color:orange">3xx: Redirection</b>
+                                    <p> It means further action must be taken in order to complete the request.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><b style="color:red">4xx: Client Error</b>
+                                    <p> It means the request contains incorrect syntax or cannot be fulfilled.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td><b style="color:red">5xx: Server Error</b>
+                                    <p> It means the server failed to fulfill an apparently valid request.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="http-info" style="display:block">
+                    <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        <b style="color:lightblue">1xx: Information</b></h4>
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <th>Message</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td style="color:lightblue">100 Continue</td>
+                                <td> Only a part of the request has been received by the server, but as long as it has
+                                    not been rejected, the client should continue with the request.</td>
+                            </tr>
+                            <tr>
+                                <td style="color:lightblue">101 Switching Protocols</td>
+                                <td>The server switches protocol.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="http-success" style="display:block">
+                    <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        <b style="color: green">2xx: Successful</b></h4>
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <th>Message</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td style="color: green">200 OK</td>
+                                <td>The request is OK.</td>
+                            </tr>
+                            <tr>
+                                <td style="color: green">201 Created</td>
+                                <td>The request is complete, and a new resource is created&nbsp;.</td>
+                            </tr>
+                            <tr>
+                                <td style="color: green">202 Accepted</td>
+                                <td>The request is accepted for processing, but the processing is not complete.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="color: green">203 Non-authoritative Information</td>
+                                <td>The information in the entity header is from a local or third-party copy, not from
+                                    the original server.</td>
+                            </tr>
+                            <tr>
+                                <td style="color: green">204 No Content</td>
+                                <td>A status code and a header are given in the response, but there is no entity-body in
+                                    the reply.</td>
+                            </tr>
+                            <tr>
+                                <td style="color: green">205 Reset Content</td>
+                                <td>The browser should clear the form used for this transaction for additional input.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="http-redirect" style="display:block">
+                    <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        <b style="color:orange">3xx: Redirection</b></h4>
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <th>Message</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td style="color:orange">300 Multiple Choices</td>
+                                <td>A link list. The user can select a link and go to that location. Maximum five
+                                    addresses &nbsp;.</td>
+                            </tr>
+                            <tr>
+                                <td style="color:orange">301 Moved Permanently</td>
+                                <td>The requested page has moved to a new url&nbsp;.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="color:orange">302 Found</td>
+                                <td>The requested page has moved temporarily to a new url&nbsp;.</td>
+                            </tr>
+                            <tr>
+                                <td style="color:orange">303 See Other</td>
+                                <td>The requested page can be found under a different url&nbsp;.</td>
+                            </tr>
+                            <tr>
+                                <td style="color:orange">304 Not Modified</td>
+                                <td>This is the response code to an <i>If-Modified-Since</i> or <i>If-None-Match</i>
+                                    header, where the URL has not been modified since the specified date.</td>
+                            </tr>
+                            <tr>
+                                <td style="color:orange">305 Use Proxy</td>
+                                <td>The requested URL must be accessed through the proxy mentioned in the
+                                    <i>Location</i> header.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="http-error" style="display:block">
+                    <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        <b style="color:red">4xx: Client Error</b></h4>
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <th>Message</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td style="color:red">400&nbsp;Bad Request</td>
+                                <td>The server did not understand the request.</td>
+                            </tr>
+                            <tr>
+                                <td style="color:red">401 Unauthorized</td>
+                                <td>The requested page needs a username and a password.</td>
+                            </tr>
+                            <tr>
+                                <td style="color:red">402 Payment Required</td>
+                                <td><i>You can not use this code yet</i>.</td>
+                            </tr>
+                            <tr>
+                                <td style="color:red">403 Forbidden</td>
+                                <td>Access is forbidden to the requested page.</td>
+                            </tr>
+                            <tr>
+                                <td style="color:red">404 Not Found</td>
+                                <td>The server can not find the requested page.</td>
+                            </tr>
+                            <tr>
+                                <td style="color:red">405 Method Not Allowed</td>
+                                <td>The method specified in the request is not allowed.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="http-server" style="display:block">
+                    <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        <b style="color:red">5xx: Server Error</b></h4>
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <th>Message</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td style="color:red">500&nbsp;Internal Server Error</td>
+                                <td>The request was not completed. The server met an unexpected condition.</td>
+                            </tr>
+                            <tr>
+                                <td style="color:red">501 Not Implemented</td>
+                                <td>The request was not completed. The server did not support the functionality
+                                    required.</td>
+                            </tr>
+                            <tr>
+                                <td style="color:red">502 Bad Gateway</td>
+                                <td>The request was not completed. The server received an invalid response from the
+                                    upstream server.</td>
+                            </tr>
+                            <tr>
+                                <td style="color:red">503 Service Unavailable</td>
+                                <td>The request was not completed. The server is temporarily overloading or down.</td>
+                            </tr>
+                            <tr>
+                                <td style="color:red">504 Gateway Timeout</td>
+                                <td>The gateway has timed out.</td>
+                            </tr>
+                            <tr>
+                                <td style="color:red">505 HTTP Version Not Supported</td>
+                                <td>The server does not support the "http protocol" version.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="http-methods" style="display:block">
+                    <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        HTTP Methods</h2>
+                    <p>The set of common methods for HTTP/1.1 is defined below and this set can be expanded based on
+                        requirements. These method names are case sensitive and they must be used in uppercase.</p>
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <th>S.N.</th>
+                                <th>Method and Description</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td><b>GET</b>
+                                    <p>The GET method is used to retrieve information from the given server using a
+                                        given URI. Requests using GET should only retrieve data and should have no other
+                                        effect on the data.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><b>POST</b>
+                                    <p>A POST request is used to send data to the server, for example, customer
+                                        information, file upload, etc. using HTML forms.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><b>PUT</b>
+                                    <p>Replaces all current representations of the target resource with the uploaded
+                                        content.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><b>DELETE</b>
+                                    <p>Removes all current representations of the target resource given by a URI.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="http-get" style="display:block">
+                    <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        GET Method</h4>
+                    <p>GET request retrieves data from a web server by specifying parameters in the URL portion of the
+                        request.</p>
+                    <pre class="result notranslate">
+GET /hello.htm HTTP/1.1
+User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT)
+Host: www.tutorialspoint.com
+Accept-Language: en-us
+Accept-Encoding: gzip, deflate
+Connection: Keep-Alive
+                    </pre>
+                    <p>The server response</p>
+                    <pre class="result notranslate">
+HTTP/1.1 200 OK
+Date: Mon, 27 Jul 2009 12:28:53 GMT
+Server: Apache/2.2.14 (Win32)
+Last-Modified: Wed, 22 Jul 2009 19:15:56 GMT
+ETag: "34aa387-d-1568eb00"
+Vary: Authorization,Accept
+Accept-Ranges: bytes
+Content-Length: 88
+Content-Type: text/html
+Connection: Closed
+                            </pre>
+
+                </div>
+                <div id="http-post" style="display:block">
+                    <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        POST Method</h4>
+                    <p>POST is used to send data to a server to create/update a resource.</p>
+                    <p>The data sent to the server with POST is stored in the request body of the HTTP request</p>
+                </div>
+            </div>
+        </div>
+        <div class="sticky col-md-3" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top">
+                <p><strong>Summary</strong></p>
+                <ul class="nav bs-docs-sidenav">
+                    <li>
+                        <a href="#overview">Overview</a>
+                    </li>
+                    <li>
+                        <a href="#http-architecture" onclick="showHiddenList(this)">Basic architecture</a>
+                        <ul class="arrow" style="display:none">
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#http-flow">HTTP Flow</a>
+                        <ul class="arrow" style="display:none">
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#http-messages" onclick="showHiddenList(this)">HTTP Messages</a>
+                        <ul class="arrow" style="display:none">
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#http-status-code">Status Code</a>
+                        <ul class="arrow">
+                            <li>
+                                <a href="#http-info">1xx: Information</a>
+                            </li>
+                            <li>
+                                <a href="#http-success">2xx: Successful</a>
+                            </li>
+                            <li>
+                                <a href="#http-redirect">3xx: Redirection</a>
+                            </li>
+                            <li>
+                                <a href="#http-error">4xx: Client Error</a>
+                            </li>
+                            <li>
+                                <a href="#http-server">5xx: Server Error</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#http-methods">HTTP Methods</a>
+                        <ul class="arrow">
+                            <li>
+                                <a href="#http-get">GET</a>
+                            </li>
+                            <li>
+                                <a href="#http-post">POST</a>
+                            </li>
+                            <li>
+                                <a href="#http-put">PUT</a>
+                            </li>
+                            <li>
+                                <a href="#http-delete">DELETE</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    ready();
+</script>
