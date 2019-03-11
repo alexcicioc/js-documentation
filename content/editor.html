@@ -4,6 +4,25 @@
 <head>
   <title>Code Editor</title>
   <style type="text/css" media="screen">
+    .btn-primary {
+      background-image: -webkit-linear-gradient(top, #337ab7 0, #265a88 100%);
+      background-image: -o-linear-gradient(top, #337ab7 0, #265a88 100%);
+      background-image: -webkit-gradient(linear, left top, left bottom, from(#337ab7), to(#265a88));
+      background-image: linear-gradient(to bottom, #337ab7 0, #265a88 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff337ab7', endColorstr='#ff265a88', GradientType=0);
+      filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+      background-repeat: repeat-x;
+      border-color: #245580;
+      text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
+      color: #fff;
+      border: 1px solid transparent;
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-size: 14px;
+      line-height: 1.42857143;
+    }
+
     #editor {
       height: 300px;
       width: 500px;
@@ -38,7 +57,7 @@
     <tr>
       <td></td>
       <td>
-        <button onclick="runCode(event)">Run</button>
+        <button class="btn-primary" onclick="runCode(event)">Run >></button>
       </td>
     </tr>
   </table>
