@@ -695,7 +695,10 @@
             href="https://www.w3schools.com/css/tryit.asp?filename=trycss_position_relative" target="_blank">Try it
             Yourself »</a><br />
           <h3>Position Fixed</h3>
-          <p>An element with <code class="inline">position: fixed;</code> is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element. <br/>A fixed element does not leave a gap in the page where it would normally have been located. </p>
+          <p>An element with <code class="inline">position: fixed;</code> is positioned relative to the viewport, which
+            means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left
+            properties are used to position the element. <br />A fixed element does not leave a gap in the page where it
+            would normally have been located. </p>
           <code>
             div.fixed { <br/> 
               &nbsp;&nbsp;position: fixed; <br/> 
@@ -705,11 +708,14 @@
               &nbsp;&nbsp;border: 3px solid #73AD21; <br/>
             } <br/>
           </code>
-          <br /><a class="btn btn-primary"
-            href="https://www.w3schools.com/css/tryit.asp?filename=trycss_position_fixed" target="_blank">Try it
-            Yourself »</a><br />  
+          <br /><a class="btn btn-primary" href="https://www.w3schools.com/css/tryit.asp?filename=trycss_position_fixed"
+            target="_blank">Try it
+            Yourself »</a><br />
           <h3>Position Absolute</h3>
-          <p>An element with <code class="inline">position: absolute;</code> is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed). <br/> However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling. </p>
+          <p>An element with <code class="inline">position: absolute;</code> is positioned relative to the nearest
+            positioned ancestor (instead of positioned relative to the viewport, like fixed). <br /> However; if an
+            absolute positioned element has no positioned ancestors, it uses the document body, and moves along with
+            page scrolling. </p>
           <code>
             div.relative {<br/>
               &nbsp;&nbsp;position: relative;<br/>
@@ -730,7 +736,10 @@
             href="https://www.w3schools.com/css/tryit.asp?filename=trycss_position_absolute" target="_blank">Try it
             Yourself »</a><br />
           <h3>Position Sticky</h3>
-          <p>An element with <code class="inline">position: sticky;</code> is positioned based on the user's scroll position. <br/> A sticky element toggles between <code class="inline">relative</code> and <code class="inline">fixed</code>, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).</p>
+          <p>An element with <code class="inline">position: sticky;</code> is positioned based on the user's scroll
+            position. <br /> A sticky element toggles between <code class="inline">relative</code> and <code
+              class="inline">fixed</code>, depending on the scroll position. It is positioned relative until a given
+            offset position is met in the viewport - then it "sticks" in place (like position:fixed).</p>
           <code>
             div.sticky { <br/>
               position: -webkit-sticky; <br/>
@@ -742,21 +751,24 @@
           </code>
           <br /><a class="btn btn-primary"
             href="https://www.w3schools.com/css/tryit.asp?filename=trycss_position_absolute" target="_blank">Try it
-            Yourself »</a><br />            
+            Yourself »</a><br />
         </div>
         <div class="section">
           <h2 class="page-header">CSS Animations</h2>
-          <p>CSS animations allows animation of most HTML elements without using JavaScript or Flash! <br/>
-            An animation lets an element gradually change from one style to another. <br/>
-            You can change as many CSS properties you want, as many times you want. <br/>
-            To use CSS animation, you must first specify some keyframes for the animation. <br/>
-            Keyframes hold what styles the element will have at certain times. <br/>
+          <p>CSS animations allows animation of most HTML elements without using JavaScript or Flash! <br />
+            An animation lets an element gradually change from one style to another. <br />
+            You can change as many CSS properties you want, as many times you want. <br />
+            To use CSS animation, you must first specify some keyframes for the animation. <br />
+            Keyframes hold what styles the element will have at certain times. <br />
           </p>
           <h3>The @keyframes Rule</h3>
           <p>
-            When you specify CSS styles inside the @keyframes rule, the animation will gradually change from the current style to the new style at certain times.
+            When you specify CSS styles inside the @keyframes rule, the animation will gradually change from the current
+            style to the new style at certain times.
             To get an animation to work, you must bind the animation to an element.
-            The following example binds the "example" animation to the <code class="inline">&lt;div&gt;</code> element. The animation will last for 4 seconds, and it will gradually change the background-color of the <code class="inline">&lt;div&gt;</code> element from "red" to "yellow":
+            The following example binds the "example" animation to the <code class="inline">&lt;div&gt;</code> element.
+            The animation will last for 4 seconds, and it will gradually change the background-color of the <code
+              class="inline">&lt;div&gt;</code> element from "red" to "yellow":
           </p>
           <code>
             /* The animation code */<br/>
@@ -773,11 +785,15 @@
               &nbsp;&nbsp;animation-duration: 4s;<br/>
             }<br/>
           </code>
-          <p>Note: The <code class="inline">animation-duration</code> property defines how long time an animation should take to complete. If the <code class="inline">animation-duration</code> property is not specified, no animation will occur, because the default value is 0s (0 seconds). </p>
-          <br /><a class="btn btn-primary"
-            href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_animation1" target="_blank">Try it
-            Yourself »</a><br/><br/>  
-          <p>The following example will change both the background-color and the position of the <code class="inline">&lt;div&gt;</code> element when the animation is 25% complete, 50% complete, and again when the animation is 100% complete:</p>    
+          <p>Note: The <code class="inline">animation-duration</code> property defines how long time an animation should
+            take to complete. If the <code class="inline">animation-duration</code> property is not specified, no
+            animation will occur, because the default value is 0s (0 seconds). </p>
+          <br /><a class="btn btn-primary" href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_animation1"
+            target="_blank">Try it
+            Yourself »</a><br /><br />
+          <p>The following example will change both the background-color and the position of the <code
+              class="inline">&lt;div&gt;</code> element when the animation is 25% complete, 50% complete, and again when
+            the animation is 100% complete:</p>
           <code>
             /* The animation code */ <br/>
             @keyframes example { <br/>
@@ -797,12 +813,13 @@
               &nbsp;&nbsp;animation-duration: 4s;<br/>
             }
           </code>
-          <br /><a class="btn btn-primary"
-            href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_animation3" target="_blank">Try it
-            Yourself »</a><br />  
+          <br /><a class="btn btn-primary" href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_animation3"
+            target="_blank">Try it
+            Yourself »</a><br />
           <h3>Delay an Animation</h3>
           <p>
-            The <code class="inline">animation-delay</code> property specifies a delay for the start of an animation.<br/>The following example has a 2 seconds delay before starting the animation:
+            The <code class="inline">animation-delay</code> property specifies a delay for the start of an
+            animation.<br />The following example has a 2 seconds delay before starting the animation:
           </p>
           <code>
             div {<br/>
@@ -817,8 +834,10 @@
           </code>
           <br /><a class="btn btn-primary"
             href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_animation_delay" target="_blank">Try it
-            Yourself »</a><br /> 
-          <p>Note: Negative values are also allowed. If using negative values, the animation will start as if it had already been playing for N seconds. <br/>In the following example, the animation will start as if it had already been playing for 2 seconds:</p>
+            Yourself »</a><br /><br />
+          <p>Note: Negative values are also allowed. If using negative values, the animation will start as if it had
+            already been playing for N seconds. <br />In the following example, the animation will start as if it had
+            already been playing for 2 seconds:</p>
           <code>
             div {<br/>
               &nbsp;&nbsp;width: 100px;<br/>
@@ -832,10 +851,11 @@
           </code>
           <br /><a class="btn btn-primary"
             href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_animation_delay2" target="_blank">Try it
-            Yourself »</a><br />  
+            Yourself »</a><br />
           <h3>Times to run the app</h3>
           <p>
-            The <code class="inline">animation-iteration-count</code> property specifies the number of times an animation should run.<br/>The following example will run the animation 3 times before it stops:
+            The <code class="inline">animation-iteration-count</code> property specifies the number of times an
+            animation should run.<br />The following example will run the animation 3 times before it stops:
           </p>
           <code>
             div {<br/>
@@ -850,7 +870,7 @@
           </code>
           <br /><a class="btn btn-primary"
             href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_animation_count" target="_blank">Try it
-            Yourself »</a><br /> 
+            Yourself »</a><br /><br />
           <p>Note: The following example uses the value "infinite" to make the animation continue for ever:</p>
           <code>
             div {<br/>
@@ -865,11 +885,12 @@
           </code>
           <br /><a class="btn btn-primary"
             href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_animation_count2" target="_blank">Try it
-            Yourself »</a><br />  
+            Yourself »</a><br />
           <h3>Direction of animation</h3>
           <p>
-            The <code class="inline">animation-direction</code> property specifies whether an animation should be played forwards, backwards or in alternate cycles.
-            <br/>
+            The <code class="inline">animation-direction</code> property specifies whether an animation should be played
+            forwards, backwards or in alternate cycles.
+            <br />
             This property can have the following values:
           </p>
           <ul>
@@ -892,8 +913,9 @@
           </code>
           <br /><a class="btn btn-primary"
             href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_animation_direction2" target="_blank">Try it
-            Yourself »</a><br /> 
-          <p>The following example uses the value "alternate" to make the animation run forwards first, then backwards:</p>
+            Yourself »</a><br /><br />
+          <p>The following example uses the value "alternate" to make the animation run forwards first, then backwards:
+          </p>
           <code>
             div {<br/>
               &nbsp;&nbsp;width: 100px;<br/>
@@ -908,8 +930,9 @@
           </code>
           <br /><a class="btn btn-primary"
             href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_animation_count" target="_blank">Try it
-            Yourself »</a><br /> 
-          <p>The following example uses the value "alternate-reverse" to make the animation run backwards first, then forwards:</p>
+            Yourself »</a><br />
+          <p>The following example uses the value "alternate-reverse" to make the animation run backwards first, then
+            forwards:</p>
           <code>
             div {<br/>
               &nbsp;&nbsp;width: 100px;<br/>
@@ -924,15 +947,17 @@
           </code>
           <br /><a class="btn btn-primary"
             href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_animation_direction3" target="_blank">Try it
-            Yourself »</a><br />             
+            Yourself »</a><br />
           <h3>Speed curve</h3>
           <p>
-            The <code class="inline">animation-timing-function</code> property specifies whether an animation should be played forwards, backwards or in alternate cycles.
-            <br/>
+            The <code class="inline">animation-timing-function</code> property specifies whether an animation should be
+            played forwards, backwards or in alternate cycles.
+            <br />
             This property can have the following values:
           </p>
           <ul>
-            <li><code>ease</code> - Specifies an animation with a slow start, then fast, then end slowly (this is default)</li>
+            <li><code>ease</code> - Specifies an animation with a slow start, then fast, then end slowly (this is
+              default)</li>
             <li><code>linear</code> - Specifies an animation with the same speed from start to end</li>
             <li><code>ease-in</code> - Specifies an animation with a slow start</li>
             <li><code>ease-out</code> - Specifies an animation with a slow end</li>
@@ -949,18 +974,27 @@
           </code>
           <br /><a class="btn btn-primary"
             href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_animation_speed" target="_blank">Try it
-            Yourself »</a><br />  
+            Yourself »</a><br />
           <h3>Fill-mode option</h3>
           <p>
-            CSS animations do not affect an element before the first keyframe is played or after the last keyframe is played. The animation-fill-mode property can override this behavior.<br/> The <code class="inline">animation-fill-mode</code> property specifies a style for the target element when the animation is not playing (before it starts, after it ends, or both).<br/>The animation-fill-mode property can have the following values:
+            CSS animations do not affect an element before the first keyframe is played or after the last keyframe is
+            played. The animation-fill-mode property can override this behavior.<br /> The <code
+              class="inline">animation-fill-mode</code> property specifies a style for the target element when the
+            animation is not playing (before it starts, after it ends, or both).<br />The animation-fill-mode property
+            can have the following values:
           </p>
           <ul>
-            <li><code>none</code> - Default value. Animation will not apply any styles to the element before or after it is executing</li>
-            <li><code>forwards</code> - The element will retain the style values that is set by the last keyframe (depends on animation-direction and animation-iteration-count)</li>
-            <li><code>backwards</code> - The element will get the style values that is set by the first keyframe (depends on animation-direction), and retain this during the animation-delay period</li>
-            <li><code>both</code> - The animation will follow the rules for both forwards and backwards, extending the animation properties in both directions</li>
+            <li><code class="inline">none</code> - Default value. Animation will not apply any styles to the element before or after it
+              is executing</li>
+            <li><code class="inline">forwards</code> - The element will retain the style values that is set by the last keyframe
+              (depends on animation-direction and animation-iteration-count)</li>
+            <li><code class="inline">backwards</code> - The element will get the style values that is set by the first keyframe
+              (depends on animation-direction), and retain this during the animation-delay period</li>
+            <li><code class="inline">both</code> - The animation will follow the rules for both forwards and backwards, extending the
+              animation properties in both directions</li>
           </ul>
-          <p>The following example lets the <code class="inline">&lt;div&gt;</code> element retain the style values from the last keyframe when the animation ends:</p>
+          <p>The following example lets the <code class="inline">&lt;div&gt;</code> element retain the style values from
+            the last keyframe when the animation ends:</p>
           <code>
             div {<br/>
               &nbsp;&nbsp;width: 100px;<br/>
@@ -974,8 +1008,9 @@
           </code>
           <br /><a class="btn btn-primary"
             href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_animation_fill-mode" target="_blank">Try it
-            Yourself »</a><br /> 
-          <p>The following example lets the <code class="inline">&lt;div&gt;</code> element get the style values set by the first keyframe before the animation starts (during the animation-delay period):</p>
+            Yourself »</a><br /><br />
+          <p>The following example lets the <code class="inline">&lt;div&gt;</code> element get the style values set by
+            the first keyframe before the animation starts (during the animation-delay period):</p>
           <code>
             div {<br/>
               &nbsp;&nbsp;width: 100px;<br/>
@@ -989,8 +1024,10 @@
           </code>
           <br /><a class="btn btn-primary"
             href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_animation_fill-mode2" target="_blank">Try it
-            Yourself »</a><br /> 
-          <p>The following example lets the <code class="inline">&lt;div&gt;</code> element get the style values set by the first keyframe before the animation starts, and retain the style values from the last keyframe when the animation ends:</p>
+            Yourself »</a><br /><br />
+          <p>The following example lets the <code class="inline">&lt;div&gt;</code> element get the style values set by
+            the first keyframe before the animation starts, and retain the style values from the last keyframe when the
+            animation ends:</p>
           <code>
             div {<br/>
               &nbsp;&nbsp;width: 100px;<br/>
@@ -1004,7 +1041,7 @@
           </code>
           <br /><a class="btn btn-primary"
             href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_animation_fill-mode3" target="_blank">Try it
-            Yourself »</a><br />  
+            Yourself »</a><br />
           <h3>Shorthand Property</h3>
           <p>The example below uses six of the animation properties:</p>
           <code>
@@ -1017,32 +1054,34 @@
               &nbsp;&nbsp;animation-direction: alternate;<br/>
             }<br/>
           </code>
-          <br /><a class="btn btn-primary"
-            href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_animation4" target="_blank">Try it
-            Yourself »</a><br />  
-          <p>The same animation effect as above can be achieved by using the shorthand <code class="inline">animation</code> property:</p>
+          <br /><a class="btn btn-primary" href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_animation4"
+            target="_blank">Try it Yourself »</a><br /><br />
+          <p>The same animation effect as above can be achieved by using the shorthand <code
+              class="inline">animation</code> property:</p>
           <code>
             div {<br/>
               &nbsp;&nbsp;animation: example 5s linear 2s infinite alternate;
             }<br/>
           </code>
-          <br /><a class="btn btn-primary"
-            href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_animation5" target="_blank">Try it
-            Yourself »</a><br />    
+          <br /><a class="btn btn-primary" href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_animation5"
+            target="_blank">Try it
+            Yourself »</a><br />
         </div>
         <div class="section">
           <h2 class="page-header">CSS Opacity</h2>
-          <p>The <code class="inline">opacity</code> property specifies the opacity/transparency of an element. <br/>This property can take a value from 0.0 - 1.0. The lower value, the more transparent:</p>
+          <p>The <code class="inline">opacity</code> property specifies the opacity/transparency of an element.
+            <br />This property can take a value from 0.0 - 1.0. The lower value, the more transparent:</p>
           <code>
             img {<br/>
               opacity: 0.5;<br/>
               filter: alpha(opacity=50); /* For IE8 and earlier */<br/>
             }<br/>
           </code>
-          <br /><a class="btn btn-primary"
-            href="https://www.w3schools.com/css/tryit.asp?filename=trycss_image_opacity" target="_blank">Try it
-            Yourself »</a><br/><br/>  
-          <p>The <code class="inline">opacity</code> property is often used together with the <code class="inline">:hover</code> selector to change the opacity on mouse-over:</p>
+          <br /><a class="btn btn-primary" href="https://www.w3schools.com/css/tryit.asp?filename=trycss_image_opacity"
+            target="_blank">Try it
+            Yourself »</a><br /><br />
+          <p>The <code class="inline">opacity</code> property is often used together with the <code
+              class="inline">:hover</code> selector to change the opacity on mouse-over:</p>
           <code>
             img {<br/>
               opacity: 0.5;<br/>
@@ -1060,7 +1099,10 @@
         <div class="section">
           <h2 class="page-header">RGB, RGBA</h2>
           <h3>RGB Color</h3>
-          <p>RGB color values are supported in all browsers. <br/>An RGB color value is specified with: rgb(red, green, blue). <br/>Each parameter (red, green, and blue) defines the intensity of the color as an integer between 0 and 255. <br/> For example, rgb(0, 0, 255) is rendered as blue, because the blue parameter is set to its highest value (255) and the others are set to 0.</p>
+          <p>RGB color values are supported in all browsers. <br />An RGB color value is specified with: rgb(red, green,
+            blue). <br />Each parameter (red, green, and blue) defines the intensity of the color as an integer between
+            0 and 255. <br /> For example, rgb(0, 0, 255) is rendered as blue, because the blue parameter is set to its
+            highest value (255) and the others are set to 0.</p>
           <code>
               &nbsp;&lt;style&gt;<br/>
                 &nbsp;&nbsp;div {<br/>
@@ -1069,12 +1111,14 @@
                 &nbsp;&nbsp;}<br/>
               &nbsp;&lt;/style&gt;<br/>
           </code>
-          <br /><a class="btn btn-primary"
-            href="https://www.w3schools.com/colors/tryit.asp?filename=trycolors_rgb" target="_blank">Try it
+          <br /><a class="btn btn-primary" href="https://www.w3schools.com/colors/tryit.asp?filename=trycolors_rgb"
+            target="_blank">Try it
             Yourself »</a><br />
           <h3>CSS rgba() Function</h3>
-          <p>The <code class="inline">rgba()</code> function define colors using the Red-green-blue-alpha (RGBA) model.<br/>RGBA color values are an extension of RGB color values with an alpha channel - which specifies the opacity of the color.<br/>Define different RGB colors with opacity (RGBA):</p>          
-          <p>CSS Syntax</p> <code class="inline">rgba(red, green, blue, alpha)</code><br/>
+          <p>The <code class="inline">rgba()</code> function define colors using the Red-green-blue-alpha (RGBA)
+            model.<br />RGBA color values are an extension of RGB color values with an alpha channel - which specifies
+            the opacity of the color.<br />Define different RGB colors with opacity (RGBA):</p>
+          <p>CSS Syntax</p> <code class="inline">rgba(red, green, blue, alpha)</code><br />
           <code>
             &nbsp;&lt;style&gt;<br/>
               &nbsp;&nbsp;#p1 {background-color:rgba(255,0,0,0.3);} /* red with opacity*/<br/>
@@ -1082,9 +1126,9 @@
               &nbsp;&nbsp;#p3 {background-color:rgba(0,0,255,0.3);} /* blue with opacity */<br/>
             &nbsp;&lt;/style&gt;<br/>
           </code>
-          <br /><a class="btn btn-primary"
-            href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_func_rgba" target="_blank">Try it
-            Yourself »</a><br />          
+          <br /><a class="btn btn-primary" href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_func_rgba"
+            target="_blank">Try it
+            Yourself »</a><br />
         </div>
         <div class="section">
           <h2 class="page-header">CSS Gradients</h2>
@@ -1096,9 +1140,10 @@
           </ul>
           <h3>Linear Gradients</h3>
           <p>CSS syntax</p>
-          <code class="inline">background-image: linear-gradient(direction, color-stop1, color-stop2, ...);</code><br/>
+          <code class="inline">background-image: linear-gradient(direction, color-stop1, color-stop2, ...);</code><br />
           <h4>Linear Gradient - Top to Bottom (this is default)</h4>
-          <p>The following example shows a linear gradient that starts at the top. It starts red, transitioning to yellow:</p>
+          <p>The following example shows a linear gradient that starts at the top. It starts red, transitioning to
+            yellow:</p>
           <code>
             #grad { <br/>
               &nbsp;&nbsp;background-image: linear-gradient(red, yellow); <br/>
@@ -1108,7 +1153,8 @@
             href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_gradient-linear" target="_blank">Try it
             Yourself »</a><br />
           <h4>Linear Gradient - Left to Right</h4>
-          <p>The following example shows a linear gradient that starts from the left. It starts red, transitioning to yellow:</p>
+          <p>The following example shows a linear gradient that starts from the left. It starts red, transitioning to
+            yellow:</p>
           <code>
             #grad { <br/>
               &nbsp;&nbsp;background-image: linear-gradient(to right, red , yellow); <br/>
@@ -1116,28 +1162,36 @@
           </code>
           <br /><a class="btn btn-primary"
             href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_gradient-linear_ltr" target="_blank">Try it
-            Yourself »</a><br />    
+            Yourself »</a><br />
           <h4>Linear Gradient - Diagonal</h4>
-          <p>You can make a gradient diagonally by specifying both the horizontal and vertical starting positions. <br/> The following example shows a linear gradient that starts at top left (and goes to bottom right). It starts red, transitioning to yellow:</p>
+          <p>You can make a gradient diagonally by specifying both the horizontal and vertical starting positions.
+            <br /> The following example shows a linear gradient that starts at top left (and goes to bottom right). It
+            starts red, transitioning to yellow:</p>
           <code>
             #grad { <br/>
               &nbsp;&nbsp;background-image: linear-gradient(to bottom right, red, yellow); <br/>
             } <br/>
           </code>
-          <br/><a class="btn btn-primary"
-            href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_gradient-linear_diagonal" target="_blank">Try it
+          <br /><a class="btn btn-primary"
+            href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_gradient-linear_diagonal" target="_blank">Try
+            it
             Yourself »</a><br />
           <h4>Using Angles</h4>
-          <p>If you want more control over the direction of the gradient, you can define an angle, instead of the predefined directions (to bottom, to top, to right, to left, to bottom right, etc.).</p>
-          <p>Syntax: <code class="inlie">background-image: linear-gradient(angle, color-stop1, color-stop2);</code><br/>The angle is specified as an angle between a horizontal line and the gradient line. <br/>The following example shows how to use angles on linear gradients:</p>
+          <p>If you want more control over the direction of the gradient, you can define an angle, instead of the
+            predefined directions (to bottom, to top, to right, to left, to bottom right, etc.).</p>
+          <p>Syntax: <code
+              class="inlie">background-image: linear-gradient(angle, color-stop1, color-stop2);</code><br />The angle is
+            specified as an angle between a horizontal line and the gradient line. <br />The following example shows how
+            to use angles on linear gradients:</p>
           <code>
             #grad { <br/>
               &nbsp;&nbsp;background-image: linear-gradient(-90deg, red, yellow); <br/>
             } <br/>
           </code>
           <br /><a class="btn btn-primary"
-            href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_gradient-linear_angles" target="_blank">Try it
-            Yourself »</a><br /> 
+            href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_gradient-linear_angles" target="_blank">Try
+            it
+            Yourself »</a><br />
           <h4>Using Multiple Color Stops</h4>
           <p>The following example shows a linear gradient (from top to bottom) with multiple color stops:</p>
           <code>
@@ -1149,9 +1203,12 @@
             href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_gradient-linear_cs" target="_blank">Try it
             Yourself »</a><br />
           <h4>Using Transparency</h4>
-          <p>CSS gradients also support transparency, which can be used to create fading effects. <br/>
-            To add transparency, we use the rgba() function to define the color stops. The last parameter in the rgba() function can be a value from 0 to 1, and it defines the transparency of the color: 0 indicates full transparency, 1 indicates full color (no transparency).<br/>            
-            The following example shows a linear gradient that starts from the left. It starts fully transparent, transitioning to full color red:</p>
+          <p>CSS gradients also support transparency, which can be used to create fading effects. <br />
+            To add transparency, we use the rgba() function to define the color stops. The last parameter in the rgba()
+            function can be a value from 0 to 1, and it defines the transparency of the color: 0 indicates full
+            transparency, 1 indicates full color (no transparency).<br />
+            The following example shows a linear gradient that starts from the left. It starts fully transparent,
+            transitioning to full color red:</p>
           <code>
             #grad { <br/>
               &nbsp;&nbsp;background-image: linear-gradient(red, yellow, green);<br/>
@@ -1168,12 +1225,16 @@
             } <br/>
           </code>
           <br /><a class="btn btn-primary"
-            href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_gradient-linear_repeating" target="_blank">Try it
-            Yourself »</a><br />        
-          <h3>Radial Gradients</h3>          
-          <p>A radial gradient is defined by its center. <br/> To create a radial gradient you must also define at least two color stops. <br/> By default, shape is ellipse, size is farthest-corner, and position is center.</p>
+            href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_gradient-linear_repeating"
+            target="_blank">Try it
+            Yourself »</a><br />
+          <h3>Radial Gradients</h3>
+          <p>A radial gradient is defined by its center. <br /> To create a radial gradient you must also define at
+            least two color stops. <br /> By default, shape is ellipse, size is farthest-corner, and position is center.
+          </p>
           <p>CSS syntax</p>
-          <code class="inline">background-image: radial-gradient(shape size at position, start-color, ..., last-color);</code><br/>
+          <code
+            class="inline">background-image: radial-gradient(shape size at position, start-color, ..., last-color);</code><br />
           <h4>Radial Gradient - Evenly Spaced Color Stops (this is default)</h4>
           <p>The following example shows a radial gradient with evenly spaced color stops:</p>
           <code>
@@ -1195,7 +1256,8 @@
             href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_gradient-radial2" target="_blank">Try it
             Yourself »</a><br />
           <h4>Set Shape</h4>
-          <p>The shape parameter defines the shape. It can take the value circle or ellipse. The default value is ellipse.<br/>The following example shows a radial gradient with the shape of a circle:</p>
+          <p>The shape parameter defines the shape. It can take the value circle or ellipse. The default value is
+            ellipse.<br />The following example shows a radial gradient with the shape of a circle:</p>
           <code>
             #grad { <br/>
               &nbsp;&nbsp;background-image: radial-gradient(circle, red, yellow, green);<br/>
@@ -1203,7 +1265,7 @@
           </code>
           <br /><a class="btn btn-primary"
             href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_gradient-radial_shape" target="_blank">Try it
-            Yourself »</a><br /> 
+            Yourself »</a><br />
           <h4>Use of Different Size Keywords</h4>
           <p>The size parameter defines the size of the gradient. It can take four values:</p>
           <ul>
@@ -1232,8 +1294,9 @@
             } <br/>
           </code>
           <br /><a class="btn btn-primary"
-            href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_gradient-radial_repeating" target="_blank">Try it
-            Yourself »</a><br />   
+            href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_gradient-radial_repeating"
+            target="_blank">Try it
+            Yourself »</a><br />
         </div>
       </div>
       <br />
