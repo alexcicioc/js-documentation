@@ -261,12 +261,33 @@
                     <h2 class="page-header">External files</h2>
                     <h3>Including a style sheet file</h3>
                     <p>An external style sheet file may be linked to an HTML document through HTML's
-                        <code class="inline">&lt;link&gt;</code> element:</p>
+                        <code class="inline">&lt;link&gt;</code> element:
+                    </p>
                     <code class="inline">&lt;link rel="stylesheet" type="text/css" href="css_file.css"></code>
                     <h3>Including a javascript file</h3>
                     <p>An external javascript file may be linked to an HTML document through HTML's
                         <code class="inline">&lt;script&gt;</code> element:</p>
-                    <code class="inline">&lt;script type="text/javascript" src="js_file.css">&lt;/script&gt;</code>
+                    <code class="inline">&lt;script type="text/javascript" src="js_file.js">&lt;/script&gt;</code>
+                    <h3>Ralative and absolute paths</h3>
+                    <p>The link itself could contain a "relative path" or an "absolute path" to the file</p>
+                    <p>Some examples of relative path:</p>
+                    <p>
+                      <code class="inline">&lt;link rel="stylesheet" type="text/css" href="css_file.css"></code>
+                    </p>
+                    <p>
+                      <code class="inline">&lt;link rel="stylesheet" type="text/css" href="../another_css_file.css"></code>
+                    </p>
+                    <p>
+                    <code class="inline">&lt;script type="text/javascript" src="../assets/scripts/some_js_file.js">&lt;/script&gt;</code>
+                    </p>
+                    <p>and some examplesthere absolute paths are used:</p>
+                    <p>
+                      <code class="inline">&lt;link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></code>
+                    </p>
+                    <p>
+                      <code class="inline">&lt;script type="text/javascript" src="//code.jquery.com/jquery-3.3.1.js">&lt;/script&gt;</code>
+                    </p>
+
                 </div>
                 <br /><br /><br /><br /><br /><br />
             </div>
