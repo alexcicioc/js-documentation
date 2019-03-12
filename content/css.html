@@ -897,7 +897,8 @@
             <li><code class="inline">normal</code> - The animation is played as normal (forwards). This is default</li>
             <li><code class="inline">reverse</code> - The animation is played in reverse direction (backwards)</li>
             <li><code class="inline">alternate</code> - The animation is played forwards first, then backwards</li>
-            <li><code class="inline">alternate-reverse</code> - The animation is played backwards first, then forwards</li>
+            <li><code class="inline">alternate-reverse</code> - The animation is played backwards first, then forwards
+            </li>
           </ul>
           <p>The following example will run the animation in reverse direction (backwards):</p>
           <code>
@@ -930,7 +931,7 @@
           </code>
           <br /><a class="btn btn-primary"
             href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_animation_count" target="_blank">Try it
-            Yourself »</a><br />
+            Yourself »</a><br /><br />
           <p>The following example uses the value "alternate-reverse" to make the animation run backwards first, then
             forwards:</p>
           <code>
@@ -956,13 +957,15 @@
             This property can have the following values:
           </p>
           <ul>
-            <li><code class="inline">ease</code> - Specifies an animation with a slow start, then fast, then end slowly (this is
+            <li><code class="inline">ease</code> - Specifies an animation with a slow start, then fast, then end slowly
+              (this is
               default)</li>
             <li><code class="inline">linear</code> - Specifies an animation with the same speed from start to end</li>
             <li><code class="inline">ease-in</code> - Specifies an animation with a slow start</li>
             <li><code class="inline">ease-out</code> - Specifies an animation with a slow end</li>
             <li><code class="inline">ease-in-out</code> - Specifies an animation with a slow start and end</li>
-            <li><code class="inline">cubic-bezier(n,n,n,n)</code> - Lets you define your own values in a cubic-bezier function</li>
+            <li><code class="inline">cubic-bezier(n,n,n,n)</code> - Lets you define your own values in a cubic-bezier
+              function</li>
           </ul>
           <p>The following example shows the some of the different speed curves that can be used:</p>
           <code>
@@ -984,13 +987,17 @@
             can have the following values:
           </p>
           <ul>
-            <li><code class="inline">none</code> - Default value. Animation will not apply any styles to the element before or after it
+            <li><code class="inline">none</code> - Default value. Animation will not apply any styles to the element
+              before or after it
               is executing</li>
-            <li><code class="inline">forwards</code> - The element will retain the style values that is set by the last keyframe
+            <li><code class="inline">forwards</code> - The element will retain the style values that is set by the last
+              keyframe
               (depends on animation-direction and animation-iteration-count)</li>
-            <li><code class="inline">backwards</code> - The element will get the style values that is set by the first keyframe
+            <li><code class="inline">backwards</code> - The element will get the style values that is set by the first
+              keyframe
               (depends on animation-direction), and retain this during the animation-delay period</li>
-            <li><code class="inline">both</code> - The animation will follow the rules for both forwards and backwards, extending the
+            <li><code class="inline">both</code> - The animation will follow the rules for both forwards and backwards,
+              extending the
               animation properties in both directions</li>
           </ul>
           <p>The following example lets the <code class="inline">&lt;div&gt;</code> element retain the style values from
@@ -1060,7 +1067,7 @@
               class="inline">animation</code> property:</p>
           <code>
             div {<br/>
-              &nbsp;&nbsp;animation: example 5s linear 2s infinite alternate;
+              &nbsp;&nbsp;animation: example 5s linear 2s infinite alternate;<br/>
             }<br/>
           </code>
           <br /><a class="btn btn-primary" href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_animation5"
@@ -1073,8 +1080,8 @@
             <br />This property can take a value from 0.0 - 1.0. The lower value, the more transparent:</p>
           <code>
             img {<br/>
-              opacity: 0.5;<br/>
-              filter: alpha(opacity=50); /* For IE8 and earlier */<br/>
+              &nbsp;&nbsp;opacity: 0.5;<br/>
+              &nbsp;&nbsp;filter: alpha(opacity=50); /* For IE8 and earlier */<br/>
             }<br/>
           </code>
           <br /><a class="btn btn-primary" href="https://www.w3schools.com/css/tryit.asp?filename=trycss_image_opacity"
@@ -1084,12 +1091,12 @@
               class="inline">:hover</code> selector to change the opacity on mouse-over:</p>
           <code>
             img {<br/>
-              opacity: 0.5;<br/>
-              filter: alpha(opacity=50); /* For IE8 and earlier */<br/>
+              &nbsp;&nbsp;opacity: 0.5;<br/>
+              &nbsp;&nbsp;filter: alpha(opacity=50); /* For IE8 and earlier */<br/>
             }<br/>
             img:hover {<br/>
-              opacity: 1.0;<br/>
-              filter: alpha(opacity=100); /* For IE8 and earlier */<br/>
+              &nbsp;&nbsp;opacity: 1.0;<br/>
+              &nbsp;&nbsp;filter: alpha(opacity=100); /* For IE8 and earlier */<br/>
             }<br/>
           </code>
           <br /><a class="btn btn-primary"
@@ -1104,12 +1111,10 @@
             0 and 255. <br /> For example, rgb(0, 0, 255) is rendered as blue, because the blue parameter is set to its
             highest value (255) and the others are set to 0.</p>
           <code>
-              &nbsp;&lt;style&gt;<br/>
-                &nbsp;&nbsp;div {<br/>
-                  &nbsp;&nbsp;&nbsp;background-color: rgb(0, 191, 255);<br/>
-                  &nbsp;&nbsp;&nbsp;color: rgb(255, 255, 255);<br/>
-                &nbsp;&nbsp;}<br/>
-              &nbsp;&lt;/style&gt;<br/>
+              &nbsp;&nbsp;div {<br/>
+                &nbsp;&nbsp;&nbsp;background-color: rgb(0, 191, 255);<br/>
+                &nbsp;&nbsp;&nbsp;color: rgb(255, 255, 255);<br/>
+              &nbsp;&nbsp;}<br/>              
           </code>
           <br /><a class="btn btn-primary" href="https://www.w3schools.com/colors/tryit.asp?filename=trycolors_rgb"
             target="_blank">Try it
@@ -1120,11 +1125,9 @@
             the opacity of the color.<br />Define different RGB colors with opacity (RGBA):</p>
           <p>CSS Syntax</p> <code class="inline">rgba(red, green, blue, alpha)</code><br />
           <code>
-            &nbsp;&lt;style&gt;<br/>
-              &nbsp;&nbsp;#p1 {background-color:rgba(255,0,0,0.3);} /* red with opacity*/<br/>
-              &nbsp;&nbsp;#p2 {background-color:rgba(0,255,0,0.3);} /* green with opacity */<br/>
-              &nbsp;&nbsp;#p3 {background-color:rgba(0,0,255,0.3);} /* blue with opacity */<br/>
-            &nbsp;&lt;/style&gt;<br/>
+            &nbsp;&nbsp;#p1 {background-color:rgba(255,0,0,0.3);} /* red with opacity*/<br/>
+            &nbsp;&nbsp;#p2 {background-color:rgba(0,255,0,0.3);} /* green with opacity */<br/>
+            &nbsp;&nbsp;#p3 {background-color:rgba(0,0,255,0.3);} /* blue with opacity */<br/>            
           </code>
           <br /><a class="btn btn-primary" href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_func_rgba"
             target="_blank">Try it
