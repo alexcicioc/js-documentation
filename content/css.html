@@ -894,10 +894,10 @@
             This property can have the following values:
           </p>
           <ul>
-            <li><code>normal</code> - The animation is played as normal (forwards). This is default</li>
-            <li><code>reverse</code> - The animation is played in reverse direction (backwards)</li>
-            <li><code>alternate</code> - The animation is played forwards first, then backwards</li>
-            <li><code>alternate-reverse</code> - The animation is played backwards first, then forwards</li>
+            <li><code class="inline">normal</code> - The animation is played as normal (forwards). This is default</li>
+            <li><code class="inline">reverse</code> - The animation is played in reverse direction (backwards)</li>
+            <li><code class="inline">alternate</code> - The animation is played forwards first, then backwards</li>
+            <li><code class="inline">alternate-reverse</code> - The animation is played backwards first, then forwards</li>
           </ul>
           <p>The following example will run the animation in reverse direction (backwards):</p>
           <code>
@@ -956,13 +956,13 @@
             This property can have the following values:
           </p>
           <ul>
-            <li><code>ease</code> - Specifies an animation with a slow start, then fast, then end slowly (this is
+            <li><code class="inline">ease</code> - Specifies an animation with a slow start, then fast, then end slowly (this is
               default)</li>
-            <li><code>linear</code> - Specifies an animation with the same speed from start to end</li>
-            <li><code>ease-in</code> - Specifies an animation with a slow start</li>
-            <li><code>ease-out</code> - Specifies an animation with a slow end</li>
-            <li><code>ease-in-out</code> - Specifies an animation with a slow start and end</li>
-            <li><code>cubic-bezier(n,n,n,n)</code> - Lets you define your own values in a cubic-bezier function</li>
+            <li><code class="inline">linear</code> - Specifies an animation with the same speed from start to end</li>
+            <li><code class="inline">ease-in</code> - Specifies an animation with a slow start</li>
+            <li><code class="inline">ease-out</code> - Specifies an animation with a slow end</li>
+            <li><code class="inline">ease-in-out</code> - Specifies an animation with a slow start and end</li>
+            <li><code class="inline">cubic-bezier(n,n,n,n)</code> - Lets you define your own values in a cubic-bezier function</li>
           </ul>
           <p>The following example shows the some of the different speed curves that can be used:</p>
           <code>
@@ -1315,7 +1315,7 @@
 <script>
   htmlcss();
   createSummary();
-
+  
   document.querySelectorAll('code').forEach((block) => {
     hljs.highlightBlock(block);
   });
