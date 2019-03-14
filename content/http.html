@@ -38,9 +38,6 @@
                         acts as a server.</p>
                     <img src="images/basic_arhitecture.gif"></img>
                     <p></p>
-                    <p>The HTTP protocol is a <code>request/response</code> protocol based on the client/server based
-                        architecture where web browsers, robots and search engines, etc. act like HTTP clients, and the
-                        Web server acts as a server.</p>
                     <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
                             aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
                             style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
@@ -56,6 +53,35 @@
                         success or error code, followed by a MIME-like message containing server information, entity
                         meta information, and possible entity-body content.</p>
                 </div>
+
+                <div id="http-url" style="display:block">
+                    <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        URL</h2>
+                    <p>URL stands for Uniform Resource Locator it’s a web address that uses a mechanism of identifying a
+                        partner website in the network and retrieve the desired information a typical URL starts with
+                        HTTP or HTTPS.</p>
+                    <p>URL may consists of as many as 6 parts. The different parts of the URL are:</p>
+                    <pre><code>URL=scheme:[//domain:port]path[?query_string][#fragment_id]</code></pre>
+                    <ul>
+                        <li><i>scheme </i>can be http, https, ftp, mailto and a lof of others.</li>
+                        <li><i>host or domain name</i> this is the destination location for the URL. It can be a host
+                            name or IP address.</li>
+                        <li><i>port</i> is numeric value and almost always inferred from the scheme. For example default
+                            port for https is 443, for http is 80 and for ftp is 21</li>
+                        <li><i>path </i>indicates the route to access the resource within that host</li>
+                        <li><i>query</i> is used to pass arguments to the accessed resource, these are used by the host
+                            that processes the request</li>
+                        <li><i>fragment</i> is a secondary direction within the resource, for example you can use this
+                            to scroll to a specific section in a web page, although this is also used for other things
+                            in websites</li>
+                    </ul>
+                    <img src="images/urlparts.png"></img>
+                    <p>Another example</p>
+                    <img src="images/url.png"></img>
+                </div>
+
                 <div id="http-flow" style="display:block">
                     <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
                             aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
@@ -131,6 +157,75 @@
 
                         </ul>
                         <img src="images/HTTP_response.png">
+                </div>
+                <div id="http-headers" style="display:block">
+                    <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        HTTP Headers</h2>
+                    <p><code>HTTP header</code> fields provide required information about the request or response, or
+                        about the object sent in the message body.</p>
+                    <p>There are four types of HTTP message headers:</p>
+                    <ul>
+                        <li>
+                            <p><b>General-header:</b> These header fields have general applicability for both request
+                                and response messages.</p>
+                        </li>
+                        <li>
+                            <p><b>Client Request-header:</b> These header fields have applicability only for request
+                                messages.</p>
+                        </li>
+                        <li>
+                            <p><b>Server Response-header:</b> These header fields have applicability only for response
+                                messages.</p>
+                        </li>
+                        <li>
+                            <p><b>Entity-header:</b> These header fields define meta information about the entity-body
+                                or, if no body is present, about the resource identified by the request.</p>
+                        </li>
+                    </ul>
+
+                    <h4 id="http-general-header" class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        <b style="color: green">General-header</b></h4>
+                    <p>A few general headers</p>
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <th>Header</th>
+                                <th>Syntax</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td style="color:dodgerblue;width:165px;">Cache-Control</td>
+                                <td style="width:200px;">
+                                    <pre><code>Cache-control: no-cache</code></pre>
+                                </td>
+                                <td> The Cache-Control general-header field is used to specify directives that MUST be
+                                    obeyed by all the caching system</td>
+                            </tr>
+                            <tr>
+                                <td style="color:dodgerblue;width:165px;">Connection</td>
+                                <td style="width:200px;">
+                                    <pre><code>Connection: keep-alive</code></pre>
+                                </td>
+                                <td>The Connection general-header field allows the sender to specify options that are
+                                    desired for that particular connection and must not be communicated by proxies over
+                                    further connections.</td>
+                            </tr>
+                            <tr>
+                                <td style="color:dodgerblue;width:165px;">Transfer-Encoding</td>
+                                <td style="width:200px;">
+                                    <pre><code>Transfer-Encoding: chunked</code></pre>
+                                </td>
+                                <td>The Transfer-Encoding general-header field indicates what type of transformation has
+                                    been applied to the message body in order to safely transfer it between the sender
+                                    and the recipient. This is not the same as content-encoding because
+                                    transfer-encodings are a property of the message, not of the entity-body.</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
                 <div id="http-status-code" style="display:block">
                     <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
@@ -422,7 +517,7 @@
                         GET Method</h4>
                     <p>GET request retrieves data from a web server by specifying parameters in the URL portion of the
                         request.</p>
-                    <pre class="result notranslate">
+                    <pre class="result notranslate" style="width: 670px;">
 GET /hello.htm HTTP/1.1
 User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT)
 Host: www.tutorialspoint.com
@@ -431,7 +526,7 @@ Accept-Encoding: gzip, deflate
 Connection: Keep-Alive
                     </pre>
                     <p>The server response</p>
-                    <pre class="result notranslate">
+                    <pre class="result notranslate" style="width: 670px;">
 HTTP/1.1 200 OK
 Date: Mon, 27 Jul 2009 12:28:53 GMT
 Server: Apache/2.2.14 (Win32)
@@ -444,6 +539,7 @@ Content-Type: text/html
 Connection: Closed
                             </pre>
 
+                    <h6>We use <b>GET</b> when we want to retrieve data from the server (GET Data).</h6>
                 </div>
                 <div id="http-post" style="display:block">
                     <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
@@ -452,6 +548,28 @@ Connection: Closed
                         POST Method</h4>
                     <p>POST is used to send data to a server to create/update a resource.</p>
                     <p>The data sent to the server with POST is stored in the request body of the HTTP request</p>
+                    <img src="images/http_post.png">
+                </div>
+                <div id="http-put" style="display:block">
+                    <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        PUT Method</h4>
+                    <p><code>PUT</code> can create a new entity or update an existing one.</p>
+                    <p> A <code>PUT</code> request is idempotent. Idempotency
+                        is the main difference between the expectations of PUT versus a POST request.</p>
+                    <pre><code>PUT /addresses/1</code></pre>
+                </div>
+
+                <div id="http-delete" style="display:block">
+                    <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        DELETE Method</h4>
+                    <p>Request that a resource be removed; however, the resource does not have to be removed
+                        immediately. It could be an asynchronous or long-running request.</p>
+
+                    <pre><code>DELETE /addresses/1</code></pre>
                 </div>
             </div>
         </div>
@@ -468,13 +586,33 @@ Connection: Closed
                         </ul>
                     </li>
                     <li>
+                        <a href="#http-url">URL</a>
+                        <ul class="arrow" style="display:none">
+                        </ul>
+                    </li>
+                    <li>
                         <a href="#http-flow">HTTP Flow</a>
                         <ul class="arrow" style="display:none">
                         </ul>
                     </li>
                     <li>
                         <a href="#http-messages" onclick="showHiddenList(this)">HTTP Messages</a>
+                    </li>
+                    <li>
+                        <a href="#http-headers" onclick="showHiddenList(this)">HTTP Headers</a>
                         <ul class="arrow" style="display:none">
+                            <li>
+                                <a href="#test">General-header</a>
+                            </li>
+                            <li>
+                                <a href="#test">Client Request-header</a>
+                            </li>
+                            <li>
+                                <a href="#test">Server Response-header</a>
+                            </li>
+                            <li>
+                                <a href="#test">Server Response-header</a>
+                            </li>
                         </ul>
                     </li>
                     <li>
