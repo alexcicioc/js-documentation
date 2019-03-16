@@ -36,7 +36,6 @@
                         <img src="images/overview.png" />
                     </p>
                 </div>
-
                 <div id="what-is-javascript" style="display:block">
                     <h2 class="page-header">
                         <a class="anchorjs-link " href="#overview-doctype"
@@ -85,252 +84,6 @@
 var y = 2;
 let z = true;</code></pre>
                 </div>
-
-                <div id="blocks" style="display:block">
-                    <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
-                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
-                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
-                        Blocks</h2>
-                    <p>A <b>block</b> statement is used to group zero or more statements. The block is
-                        delimited by a pair of <b>curly brackets { }</b> and may optionally be labelled:</p>
-                    <p>A few examples can be seen below:</p>
-                    <pre><code>if (true) {
-    // this is a block
-}
-
-while (true) {
-    // this is a block
-}
-
-function sum(a, b) {
-    // this is a block
-}
-</code></pre>
-                </div>
-
-                <div id="scope" style="display:block">
-                    <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
-                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
-                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
-                        Scope</h2>
-                    <p>In JavaScript <code>scope</code> means the visibility of a property</p>
-                    <p>Scope determines the accessibility of variables, objects, and functions from different
-                        parts of
-                        the code.</p>
-                    <p>We have two types of scope in JavaScript</p>
-                    <ul>
-                        <li>Local Scope</li>
-                        <li>Global Scope</li>
-                    </ul>
-                    <p>Local scope</p>
-                    <ul>
-                        <li><code>JavaScript has function scope: Each function creates a new scope. They can only be accessed from within the function.</code>
-                        </li>
-                        <li><code>Variables defined inside a function are not accessible (visible) from outside the function, those become <code>LOCAL</code>
-                            to the function.</code></li>
-                    </ul>
-                    <p>Global scope:</p>
-                    <ul>
-                        <li><code>A variable declared outside a function, becomes GLOBAL.</code></li>
-                        <li><code>A global variable has global scope: All scripts and functions on a web page can access it.</code>
-                        </li>
-                    </ul>
-                </div>
-
-                <div id="local-scope" style="display:block">
-                    <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
-                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
-                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
-                        Local Scope</h4>
-                    <iframe class="editor"
-                        src="content/editor.html?value=aWYgKHRydWUpIHsKICAgIC8vIHRoaXMgaXMgYSBibG9jawogICAgLy8gdGhlc2UgYXJlIG9ubHkgYWNjZXNpYmxlIGluc2lkZSB0aGUgd2hpbGUgc3RhdGVtZW50CiAgICBsZXQgdmFyaWFibGUgPSAwOwogICAgY29uc3QgcGkgPSAzLjE0OwogICAgY29uc29sZS5sb2coJ2Jsb2NrIHZhcmlhYmxlOiAnICsgdmFyaWFibGUpOwogICAgY29uc29sZS5sb2coJ2Jsb2NrIHBpOiAnICsgcGkpOwp9CmNvbnNvbGUubG9nKCdvdXRzaWRlOiAnICsgdGVzdCk7IC8vIHRoaXMgd2lsbCB0aHJvdyBhbiBlcnJvcgovLyB0aGUgc2NyaXB0IHN0b3BzIGV4ZWN1dGluZwpjb25zb2xlLmxvZygnb3V0c2lkZTogJyArIHBpKTsgLy8gdGhpcyB3aWxsIHRocm93IGFuIGVycm9y">
-                    </iframe>
-                </div>
-
-                <div id="global-scope" style="display:block">
-                    <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
-                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
-                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
-                        Global Scope</h4>
-                    <button onclick="runCode(event)">Run</button>
-                    <div id="js-global-scope-editor" style="height: 170px;"></div>
-                    <div class="form-group"> <label for="exampleInputFile" style="display: none;">Result</label>
-                        <p class="help-block result"></p>
-                    </div>
-                </div>
-
-                <div id="context" style="display:block">
-                    <h2 class="page-header">
-                        <a class="anchorjs-link " href="#overview-doctype"
-                            aria-label="Anchor link for: overview doctype" data-anchorjs-icon="" style="font-style: normal; font-variant: normal; font-weight: normal; 
-                                font-stretch: normal; font-size: 1em; line-height: inherit; font-family: 
-                                anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;">
-                        </a>
-                        Context
-                    </h2>
-                    <h4>It's all about THIS !</h4>
-                    <p>
-                        In JavaScript, <code>context</code> refers to an object. Within an object, the keyword
-                        <code>this</code> refers to
-                        that object (i.e. “self”), and provides an interface to the properties and methods that
-                        are
-                        members of that object. When a function is executed, the keyword <code>this</code>
-                        refers to the
-                        object
-                        that the function is executed in.
-                    </p>
-                    <p>Scenarios</p>
-                    <ul>
-                        <li>When a function executes in the global context, <code>this</code> refers to the
-                            global, or
-                            <code>window</code> object</li>
-                        <li>When a function is a method of an Object, <code>this</code> refers to that object
-                        </li>
-                        <li>When a function executes inside of another function (no matter how deeply nested),
-                            <code>this</code> refers to the object whose context within which it is executed
-                        </li>
-                    </ul>
-                    <p>Below we will explain better the context by examples</p>
-                    <button onclick="runCode(event)">Run</button>
-                    <div id="ctx-editor" style="height: 170px;"></div>
-                    <div class="form-group"> <label for="exampleInputFile" style="display: none;">Result</label>
-                        <p class="help-block result"></p>
-                    </div>
-                </div>
-
-                <div id="context-2" style="display:block">
-                    <p>
-                        Wait a minute, why I can't see <code>beer</code> and why I see <code>wine</code> ?
-                    </p>
-                    <p>According to other OOP languges like C#, Java we expect to see beer. In JavaScript to
-                        achieve
-                        this is all about context, let's fix our example</p>
-                    <p>How can we make reference to the property <code>drink</code> that is in the context of
-                        the object
-                        <code>foo</code>?</p>
-                    <button onclick="runCode(event)">Run</button>
-                    <div id="ctx-editor-1" style="height: 170px;"></div>
-                    <div class="form-group"> <label for="exampleInputFile" style="display: none;">Result</label>
-                        <p class="help-block result"></p>
-                    </div>
-                    <p>Note
-                        <code>the only change we have made is that in the anonymous function that is assigned to “getDrink”, we return “this.drink” instead of “drink”</code>
-                    </p>
-                </div>
-
-                <div id="context-3" style="display:block">
-                    <p>
-                        Another fancy way to write the example above
-                    </p>
-                    <p>The result should be the same, the only difference is that we created the properties
-                        <code>drink</code> and
-                        <code>getDrink</code> at the exact same time that we created the object literal
-                        <code>foo</code>
-                    </p>
-                    <p>Now we assign those on the fly.</p>
-                    <button onclick="runCode(event)">Run</button>
-                    <div id="ctx-editor-2" style="height: 170px;"></div>
-                    <div class="form-group"> <label for="exampleInputFile" style="display: none;">Result</label>
-                        <p class="help-block result"></p>
-                    </div>
-                    <p>Note
-                        <code>the only change we have made is that in the anonymous function that is assigned to “getDrink”, we return “this.drink” instead of “drink”</code>
-                    </p>
-                </div>
-
-                <div id="wht-is-this" style="display:block">
-                    <h2 class="page-header">
-                        <a class="anchorjs-link " href="#overview-doctype"
-                            aria-label="Anchor link for: overview doctype" data-anchorjs-icon="" style="font-style: normal; font-variant: normal; font-weight: normal; 
-                                font-stretch: normal; font-size: 1em; line-height: inherit; font-family: 
-                                anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;">
-                        </a>
-                        What is <code>this</code> ?
-                    </h2>
-                    <p>
-                        Let's answer to this question: <b>Why is the word <code>this</code> so important in
-                            JavaScript?</b>
-                    </p>
-                    <p>The JavaScript <code>this</code> keyword refers to the object it belongs to. </p>
-                    <ul>
-                        <li>In a method, <code>this</code> refers to the <b>owner object.</b></li>
-                        <li>Alone, <code>this</code> refers to the <b>global object.</b></li>
-                        <li>In a function, <code>this</code> refers to the <b>global object.</b></li>
-                        <li>In an event, <code>this</code> refers to the element that received the event.</li>
-                    </ul>
-                    <p>Below we will explain better the context by examples</p>
-                </div>
-
-                <div id="this-alone" style="display:block">
-                    <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
-                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
-                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
-                        <code>this</code> Alone</h4>
-                    <ul>
-                        <li>When used alone, the owner is the <b>Global object</b>, so this refers to the Global
-                            object.</b></li>
-                        <li>In a browser window the Global object is <code>[object Window]</code></li>
-                    </ul>
-                    <button onclick="runCode(event)">Run</button>
-                    <div id="this-alone-editor" style="height: 30px;"></div>
-                    <div class="form-group"> <label for="exampleInputFile" style="display: none;">Result</label>
-                        <p class="help-block result"></p>
-                    </div>
-                </div>
-
-                <div id="this-in-a-function" style="display:block">
-                    <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
-                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
-                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
-                        <code>this</code> in <b>Function</b></h4>
-                    <ul>
-                        <li>In a JavaScript function, the owner of the function is the <code>default</code>
-                            binding for
-                            <code>this</code>.</li>
-                        <li>So, in a function, this refers to the Global object
-                            <code>[object Window]</code>.</code>
-                        </li>
-                    </ul>
-                    <button onclick="runCode(event)">Run</button>
-                    <div id="this-function-editor" style="height: 100px;"></div>
-                    <div class="form-group"> <label for="exampleInputFile" style="display: none;">Result</label>
-                        <p class="help-block result"></p>
-                    </div>
-                </div>
-                <div id="this-in-an-object" style="display:block">
-                    <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
-                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
-                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
-                        <code>this</code> in <b>Object</b></h4>
-                    <ul>
-                        <li><code>this</code> is the <b>person</b> object (The person object is the "owner" of
-                            the
-                            function)</li>
-                    </ul>
-                    <button onclick="runCode(event)">Run</button>
-                    <div id="this-object-editor" style="height: 175px;"></div>
-                    <div class="form-group"> <label for="exampleInputFile" style="display: none;">Result</label>
-                        <p class="help-block result"></p>
-                    </div>
-                </div>
-                <div id="this-in-a-method" style="display:block">
-                    <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
-                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
-                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
-                        <code>this</code> in <b>Method</b></h4>
-                    <ul>
-                        <li>In an object method, <code>this</code> refers to the <b>owner</b> of the method.
-                        </li>
-                        <li><code>this</code> refers to the person object.</li>
-                        <li>The <b>person</b> object is the <b>owner</b> of the <b>fullName</b> method.</li>
-                    </ul>
-                    <button onclick="runCode(event)">Run</button>
-                    <div id="this-object-method-editor" style="height: 195px;"></div>
-                    <div class="form-group"> <label for="exampleInputFile" style="display: none;">Result</label>
-                        <p class="help-block result"></p>
-                    </div>
-                </div>
-
                 <div id="types" style="display:block">
                     <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
                             aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
@@ -362,7 +115,6 @@ function sum(a, b) {
                         <p class="help-block result">Click Run button to see the result.</p>
                     </div>
                 </div>
-
                 <div id="js-boolean" style="display:block">
                     <h3 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
                             aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
@@ -388,7 +140,6 @@ function sum(a, b) {
                         <p class="help-block result">Click Run button to see the result.</p>
                     </div>
                 </div>
-
                 <div id="js-number" style="display:block">
                     <h3 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
                             aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
@@ -416,8 +167,6 @@ function sum(a, b) {
                         <p class="help-block result">Click Run button to see the result.</p>
                     </div>
                 </div>
-
-
                 <div id="js-string" style="display:block">
                     <h3 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
                             aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
@@ -473,7 +222,6 @@ function sum(a, b) {
                         <p class="help-block result">Click Run button to see the result.</p>
                     </div>
                 </div>
-
                 <div id="js-arrays" style="display:block">
                     <h3 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
                             aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
@@ -516,9 +264,6 @@ function sum(a, b) {
                         <p class="help-block result">Click Run button to see the result.</p>
                     </div>
                 </div>
-
-                <!-- Object section Start -->
-
                 <div id="js-object" style="display:block">
                     <h3 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
                             aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
@@ -552,7 +297,75 @@ function sum(a, b) {
                         <p class="help-block result">Click Run button to see the result.</p>
                     </div>
                 </div>
+                <div id="blocks" style="display:block">
+                    <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        Blocks</h2>
+                    <p>A <b>block</b> statement is used to group zero or more statements. The block is
+                        delimited by a pair of <b>curly brackets { }</b> and may optionally be labelled:</p>
+                    <p>A few examples can be seen below:</p>
+                    <pre><code>if (true) {
+    // this is a block
+}
 
+while (true) {
+    // this is a block
+}
+
+function sum(a, b) {
+    // this is a block
+}
+</code></pre>
+                </div>
+                <div id="scope" style="display:block">
+                    <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        Scope</h2>
+                    <p>In JavaScript <code>scope</code> means the visibility of a property</p>
+                    <p>Scope determines the accessibility of variables, objects, and functions from different
+                        parts of
+                        the code.</p>
+                    <p>We have two types of scope in JavaScript</p>
+                    <ul>
+                        <li>Local Scope</li>
+                        <li>Global Scope</li>
+                    </ul>
+                    <p>Local scope</p>
+                    <ul>
+                        <li><code>JavaScript has function scope: Each function creates a new scope. They can only be accessed from within the function.</code>
+                        </li>
+                        <li><code>Variables defined inside a function are not accessible (visible) from outside the function, those become <code>LOCAL</code>
+                            to the function.</code></li>
+                    </ul>
+                    <p>Global scope:</p>
+                    <ul>
+                        <li><code>A variable declared outside a function, becomes GLOBAL.</code></li>
+                        <li><code>A global variable has global scope: All scripts and functions on a web page can access it.</code>
+                        </li>
+                    </ul>
+                </div>
+                <div id="local-scope" style="display:block">
+                    <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        Local Scope</h4>
+                    <iframe class="editor"
+                        src="content/editor.html?value=aWYgKHRydWUpIHsKICAgIC8vIHRoaXMgaXMgYSBibG9jawogICAgLy8gdGhlc2UgYXJlIG9ubHkgYWNjZXNpYmxlIGluc2lkZSB0aGUgd2hpbGUgc3RhdGVtZW50CiAgICBsZXQgdmFyaWFibGUgPSAwOwogICAgY29uc3QgcGkgPSAzLjE0OwogICAgY29uc29sZS5sb2coJ2Jsb2NrIHZhcmlhYmxlOiAnICsgdmFyaWFibGUpOwogICAgY29uc29sZS5sb2coJ2Jsb2NrIHBpOiAnICsgcGkpOwp9CmNvbnNvbGUubG9nKCdvdXRzaWRlOiAnICsgdGVzdCk7IC8vIHRoaXMgd2lsbCB0aHJvdyBhbiBlcnJvcgovLyB0aGUgc2NyaXB0IHN0b3BzIGV4ZWN1dGluZwpjb25zb2xlLmxvZygnb3V0c2lkZTogJyArIHBpKTsgLy8gdGhpcyB3aWxsIHRocm93IGFuIGVycm9y">
+                    </iframe>
+                </div>
+                <div id="global-scope" style="display:block">
+                    <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        Global Scope</h4>
+                    <button onclick="runCode(event)">Run</button>
+                    <div id="js-global-scope-editor" style="height: 170px;"></div>
+                    <div class="form-group"> <label for="exampleInputFile" style="display: none;">Result</label>
+                        <p class="help-block result"></p>
+                    </div>
+                </div>
                 <!-- Object section End -->
                 <!-- If statement -->
                 <div id="js-ifelse" style="display:block">
@@ -600,7 +413,6 @@ function sum(a, b) {
                     </div>
                 </div>
                 <!-- End Switch statement -->
-
                 <!-- Loops statement -->
                 <div id="js-loops" style="display:block">
                     <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
@@ -616,7 +428,6 @@ function sum(a, b) {
                             loop over the others.</p>
                 </div>
                 <!-- End While statement -->
-
                 <!-- While statement -->
                 <div id="js-while-condition" style="display:block">
                     <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
@@ -633,7 +444,6 @@ function sum(a, b) {
                     <img src="images/while-loop.png" />
                 </div>
                 <!-- End While statement -->
-
                 <!-- Do While statement -->
                 <div id="js-dowhile-condition" style="display:block">
                     <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
@@ -653,7 +463,6 @@ function sum(a, b) {
                     </div>
                 </div>
                 <!-- End While statement -->
-
                 <!-- For statement -->
                 <div id="js-for" style="display:block">
                     <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
@@ -691,7 +500,6 @@ function sum(a, b) {
                         </div>
                 </div>
                 <!-- End For statement -->
-
                 <!-- For...in statement -->
                 <div id="js-forin" style="display:block">
                     <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
@@ -709,7 +517,6 @@ function sum(a, b) {
                     </div>
                 </div>
                 <!-- End For...in statement -->
-
                 <!-- For...of statement -->
                 <div id="js-forof" style="display:block">
                     <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
@@ -730,7 +537,6 @@ function sum(a, b) {
                     </div>
                 </div>
                 <!-- End For...of statement -->
-
                 <!-- What is a function -->
                 <div id="js-whatIsAFunction" style="display:block">
                     <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
@@ -756,7 +562,6 @@ function sum(a, b) {
                     </ul>
                 </div>
                 <!-- End What is a function -->
-
                 <!-- Define a function -->
                 <div id="js-defineAfunction" style="display:block">
                     <h3 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
@@ -788,7 +593,6 @@ function sum(a, b) {
                     </div>
                 </div>
                 <!-- End Define a function -->
-
                 <!-- Invoke a function -->
                 <div id="js-invokeAFunction" style="display:block">
                     <h3 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
@@ -816,7 +620,173 @@ function sum(a, b) {
                         <p class="help-block result">Click Run button to see the result.</p>
                     </div>
                 </div>
-                <!-- Function Return -->
+                <!-- End Function Return -->
+                <div id="context" style="display:block">
+                    <h2 class="page-header">
+                        <a class="anchorjs-link " href="#overview-doctype"
+                            aria-label="Anchor link for: overview doctype" data-anchorjs-icon="" style="font-style: normal; font-variant: normal; font-weight: normal; 
+                                font-stretch: normal; font-size: 1em; line-height: inherit; font-family: 
+                                anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;">
+                        </a>
+                        Context
+                    </h2>
+                    <h4>It's all about THIS !</h4>
+                    <p>
+                        In JavaScript, <code>context</code> refers to an object. Within an object, the keyword
+                        <code>this</code> refers to
+                        that object (i.e. “self”), and provides an interface to the properties and methods that
+                        are
+                        members of that object. When a function is executed, the keyword <code>this</code>
+                        refers to the
+                        object
+                        that the function is executed in.
+                    </p>
+                    <p>Scenarios</p>
+                    <ul>
+                        <li>When a function executes in the global context, <code>this</code> refers to the
+                            global, or
+                            <code>window</code> object</li>
+                        <li>When a function is a method of an Object, <code>this</code> refers to that object
+                        </li>
+                        <li>When a function executes inside of another function (no matter how deeply nested),
+                            <code>this</code> refers to the object whose context within which it is executed
+                        </li>
+                    </ul>
+                    <p>Below we will explain better the context by examples</p>
+                    <button onclick="runCode(event)">Run</button>
+                    <div id="ctx-editor" style="height: 170px;"></div>
+                    <div class="form-group"> <label for="exampleInputFile" style="display: none;">Result</label>
+                        <p class="help-block result"></p>
+                    </div>
+                </div>
+                <div id="context-2" style="display:block">
+                    <p>
+                        Wait a minute, why I can't see <code>beer</code> and why I see <code>wine</code> ?
+                    </p>
+                    <p>According to other OOP languges like C#, Java we expect to see beer. In JavaScript to
+                        achieve
+                        this is all about context, let's fix our example</p>
+                    <p>How can we make reference to the property <code>drink</code> that is in the context of
+                        the object
+                        <code>foo</code>?</p>
+                    <button onclick="runCode(event)">Run</button>
+                    <div id="ctx-editor-1" style="height: 170px;"></div>
+                    <div class="form-group"> <label for="exampleInputFile" style="display: none;">Result</label>
+                        <p class="help-block result"></p>
+                    </div>
+                    <p>Note
+                        <code>the only change we have made is that in the anonymous function that is assigned to “getDrink”, we return “this.drink” instead of “drink”</code>
+                    </p>
+                </div>
+                <div id="context-3" style="display:block">
+                    <p>
+                        Another fancy way to write the example above
+                    </p>
+                    <p>The result should be the same, the only difference is that we created the properties
+                        <code>drink</code> and
+                        <code>getDrink</code> at the exact same time that we created the object literal
+                        <code>foo</code>
+                    </p>
+                    <p>Now we assign those on the fly.</p>
+                    <button onclick="runCode(event)">Run</button>
+                    <div id="ctx-editor-2" style="height: 170px;"></div>
+                    <div class="form-group"> <label for="exampleInputFile" style="display: none;">Result</label>
+                        <p class="help-block result"></p>
+                    </div>
+                    <p>Note
+                        <code>the only change we have made is that in the anonymous function that is assigned to “getDrink”, we return “this.drink” instead of “drink”</code>
+                    </p>
+                </div>
+                <div id="wht-is-this" style="display:block">
+                    <h2 class="page-header">
+                        <a class="anchorjs-link " href="#overview-doctype"
+                            aria-label="Anchor link for: overview doctype" data-anchorjs-icon="" style="font-style: normal; font-variant: normal; font-weight: normal; 
+                                font-stretch: normal; font-size: 1em; line-height: inherit; font-family: 
+                                anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;">
+                        </a>
+                        What is <code>this</code> ?
+                    </h2>
+                    <p>
+                        Let's answer to this question: <b>Why is the word <code>this</code> so important in
+                            JavaScript?</b>
+                    </p>
+                    <p>The JavaScript <code>this</code> keyword refers to the object it belongs to. </p>
+                    <ul>
+                        <li>In a method, <code>this</code> refers to the <b>owner object.</b></li>
+                        <li>Alone, <code>this</code> refers to the <b>global object.</b></li>
+                        <li>In a function, <code>this</code> refers to the <b>global object.</b></li>
+                        <li>In an event, <code>this</code> refers to the element that received the event.</li>
+                    </ul>
+                    <p>Below we will explain better the context by examples</p>
+                </div>
+                <div id="this-alone" style="display:block">
+                    <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        <code>this</code> Alone</h4>
+                    <ul>
+                        <li>When used alone, the owner is the <b>Global object</b>, so this refers to the Global
+                            object.</b></li>
+                        <li>In a browser window the Global object is <code>[object Window]</code></li>
+                    </ul>
+                    <button onclick="runCode(event)">Run</button>
+                    <div id="this-alone-editor" style="height: 30px;"></div>
+                    <div class="form-group"> <label for="exampleInputFile" style="display: none;">Result</label>
+                        <p class="help-block result"></p>
+                    </div>
+                </div>
+                <div id="this-in-a-function" style="display:block">
+                    <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        <code>this</code> in <b>Function</b></h4>
+                    <ul>
+                        <li>In a JavaScript function, the owner of the function is the <code>default</code>
+                            binding for
+                            <code>this</code>.</li>
+                        <li>So, in a function, this refers to the Global object
+                            <code>[object Window]</code>.</code>
+                        </li>
+                    </ul>
+                    <button onclick="runCode(event)">Run</button>
+                    <div id="this-function-editor" style="height: 100px;"></div>
+                    <div class="form-group"> <label for="exampleInputFile" style="display: none;">Result</label>
+                        <p class="help-block result"></p>
+                    </div>
+                </div>
+                <div id="this-in-an-object" style="display:block">
+                    <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        <code>this</code> in <b>Object</b></h4>
+                    <ul>
+                        <li><code>this</code> is the <b>person</b> object (The person object is the "owner" of
+                            the
+                            function)</li>
+                    </ul>
+                    <button onclick="runCode(event)">Run</button>
+                    <div id="this-object-editor" style="height: 175px;"></div>
+                    <div class="form-group"> <label for="exampleInputFile" style="display: none;">Result</label>
+                        <p class="help-block result"></p>
+                    </div>
+                </div>
+                <div id="this-in-a-method" style="display:block">
+                    <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        <code>this</code> in <b>Method</b></h4>
+                    <ul>
+                        <li>In an object method, <code>this</code> refers to the <b>owner</b> of the method.
+                        </li>
+                        <li><code>this</code> refers to the person object.</li>
+                        <li>The <b>person</b> object is the <b>owner</b> of the <b>fullName</b> method.</li>
+                    </ul>
+                    <button onclick="runCode(event)">Run</button>
+                    <div id="this-object-method-editor" style="height: 195px;"></div>
+                    <div class="form-group"> <label for="exampleInputFile" style="display: none;">Result</label>
+                        <p class="help-block result"></p>
+                    </div>
+                </div>
             </div>
 
             <!-- Class Overview Return-->
@@ -850,7 +820,6 @@ function sum(a, b) {
                     <p class="help-block result">Click Run button to see the result.</p>
                 </div>
             </div>
-
             <div id="js-class-constructor" style="display:block">
                 <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
                         aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
@@ -869,7 +838,6 @@ function sum(a, b) {
                 </ul>
                 <p>You can test those by playing with the example above.</p>
             </div>
-
             <div id="js-class-methods" style="display:block">
                 <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
                         aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
@@ -936,42 +904,6 @@ function sum(a, b) {
                     mathematical
                     constants and functions.
                     Not a function object.</p>
-
-                <h4><b>Properties</b></h4>
-                <dl>
-                    <dt><a
-                            title="The Math.E property represents the base of natural logarithms, e, approximately 2.718."><code>Math.E</code></a>
-                    </dt>
-                    <dd>Euler's constant and the base of natural logarithms, approximately 2.718.</dd>
-                    <dt><a
-                            title="The Math.LN2 property represents the natural logarithm of 2, approximately 0.693:"><code>Math.LN2</code></a>
-                    </dt>
-                    <dd>Natural logarithm of 2, approximately 0.693.</dd>
-                    <dt><a
-                            title="The Math.LN10 property represents the natural logarithm of 10, approximately 2.302:"><code>Math.LN10</code></a>
-                    </dt>
-                    <dd>Natural logarithm of 10, approximately 2.303.</dd>
-                    <dt><a
-                            title="The Math.LOG2E property represents the base 2 logarithm of e, approximately 1.442:"><code>Math.LOG2E</code></a>
-                    </dt>
-                    <dd>Base 2 logarithm of E, approximately 1.443.</dd>
-                    <dt><a
-                            title="The Math.LOG10E property represents the base 10 logarithm of e, approximately 0.434:"><code>Math.LOG10E</code></a>
-                    </dt>
-                    <dd>Base 10 logarithm of E, approximately 0.434.</dd>
-                    <dt><a
-                            title="The Math.PI property represents the ratio of the circumference of a circle to its diameter, approximately 3.14159:"><code>Math.PI</code></a>
-                    </dt>
-                    <dd>Ratio of the circumference of a circle to its diameter, approximately 3.14159.</dd>
-                    <dt><a
-                            title="The Math.SQRT1_2 property represents the square root of 1/2 which is approximately 0.707:"><code>Math.SQRT1_2</code></a>
-                    </dt>
-                    <dd>Square root of 1/2; equivalently, 1 over the square root of 2, approximately 0.707.</dd>
-                    <dt><a
-                            title="The Math.SQRT2 property represents the square root of 2, approximately 1.414:"><code>Math.SQRT2</code></a>
-                    </dt>
-                    <dd>Square root of 2, approximately 1.414.</dd>
-                </dl>
                 <h4><b>Methods</b></h4>
                 <p>Note that the trigonometric functions
                     (<code>sin(), cos(), tan(), asin(), acos(), atan(), atan2()</code>) expect
@@ -990,149 +922,17 @@ function sum(a, b) {
                     </dt>
                     <dd>Returns the absolute value of a number.</dd>
                     <dt><a
-                            title="The Math.acos() function returns the arccosine (in radians) of a number, that is"><code>Math.acos(x)</code></a>
-                    </dt>
-                    <dd>Returns the arccosine of a number.</dd>
-                    <dt><a
-                            title="The Math.acosh() function returns the hyperbolic arc-cosine of a number, that is"><code>Math.acosh(x)</code></a>
-                    </dt>
-                    <dd>Returns the hyperbolic arccosine of a number.</dd>
-                    <dt><a
-                            title="The Math.asin() function returns the arcsine (in radians) of a number, that is"><code>Math.asin(x)</code></a>
-                    </dt>
-                    <dd>Returns the arcsine of a number.</dd>
-                    <dt><a
-                            title="The Math.asinh() function returns the hyperbolic arcsine of a number, that is"><code>Math.asinh(x)</code></a>
-                    </dt>
-                    <dd>Returns the hyperbolic arcsine of a number.</dd>
-                    <dt><a
-                            title="The Math.atan() function returns the arctangent (in radians) of a number, that is"><code>Math.atan(x)</code></a>
-                    </dt>
-                    <dd>Returns the arctangent of a number.</dd>
-                    <dt><a
-                            title="The Math.atanh() function returns the hyperbolic arctangent of a number, that is"><code>Math.atanh(x)</code></a>
-                    </dt>
-                    <dd>Returns the hyperbolic arctangent of a number.</dd>
-                    <dt><a
-                            title="The Math.atan2() function returns the angle in the&nbsp;plane&nbsp;(in radians) between the positive x-axis and the ray from (0,0) to the point (x,y), for Math.atan2(y,x)."><code>Math.atan2(y, x)</code></a>
-                    </dt>
-                    <dd>Returns the arctangent of the quotient of its arguments.</dd>
-                    <dt><a
-                            title="The Math.cbrt() function returns the cube root of a number, that is"><code>Math.cbrt(x)</code></a>
-                    </dt>
-                    <dd>Returns the cube root of a number.</dd>
-                    <dt><a
                             title="The Math.ceil() function returns the smallest integer greater than or equal to a given number."><code>Math.ceil(x)</code></a>
                     </dt>
                     <dd>Returns the smallest integer greater than or equal to a number.</dd>
-                    <dt><a
-                            title="The Math.clz32() function returns the number of leading zero bits in the 32-bit binary representation of a number."><code>Math.clz32(x)</code></a>
-                    </dt>
-                    <dd>Returns the number of leading zeroes of a 32-bit integer.</dd>
-                    <dt><a
-                            title="The Math.cos() static function returns the cosine of the specified angle, which must be specified in radians. This value is "><code>Math.cos(x)</code></a>
-                    </dt>
-                    <dd>Returns the cosine of a number.</dd>
-                    <dt><a href="h"
-                            title="The Math.cosh() function returns the hyperbolic cosine of a number, that can be expressed using the constant e:"><code>Math.cosh(x)</code></a>
-                    </dt>
-                    <dd>Returns the hyperbolic cosine of a number.</dd>
-                    <dt><a
-                            title="The Math.exp() function returns ex, where x is the argument, and e is Euler's number (also known as Napier's constant), the base of the natural logarithms."><code>Math.exp(x)</code></a>
-                    </dt>
-                    <dd>Returns E<sup>x</sup>, where <var>x</var> is the argument, and E is Euler's constant
-                        (2.718…),
-                        the base of the natural logarithm.</dd>
-                    <dt><a
-                            title="The Math.expm1() function returns ex - 1, where x is the argument, and e the base of the natural logarithms."><code>Math.expm1(x)</code></a>
-                    </dt>
-                    <dd>Returns subtracting 1 from <code>exp(x)</code>.</dd>
                     <dt><a
                             title="The Math.floor() function returns the largest integer less than or equal to a given number."><code>Math.floor(x)</code></a>
                     </dt>
                     <dd>Returns the largest integer less than or equal to a number.</dd>
                     <dt><a
-                            title="The Math.fround() function returns the nearest 32-bit single precision float representation of a Number."><code>Math.fround(x)</code></a>
-                    </dt>
-                    <dd>Returns the nearest <a rel="noopener" href="" class="external external-icon"
-                            title="link to the wikipedia page on single precision">single
-                            precision</a> float representation of a number.</dd>
-                    <dt><a
-                            title="The Math.hypot() function returns the square root of the sum of squares of its arguments, that is:"><code>Math.hypot([x[, y[, …]]])</code></a>
-                    </dt>
-                    <dd>Returns the square root of the sum of squares of its arguments.</dd>
-                    <dt><a
-                            title="The Math.imul() function returns the result of the C-like 32-bit multiplication of the two parameters."><code>Math.imul(x, y)</code></a>
-                    </dt>
-                    <dd>Returns the result of a 32-bit integer multiplication.</dd>
-                    <dt><a
-                            title="The Math.log() function returns the natural logarithm (base e) of a number, that is"><code>Math.log(x)</code></a>
-                    </dt>
-                    <dd>Returns the natural logarithm (log<sub>e</sub>, also ln) of a number.</dd>
-                    <dt><a
-                            title="The Math.log1p() function returns the natural logarithm (base e) of 1 + a number, that is"><code>Math.log1p(x)</code></a>
-                    </dt>
-                    <dd>Returns the natural logarithm (log<sub>e</sub>, also ln) of <code>1 + x</code> for a
-                        number x.
-                    </dd>
-                    <dt><a
-                            title="The Math.log10() function returns the base 10 logarithm of a number, that is"><code>Math.log10(x)</code></a>
-                    </dt>
-                    <dd>Returns the base 10 logarithm of a number.</dd>
-                    <dt><a
-                            title="The Math.log2() function returns the base 2 logarithm of a number, that is"><code>Math.log2(x)</code></a>
-                    </dt>
-                    <dd>Returns the base 2 logarithm of a number.</dd>
-                    <dt><a
-                            title="The Math.max() function returns the largest of zero or more numbers."><code>Math.max([x[, y[, …]]])</code></a>
-                    </dt>
-                    <dd>Returns the largest of zero or more numbers.</dd>
-                    <dt><a href="/"
-                            title="The static function Math.min() returns the lowest-valued number passed into it, or NaN if any parameter isn't a number and can't be converted into one."><code>Math.min([x[, y[, …]]])</code></a>
-                    </dt>
-                    <dd>Returns the smallest of zero or more numbers.</dd>
-                    <dt><a
-                            title="The Math.pow() function returns the base to the&nbsp;exponent power, that is, baseexponent."><code>Math.pow(x, y)</code></a>
-                    </dt>
-                    <dd>Returns base to the exponent power, that is, <code>base<sup>exponent</sup></code>.</dd>
-                    <dt><a
                             title="The Math.random() function returns a floating-point, pseudo-random number in the range 0–1 (inclusive of 0, but not 1) with approximately uniform distribution over that range — which you can then scale to your desired range. The implementation selects the initial seed to the random number generation algorithm; it cannot be chosen or reset by the user."><code>Math.random()</code></a>
                     </dt>
                     <dd>Returns a pseudo-random number between 0 and 1.</dd>
-                    <dt><a
-                            title="The Math.round() function returns the value of a number rounded to the nearest integer."><code>Math.round(x)</code></a>
-                    </dt>
-                    <dd>Returns the value of a number rounded to the nearest integer.</dd>
-                    <dt><a
-                            title="The Math.sign() function returns the sign of a number, indicating whether the number is positive, negative or zero."><code>Math.sign(x)</code></a>
-                    </dt>
-                    <dd>Returns the sign of the x, indicating whether x is positive, negative or zero.</dd>
-                    <dt><a title="The Math.sin() function returns the sine of a number."><code>Math.sin(x)</code></a>
-                    </dt>
-                    <dd>Returns the sine of a number.</dd>
-                    <dt><a
-                            title="The Math.sinh() function returns the hyperbolic sine of a number, that can be expressed using the constant e:"><code>Math.sinh(x)</code></a>
-                    </dt>
-                    <dd>Returns the hyperbolic sine of a number.</dd>
-                    <dt><a
-                            title="The Math.sqrt() function returns the square root of a number, that is"><code>Math.sqrt(x)</code></a>
-                    </dt>
-                    <dd>Returns the positive square root of a number.</dd>
-                    <dt><a title="The Math.tan() function returns the tangent of a number."><code>Math.tan(x)</code></a>
-                    </dt>
-                    <dd>Returns the tangent of a number.</dd>
-                    <dt><a
-                            title="The Math.tanh() function returns the hyperbolic tangent of a number, that is"><code>Math.tanh(x)</code></a>
-                    </dt>
-                    <dd>Returns the hyperbolic tangent of a number.</dd>
-                    <dt><code>Math.toSource()</code> <span class="icon-only-inline"
-                            title="This API has not been standardized."><i class="icon-warning-sign">
-                            </i></span></dt>
-                    <dd>Returns the string <code>"Math"</code>.</dd>
-                    <dt><a
-                            title="The Math.trunc() function returns the integer part of a number by removing any fractional digits."><code>Math.trunc(x)</code></a>
-                    </dt>
-                    <dd>Returns the integer part of the number x, removing any fractional digits.</dd>
                 </dl>
                 <button onclick="runCode(event)">Run</button>
                 <div id="js-math-editor" style="height: 150px;"></div>
@@ -1157,27 +957,22 @@ function sum(a, b) {
                         </ul>
                     </li>
                     <li>
+                        <a href="#types" onclick="showHiddenList(this)">Data Types</a>
+                        <ul class="arrow" style="display: none">
+                            <li><a href="#js-boolean">Boolean</a></li>
+                            <li><a href="#js-number">Number</a></li>
+                            <li><a href="#js-string">String</a></li>
+                            <li><a href="#js-arrays">Arrays</a></li>
+                            <li><a href="#js-object">Object</a></li>
+                        </ul>
+                    </li>
+                    <li>
                         <a href="#blocks">Blocks</a>
                         <ul class="arrow" style="display:none"></ul>
                     </li>
                     <li>
                         <a href="#scope">Scope</a>
                         <ul class="arrow" style="display:none">
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#context">Context</a>
-                        <ul class="arrow" style="display:none">
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#types" onclick="showHiddenList(this)">Data Types</a>
-                        <ul class="arrow" style="display: none">
-                            <li><a href="#js-boolean">Boolean</a></li>
-                            <li><a href="#js-number">Number</a></li>
-                            <li><a href="#js-string">String</a></li>
-                            <li><a href="#js-string">Arrays</a></li>
-                            <li><a href="#js-object">Object</a></li>
                         </ul>
                     </li>
                     <li>
@@ -1198,12 +993,17 @@ function sum(a, b) {
                         </ul>
                     </li>
                     <li>
-                        <a href="#forloop" onclick="showHiddenList(this)">Functions</a>
+                        <a href="#js-whatIsAFunction" onclick="showHiddenList(this)">Functions</a>
                         <ul class="arrow" style="display:none">
                             <li><a href="#js-whatIsAFunction">What is a Function?</a></li>
                             <li><a href="#js-defineAfunction">Define a Function</a></li>
                             <li><a href="#js-invokeAFunction">Invoking a Function</a></li>
                             <li><a href="#js-functionReturn">Function Return</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#context">Context</a>
+                        <ul class="arrow" style="display:none">
                         </ul>
                     </li>
                     <li>
