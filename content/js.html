@@ -95,18 +95,17 @@ let z = true;</code></pre>
                         type-less</p>
                     <p>There are 7 basic types in Javascript</p>
                     <ul>
-                        <li><code>number</code> - for numbers of any kind: integer or floating-point.
-                        <li>
-                        <li><code>string</code> - for strings. A string may have one or more characters, there’s
+                        <li><code class="inline">number</code> - for numbers of any kind: integer or floating-point. </li>
+                        <li><code class="inline">string</code> - for strings. A string may have one or more characters, there’s
                             no
                             separate single-character type.</li>
-                        <li><code>boolean</code> - for <code>true/false</code></li>
-                        <li><code>null</code> - for unknown values – a standalone type that has a single value
+                        <li><code class="inline">boolean</code> - for <code class="inline">true/false</code></li>
+                        <li><code class="inline">null</code> - for unknown values – a standalone type that has a single value
                             null
                         </li>
-                        <li><code>undefined</code> - for unassigned values</li>
-                        <li><code>object</code> - for more complex data structures.</li>
-                        <li><code>symbol</code> - for unique identifiers.</li>
+                        <li><code class="inline">undefined</code> - for unassigned values</li>
+                        <li><code class="inline">object</code> - for more complex data structures.</li>
+                        <li><code class="inline">symbol</code> - for unique identifiers.</li>
                     </ul>
 
                     <button onclick="runCode(event)">Run</button>
@@ -199,17 +198,17 @@ let z = true;</code></pre>
 
                     <p>Strings have some utils methods like :</p>
                     <ul>
-                        <li style="list-style: decimal"><code>toUpperCase()</code> - method returns the calling
+                        <li style="list-style: decimal"><code class="inline">toUpperCase()</code> - method returns the calling
                             string value converted to uppercase</li>
-                        <li style="list-style: decimal"><code>toLowerCase()</code> - method returns the calling
+                        <li style="list-style: decimal"><code class="inline">toLowerCase()</code> - method returns the calling
                             string value converted to lower case.</li>
-                        <li style="list-style: decimal"><code>concat(arg1, arg2)</code> - method concatenates
+                        <li style="list-style: decimal"><code class="inline">concat(arg1, arg2)</code> - method concatenates
                             the
                             string arguments to the calling string and returns a new string.</li>
-                        <li style="list-style: decimal"><code>trim()</code> - method removes whitespace from
+                        <li style="list-style: decimal"><code class="inline">trim()</code> - method removes whitespace from
                             both
                             ends of a string</li>
-                        <li style="list-style: decimal"><code>includes()</code> - method determines whether one
+                        <li style="list-style: decimal"><code class="inline">includes()</code> - method determines whether one
                             string may be found within another string</li>
                     </ul>
                     <p> A lot more useful strings utils will be found here:
@@ -240,22 +239,22 @@ let z = true;</code></pre>
                         array
                         <code>var cars = ["Dacia", "Skoda"]</code></p>
                     <ul>
-                        <li>Access (index into) an Array item = > <code>var first = cars[0]; //Dacia</code></li>
-                        <li>Loop over an Array = > <code>cars.forEach(function(item, index, array) {
+                        <li>Access (index into) an Array item<code>var first = cars[0]; //Dacia</code></li>
+                        <li>Loop over an Array<code>cars.forEach(function(item, index, array) {
                               alert(item, index);
                           });</code></li>
-                        <li>Add to the end of an Array = >
+                        <li>Add to the end of an Array
                             <code>cars.push("BMW");//["Dacia", "Skoda", "BMW"];</code></li>
-                        <li>Remove from the end of an Array = > <code>cars.pop(); // ["Dacia", "Skoda"];</code>
+                        <li>Remove from the end of an Array<code>cars.pop(); // ["Dacia", "Skoda"];</code>
                         </li>
-                        <li>Remove from the front of an Array = > <code>cars.shift(); // ["Skoda"]</code></li>
-                        <li>Add to the front of an Array = >
+                        <li>Remove from the front of an Array<code>cars.shift(); // ["Skoda"]</code></li>
+                        <li>Add to the front of an Array
                             <code>fruits.unshift('Ford'); // ["Ford", "Skoda"];</code></li>
-                        <li>Find the index of an item in the Array= > <code>cars.indexOf('Skoda'); // 1</code>
+                        <li>Find the index of an item in the Array<code>cars.indexOf('Skoda'); // 1</code>
                         </li>
-                        <li>Remove an item by index position = >
+                        <li>Remove an item by index position
                             <code>var pos=1; cars.splice(pos, 1); //["Skoda"]</code></li>
-                        <li>Copy an Array = >
+                        <li>Copy an Array
                             <code>var first = var shallowCopy = cars.slice(); //make a copy </code></li>
                     </ul>
                     <button onclick="runCode(event)">Run</button>
@@ -323,7 +322,7 @@ function sum(a, b) {
                             aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
                             style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
                         Scope</h2>
-                    <p>In JavaScript <code>scope</code> means the visibility of a property</p>
+                    <p>In JavaScript <code class="inline">scope</code> means the visibility of a property</p>
                     <p>Scope determines the accessibility of variables, objects, and functions from different
                         parts of
                         the code.</p>
@@ -373,17 +372,17 @@ function sum(a, b) {
                             aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
                             style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
                         If/Else Statement</h2>
-                    <p><code>If</code> statement is used when you want to take a decision based on a condition
+                    <p><code class="inline">If</code> statement is used when you want to take a decision based on a condition
                     </p>
                     <p>In JavaScript like in other programming languages if statement works the same.</p>
                     <ul>
-                        <li>Use <code>if</code> to specify a block of code to be executed when the condition is
-                            <code>true</code></li>
-                        <li>Use <code>else</code> to specify a block of code to be executed when the same
+                        <li>Use <code class="inline">if</code> to specify a block of code to be executed when the condition is
+                            <code class="inline">true</code></li>
+                        <li>Use <code class="inline">else</code> to specify a block of code to be executed when the same
                             condition
-                            is <code>false</code></li>
-                        <li>Use <code>else if</code> to specify a new condition when the first condition is
-                            <code>false</code></li>
+                            is <code class="inline">false</code></li>
+                        <li>Use <code class="inline">else if</code> to specify a new condition when the first condition is
+                            <code class="inline">false</code></li>
                     </ul>
 
                     <button onclick="runCode(event)">Run</button>
@@ -399,11 +398,11 @@ function sum(a, b) {
                             aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
                             style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
                         Switch Statement</h2>
-                    <p><code>Switch</code> statement is used to to perform different actions based on different
+                    <p><code class="inline">Switch</code> statement is used to to perform different actions based on different
                         conditions</p>
-                    <p>The <code>switch</code> expression is evaluated once, the value of the expression is
+                    <p>The <code class="inline">switch</code> expression is evaluated once, the value of the expression is
                         compared
-                        with the values of each case, <code>if</code> there is a match, the associated block of
+                        with the values of each case, <code class="inline">if</code> there is a match, the associated block of
                         code
                         is executed</p>
                     <button onclick="runCode(event)">Run</button>
@@ -435,7 +434,7 @@ function sum(a, b) {
                             style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
                         While loop</h2>
                     <p>The while construct consists of a block of code and a condition/expression. The
-                        condition/expression is evaluated, and if the condition/expression is <code>true</code>,
+                        condition/expression is evaluated, and if the condition/expression is <code class="inline">true</code>,
                         the
                         code within the block is executed. This repeats until the condition/expression becomes
                         false. Because the while loop checks the condition/expression before the block is
@@ -450,7 +449,7 @@ function sum(a, b) {
                             aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
                             style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
                         Do While loop</h2>
-                    <p>The <code>do...while</code> statement creates a loop that executes a specified statement
+                    <p>The <code class="inline">do...while</code> statement creates a loop that executes a specified statement
                         until the test
                         condition evaluates to false.</p>
                     <p>The condition is evaluated after executing the statement,
@@ -469,28 +468,28 @@ function sum(a, b) {
                             aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
                             style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
                         For loop</h2>
-                    <p>A <code>for loop</code> repeats until a specified condition evaluates to
-                        <code>false</code>.
+                    <p>A <code class="inline">for loop</code> repeats until a specified condition evaluates to
+                        <code class="inline">false</code>.
                         <p>The JavaScript for loop is similar to the Java and C for loop. </p>
                         <img src="images/for.PNG" />
                         <p>When a for loop executes, the following occurs:</p>
                         <ul>
                             <li style="list-style: decimal">The initializing expression
-                                <code>initialExpression</code> is executed. This expression usually initializes
+                                <code class="inline">initialExpression</code> is executed. This expression usually initializes
                                 one
                                 or more loop counters. This expression can also declare variables</li>
-                            <li style="list-style: decimal">The <code>condition</code> expression is evaluated.
+                            <li style="list-style: decimal">The <code class="inline">condition</code> expression is evaluated.
                                 If
                                 the value of <strong>condition</strong> is true, the loop statements execute. If
                                 the
                                 value of <strong>condition</strong> is false, the for loop terminates.</li>
-                            <li style="list-style: decimal">The <code>statement</code> executes. To execute
+                            <li style="list-style: decimal">The <code class="inline">statement</code> executes. To execute
                                 multiple
-                                statements, <code>use a block statement ({ ... })</code> to group those
+                                statements, <code class="inline">use a block statement ({ ... })</code> to group those
                                 statements.
                             </li>
                             <li style="list-style: decimal">If present, the update expression
-                                <code>incrementExpression</code> is executed.</li>
+                                <code class="inline">incrementExpression</code> is executed.</li>
                             <li style="list-style: decimal">Control returns to step 2.</li>
                         </ul>
                         <button onclick="runCode(event)">Run</button>
@@ -507,7 +506,7 @@ function sum(a, b) {
                             style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
                         For...in</h2>
                     <p>The for...in statement iterates over enumerable properties of an object.</p>
-                    <p>A different property name is assigned to variable(in our case <code>prop</code>) on each
+                    <p>A different property name is assigned to variable(in our case <code class="inline">prop</code>) on each
                         iteration.</p>
                     <p>Object whose enumerable properties are iterated over.</p>
                     <button onclick="runCode(event)">Run</button>
@@ -523,13 +522,13 @@ function sum(a, b) {
                             aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
                             style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
                         For...of</h2>
-                    <p>The <code>for...of</code> statement creates a loop iterating over iterable objects,
+                    <p>The <code class="inline">for...of</code> statement creates a loop iterating over iterable objects,
                         including: built-in String, Array, Array-like objects, etc</p>
                     <h4>Syntax</h4>
                     <img src="images/forof.PNG">
-                    <p><code>variable</code> - On each iteration a value of a different property is assigned to
-                        variable. variable may be declared with <code>const, let, or var.</code></p>
-                    <p><code>iterable</code> - Object whose iterable properties are iterated.</p>
+                    <p><code class="inline">variable</code> - On each iteration a value of a different property is assigned to
+                        variable. variable may be declared with <code class="inline">const, let, or var.</code></p>
+                    <p><code class="inline">iterable</code> - Object whose iterable properties are iterated.</p>
                     <button onclick="runCode(event)">Run</button>
                     <div id="js-forof-editor" style="height: 280px;"></div>
                     <div class="form-group"> <label for="exampleInputFile" style="display: none;">Result</label>
@@ -549,12 +548,12 @@ function sum(a, b) {
                         <li style="list-style-type: decimal;">Functions are executed when they are called. This
                             is
                             known as invoking a function.</li>
-                        <li style="list-style-type: decimal;">Values can be <code>passed</code> into functions
+                        <li style="list-style-type: decimal;">Values can be <code class="inline">passed</code> into functions
                             and
                             used within the function.</li>
-                        <li style="list-style: decimal">in JavaScript we have <code>anonymous functions</code>,
+                        <li style="list-style: decimal">in JavaScript we have <code class="inline">anonymous functions</code>,
                             those functions doesn't have a name.</li>
-                        <li style="list-style-type: decimal;">Functions <b>always</b> <code>return</code> a
+                        <li style="list-style-type: decimal;">Functions <b>always</b> <code class="inline">return</code> a
                             value.
                             <b style="font-size: 18px">In JavaScript, if no return value is specified, the
                                 function
@@ -571,19 +570,19 @@ function sum(a, b) {
                     <p>In JavaScript we have different ways to declare a function, bellow are explained the
                         function
                         types and how to declare functions.</p>
-                    <p>To create a function declaration you use the <code>function</code> keyword followed by
+                    <p>To create a function declaration you use the <code class="inline">function</code> keyword followed by
                         the
                         name of the
                         function. When using function declarations, the function definition is hoisted, thus
                         allowing the function to be used before it is defined.</p>
                     <ul>
-                        <li><code>Function Declaration</code> - defines a named function</li>
-                        <li><code>Function Expressions</code> - defines a named or anonymous function, Function
+                        <li><code class="inline">Function Declaration</code> - defines a named function</li>
+                        <li><code class="inline">Function Expressions</code> - defines a named or anonymous function, Function
                             Expressions are not hoisted, and therefore cannot be used before they are defined
                         </li>
-                        <li><code>Arrow Function Expression</code> - is a shorter syntax for writing function
+                        <li><code class="inline">Arrow Function Expression</code> - is a shorter syntax for writing function
                             expressions </li>
-                        <li><code>Function Constructor</code> - The Function constructor creates a new Function
+                        <li><code class="inline">Function Constructor</code> - The Function constructor creates a new Function
                             object.</li>
                     </ul>
                     <button onclick="runCode(event)">Run</button>
@@ -602,7 +601,7 @@ function sum(a, b) {
                     Functions execute when the function is called. This process is known as invocation. You can
                     invoke a function by referencing the function name, followed by an open and closed
                     parenthesis:
-                    <code>()</code>.
+                    <code class="inline">()</code>.
                 </div>
                 <!-- End Invoke a function -->
                 <!-- Function Return-->
@@ -611,7 +610,7 @@ function sum(a, b) {
                             aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
                             style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
                         Function Returns</h3>
-                    <p>Every function in JavaScript returns <code>undefined</code> unless otherwise specified.
+                    <p>Every function in JavaScript returns <code class="inline">undefined</code> unless otherwise specified.
                     </p>
                     <p>Below we'll find some examples</p>
                     <button onclick="runCode(event)">Run</button>
@@ -632,24 +631,24 @@ function sum(a, b) {
                     </h2>
                     <h4>It's all about THIS !</h4>
                     <p>
-                        In JavaScript, <code>context</code> refers to an object. Within an object, the keyword
-                        <code>this</code> refers to
+                        In JavaScript, <code class="inline">context</code> refers to an object. Within an object, the keyword
+                        <code class="inline">this</code> refers to
                         that object (i.e. “self”), and provides an interface to the properties and methods that
                         are
-                        members of that object. When a function is executed, the keyword <code>this</code>
+                        members of that object. When a function is executed, the keyword <code class="inline">this</code>
                         refers to the
                         object
                         that the function is executed in.
                     </p>
                     <p>Scenarios</p>
                     <ul>
-                        <li>When a function executes in the global context, <code>this</code> refers to the
+                        <li>When a function executes in the global context, <code class="inline">this</code> refers to the
                             global, or
-                            <code>window</code> object</li>
-                        <li>When a function is a method of an Object, <code>this</code> refers to that object
+                            <code class="inline">window</code> object</li>
+                        <li>When a function is a method of an Object, <code class="inline">this</code> refers to that object
                         </li>
                         <li>When a function executes inside of another function (no matter how deeply nested),
-                            <code>this</code> refers to the object whose context within which it is executed
+                            <code class="inline">this</code> refers to the object whose context within which it is executed
                         </li>
                     </ul>
                     <p>Below we will explain better the context by examples</p>
@@ -661,21 +660,21 @@ function sum(a, b) {
                 </div>
                 <div id="context-2" style="display:block">
                     <p>
-                        Wait a minute, why I can't see <code>beer</code> and why I see <code>wine</code> ?
+                        Wait a minute, why I can't see <code class="inline">beer</code> and why I see <code class="inline">wine</code> ?
                     </p>
                     <p>According to other OOP languges like C#, Java we expect to see beer. In JavaScript to
                         achieve
                         this is all about context, let's fix our example</p>
-                    <p>How can we make reference to the property <code>drink</code> that is in the context of
+                    <p>How can we make reference to the property <code class="inline">drink</code> that is in the context of
                         the object
-                        <code>foo</code>?</p>
+                        <code class="inline">foo</code>?</p>
                     <button onclick="runCode(event)">Run</button>
                     <div id="ctx-editor-1" style="height: 170px;"></div>
                     <div class="form-group"> <label for="exampleInputFile" style="display: none;">Result</label>
                         <p class="help-block result"></p>
                     </div>
                     <p>Note
-                        <code>the only change we have made is that in the anonymous function that is assigned to “getDrink”, we return “this.drink” instead of “drink”</code>
+                        <code >the only change we have made is that in the anonymous function that is assigned to “getDrink”, we return “this.drink” instead of “drink”</code>
                     </p>
                 </div>
                 <div id="context-3" style="display:block">
@@ -683,9 +682,9 @@ function sum(a, b) {
                         Another fancy way to write the example above
                     </p>
                     <p>The result should be the same, the only difference is that we created the properties
-                        <code>drink</code> and
-                        <code>getDrink</code> at the exact same time that we created the object literal
-                        <code>foo</code>
+                        <code class="inline">drink</code> and
+                        <code class="inline">getDrink</code> at the exact same time that we created the object literal
+                        <code class="inline">foo</code>
                     </p>
                     <p>Now we assign those on the fly.</p>
                     <button onclick="runCode(event)">Run</button>
@@ -704,18 +703,18 @@ function sum(a, b) {
                                 font-stretch: normal; font-size: 1em; line-height: inherit; font-family: 
                                 anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;">
                         </a>
-                        What is <code>this</code> ?
+                        What is <code class="inline">this</code> ?
                     </h2>
                     <p>
-                        Let's answer to this question: <b>Why is the word <code>this</code> so important in
+                        Let's answer to this question: <b>Why is the word <code class="inline">this</code> so important in
                             JavaScript?</b>
                     </p>
-                    <p>The JavaScript <code>this</code> keyword refers to the object it belongs to. </p>
+                    <p>The JavaScript <code class="inline">this</code> keyword refers to the object it belongs to. </p>
                     <ul>
-                        <li>In a method, <code>this</code> refers to the <b>owner object.</b></li>
-                        <li>Alone, <code>this</code> refers to the <b>global object.</b></li>
-                        <li>In a function, <code>this</code> refers to the <b>global object.</b></li>
-                        <li>In an event, <code>this</code> refers to the element that received the event.</li>
+                        <li>In a method, <code class="inline">this</code> refers to the <b>owner object.</b></li>
+                        <li>Alone, <code class="inline">this</code> refers to the <b>global object.</b></li>
+                        <li>In a function, <code class="inline">this</code> refers to the <b>global object.</b></li>
+                        <li>In an event, <code class="inline">this</code> refers to the element that received the event.</li>
                     </ul>
                     <p>Below we will explain better the context by examples</p>
                 </div>
@@ -723,11 +722,11 @@ function sum(a, b) {
                     <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
                             aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
                             style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
-                        <code>this</code> Alone</h4>
+                        <code class="inline">this</code> Alone</h4>
                     <ul>
                         <li>When used alone, the owner is the <b>Global object</b>, so this refers to the Global
                             object.</b></li>
-                        <li>In a browser window the Global object is <code>[object Window]</code></li>
+                        <li>In a browser window the Global object is <code class="inline">[object Window]</code></li>
                     </ul>
                     <button onclick="runCode(event)">Run</button>
                     <div id="this-alone-editor" style="height: 30px;"></div>
@@ -739,13 +738,13 @@ function sum(a, b) {
                     <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
                             aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
                             style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
-                        <code>this</code> in <b>Function</b></h4>
+                        <code class="inline">this</code> in <b>Function</b></h4>
                     <ul>
-                        <li>In a JavaScript function, the owner of the function is the <code>default</code>
+                        <li>In a JavaScript function, the owner of the function is the <code class="inline">default</code>
                             binding for
-                            <code>this</code>.</li>
+                            <code class="inline">this</code>.</li>
                         <li>So, in a function, this refers to the Global object
-                            <code>[object Window]</code>.</code>
+                            <code class="inline">[object Window]</code>.</code>
                         </li>
                     </ul>
                     <button onclick="runCode(event)">Run</button>
@@ -758,9 +757,9 @@ function sum(a, b) {
                     <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
                             aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
                             style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
-                        <code>this</code> in <b>Object</b></h4>
+                        <code class="inline">this</code> in <b>Object</b></h4>
                     <ul>
-                        <li><code>this</code> is the <b>person</b> object (The person object is the "owner" of
+                        <li><code class="inline">this</code> is the <b>person</b> object (The person object is the "owner" of
                             the
                             function)</li>
                     </ul>
@@ -774,11 +773,11 @@ function sum(a, b) {
                     <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
                             aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
                             style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
-                        <code>this</code> in <b>Method</b></h4>
+                        <code class="inline">this</code> in <b>Method</b></h4>
                     <ul>
-                        <li>In an object method, <code>this</code> refers to the <b>owner</b> of the method.
+                        <li>In an object method, <code class="inline">this</code> refers to the <b>owner</b> of the method.
                         </li>
-                        <li><code>this</code> refers to the person object.</li>
+                        <li><code class="inline">this</code> refers to the person object.</li>
                         <li>The <b>person</b> object is the <b>owner</b> of the <b>fullName</b> method.</li>
                     </ul>
                     <button onclick="runCode(event)">Run</button>
@@ -795,12 +794,12 @@ function sum(a, b) {
                         aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
                         style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
                     JavaScript OOP like</h2>
-                <p>Whit <code>ES6</code> JavaScript has more human readable way to declare classes/objects,
+                <p>Whit <code class="inline">ES6</code> JavaScript has more human readable way to declare classes/objects,
                     because
-                    with this version was introduced <code>class</code>
-                    < keyword.</p> <p>Now you can make use of it to program in a similar way as to how you might
+                    with this version was introduced <code class="inline">class</code>
+                    keyword.</p> <p>Now you can make use of it to program in a similar way as to how you might
                         in
-                        <code>C#, Java, or PHP</code></p>
+                        <code class="inline">C#, Java, or PHP</code></p>
                 <p>Classes in ES6 are definitely a step in the right direction to achieving true object oriented
                     programming, but truth be told, these are not classes in the purest sense of the word</p>
 
@@ -825,16 +824,16 @@ function sum(a, b) {
                         aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
                         style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
                     Constructors</h4>
-                <p>What you need to know about <code>constructor</code> function in JavaScript is the following
+                <p>What you need to know about <code class="inline">constructor</code> function in JavaScript is the following
                 </p>
                 <ul>
                     <li>Constructors are a key concept of classes</li>
-                    <li>There can only be one special method with the name <code>constructor</code> in a class
+                    <li>There can only be one special method with the name <code class="inline">constructor</code> in a class
                     </li>
-                    <li>Constructor <code>is a function</code> which automatically runs anytime an object is
+                    <li>Constructor <code class="inline">is a function</code> which automatically runs anytime an object is
                         instantiated from that class</li>
-                    <li>Commonly <code>used to set up some default data</code> or
-                        <code>initialize needed variables</code></li>
+                    <li>Commonly <code class="inline">used to set up some default data</code> or
+                        <code class="inline">initialize needed variables</code></li>
                 </ul>
                 <p>You can test those by playing with the example above.</p>
             </div>
@@ -843,7 +842,7 @@ function sum(a, b) {
                         aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
                         style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
                     Methods</h4>
-                <p>In JavaScript <code>methods</code> are simple functions that contain code and can be invoked
+                <p>In JavaScript <code class="inline">methods</code> are simple functions that contain code and can be invoked
                     like
                     usual.</p>
                 <p>Also we can have static methods, The static keyword defines a static method for a class.
@@ -863,10 +862,10 @@ function sum(a, b) {
                         aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
                         style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
                     Getters and Setters</h4>
-                <p>The <code>get</code> syntax binds an object property to a function that will be called when
+                <p>The <code class="inline">get</code> syntax binds an object property to a function that will be called when
                     that
                     property is looked up.</p>
-                <p>The <code>set</code> syntax binds an object property to a function to be called when there is
+                <p>The <code class="inline">set</code> syntax binds an object property to a function to be called when there is
                     an
                     attempt to set that property.</p>
                 <button onclick="runCode(event)">Run</button>
@@ -880,10 +879,10 @@ function sum(a, b) {
                         aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
                         style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
                     Inheritance</h4>
-                <p> <code>ES6</code> has made <code>JavaScript</code> look a lot simpler with the
-                    <code>class syntax</code> and its additional features.
-                    In the example below we are going to combine the <code>class syntax feature</code> with the
-                    concept of <code>inheritance</code>
+                <p> <code class="inline">ES6</code> has made <code class="inline">JavaScript</code> look a lot simpler with the
+                    <code class="inline">class syntax</code> and its additional features.
+                    In the example below we are going to combine the <code class="inline">class syntax feature</code> with the
+                    concept of <code class="inline">inheritance</code>
                 </p>
                 <p>We'll combine all things that we achieve and learn so far to exemplify better the
                     inheritance.
@@ -900,15 +899,15 @@ function sum(a, b) {
                         aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
                         style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
                     Math library</h2>
-                <p><code><b>Math</b></code> is a built-in object that has properties and methods for
+                <p><code class="inline"><b>Math</b></code> is a built-in object that has properties and methods for
                     mathematical
                     constants and functions.
                     Not a function object.</p>
                 <h4><b>Methods</b></h4>
                 <p>Note that the trigonometric functions
-                    (<code>sin(), cos(), tan(), asin(), acos(), atan(), atan2()</code>) expect
-                    or return angles in <code>radians</code>. </p>
-                <p>To convert <code>radians</code> to degrees, <code>divide by (Math.PI / 180)</code>, and
+                    (<code class="inline">sin(), cos(), tan(), asin(), acos(), atan(), atan2()</code>) expect
+                    or return angles in <code class="inline">radians</code>. </p>
+                <p>To convert <code class="inline">radians</code> to degrees, <code class="inline">divide by (Math.PI / 180)</code>, and
                     multiply
                     by this to convert the other way.</p>
                 <p>
@@ -1027,6 +1026,7 @@ function sum(a, b) {
 <script type="text/javascript">
     ready();
     document.querySelectorAll('code').forEach((block) => {
-        hljs.highlightBlock(block);
+        let hasInline = block.className && block.className === 'inline' ;
+        !hasInline && hljs.highlightBlock(block); 
     });
 </script>
