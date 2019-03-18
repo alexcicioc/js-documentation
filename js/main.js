@@ -558,3 +558,12 @@ function createSummary() {
 function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
 }
+
+function applyInlineStyle(){
+    let codeList = document.getElementsByTagName("code");
+    codeList.forEach(codeElement => {
+        if(codeElement.parentElement){
+            console.log("pre");
+        }
+    });
+}
