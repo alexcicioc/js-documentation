@@ -5,35 +5,6 @@ function ready() {
 }
 
 function setupEditor() {
-
-    new Editor(
-        "js-datatypes-editor",
-        `typeof undefined // "undefined";
-
-typeof 0 // "number"
-
-typeof true // "boolean";
-
-typeof "foo" // "string"
-
-typeof Symbol("id") // "symbol";
-
-typeof { property : 'value'} // "object"
-
-typeof alert // "function"`
-    );
-
-    new Editor(
-        "js-boolean-editor",
-        `
-10>9 // "true";
-
-const value = true;
-    
-const anotherValue = new Boolean(false);
-`
-    );
-
     new Editor(
         "js-array-editor",
         `
@@ -42,20 +13,6 @@ var cars = ["Dacia", "Skoda"];
 
 // You can play with the methods described above
 alert(cars);
-`
-    );
-
-    new Editor(
-        "js-number-editor",
-        `let integerNumber = 123; //integer
-
-let floatingNumber = 12.345; //floating number
-    
-alert( 1 / 0 ); // Will result in Infinity
-    
-alert( -1 / 0 ); // Will result in -Infinity
-    
-alert("not a number" / 2); // Will result in NaN, because we try to divide string with number
 `
     );
 
