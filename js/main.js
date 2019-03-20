@@ -217,19 +217,6 @@ class Person {
         1
     );
 
-    new Editor(
-        "js-global-scope-editor", `var test = "I'm the test";
-
-// we can use "test" here
-console.log(test);
-function myFunction() {
-    
-  // also we can use "test" here 
-  console.log(test);
-}
-
-myFunction();
-  `, 1);
 
     new Editor(
         "ctx-editor", `drink = 'wine';
