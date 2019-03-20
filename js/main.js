@@ -5,27 +5,6 @@ function ready() {
 }
 
 function setupEditor() {
-    new Editor(
-        "js-array-editor",
-        `
-//Create an Array
-var cars = ["Dacia", "Skoda"];
-
-// You can play with the methods described above
-alert(cars);
-`
-    );
-
-    new Editor(
-        "js-string-editor",
-        `let str = "JavaScript";
-
-let str2 = 'String with single quotes';
-
-str2.toUpperCase();
-// STRING WITH SINGLE QUOTES
-`
-    );
 
     new Editor(
         "js-object-editor",
