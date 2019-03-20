@@ -6,51 +6,6 @@ function ready() {
 
 function setupEditor() {
 
-    new Editor(
-        "js-condition-editor",
-        ` let n = 5;
-
-if(n>5){
-    alert("Greater then 5");
-} else {
-    alert("Less or equal...");
-}
-
-//another way to write if/else statement
-(n>5) ? alert("Greater") : alert("Less then");`,
-        1
-    );
-
-    new Editor(
-        "js-switch-editor",
-        `var day = 4;
-
-switch (day) {
-    case 0:
-        day = "Sunday";
-        break;
-    case 1:
-        day = "Monday";
-        break;
-    case 2:
-        day = "Tuesday";
-        break;
-    case 3:
-        day = "Wednesday";
-        break;
-    case 4:
-        day = "Thursday";
-        break;
-    case 5:
-        day = "Friday";
-        break;
-    case 6:
-        day = "Saturday";
-    }
-    
-    alert(day); //what value should have day variable ?`,
-        1
-    );
 
     new Editor(
         "js-dowhile-editor",
