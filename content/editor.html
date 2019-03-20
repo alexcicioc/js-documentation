@@ -96,7 +96,27 @@
       }
     }
     console.log = (message) => {
+      console.info(message);
+      if (Array.isArray(message)) {
+        message = printArray(message);
+      }
       $('.result').append(`<div>${message}</div>`);
+    }
+
+    function printArray(array) {
+      let message = '[';
+      array.forEach((value, index) => {
+        if (typeof value === "string") {
+          value = `'${value}'`;
+        }
+        if (Array.isArray(value)) {
+          value = printArray(value);
+        }
+        message += `${index}: ${value}, `;
+      });
+      message = message.substring(0, message.length - 2);
+      message += ']';
+      return message;
     }
   </script>
 
