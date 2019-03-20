@@ -33,6 +33,7 @@
       color: #F8F8F2;
       padding: 5px;
       min-height: 310px;
+      font-family: 'Courier New', Courier, monospace;
     }
   </style>
 </head>
@@ -44,7 +45,7 @@
       <col />
     </colgroup>
     <tr>
-      <td>
+      <td style="vertical-align:top;">
         <div id="editor"></div>
       </td>
       <td style="vertical-align: top;">
@@ -54,9 +55,8 @@
       </td>
     </tr>
     <tr>
-      <td></td>
+      <td style="text-align: center;"><button class="btn-primary" onclick="runCode(event)">Run >></button></td>
       <td>
-        <button class="btn-primary" onclick="runCode(event)">Run >></button>
       </td>
     </tr>
   </table>
@@ -99,8 +99,44 @@
       console.info(message);
       if (Array.isArray(message)) {
         message = printArray(message);
+      } else if (typeof message === "object") {
+        message = printObject(message);
       }
-      $('.result').append(`<div>${message}</div>`);
+      $('.result').append(`<div>${message}</div><hr />`);
+    }
+
+    function printArray(array) {
+      let message = '[';
+      array.forEach((value, index) => {
+        if (typeof value === "string") {
+          value = `'${value}'`;
+        }else if (Array.isArray(value)) {
+          value = printArray(value);
+        } else if (typeof value === "object") {
+          value = printObject(value);
+        }
+        message += `${index}: ${value}, `;
+      });
+      message = message.substring(0, message.length - 2);
+      message += ']';
+      return message;
+    }
+
+    function printObject(object) {
+      let message = '{';
+      Object.keys(object).forEach((key) => {
+        if (typeof object[key] === "string") {
+          object[key] = `'${object[key]}'`;
+        } else if (Array.isArray(object[key])) {
+          object[key] = printArray(object[key]);
+        } else if (typeof value === "object") {
+          object[key] = printObject(object[key]);
+        }
+        message += `${key}: ${object[key]}, `;
+      });
+      message = message.substring(0, message.length - 2);
+      message += '}';
+      return message;
     }
 
     function printArray(array) {

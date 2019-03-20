@@ -7,36 +7,6 @@ function ready() {
 function setupEditor() {
 
     new Editor(
-        "js-object-editor",
-        `// Object Literal
-var Car = {
-    brand: 'Toyota',
-    color: 'black',
-    doors: 5,
-    start: function(){
-        alert("Starting...");
-    }
-};
-    
-alert(Car.brand, Car.start());
-    
-    
-//The same example as above but using [Object constructors function]
-function Car(brand, color, doors){
-    this.brand=brand;
-    this.color=color;
-    this.doors=doors;
-    
-    function start() {
-        alert("Starting...");
-    }
-}
-    
-let myCar = new Car("Audi", "black", 5);
-myCar.start();`
-    );
-
-    new Editor(
         "js-condition-editor",
         ` let n = 5;
 
