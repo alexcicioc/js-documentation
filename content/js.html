@@ -731,11 +731,9 @@ function sum(a, b) {
                     <p>The condition is evaluated after executing the statement,
                         resulting in the specified statement executing at least once</p>
                     <img src="images/dowhile.jpg" /></br>
-                    <button onclick="runCode(event)">Run</button>
-                    <div id="js-dowhile-editor" style="height: 150px;"></div>
-                    <div class="form-group"> <label for="exampleInputFile" style="display: none;">Result</label>
-                        <p class="help-block result">Click Run button to see the result.</p>
-                    </div>
+                    <iframe class="editor"
+                        src="content/editor.html?value=bGV0IHJlc3VsdCA9ICIiOyAvLyBXZSB3YW50IHRvIGZvcmNlIHRoZSBvdXRwdXQgdG8gYmUgc3RyaW5nCmxldCBpID0gMDsKICAgIApkbyB7CiAgICBpID0gaSArIDE7CiAgICAgLy8gV2UncmUgYWN0dWFsbHkgZG9pbmcgY29uY2F0ZW5hdGlvbiBoZXJlIHNpbmNlIHJlc3VsdCBpcyBzdHJpbmcKICAgIHJlc3VsdCA9IHJlc3VsdCArIGk7Cn0gd2hpbGUgKGkgPCA1KTsKICAgIApjb25zb2xlLmxvZyhyZXN1bHQpOw==">
+                    </iframe>
                 </div>
                 <!-- End While statement -->
                 <!-- For statement -->
@@ -745,79 +743,39 @@ function sum(a, b) {
                             style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
                         For loop</h2>
                     <p>A <code class="inline">for loop</code> repeats until a specified condition evaluates to
-                        <code class="inline">false</code>.
-                        <p>The JavaScript for loop is similar to the Java and C for loop. </p>
-                        <img src="images/for.PNG" />
-                        <p>When a for loop executes, the following occurs:</p>
-                        <ul>
-                            <li style="list-style: decimal">The initializing expression
-                                <code class="inline">initialExpression</code> is executed. This expression usually
-                                initializes
-                                one
-                                or more loop counters. This expression can also declare variables</li>
-                            <li style="list-style: decimal">The <code class="inline">condition</code> expression is
-                                evaluated.
-                                If
-                                the value of <strong>condition</strong> is true, the loop statements execute. If
-                                the
-                                value of <strong>condition</strong> is false, the for loop terminates.</li>
-                            <li style="list-style: decimal">The <code class="inline">statement</code> executes. To
-                                execute
-                                multiple
-                                statements, <code class="inline">use a block statement ({ ... })</code> to group those
-                                statements.
-                            </li>
-                            <li style="list-style: decimal">If present, the update expression
-                                <code class="inline">incrementExpression</code> is executed.</li>
-                            <li style="list-style: decimal">Control returns to step 2.</li>
-                        </ul>
-                        <button onclick="runCode(event)">Run</button>
-                        <div id="js-for-editor" style="height: 50px;"></div>
-                        <div class="form-group"> <label for="exampleInputFile" style="display: none;">Result</label>
-                            <p class="help-block result">Click Run button to see the result.</p>
-                        </div>
+                        <code class="inline">false</code>.</p>
+                    <p>The JavaScript for loop is similar to the Java and C for loop. </p>
+                    <img src="images/for.PNG" />
+                    <p>When a for loop executes, the following occurs:</p>
+                    <ul>
+                        <li style="list-style: decimal">
+                            The initializing expression
+                            <code class="inline">initialExpression</code> is executed. This expression usually
+                            initializes
+                            one
+                            or more loop counters. This expression can also declare variables</li>
+                        <li style="list-style: decimal">The <code class="inline">condition</code> expression is
+                            evaluated.
+                            If
+                            the value of <strong>condition</strong> is true, the loop statements execute. If
+                            the
+                            value of <strong>condition</strong> is false, the for loop terminates.</li>
+                        <li style="list-style: decimal">The <code class="inline">statement</code> executes. To
+                            execute
+                            multiple
+                            statements, <code class="inline">use a block statement ({ ... })</code> to group those
+                            statements.
+                        </li>
+                        <li style="list-style: decimal">If present, the update expression
+                            <code class="inline">incrementExpression</code> is executed.</li>
+                        <li style="list-style: decimal">Control returns to step 2.</li>
+                    </ul>
+                    <iframe class="editor"
+                        src="content/editor.html?value=Ly8gU2ltcGxlIGV4YW1wbGUgd2hlbiB3ZSBpbmNyZW1lbnQgaSAKLy8gYW5kIGxvZyBpdCBpbiB0aGUgY29uc29sZSBhdCBlYWNoIHN0ZXAKZm9yIChsZXQgaSA9IDA7IGkgPCA0OyBpKyspIHsKIGNvbnNvbGUubG9nKGkpOwp9CgovLyBJbiB0aGlzIGV4YW1wbGUgd2UncmUgZG9pbmcgaXRlcmF0aW9ucyBlcXVhbCB0byB0aGUgY2FyIGFycmF5IGxlbmd0aApjb25zdCBjYXJzID0gWydEYWNpYScsICdNYXRpeicsICdMYXN0dW4nLCAnT2x0Y2l0J107CgovLyBHbyB0aHJvdWdoIGVhY2ggZWxlbWVudCBvZiB0aGUgYXJyYXkgYW5kIG1ha2UgaXQgdG8gdXBwZXIgY2FzZQpmb3IgKGxldCBpID0gMDsgaSA8IGNhcnMubGVuZ3RoOyBpKyspIHsKICAgIGNhcnNbaV0gPSBjYXJzW2ldLnRvVXBwZXJDYXNlKCk7Cn0KCmNvbnNvbGUubG9nKGNhcnMpOw==">
+                    </iframe>
                 </div>
                 <!-- End For statement -->
-                <!-- For...in statement -->
-                <div id="js-forin" style="display:block">
-                    <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
-                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
-                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
-                        For...in</h2>
-                    <p>The for...in statement iterates over enumerable properties of an object.</p>
-                    <p>A different property name is assigned to variable(in our case <code class="inline">prop</code>)
-                        on each
-                        iteration.</p>
-                    <p>Object whose enumerable properties are iterated over.</p>
-                    <button onclick="runCode(event)">Run</button>
-                    <div id="js-forin-editor" style="height: 150px;"></div>
-                    <div class="form-group"> <label for="exampleInputFile" style="display: none;">Result</label>
-                        <p class="help-block result">Click Run button to see the result.</p>
-                    </div>
-                </div>
-                <!-- End For...in statement -->
-                <!-- For...of statement -->
-                <div id="js-forof" style="display:block">
-                    <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
-                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
-                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
-                        For...of</h2>
-                    <p>The <code class="inline">for...of</code> statement creates a loop iterating over iterable
-                        objects,
-                        including: built-in String, Array, Array-like objects, etc</p>
-                    <h4>Syntax</h4>
-                    <img src="images/forof.PNG">
-                    <p><code class="inline">variable</code> - On each iteration a value of a different property is
-                        assigned to
-                        variable. variable may be declared with <code class="inline">const, let, or var.</code></p>
-                    <p><code class="inline">iterable</code> - Object whose iterable properties are iterated.</p>
-                    <button onclick="runCode(event)">Run</button>
-                    <div id="js-forof-editor" style="height: 280px;"></div>
-                    <div class="form-group"> <label for="exampleInputFile" style="display: none;">Result</label>
-                        <p class="help-block result">Click Run button to see the result.</p>
-                    </div>
-                </div>
-                <!-- End For...of statement -->
+
                 <!-- What is a function -->
                 <div id="js-whatIsAFunction" style="display:block">
                     <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
@@ -874,11 +832,9 @@ function sum(a, b) {
                             Function
                             object.</li>
                     </ul>
-                    <button onclick="runCode(event)">Run</button>
-                    <div id="js-function-editor" style="height: 320px;"></div>
-                    <div class="form-group"> <label for="exampleInputFile" style="display: none;">Result</label>
-                        <p class="help-block result">Click Run button to see the result.</p>
-                    </div>
+                    <iframe class="editor"
+                        src="content/editor.html?value=Ly8gRnVuY3Rpb24gRGVjbGFyYXRpb24KZnVuY3Rpb24gZmlyc3RGdW5jdGlvbihwYXJhbWV0ZXJzKSB7CiAgICAvLyB3aGF0ZXZlciBmYW5jeSBjb2RlIHlvdXIgaGVhcnQgZGVzaXJlcwp9CgpmdW5jdGlvbiBzaG93UGFyYW1zKHBhcmFtMSwgcGFyYW0yKXsKICBjb25zb2xlLmxvZyhwYXJhbTEpOwogIGNvbnNvbGUubG9nKHBhcmFtMik7Cn0KCi8vIENhbGxpbmcgdGhlIHByZXZpb3MgZGVjbGFyZWQgZnVuY3Rpb24KY29uc3QgcGFyYW0xID0gdHJ1ZTsKY29uc3QgcGFyYW0yID0gZmFsc2U7CnNob3dQYXJhbXMocGFyYW0xLCBwYXJhbTIpOw==">
+                    </iframe>
                 </div>
                 <!-- End Define a function -->
                 <!-- Invoke a function -->
@@ -903,11 +859,9 @@ function sum(a, b) {
                         specified.
                     </p>
                     <p>Below we'll find some examples</p>
-                    <button onclick="runCode(event)">Run</button>
-                    <div id="js-functionreturn-editor" style="height: 180px;"></div>
-                    <div class="form-group"> <label for="exampleInputFile" style="display: none;">Result</label>
-                        <p class="help-block result">Click Run button to see the result.</p>
-                    </div>
+                    <iframe class="editor"
+                        src="content/editor.html?value=ZnVuY3Rpb24gc3VtKGEsIGIpIHsKICAgIHJldHVybiBhICsgYjsKfQoKLy8gQ2FsbGluZyB0aGUgc3VtIGZ1bmN0aW9uIHdpdGggdHdvIG51bWJlcnMgYXMgcGFyYW1ldGVycwovLyBXZSdyZSBzYXZpbmcgdGhlIHJldHVybiB2YWx1ZSBvZiBzdW0gaW5zaWRlIG9mIHRoZSB2YXJpYWJsZSByZXN1bHQKY29uc3QgcmVzdWx0ID0gc3VtKDQsIDcpOwpjb25zb2xlLmxvZygnU3VtIG9mIDQgYW5kIDcgaXM6ICcgKyByZXN1bHQpOwoKLy8gV2UncmUgZG91YmxpbmcgYSBnaXZlbiBudW1iZXIncyB2YWx1ZSBidXQgbm90IHJldHVybmluZyBhbnl0aGluZwpmdW5jdGlvbiBkb3VibGUobnVtYmVyKSB7CiAgICBudW1iZXIgPSBudW1iZXIgKiAyOwogICAgY29uc29sZS5sb2coJ251bWJlciA9ICcgKyBudW1iZXIpOwp9Cgpjb25zb2xlLmxvZygnUmV0dXJuIHZhbHVlIG9mIGRvdWJsZSg2KTogJyArIGRvdWJsZSg2KSk7">
+                    </iframe>
                 </div>
                 <!-- End Function Return -->
                 <div id="context" style="display:block">
@@ -1310,8 +1264,6 @@ function sum(a, b) {
                             <li><a href="#js-while-condition">While</a></li>
                             <li><a href="#js-dowhile-condition">Do While</a></li>
                             <li><a href="#js-for">For</a></li>
-                            <li><a href="#js-forin">For...in</a></li>
-                            <li><a href="#js-forof">For...off</a></li>
                         </ul>
                     </li>
                     <li>
