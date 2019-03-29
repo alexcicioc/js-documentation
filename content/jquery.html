@@ -423,25 +423,70 @@ The title of the emphasis is:&#x3C;div&#x3E;&#x3C;/div&#x3E;
                     While the show method removes the display property:
                     <pre><code>&lt;p&gt;If you click on the &quot;Hide&quot; button, I will disappear.&lt;/p&gt;</code></pre>
                 </p>
-                <h4>Example</h3>
-                    <pre><code>$("#hide").click(function(){
+                <h4>Example</h4>
+                <pre><code>$("#hide").click(function(){
   $("p").hide();
 });
           
 $("#show").click(function(){
   $("p").show();
 });</code></pre>
-                    <a class="btn btn-primary" target="_blank"
-                        href="https://www.w3schools.com/jquERY/tryit.asp?filename=tryjquery_hide_show">
-                        Try example
-                    </a>
+                <a class="btn btn-primary" target="_blank"
+                    href="https://www.w3schools.com/jquERY/tryit.asp?filename=tryjquery_hide_show">
+                    Try example
+                </a>
+
+                <h3>The animate() Method</h3>
+                <p>The jQuery <code class="inline">animate()</code> method is used to create custom animations.</p>
+                <b>Syntax:</b>
+                <pre><code>$(selector).animate({params},speed,callback);</code></pre>
+                <p>The required <code class="inline">{params}</code> parameter defines the CSS properties to be
+                    animated.</p>
+                <p>The optional <code class="inline">speed</code> parameter specifies the duration of the effect. It
+                    can take the following values: "slow", "fast", or
+                    milliseconds.</p>
+                <p>The optional <code class="inline">callback</code> parameter is a function to be executed after
+                    the
+                    animation completes.</p>
+                <p>The following example demonstrates a simple use of the <code class="inline">animate()</code>
+                    method; it moves
+                    a &lt;div&gt; element to the right, until it has reached a left property of 250px:</p>
+                <pre><code>$("button").click(function(){
+    $("div").animate({left: '250px'});
+}); </code></pre>
+                <a class="btn btn-primary" target="_blank"
+                    href="https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_animation1">
+                    Try example
+                </a>
+                <h4>Manipulate Multiple CSS Properties</h4>
+                <pre><code>$("button").click(function(){
+    $("div").animate({
+        left: '250px',
+        opacity: '0.5',
+        height: '150px',
+        width: '150px'
+    });
+}); </code></pre>
+
+                <a class="btn btn-primary" target="_blank"
+                    href="https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_animation1_multicss">
+                    Try example
+                </a>
+                <h4>Using Relative Values</h4>
+                <pre><code>$("button").click(function(){
+    $("div").animate({
+        left: '250px',
+        height: '+=150px',
+        width: '+=150px'
+    });
+});</code></pre>
+
+                <a class="btn btn-primary" target="_blank"
+                    href="https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_animation1_relative">
+                    Try example
+                </a>
             </div>
 
-            <!-- <div class="section">
-                <h2 class="page-header">
-                    AAA
-                </h2>
-            </div> -->
 
         </div>
         <div class="sticky col-md-3" role="complementary">
