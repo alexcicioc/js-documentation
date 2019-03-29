@@ -286,7 +286,7 @@ $("#btn3").click(function(){
                 </a>
 
 
-                <h3>remove() Method</h3>
+                <h3>remove()</h3>
                 <p>The jQuery <code class="inline">remove()</code> method removes the selected element(s) and its child
                     elements.</p>
                 <pre><code>$("#div1").remove();</code></pre>
@@ -296,7 +296,7 @@ $("#btn3").click(function(){
                     Try example
                 </a>
 
-                <h3>empty() Method</h3>
+                <h3>empty()</h3>
                 <p>The jQuery <code class="inline">empty()</code> method removes the child elements of the selected
                     element(s).</p>
                 <pre><code>$("#div1").empty();</code></pre>
@@ -306,7 +306,7 @@ $("#btn3").click(function(){
                     Try example
                 </a>
 
-                <h3>append() Method</h3>
+                <h3>append()</h3>
                 <p>The jQuery <code class="inline">append()</code> method inserts content AT THE END of the selected
                     HTML elements.</p>
                 <pre><code>$("p").append("Some appended text.");</code></pre>
@@ -315,7 +315,7 @@ $("#btn3").click(function(){
                     href="https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_html_append">
                     Try example
                 </a>
-                <h3>prepend() Method</h3>
+                <h3>prepend()</h3>
                 <p>The jQuery <code class="inline">prepend()</code> method inserts content AT THE BEGINNING of the
                     selected HTML elements.</p>
                 <pre><code>$("p").prepend("Some prepended text.");</code></pre>
@@ -324,8 +324,8 @@ $("#btn3").click(function(){
                     Try example
                 </a>
 
-                <h3>attr() Method</h3>
-                <p>The .attr() method gets the attribute value for only the first element in the matched set. To get the
+                <h3>attr()</h3>
+                <p>The .attr() gets the attribute value for only the first element in the matched set. To get the
                     value for each element individually, use a looping construct such as jQuery's .each() or .map()
                     method.</p>
                 <p>In the following example we are extracting the <code class="inline">title</code> attribute from the
@@ -342,7 +342,7 @@ The title of the emphasis is:&#x3C;div&#x3E;&#x3C;/div&#x3E;
             </div>
             <div class="section">
                 <h2 class="page-header">CSS Manipulation</h2>
-                <h3>addClass() Method</h3>
+                <h3>addClass()</h3>
                 <p>The following example shows how to add class attributes to different
                     elements. Of course you can select multiple elements, when adding classes:</p>
                 <pre><code>$("button").click(function(){
@@ -363,7 +363,7 @@ The title of the emphasis is:&#x3C;div&#x3E;&#x3C;/div&#x3E;
                     href="https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_dom_addclass2">
                     Try example
                 </a>
-                <h3>removeClass() Method</h3>
+                <h3>removeClass()</h3>
                 <p>The following example shows how to remove a specific class attribute from different elements:</p>
                 <pre><code>$("button").click(function(){
     $("h1, h2, p").removeClass("blue");
@@ -373,7 +373,7 @@ The title of the emphasis is:&#x3C;div&#x3E;&#x3C;/div&#x3E;
                     Try example
                 </a>
 
-                <h3>css() Method</h3>
+                <h3>css()</h3>
                 <p>The <code class="inline">css()</code> method sets or returns one or more style properties for
                     the selected elements.</p>
                 <p>To return the value of a specified CSS property, use the following syntax:</p>
@@ -436,7 +436,7 @@ $("#show").click(function(){
                     Try example
                 </a>
 
-                <h3>The animate() Method</h3>
+                <h3>The animate()</h3>
                 <p>The jQuery <code class="inline">animate()</code> method is used to create custom animations.</p>
                 <b>Syntax:</b>
                 <pre><code>$(selector).animate({params},speed,callback);</code></pre>
@@ -487,6 +487,86 @@ $("#show").click(function(){
                 </a>
             </div>
 
+            <div class="section">
+                <h2 class="page-header">
+                    jQuery Event Methods
+                </h2>
+                <p>All the different visitors' actions that a web page can respond to are called events.
+                </p>
+                <p>An event represents the precise moment when something happens.</p>
+                <p>Examples:</p>
+                <ul>
+                    <li>moving a mouse over an element</li>
+                    <li>selecting a radio button</li>
+                    <li>clicking on an element</li>
+                </ul>
+                <p>The term <b>"fires/fired"</b> is often used with events. Example:
+                    "The keypress event is fired, the moment you press a key".</p>
+                <p>Here are some common DOM events:</p>
+                <table class="table table-bordered table-striped">
+                    <tbody>
+                        <tr>
+                            <th style="width:23%">Mouse Events</th>
+                            <th style="width:25%">Keyboard Events</th>
+                            <th style="width:22%">Form Events</th>
+                            <th>Document/Window Events</th>
+                        </tr>
+                        <tr>
+                            <td>click</td>
+                            <td>keypress</td>
+                            <td>submit</td>
+                            <td>load</td>
+                        </tr>
+                        <tr>
+                            <td>dblclick</td>
+                            <td>keydown</td>
+                            <td>change</td>
+                            <td>resize</td>
+                        </tr>
+                        <tr>
+                            <td>mouseenter</td>
+                            <td>keyup</td>
+                            <td>focus</td>
+                            <td>scroll</td>
+                        </tr>
+                        <tr>
+                            <td>mouseleave</td>
+                            <td>&nbsp;</td>
+                            <td>blur</td>
+                            <td>unload</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>click()</h3>
+                <p>The click() attaches an event handler function to an HTML element.</p>
+                <p>The function is executed when the user clicks on the HTML element.</p>
+                <p>The following example says: When a click event fires on a <code class="inline">&lt;p&gt;</code>
+                    element; hide
+                    the current <code class="inline">&lt;p&gt;</code> element:</p>
+                <pre><code>$("p").click(function(){
+    $(this).hide();
+});</code></pre>
+                <a class="btn btn-primary" target="_blank"
+                    href="https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_click">
+                    Try example
+                </a>
+
+                <h3>keydown()</h3>
+                <p>The keydown() attaches an event handler function to an HTML element.</p>
+                <p>The function is executed when the user presses any keyboard key on the HTML element.</p>
+                <p>The following example returns which keyboard key was pressed:</p>
+                <p><b>Tip:</b> Use the <code class="inline">event.which</code> property to return which keyboard
+                    key was pressed.</p>
+                <pre><code>$("input").keydown(function(event){ 
+    $("div").html("Key: " + event.which);
+});</code></pre>
+
+                <a class="btn btn-primary" target="_blank"
+                    href="https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_event_which">
+                    Try example
+                </a>
+            </div>
 
         </div>
         <div class="sticky col-md-3" role="complementary">
