@@ -901,11 +901,9 @@ function sum(a, b) {
                         </li>
                     </ul>
                     <p>Below we will explain better the context by examples</p>
-                    <button onclick="runCode(event)">Run</button>
-                    <div id="ctx-editor" style="height: 170px;"></div>
-                    <div class="form-group"> <label for="exampleInputFile" style="display: none;">Result</label>
-                        <p class="help-block result"></p>
-                    </div>
+                    <iframe class="editor"
+                        src="content/editor.html?value=Y29uc3QgZHJpbmsgPSAnd2luZSc7CgovLyBJbml0aWFsaXplIHRoZSBmb28gb2JqZWN0CmNvbnN0IGZvbyA9IHsKICBkcmluazogImJlZXIiLAogIGdldERyaW5rOiBmdW5jdGlvbigpewogICAgcmV0dXJuIGRyaW5rOwogIH0gICAgCn07CgovLyBDYWxsIHRoZSBnZXRkRHJpbmsgbWV0aG9kIG9uIHRoZSBmb28gb2JqZWN0CmNvbnNvbGUubG9nKGZvby5nZXREcmluaygpKTsgLy8gdGhpcyBzaG91bGQgYmUgYmVlciwgcmlnaHQgPw==">
+                    </iframe>
                 </div>
                 <div id="context-2" style="display:block">
                     <p>
@@ -919,11 +917,9 @@ function sum(a, b) {
                         context of
                         the object
                         <code class="inline">foo</code>?</p>
-                    <button onclick="runCode(event)">Run</button>
-                    <div id="ctx-editor-1" style="height: 170px;"></div>
-                    <div class="form-group"> <label for="exampleInputFile" style="display: none;">Result</label>
-                        <p class="help-block result"></p>
-                    </div>
+                    <iframe class="editor"
+                        src="content/editor.html?value=Y29uc3QgZHJpbmsgPSAnd2luZSc7CgovLyBJbml0aWFsaXplIHRoZSBmb28gb2JqZWN0CmNvbnN0IGZvbyA9IHsKICBkcmluazogImJlZXIiLAogIGdldERyaW5rOiBmdW5jdGlvbigpIHsKICAgIC8vIHdlJ3JlIHJldHVybmluZyB0aGUgZHJpbmsgcHJvcGVydHkgb2YgZm9vIHVzaW5nIHRoaXMKICAgIHJldHVybiB0aGlzLmRyaW5rOwogIH0gICAgCn07CgovLyBDYWxsIHRoZSBnZXRkRHJpbmsgbWV0aG9kIG9uIHRoZSBmb28gb2JqZWN0CmNvbnNvbGUubG9nKGZvby5nZXREcmluaygpKTs=">
+                    </iframe>
                     <p>Note
                         <code>the only change we have made is that in the anonymous function that is assigned to “getDrink”, we return “this.drink” instead of “drink”</code>
                     </p>
@@ -938,11 +934,9 @@ function sum(a, b) {
                         <code class="inline">foo</code>
                     </p>
                     <p>Now we assign those on the fly.</p>
-                    <button onclick="runCode(event)">Run</button>
-                    <div id="ctx-editor-2" style="height: 170px;"></div>
-                    <div class="form-group"> <label for="exampleInputFile" style="display: none;">Result</label>
-                        <p class="help-block result"></p>
-                    </div>
+                    <iframe class="editor"
+                        src="content/editor.html?value=Y29uc3QgZHJpbmsgPSAnd2luZSc7Cgpjb25zdCBmb28gPSB7fTsKIApmb28uZHJpbmsgPSAiYmVlciI7CiAgIApmb28uZ2V0RHJpbmsgPSBmdW5jdGlvbigpIHsKICByZXR1cm4gdGhpcy5kcmluazsgLy8gdGhlIGNvbnRleHQgKHRoaXMpIGhlcmUgaXMgc3RpbGwgZm9vCn07CiAgIApjb25zb2xlLmxvZyhmb28uZ2V0RHJpbmsoKSk7Cg==">
+                    </iframe>
                     <p>Note
                         <code>the only change we have made is that in the anonymous function that is assigned to “getDrink”, we return “this.drink” instead of “drink”</code>
                     </p>
@@ -981,11 +975,9 @@ function sum(a, b) {
                             object.</b></li>
                         <li>In a browser window the Global object is <code class="inline">[object Window]</code></li>
                     </ul>
-                    <button onclick="runCode(event)">Run</button>
-                    <div id="this-alone-editor" style="height: 30px;"></div>
-                    <div class="form-group"> <label for="exampleInputFile" style="display: none;">Result</label>
-                        <p class="help-block result"></p>
-                    </div>
+                    <iframe class="editor"
+                        src="content/editor.html?value=Y29uc3QgeCA9IHRoaXM7Ci8vIEJldHRlciBkbyB0aGlzIGluIHRoZSBicm93c2VyJ3MgY29uc29sZSBiZWNhdXNlIHRoZSBvdXRwdXQgaXMgaHVnZQpjb25zb2xlLmxvZyh4KTsKCi8vIHRoaXMgc2hvdWxkIGJlIHRoZSBzYW1lIHdpdGggd2luZG93IGluIHRoZSBnbG9iYWwgY29udGV4dApjb25zb2xlLmxvZyh3aW5kb3cpOw==">
+                    </iframe>
                 </div>
                 <div id="this-in-a-function" style="display:block">
                     <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
@@ -1001,11 +993,9 @@ function sum(a, b) {
                             <code class="inline">[object Window]</code>.</code>
                         </li>
                     </ul>
-                    <button onclick="runCode(event)">Run</button>
-                    <div id="this-function-editor" style="height: 100px;"></div>
-                    <div class="form-group"> <label for="exampleInputFile" style="display: none;">Result</label>
-                        <p class="help-block result"></p>
-                    </div>
+                    <iframe class="editor"
+                        src="content/editor.html?value=ZnVuY3Rpb24gbXlGdW5jdGlvbigpIHsKICByZXR1cm4gdGhpczsKfQoKLy8gQmV0dGVyIHJ1biB0aGlzIGNvZGUgaW4gdGhlIGJyb3dzZXIncyBjb25zb2xlIGJlY2F1c2UgdGhlIG91dHB1dCBpcyBodWdlCmNvbnNvbGUubG9nKG15RnVuY3Rpb24oKSk7">
+                    </iframe>
                 </div>
                 <div id="this-in-an-object" style="display:block">
                     <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
@@ -1018,11 +1008,9 @@ function sum(a, b) {
                             the
                             function)</li>
                     </ul>
-                    <button onclick="runCode(event)">Run</button>
-                    <div id="this-object-editor" style="height: 175px;"></div>
-                    <div class="form-group"> <label for="exampleInputFile" style="display: none;">Result</label>
-                        <p class="help-block result"></p>
-                    </div>
+                    <iframe class="editor"
+                        src="content/editor.html?value=Y29uc3QgcGVyc29uID0gewogIGZpcnN0TmFtZTogIkpvaG4iLAogIGxhc3ROYW1lOiAiRG9lIiwKICBteUZ1bmN0aW9uOiBmdW5jdGlvbigpIHsKICAgIHJldHVybiB0aGlzOwogIH0KfTsKCi8vIFRoZSBmdW5jdGlvbiByZXR1cm5zIHRoaXMsIHRoZSBvdXRwdXQgd2lsbCBiZSB0aGUgcGVyc29uIG9iamVjdApjb25zb2xlLmxvZyhwZXJzb24ubXlGdW5jdGlvbigpKTsK">
+                    </iframe>
                 </div>
                 <div id="this-in-a-method" style="display:block">
                     <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
@@ -1036,11 +1024,9 @@ function sum(a, b) {
                         <li><code class="inline">this</code> refers to the person object.</li>
                         <li>The <b>person</b> object is the <b>owner</b> of the <b>fullName</b> method.</li>
                     </ul>
-                    <button onclick="runCode(event)">Run</button>
-                    <div id="this-object-method-editor" style="height: 195px;"></div>
-                    <div class="form-group"> <label for="exampleInputFile" style="display: none;">Result</label>
-                        <p class="help-block result"></p>
-                    </div>
+                    <iframe class="editor"
+                        src="content/editor.html?value=Y29uc3QgcGVyc29uID0gewogIGZpcnN0TmFtZTogJ0pvaG4nLAogIGxhc3ROYW1lOiAnRG9lJywKICBteUZ1bmN0aW9uOiBmdW5jdGlvbigpIHsKICAgIHJldHVybiB0aGlzOwogIH0sCiAgZ2V0RnVsbE5hbWUgOiBmdW5jdGlvbigpIHsKICAgIGNvbnNvbGUubG9nKHRoaXMpOwogICAgcmV0dXJuIHRoaXMuZmlyc3ROYW1lICsgIiAiICsgdGhpcy5sYXN0TmFtZTsKICB9Cn07Cgpjb25zb2xlLmxvZyhwZXJzb24uZ2V0RnVsbE5hbWUoKSk7Cg==">
+                    </iframe>
                 </div>
             </div>
 
