@@ -333,8 +333,23 @@ let z = true;</code></pre>
                                     <td>x &lt;= 8</td>
                                     <td>true</td>
                                 </tr>
+                                <tr style="background-color:#f5f5f5;">
+                                    <td>&&</td>
+                                    <td>AND (both conditions are true)</td>
+                                    <td>1 === 1 && 1 > 2 (true && false)</td>
+                                    <td>false</td>
+                                </tr>
+                                <tr style="background-color:#ffffff;">
+                                    <td>||</td>
+                                    <td>OR (any of the conditions is true)</td>
+                                    <td>1 === 1 || 1 > 2 (true || false)</td>
+                                    <td>true</td>
+                                </tr>
                             </tbody>
                         </table>
+                        <iframe class="editor"
+                            src="content/editor.html?value=Y29uc3QgeCA9IDU7CmNvbnN0IHkgPSA4OwoKY29uc29sZS5sb2coJ3ggPT0gNSA9ICcgKyAoeCA9PSA1KSk7CmNvbnNvbGUubG9nKCd4ID09ICI1IiA9ICcgKyAoeCA9PSAiNSIpKTsKY29uc29sZS5sb2coJ3ggPT09ICI1IiA9ICcgKyAoeCA9PT0gIjUiKSk7CmNvbnNvbGUubG9nKCd4ICE9IHkgPSAnICsgKHggIT0geSkpOwpjb25zb2xlLmxvZygneCAhPT0gNSA9ICcgKyAoeCAhPT0gNSkpOwpjb25zb2xlLmxvZygneCAhPT0gIjUiID0gJyArICh4ICE9PSAiNSIpKTsKY29uc29sZS5sb2coJ3ggPiB5ID0gJyArICh4ID4geSkpOwpjb25zb2xlLmxvZygneCA8IHkgPSAnICsgKHggPCB5KSk7CmNvbnNvbGUubG9nKCd4ID4gMSAmJiB4IDwgNSA9ICcrICh4ID4gMSAmJiB4IDwgNSkpOwpjb25zb2xlLmxvZygneCA+IDEgfHwgeCA8IDUgPSAnKyAoeCA+IDEgfHwgeCA8IDUpKTsKY29uc29sZS5sb2coJ3ggPCAxIHx8IHggPiA1ID0gJysgKHggPCAxIHx8IHggPiA1KSk7">
+                        </iframe>
                     </div>
                 </div>
                 <div id="op-type" style="display:block">
@@ -410,7 +425,7 @@ let z = true;</code></pre>
                     </ul>
 
                     <iframe class="editor"
-                        src="content/editor.html?value=Y29uc29sZS5sb2coMTA+OSk7Cgpjb25zdCB2YWx1ZSA9IHRydWU7CmNvbnN0IGFub3RoZXJWYWx1ZSA9IG5ldyBCb29sZWFuKGZhbHNlKTsKCmNvbnNvbGUubG9nKHZhbHVlKTsKY29uc29sZS5sb2coYW5vdGhlclZhbHVlKTs=">
+                        src="content/editor.html?value=Y29uc3QgdmFsdWUgPSB0cnVlOwpjb25zdCBhbm90aGVyVmFsdWUgPSBmYWxzZTsKCmNvbnNvbGUubG9nKHZhbHVlKTsKY29uc29sZS5sb2coYW5vdGhlclZhbHVlKTsKLy8gQ29uZGl0aW9ucyByZXR1cm4gYSBib29sZWFuIGFmdGVyIHRoZXkgYXJlIGV2YWx1YXRlZApjb25zb2xlLmxvZygxMCA+IDkpOwpjb25zb2xlLmxvZyh2YWx1ZSAmJiBhbm90aGVyVmFsdWUpOw==">
                     </iframe>
                 </div>
                 <div id="js-number" style="display:block">
@@ -435,7 +450,7 @@ let z = true;</code></pre>
                     </ul>
 
                     <iframe class="editor"
-                        src="content/editor.html?value=CmxldCBpbnRlZ2VyTnVtYmVyID0gMTIzOwpsZXQgZmxvYXRpbmdOdW1iZXIgPSAxMi4zNDU7CmNvbnNvbGUubG9nKCdpbnRlZ2VyTnVtYmVyOiAnICsgaW50ZWdlck51bWJlcik7CmNvbnNvbGUubG9nKCdmbG9hdGluZ051bWJlcjogJyArIGZsb2F0aW5nTnVtYmVyKTsKY29uc29sZS5sb2coJzEgLyAwOiAnICsgKDEgLyAwKSk7CmNvbnNvbGUubG9nKCcxIC8gMDogJyArICgtMSAvIDApKTsKY29uc29sZS5sb2coJyJzdHJpbmciIC8gMjogJyArICgic3RyaW5nIiAvIDIpKTsKY29uc29sZS5sb2coJ3t9IC8gMjogJyArICh7fSAvIDIpKTs=">
+                        src="content/editor.html?value=Y29uc29sZS5sb2coMTAwIC8gNSk7Cgpjb25zdCBpbnRlZ2VyTnVtYmVyID0gMTIzOwpjb25zdCBmbG9hdGluZ051bWJlciA9IDEyLjM0NTsKCmNvbnNvbGUubG9nKCdpbnRlZ2VyTnVtYmVyOiAnICsgaW50ZWdlck51bWJlcik7CmNvbnNvbGUubG9nKCdmbG9hdGluZ051bWJlcjogJyArIGZsb2F0aW5nTnVtYmVyKTsKY29uc29sZS5sb2coJzEgLyAwOiAnICsgKDEgLyAwKSk7CmNvbnNvbGUubG9nKCcxIC8gMDogJyArICgtMSAvIDApKTsKY29uc29sZS5sb2coJyJzdHJpbmciIC8gMjogJyArICgic3RyaW5nIiAvIDIpKTsKY29uc29sZS5sb2coJ3t9IC8gMjogJyArICh7fSAvIDIpKTs=">
                     </iframe>
                 </div>
                 <div id="js-string" style="display:block">
