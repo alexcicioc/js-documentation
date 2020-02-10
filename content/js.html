@@ -1098,10 +1098,7 @@ function sum(a, b) {
                 <p>You can test those by playing with the example above.</p>
             </div>
             <div id="js-class-methods" style="display:block">
-                <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
-                        aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
-                        style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
-                    Methods</h4>
+                <h4 class="page-header">Methods</h4>
                 <p>In JavaScript <code class="inline">methods</code> are simple functions that contain code and can be
                     invoked
                     like
@@ -1115,6 +1112,32 @@ function sum(a, b) {
                 <iframe class="editor"
                     src="content/editor.html?value=Y2xhc3MgQW5pbWFsIHsKICAgIGNvbnN0cnVjdG9yKHR5cGUpIHsKICAgICAgICB0aGlzLnR5cGUgPSB0eXBlOwogICAgfQogICAgc3BlYWsoKSB7CiAgICAgICAgc3dpdGNoICh0aGlzLnR5cGUpIHsKICAgICAgICAgICAgY2FzZSAnY2F0JzoKICAgICAgICAgICAgICAgIGNvbnNvbGUubG9nKCdjYXQgbWVvd3MnKTsKICAgICAgICAgICAgICAgIGJyZWFrOwogICAgICAgICAgICBjYXNlICdkb2cnOgogICAgICAgICAgICAgICAgY29uc29sZS5sb2coJ2RvZyBiYXJrcycpOwogICAgICAgICAgICAgICAgYnJlYWs7CiAgICAgICAgICAgIGRlZmF1bHQ6CiAgICAgICAgICAgICAgICBjb25zb2xlLmxvZygnYW5pbWFsIHNwZWFrcycpOwogICAgICAgIH0KICAgIH0KICAgIC8vIFN0YXRpYyBtZWFucyB0aGF0IHlvdSBkb24ndCBuZWVkIGFuIGluc3RhbmNlCiAgICBzdGF0aWMgZWF0KCkgewogICAgICAgIGNvbnNvbGUubG9nKCdUaGUgYW5pbWFsIGlzIGVhdGluZycpOwogICAgfQp9CgpBbmltYWwuZWF0KCk7IC8vIEkgY2FuIGNhbGwgdGhpcyBmdW5jdGlvbiB3aXRob3V0IGFuIGluc3RhbmNlCgpjb25zdCBjYXQgPSBuZXcgQW5pbWFsKCdjYXQnKTsKY2F0LnNwZWFrKCk7IC8vIEkgbmVlZCB0byBjYWxsIHRoaXMgZnVuY3Rpb24gYWZ0ZXIgY3JlYXRpbmcgYW4gaW5zdGFuY2UKLy8gSWYgSSBjYWxsIHNwZWFrIHN0YXRpY2FsbHkgSSdsbCBnZXQgYW4gZXJyb3IgKEkgbmVlZCBhIGNvbnRleHQpCkFuaW1hbC5zcGVhaygpOwo=">
                 </iframe>
+            </div>
+            <div id="js-arrow-function" style="display:block">
+                <h4 class="page-header">Arrow function</h4>
+                <div>
+                    <p>Arrow functions were introduced in <strong>ES6</strong>.</p>
+                    <p>Arrow functions allow us to write shorter function syntax:</p>
+                    <iframe class="editor"
+                        src="content/editor.html?value=Ly8gU3RlcCAxCmhlbGxvID0gZnVuY3Rpb24oKSB7CiAgcmV0dXJuICJIZWxsbyBXb3JsZCEiOwp9CgovLyBTdGVwIDIKaGVsbG8yID0gKCkgPT4gewogIHJldHVybiAiSGVsbG8gV29ybGQgMiEiOwp9CgovLyBTdGVwIDMKaGVsbG8zID0gKCkgPT4gIkhlbGxvIFdvcmxkIDMhIjsKCmFsZXJ0KGhlbGxvKCkpOwphbGVydChoZWxsbzIoKSk7CmFsZXJ0KGhlbGxvMygpKTs=">
+                    </iframe>
+                </div>
+                <p class="page-header">Parameters</h4>
+                    <div>
+                        <p>If you have parameters, you pass them inside the parentheses:</p>
+                        <iframe class="editor"
+                            src="content/editor.html?value=aGVsbG8gPSAodmFsKSA9PiAiSGVsbG8gIiArIHZhbDsKCi8vIElmIHlvdSBoYXZlIG9ubHkgb25lIHBhcmFtZXRlciwgeW91IGNhbiBza2lwIHBhcmVudGhlc2VzCmhlbGxvID0gdmFsID0+ICJIZWxsbyAiICsgdmFsOwoK">
+                        </iframe>
+                    </div>
+                <code><h5 class="page-header">this</h4></code> 
+                    <!-- WIP -->
+                <div>
+                    <p>The handling of <code class="inline">this</code> is also different in arrow functions compared to regular functions. In short, with arrow functions there are no binding of this. Let us take a look at two examples to understand the difference.</p>
+                    <p>The result shows that the first example returns two different objects (window and button), and the second example returns the window object twice, because the window object is the "owner" of the function.</p>
+                    <iframe class="editor"
+                        src="content/editor.html?value=PGJ1dHRvbiBpZD0iYnRuIj5DbGljayBNZSE8L2J1dHRvbj4KPGJ1dHRvbiBpZD0iYnRuMiI+Q2xpY2sgTWUhPC9idXR0b24+Cgp2YXIgaGVsbG87CgpoZWxsbyA9IGZ1bmN0aW9uKCkgewogIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJkZW1vIikuaW5uZXJIVE1MICs9IHRoaXM7Cn0KCi8vVGhlIHdpbmRvdyBvYmplY3QgY2FsbHMgdGhlIGZ1bmN0aW9uOgp3aW5kb3cuYWRkRXZlbnRMaXN0ZW5lcigibG9hZCIsIGhlbGxvKTsKCi8vQSBidXR0b24gb2JqZWN0IGNhbGxzIHRoZSBmdW5jdGlvbjoKZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoImJ0biIpLmFkZEV2ZW50TGlzdGVuZXIoImNsaWNrIiwgaGVsbG8pOwoKdmFyIGhlbGxvOwoKaGVsbG8yID0gKCkgPT4gewogIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJkZW1vIikuaW5uZXJIVE1MICs9IHRoaXM7Cn0KCi8vVGhlIHdpbmRvdyBvYmplY3QgY2FsbHMgdGhlIGZ1bmN0aW9uOgp3aW5kb3cuYWRkRXZlbnRMaXN0ZW5lcigibG9hZCIsIGhlbGxvMik7CgovL0EgYnV0dG9uIG9iamVjdCBjYWxscyB0aGUgZnVuY3Rpb246CmRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJidG4yIikuYWRkRXZlbnRMaXN0ZW5lcigiY2xpY2siLCBoZWxsbzIpOwo=">
+                    </iframe>
+                </div>
             </div>
             <div id="js-getset-methods" style="display:block">
                 <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
@@ -1277,6 +1300,7 @@ function sum(a, b) {
                             <li><a href="#js-define-classes">Define a class</a></li>
                             <li><a href="#js-class-constructor">Constructors</a></li>
                             <li><a href="#js-class-methods">Methods/ Static Methods</a></li>
+                            <li><a href="#js-arrow-function">Arrow function</a></li>
                             <li><a href="#js-getset-methods">Getters and Setters</a></li>
                             <li><a href="#js-class-inheritance">Inheritance</a></li>
                         </ul>
@@ -1284,6 +1308,21 @@ function sum(a, b) {
                     <li>
                         <a href="#js-math" onclick="showHiddenList(this)">Math Library</a>
                     </li>
+
+
+                    <li>
+                        <a href="#js-classes" onclick="showHiddenList(this)">Classes (ES6 syntax)</a>
+                        <ul class="arrow" style="display:none">
+                            <li><a href="#js-define-classes">Define a class</a></li>
+                            <li><a href="#js-class-constructor">Constructors</a></li>
+                            <li><a href="#js-class-methods">Methods/ Static Methods</a></li>
+                            <li><a href="#js-getset-methods">Getters and Setters</a></li>
+                            <li><a href="#js-class-inheritance">Inheritance</a></li>
+                        </ul>
+                    </li>
+
+
+
                 </ul>
             </nav>
         </div>
