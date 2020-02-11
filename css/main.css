@@ -112,3 +112,7 @@ ul.nav.nav-pills>li>span{
   padding: 10px 15px;
   border-radius: 4px;
 }
+
+div.footer-space{
+  margin-bottom: 10%;
+}

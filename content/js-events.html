@@ -1,0 +1,127 @@
+<div class="bs-docs-header" id="content" tabindex="-1">
+
+    <div id="js-overview" class="container">
+        <h1>JavaScript Events</h1>
+        <div id="carbonads-js">
+            <span>
+                <span class="carbon-wrap">
+                    <img src="images/js-events.png" alt="" style="border-radius: 10px;" width="75%" />
+                </span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div id="js-details" class="container bs-docs-container footer-space">
+    <div class="row">
+        <div class="col-md-9" role="main">
+            <!-- Events -->
+            <div id="js-events" style="display:block">
+                <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                        aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                        style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                    Events</h2>
+                <p><b>Events</b> are actions or occurrences that happen in the system you are programming — the system produces (or "fires") a signal of some kind when an event occurs, and also provides a mechanism by which some kind of action can be automatically taken (that is, some code running) when the event occurs. For example in an airport when the runway is clear for a plane to take off, a signal is communicated to the pilot, and as a result, they commence piloting the plane.</p>
+                <p><img alt="" src="https://mdn.mozillademos.org/files/14077/MDN-mozilla-events-runway.png" style="display: block; margin: 0px auto;"></p>
+                <p>There are a lot of different types of events that can occur, for example:
+                    <ul>
+                        <li>The user clicking the mouse over a certain element or hovering the cursor over a certain element.</li>
+                        <li>The user pressing a key on the keyboard.</li>
+                        <li>The user resizing or closing the browser window.</li>
+                        <li>A web page finishing loading.</li>
+                        <li>A form being submitted.</li>
+                        <li>A video being played, or paused, or finishing play.</li>
+                        <li>An error occurring.</li>
+                    </ul>
+                </p>
+                <h4><strong>onclick</strong></h4>
+                <p>Let's look at a simple example to explain what we mean here. You've already seen events and event handlers used in many of the examples in this course already, but let's recap just to cement our knowledge. In the following example, we have a single <code class="inline">button</code>, which when pressed, makes the background change to a random color:</p>
+                <p>The JavaScript looks like so:</p>
+                <iframe class="editor"
+                    src="content/editor.html?value=Y29uc3QgYnRuID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcignYnV0dG9uJyk7CgpmdW5jdGlvbiByYW5kb20obnVtYmVyKSB7CiAgcmV0dXJuIE1hdGguZmxvb3IoTWF0aC5yYW5kb20oKSAqIChudW1iZXIrMSkpOwp9CgpidG4ub25jbGljayA9IGZ1bmN0aW9uKCkgewogIGNvbnN0IHJuZENvbCA9ICdyZ2IoJyArIHJhbmRvbSgyNTUpICsgJywnICsgcmFuZG9tKDI1NSkgKyAnLCcgKyByYW5kb20oMjU1KSArICcpJzsKICBjb25zb2xlLmxvZyhybmRDb2wpOwp9Cg==">
+                </iframe>
+                <p>The live output of the example above is as folows:
+                    <iframe frameborder="2px" height="200" width="100%" src="https://mdn.mozillademos.org/en-US/docs/Learn/JavaScript/Building_blocks/Events$samples/A_simple_example?revision=1605792"></iframe>
+                </p>
+                <h4><strong>keydown</strong></h4>
+                <p>The keydown and keyup events provide a code indicating which key is pressed, while keypress indicates which character was entered. For example, a lowercase "a" will be reported as 65 by keydown and keyup, but as 97 by keypress. An uppercase "A" is reported as 65 by all events.</p>
+                <p>This example logs the KeyboardEvent.code value whenever you press down a key.</p>
+                <pre><code>
+                    document.addEventListener('keydown', logKey);<br>
+                    &nbsp;function logKey(e) {<br>
+                    &nbsp;&nbsp;log.textContent += ` ${e.code}`;<br>
+                    &nbsp;}<br>
+                </code></pre>
+                <p>The live output of the example above is as folows:
+                    <iframe frameborder="2px" height="200" width="100%" src="https://mdn.mozillademos.org/en-US/docs/Web/API/Document/keydown_event$samples/addEventListener_keydown_example?revision=1566468"></iframe>
+                </p>
+            </div>
+            <!-- End Events -->
+
+            <!-- Timing Events -->
+            <div id="js-timing-events" style="display:block">
+                <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                        aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                        style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                    Timing Events</h2>
+                <p>We may decide to execute a function not right now, but at a certain time later. That’s called “scheduling a call”.</p>
+                <p>There are two methods for it:
+                    <ul>
+                        <li>setTimeout allows us to run a function once after the interval of time.</li>
+                        <li>setInterval allows us to run a function repeatedly, starting after the interval of time, then repeating continuously at that interval.</li>
+                    </ul>
+                </p>
+                <p>These methods are not a part of JavaScript specification. But most environments have the internal scheduler and provide these methods. In particular, they are supported in all browsers and Node.js.</p>
+                <h4><strong>setTimeout</strong></h4>
+                <p>The syntax:</p>
+                <code>let timerId = setTimeout(func|code, [delay], [arg1], [arg2], ...)</code>
+                <p><code class="inline">func|code</code> - function or a string of code to execute. Usually, that’s a function. For historical reasons, a string of code can be passed, but that’s not recommended.</p>
+                <p><code class="inline">delay</code class="inline"> - the delay before run, in milliseconds (1000 ms = 1 second), by default 0.</p>
+                <p><code class="inline">arg1, arg2…</code class="inline"> - arguments for the function (not supported in IE9-)</p>
+                <iframe class="editor"
+                    src="content/editor.html?value=ZnVuY3Rpb24gc2F5SGkocGhyYXNlLCB3aG8pIHsKICBjb25zb2xlLmxvZyggcGhyYXNlICsgJywgJyArIHdobyApOwp9CgpzZXRUaW1lb3V0KHNheUhpLCAxMDAwLCAiSGVsbG8iLCAiSm9obiIpOyAvLyBIZWxsbywgSm9obgoK">
+                </iframe>
+                <h4><strong>setInterval</strong></h4>
+                <p>The <code> setInterval </code> method has the same syntax as <code> setTimeout</code>:</p>
+                <code>let timerId = setInterval(func|code, [delay], [arg1], [arg2], ...)</code>
+                <p>All arguments have the same meaning. But unlike <code> setTimeout</code> it runs the function not only once, but regularly after the given interval of time.</p>
+                <p>To stop further calls, we should call <code>clearInterval(timerId)</code>.</p>
+                <p>The following example will show the message every 2 seconds. After 5 seconds, the output is stopped:</p>
+                <iframe class="editor"
+                    src="content/editor.html?value=Ly8gcmVwZWF0IHdpdGggdGhlIGludGVydmFsIG9mIDIgc2Vjb25kcwpsZXQgdGltZXJJZCA9IHNldEludGVydmFsKCgpID0+IGNvbnNvbGUubG9nKCd0aWNrJyksIDIwMDApOwoKLy8gYWZ0ZXIgNSBzZWNvbmRzIHN0b3AKc2V0VGltZW91dCgoKSA9PiB7IGNsZWFySW50ZXJ2YWwodGltZXJJZCk7IGNvbnNvbGUubG9nKCdzdG9wJyk7IH0sIDUwMDApOwo=">
+                </iframe>
+            </div>
+            <!-- End Timing Events -->
+        </div>
+        <div class="sticky col-md-3" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top">
+                <p><strong>Summary</strong></p>
+                <ul class="nav bs-docs-sidenav">
+                    <li>
+                        <a href="#js-events" onclick="showHiddenList(this)">Events</a>
+                        <ul class="arrow" style="display:none">
+                            <li><a href="#js-timing-events">Timing Events</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    document.querySelectorAll('code').forEach((block) => {
+        let hasInline = block.className && block.className === 'inline';
+        !hasInline && hljs.highlightBlock(block);
+    });
+
+    const btn = document.querySelector('button');
+
+    function random(number) {
+        return Math.floor(Math.random() * (number+1));
+    }
+
+    btn.onclick = function() {
+        const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+        document.body.style.backgroundColor = rndCol;
+    }
+</script>
