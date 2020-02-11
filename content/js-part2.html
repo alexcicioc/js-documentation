@@ -1,0 +1,529 @@
+<div class="bs-docs-header" id="content" tabindex="-1">
+
+    <div id="js-overview" class="container">
+        <h1>JavaScript Part II</h1>
+        <div id="carbonads-js">
+            <span>
+                <span class="carbon-wrap">
+                    <img src="images/js-2.png" alt="" style="border-radius: 10px;" width="75%" />
+                </span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div id="js-details" class="container bs-docs-container footer-space">
+    <div class="row">
+        <div class="col-md-9" role="main">
+            <div class="bs-docs-section">
+                <!-- What is a function -->
+                <div id="js-whatIsAFunction" style="display:block">
+                    <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        What is a function ?</h2>
+                    <ul>
+                        <li style="list-style-type: decimal;">A function is a subprogram designed to perform a
+                            particular task.</li>
+                        <li style="list-style-type: decimal;">Functions are executed when they are called. This
+                            is
+                            known as invoking a function.</li>
+                        <li style="list-style-type: decimal;">Values can be <code class="inline">passed</code> into
+                            functions
+                            and
+                            used within the function.</li>
+                        <li style="list-style: decimal">in JavaScript we have <code
+                                class="inline">anonymous functions</code>,
+                            those functions doesn't have a name.</li>
+                        <li style="list-style-type: decimal;">Functions <b>always</b> <code class="inline">return</code>
+                            a
+                            value.
+                            <b style="font-size: 18px">In JavaScript, if no return value is specified, the
+                                function
+                                will return undefined.</b></li>
+                    </ul>
+                </div>
+                <!-- End What is a function -->
+                <!-- Define a function -->
+                <div id="js-defineAfunction" style="display:block">
+                    <h3 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        Define a function</h3>
+                    <p>In JavaScript we have different ways to declare a function, bellow are explained the
+                        function
+                        types and how to declare functions.</p>
+                    <p>To create a function declaration you use the <code class="inline">function</code> keyword
+                        followed by
+                        the
+                        name of the
+                        function. When using function declarations, the function definition is hoisted, thus
+                        allowing the function to be used before it is defined.</p>
+                    <ul>
+                        <li><code class="inline">Function Declaration</code> - defines a named function</li>
+                        <li><code class="inline">Function Expressions</code> - defines a named or anonymous function,
+                            Function
+                            Expressions are not hoisted, and therefore cannot be used before they are defined
+                        </li>
+                        <li><code class="inline">Arrow Function Expression</code> - is a shorter syntax for writing
+                            function
+                            expressions </li>
+                        <li><code class="inline">Function Constructor</code> - The Function constructor creates a new
+                            Function
+                            object.</li>
+                    </ul>
+                    <iframe class="editor"
+                        src="content/editor.html?value=Ly8gRnVuY3Rpb24gRGVjbGFyYXRpb24KZnVuY3Rpb24gZmlyc3RGdW5jdGlvbihwYXJhbWV0ZXJzKSB7CiAgICAvLyB3aGF0ZXZlciBmYW5jeSBjb2RlIHlvdXIgaGVhcnQgZGVzaXJlcwp9CgpmdW5jdGlvbiBzaG93UGFyYW1zKHBhcmFtMSwgcGFyYW0yKXsKICBjb25zb2xlLmxvZyhwYXJhbTEpOwogIGNvbnNvbGUubG9nKHBhcmFtMik7Cn0KCi8vIENhbGxpbmcgdGhlIHByZXZpb3MgZGVjbGFyZWQgZnVuY3Rpb24KY29uc3QgcGFyYW0xID0gdHJ1ZTsKY29uc3QgcGFyYW0yID0gZmFsc2U7CnNob3dQYXJhbXMocGFyYW0xLCBwYXJhbTIpOw==">
+                    </iframe>
+                </div>
+                <!-- End Define a function -->
+                <!-- Invoke a function -->
+                <div id="js-invokeAFunction" style="display:block">
+                    <h3 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        Invoke a function</h3>
+                    Functions execute when the function is called. This process is known as invocation. You can
+                    invoke a function by referencing the function name, followed by an open and closed
+                    parenthesis:
+                    <code class="inline">()</code>.
+                </div>
+                <!-- End Invoke a function -->
+                <!-- Function Return-->
+                <div id="js-functionReturn" style="display:block">
+                    <h3 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        Function Returns</h3>
+                    <p>Every function in JavaScript returns <code class="inline">undefined</code> unless otherwise
+                        specified.
+                    </p>
+                    <p>Below we'll find some examples</p>
+                    <iframe class="editor"
+                        src="content/editor.html?value=ZnVuY3Rpb24gc3VtKGEsIGIpIHsKICAgIHJldHVybiBhICsgYjsKfQoKLy8gQ2FsbGluZyB0aGUgc3VtIGZ1bmN0aW9uIHdpdGggdHdvIG51bWJlcnMgYXMgcGFyYW1ldGVycwovLyBXZSdyZSBzYXZpbmcgdGhlIHJldHVybiB2YWx1ZSBvZiBzdW0gaW5zaWRlIG9mIHRoZSB2YXJpYWJsZSByZXN1bHQKY29uc3QgcmVzdWx0ID0gc3VtKDQsIDcpOwpjb25zb2xlLmxvZygnU3VtIG9mIDQgYW5kIDcgaXM6ICcgKyByZXN1bHQpOwoKLy8gV2UncmUgZG91YmxpbmcgYSBnaXZlbiBudW1iZXIncyB2YWx1ZSBidXQgbm90IHJldHVybmluZyBhbnl0aGluZwpmdW5jdGlvbiBkb3VibGUobnVtYmVyKSB7CiAgICBudW1iZXIgPSBudW1iZXIgKiAyOwogICAgY29uc29sZS5sb2coJ251bWJlciA9ICcgKyBudW1iZXIpOwp9Cgpjb25zb2xlLmxvZygnUmV0dXJuIHZhbHVlIG9mIGRvdWJsZSg2KTogJyArIGRvdWJsZSg2KSk7">
+                    </iframe>
+                </div>
+                <!-- End Function Return -->
+                <!-- Context -->
+                <div id="context" style="display:block">
+                    <h2 class="page-header">
+                        <a class="anchorjs-link " href="#overview-doctype"
+                            aria-label="Anchor link for: overview doctype" data-anchorjs-icon="" style="font-style: normal; font-variant: normal; font-weight: normal; 
+                                font-stretch: normal; font-size: 1em; line-height: inherit; font-family: 
+                                anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;">
+                        </a>
+                        Context
+                    </h2>
+                    <h4>It's all about THIS !</h4>
+                    <p>
+                        In JavaScript, <code class="inline">context</code> refers to an object. Within an object, the
+                        keyword
+                        <code class="inline">this</code> refers to
+                        that object (i.e. “self”), and provides an interface to the properties and methods that
+                        are
+                        members of that object. When a function is executed, the keyword <code
+                            class="inline">this</code>
+                        refers to the
+                        object
+                        that the function is executed in.
+                    </p>
+                    <p>Scenarios</p>
+                    <ul>
+                        <li>When a function executes in the global context, <code class="inline">this</code> refers to
+                            the
+                            global, or
+                            <code class="inline">window</code> object</li>
+                        <li>When a function is a method of an Object, <code class="inline">this</code> refers to that
+                            object
+                        </li>
+                        <li>When a function executes inside of another function (no matter how deeply nested),
+                            <code class="inline">this</code> refers to the object whose context within which it is
+                            executed
+                        </li>
+                    </ul>
+                    <p>Below we will explain better the context by examples</p>
+                    <iframe class="editor"
+                        src="content/editor.html?value=Y29uc3QgZHJpbmsgPSAnd2luZSc7CgovLyBJbml0aWFsaXplIHRoZSBmb28gb2JqZWN0CmNvbnN0IGZvbyA9IHsKICBkcmluazogImJlZXIiLAogIGdldERyaW5rOiBmdW5jdGlvbigpewogICAgcmV0dXJuIGRyaW5rOwogIH0gICAgCn07CgovLyBDYWxsIHRoZSBnZXRkRHJpbmsgbWV0aG9kIG9uIHRoZSBmb28gb2JqZWN0CmNvbnNvbGUubG9nKGZvby5nZXREcmluaygpKTsgLy8gdGhpcyBzaG91bGQgYmUgYmVlciwgcmlnaHQgPw==">
+                    </iframe>
+                </div>
+                <div id="context-2" style="display:block">
+                    <p>
+                        Wait a minute, why I can't see <code class="inline">beer</code> and why I see <code
+                            class="inline">wine</code> ?
+                    </p>
+                    <p>According to other OOP languges like C#, Java we expect to see beer. In JavaScript to
+                        achieve
+                        this is all about context, let's fix our example</p>
+                    <p>How can we make reference to the property <code class="inline">drink</code> that is in the
+                        context of
+                        the object
+                        <code class="inline">foo</code>?</p>
+                    <iframe class="editor"
+                        src="content/editor.html?value=Y29uc3QgZHJpbmsgPSAnd2luZSc7CgovLyBJbml0aWFsaXplIHRoZSBmb28gb2JqZWN0CmNvbnN0IGZvbyA9IHsKICBkcmluazogImJlZXIiLAogIGdldERyaW5rOiBmdW5jdGlvbigpIHsKICAgIC8vIHdlJ3JlIHJldHVybmluZyB0aGUgZHJpbmsgcHJvcGVydHkgb2YgZm9vIHVzaW5nIHRoaXMKICAgIHJldHVybiB0aGlzLmRyaW5rOwogIH0gICAgCn07CgovLyBDYWxsIHRoZSBnZXRkRHJpbmsgbWV0aG9kIG9uIHRoZSBmb28gb2JqZWN0CmNvbnNvbGUubG9nKGZvby5nZXREcmluaygpKTs=">
+                    </iframe>
+                    <p>Note
+                        <code>the only change we have made is that in the anonymous function that is assigned to “getDrink”, we return “this.drink” instead of “drink”</code>
+                    </p>
+                </div>
+                <div id="context-3" style="display:block">
+                    <p>
+                        Another fancy way to write the example above
+                    </p>
+                    <p>The result should be the same, the only difference is that we created the properties
+                        <code class="inline">drink</code> and
+                        <code class="inline">getDrink</code> at the exact same time that we created the object literal
+                        <code class="inline">foo</code>
+                    </p>
+                    <p>Now we assign those on the fly.</p>
+                    <iframe class="editor"
+                        src="content/editor.html?value=Y29uc3QgZHJpbmsgPSAnd2luZSc7Cgpjb25zdCBmb28gPSB7fTsKIApmb28uZHJpbmsgPSAiYmVlciI7CiAgIApmb28uZ2V0RHJpbmsgPSBmdW5jdGlvbigpIHsKICByZXR1cm4gdGhpcy5kcmluazsgLy8gdGhlIGNvbnRleHQgKHRoaXMpIGhlcmUgaXMgc3RpbGwgZm9vCn07CiAgIApjb25zb2xlLmxvZyhmb28uZ2V0RHJpbmsoKSk7Cg==">
+                    </iframe>
+                    <p>Note
+                        <code>the only change we have made is that in the anonymous function that is assigned to “getDrink”, we return “this.drink” instead of “drink”</code>
+                    </p>
+                </div>
+                <!-- End Context -->
+                <!-- What is this -->
+                <div id="wht-is-this" style="display:block">
+                    <h2 class="page-header">
+                        <a class="anchorjs-link " href="#overview-doctype"
+                            aria-label="Anchor link for: overview doctype" data-anchorjs-icon="" style="font-style: normal; font-variant: normal; font-weight: normal; 
+                                font-stretch: normal; font-size: 1em; line-height: inherit; font-family: 
+                                anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;">
+                        </a>
+                        What is <code class="inline">this</code> ?
+                    </h2>
+                    <p>
+                        Let's answer to this question: <b>Why is the word <code class="inline">this</code> so important
+                            in
+                            JavaScript?</b>
+                    </p>
+                    <p>The JavaScript <code class="inline">this</code> keyword refers to the object it belongs to. </p>
+                    <ul>
+                        <li>In a method, <code class="inline">this</code> refers to the <b>owner object.</b></li>
+                        <li>Alone, <code class="inline">this</code> refers to the <b>global object.</b></li>
+                        <li>In a function, <code class="inline">this</code> refers to the <b>global object.</b></li>
+                        <li>In an event, <code class="inline">this</code> refers to the element that received the event.
+                        </li>
+                    </ul>
+                    <p>Below we will explain better the context by examples</p>
+                </div>
+                <div id="this-alone" style="display:block">
+                    <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        <code class="inline">this</code> Alone</h4>
+                    <ul>
+                        <li>When used alone, the owner is the <b>Global object</b>, so this refers to the Global
+                            object.</b></li>
+                        <li>In a browser window the Global object is <code class="inline">[object Window]</code></li>
+                    </ul>
+                    <iframe class="editor"
+                        src="content/editor.html?value=Y29uc3QgeCA9IHRoaXM7Ci8vIEJldHRlciBkbyB0aGlzIGluIHRoZSBicm93c2VyJ3MgY29uc29sZSBiZWNhdXNlIHRoZSBvdXRwdXQgaXMgaHVnZQpjb25zb2xlLmxvZyh4KTsKCi8vIHRoaXMgc2hvdWxkIGJlIHRoZSBzYW1lIHdpdGggd2luZG93IGluIHRoZSBnbG9iYWwgY29udGV4dApjb25zb2xlLmxvZyh3aW5kb3cpOw==">
+                    </iframe>
+                </div>
+                <div id="this-in-a-function" style="display:block">
+                    <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        <code class="inline">this</code> in <b>Function</b></h4>
+                    <ul>
+                        <li>In a JavaScript function, the owner of the function is the <code
+                                class="inline">default</code>
+                            binding for
+                            <code class="inline">this</code>.</li>
+                        <li>So, in a function, this refers to the Global object
+                            <code class="inline">[object Window]</code>.</code>
+                        </li>
+                    </ul>
+                    <iframe class="editor"
+                        src="content/editor.html?value=ZnVuY3Rpb24gbXlGdW5jdGlvbigpIHsKICByZXR1cm4gdGhpczsKfQoKLy8gQmV0dGVyIHJ1biB0aGlzIGNvZGUgaW4gdGhlIGJyb3dzZXIncyBjb25zb2xlIGJlY2F1c2UgdGhlIG91dHB1dCBpcyBodWdlCmNvbnNvbGUubG9nKG15RnVuY3Rpb24oKSk7">
+                    </iframe>
+                </div>
+                <div id="this-in-an-object" style="display:block">
+                    <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        <code class="inline">this</code> in <b>Object</b></h4>
+                    <ul>
+                        <li><code class="inline">this</code> is the <b>person</b> object (The person object is the
+                            "owner" of
+                            the
+                            function)</li>
+                    </ul>
+                    <iframe class="editor"
+                        src="content/editor.html?value=Y29uc3QgcGVyc29uID0gewogIGZpcnN0TmFtZTogIkpvaG4iLAogIGxhc3ROYW1lOiAiRG9lIiwKICBteUZ1bmN0aW9uOiBmdW5jdGlvbigpIHsKICAgIHJldHVybiB0aGlzOwogIH0KfTsKCi8vIFRoZSBmdW5jdGlvbiByZXR1cm5zIHRoaXMsIHRoZSBvdXRwdXQgd2lsbCBiZSB0aGUgcGVyc29uIG9iamVjdApjb25zb2xlLmxvZyhwZXJzb24ubXlGdW5jdGlvbigpKTsK">
+                    </iframe>
+                </div>
+                <div id="this-in-a-method" style="display:block">
+                    <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                            aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                            style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        <code class="inline">this</code> in <b>Method</b></h4>
+                    <ul>
+                        <li>In an object method, <code class="inline">this</code> refers to the <b>owner</b> of the
+                            method.
+                        </li>
+                        <li><code class="inline">this</code> refers to the person object.</li>
+                        <li>The <b>person</b> object is the <b>owner</b> of the <b>fullName</b> method.</li>
+                    </ul>
+                    <iframe class="editor"
+                        src="content/editor.html?value=Y29uc3QgcGVyc29uID0gewogIGZpcnN0TmFtZTogJ0pvaG4nLAogIGxhc3ROYW1lOiAnRG9lJywKICBteUZ1bmN0aW9uOiBmdW5jdGlvbigpIHsKICAgIHJldHVybiB0aGlzOwogIH0sCiAgZ2V0RnVsbE5hbWUgOiBmdW5jdGlvbigpIHsKICAgIGNvbnNvbGUubG9nKHRoaXMpOwogICAgcmV0dXJuIHRoaXMuZmlyc3ROYW1lICsgIiAiICsgdGhpcy5sYXN0TmFtZTsKICB9Cn07Cgpjb25zb2xlLmxvZyhwZXJzb24uZ2V0RnVsbE5hbWUoKSk7Cg==">
+                    </iframe>
+                </div>
+            </div>
+            <!--END What is this -->
+
+            <!-- JavaScript OOP-->
+            <div id="js-classes" style="display:block">
+                <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                        aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                        style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                    JavaScript OOP like</h2>
+                <p>With <code class="inline">ES6</code> JavaScript has more human readable way to declare
+                    classes/objects,
+                    because
+                    with this version was introduced <code class="inline">class</code>
+                    keyword.</p>
+                <p>Now you can make use of it to program in a similar way as to how you might
+                    in
+                    <code class="inline">C#, Java, or PHP</code></p>
+                <p>Classes in ES6 are definitely a step in the right direction to achieving true object oriented
+                    programming, but truth be told, these are not classes in the purest sense of the word</p>
+
+                <img src="images/es6_class.png">
+            </div>
+            <!-- End JavaScript OOP -->
+
+            <!-- Class Definition -->
+            <div id="js-define-classes" style="display:block">
+                <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                        aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                        style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                    Class Definition</h2>
+                <p>Creating a class is super easy. All you do is use the class keyword followed by a name for
+                    the
+                    class, and then your opening and closing curly braces.</p>
+                <iframe class="editor"
+                    src="content/editor.html?value=Y2xhc3MgUGV0IHsKICAgIC8vIFRoZSBjb25zdHJ1Y3RvciBtZXRob2QgaXMgY2FsbGVkIHdoZW4gYSBuZXcgUGV0IGlzIGNyZWF0ZWQobGluZSAxMykKICAgIGNvbnN0cnVjdG9yKG5hbWUsIGFnZSkgewogICAgICAgIHRoaXMuYWdlID0gYWdlOwogICAgICAgIHRoaXMubmFtZSA9IG5hbWU7CiAgICB9CgogICAgYmFyaygpIHsKICAgICAgICBjb25zb2xlLmxvZyh0aGlzLm5hbWUgKyAnIGJhcmtlZCcpOwogICAgfQp9Cgpjb25zdCBteVBldCA9IG5ldyBQZXQoJ01pa2UnLCAyKTsKbXlQZXQuYmFyaygpOwo=">
+                </iframe>
+            </div>
+            <!-- End Class Definition -->
+
+            <!-- Constructors -->
+            <div id="js-class-constructor" style="display:block">
+                <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                        aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                        style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                    Constructors</h4>
+                <p>What you need to know about <code class="inline">constructor</code> function in JavaScript is the
+                    following
+                </p>
+                <ul>
+                    <li>Constructors are a key concept of classes</li>
+                    <li>There can only be one special method with the name <code class="inline">constructor</code> in a
+                        class
+                    </li>
+                    <li>Constructor <code class="inline">is a function</code> which automatically runs anytime an object
+                        is
+                        instantiated from that class</li>
+                    <li>Commonly <code class="inline">used to set up some default data</code> or
+                        <code class="inline">initialize needed variables</code></li>
+                </ul>
+                <p>You can test those by playing with the example above.</p>
+            </div>
+            <!-- End Constructors -->
+
+            <!-- Methods -->
+            <div id="js-class-methods" style="display:block">
+                <h4 class="page-header">Methods</h4>
+                <p>In JavaScript <code class="inline">methods</code> are simple functions that contain code and can be
+                    invoked
+                    like
+                    usual.</p>
+                <p>Also we can have static methods, The static keyword defines a static method for a class.
+                    Static
+                    methods are called without instantiating their class and cannot be called through a class
+                    instance. Static methods are often used to create utility functions for an application you
+                    can
+                    see how these are defined and works in the example above.</p>
+                <iframe class="editor"
+                    src="content/editor.html?value=Y2xhc3MgQW5pbWFsIHsKICAgIGNvbnN0cnVjdG9yKHR5cGUpIHsKICAgICAgICB0aGlzLnR5cGUgPSB0eXBlOwogICAgfQogICAgc3BlYWsoKSB7CiAgICAgICAgc3dpdGNoICh0aGlzLnR5cGUpIHsKICAgICAgICAgICAgY2FzZSAnY2F0JzoKICAgICAgICAgICAgICAgIGNvbnNvbGUubG9nKCdjYXQgbWVvd3MnKTsKICAgICAgICAgICAgICAgIGJyZWFrOwogICAgICAgICAgICBjYXNlICdkb2cnOgogICAgICAgICAgICAgICAgY29uc29sZS5sb2coJ2RvZyBiYXJrcycpOwogICAgICAgICAgICAgICAgYnJlYWs7CiAgICAgICAgICAgIGRlZmF1bHQ6CiAgICAgICAgICAgICAgICBjb25zb2xlLmxvZygnYW5pbWFsIHNwZWFrcycpOwogICAgICAgIH0KICAgIH0KICAgIC8vIFN0YXRpYyBtZWFucyB0aGF0IHlvdSBkb24ndCBuZWVkIGFuIGluc3RhbmNlCiAgICBzdGF0aWMgZWF0KCkgewogICAgICAgIGNvbnNvbGUubG9nKCdUaGUgYW5pbWFsIGlzIGVhdGluZycpOwogICAgfQp9CgpBbmltYWwuZWF0KCk7IC8vIEkgY2FuIGNhbGwgdGhpcyBmdW5jdGlvbiB3aXRob3V0IGFuIGluc3RhbmNlCgpjb25zdCBjYXQgPSBuZXcgQW5pbWFsKCdjYXQnKTsKY2F0LnNwZWFrKCk7IC8vIEkgbmVlZCB0byBjYWxsIHRoaXMgZnVuY3Rpb24gYWZ0ZXIgY3JlYXRpbmcgYW4gaW5zdGFuY2UKLy8gSWYgSSBjYWxsIHNwZWFrIHN0YXRpY2FsbHkgSSdsbCBnZXQgYW4gZXJyb3IgKEkgbmVlZCBhIGNvbnRleHQpCkFuaW1hbC5zcGVhaygpOwo=">
+                </iframe>
+            </div>
+            <!-- End Methods -->
+            
+            <!-- Arrow function -->
+            <div id="js-arrow-function" style="display:block">
+                <h4 class="page-header">Arrow function</h4>
+                <div>
+                    <p>Arrow functions were introduced in <strong>ES6</strong>.</p>
+                    <p>Arrow functions allow us to write shorter function syntax:</p>
+                    <iframe class="editor"
+                        src="content/editor.html?value=Ly8gU3RlcCAxCmhlbGxvID0gZnVuY3Rpb24oKSB7CiAgcmV0dXJuICJIZWxsbyBXb3JsZCEiOwp9CgovLyBTdGVwIDIKaGVsbG8yID0gKCkgPT4gewogIHJldHVybiAiSGVsbG8gV29ybGQgMiEiOwp9CgovLyBTdGVwIDMKaGVsbG8zID0gKCkgPT4gIkhlbGxvIFdvcmxkIDMhIjsKCmFsZXJ0KGhlbGxvKCkpOwphbGVydChoZWxsbzIoKSk7CmFsZXJ0KGhlbGxvMygpKTs=">
+                    </iframe>
+                </div>
+                <p class="page-header">Parameters</h4>
+                    <div>
+                        <p>If you have parameters, you pass them inside the parentheses:</p>
+                        <iframe class="editor"
+                            src="content/editor.html?value=aGVsbG8gPSAodmFsKSA9PiAiSGVsbG8gIiArIHZhbDsKCi8vIElmIHlvdSBoYXZlIG9ubHkgb25lIHBhcmFtZXRlciwgeW91IGNhbiBza2lwIHBhcmVudGhlc2VzCmhlbGxvID0gdmFsID0+ICJIZWxsbyAiICsgdmFsOwoK">
+                        </iframe>
+                    </div>
+                <code><h5 class="page-header">this</h4></code> 
+                <div>
+                    <p>The handling of <code class="inline">this</code> is also different in arrow functions compared to regular functions. In short, with arrow functions there are no binding of this. Let us take a look at two examples to understand the difference.</p>
+                    <p>The result shows that the first example returns two different objects (window and button), and the second example returns the window object twice, because the window object is the "owner" of the function.</p>
+                    <iframe class="editor"
+                        src="content/editor.html?value=PGJ1dHRvbiBpZD0iYnRuIj5DbGljayBNZSE8L2J1dHRvbj4KPGJ1dHRvbiBpZD0iYnRuMiI+Q2xpY2sgTWUhPC9idXR0b24+Cgp2YXIgaGVsbG87CgpoZWxsbyA9IGZ1bmN0aW9uKCkgewogIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJkZW1vIikuaW5uZXJIVE1MICs9IHRoaXM7Cn0KCi8vVGhlIHdpbmRvdyBvYmplY3QgY2FsbHMgdGhlIGZ1bmN0aW9uOgp3aW5kb3cuYWRkRXZlbnRMaXN0ZW5lcigibG9hZCIsIGhlbGxvKTsKCi8vQSBidXR0b24gb2JqZWN0IGNhbGxzIHRoZSBmdW5jdGlvbjoKZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoImJ0biIpLmFkZEV2ZW50TGlzdGVuZXIoImNsaWNrIiwgaGVsbG8pOwoKdmFyIGhlbGxvOwoKaGVsbG8yID0gKCkgPT4gewogIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJkZW1vIikuaW5uZXJIVE1MICs9IHRoaXM7Cn0KCi8vVGhlIHdpbmRvdyBvYmplY3QgY2FsbHMgdGhlIGZ1bmN0aW9uOgp3aW5kb3cuYWRkRXZlbnRMaXN0ZW5lcigibG9hZCIsIGhlbGxvMik7CgovL0EgYnV0dG9uIG9iamVjdCBjYWxscyB0aGUgZnVuY3Rpb246CmRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJidG4yIikuYWRkRXZlbnRMaXN0ZW5lcigiY2xpY2siLCBoZWxsbzIpOwo=">
+                    </iframe>
+                </div>
+            </div>
+            <!-- End Arrow function -->
+
+            <!-- Getters and Setters -->
+            <div id="js-getset-methods" style="display:block">
+                <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                        aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                        style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                    Getters and Setters</h4>
+                <p>The <code class="inline">get</code> syntax binds an object property to a function that will be called
+                    when
+                    that
+                    property is looked up.</p>
+                <p>The <code class="inline">set</code> syntax binds an object property to a function to be called when
+                    there is
+                    an
+                    attempt to set that property.</p>
+                <iframe class="editor"
+                    src="content/editor.html?value=Y2xhc3MgUGVyc29uIHsKICAgIGNvbnN0cnVjdG9yKG5hbWUpIHsKICAgICAgICB0aGlzLl9uYW1lID0gbmFtZTsKICAgIH0KCiAgICBnZXQgbmFtZSgpIHsKICAgICAgICByZXR1cm4gdGhpcy5fbmFtZS50b1VwcGVyQ2FzZSgpOwogICAgfQoKICAgIHNldCBuYW1lKG5ld05hbWUpIHsKICAgICAgICBpZiAodHlwZW9mIG5ld05hbWUgIT09ICdzdHJpbmcnKSB7CiAgICAgICAgICAgIHRocm93IG5ldyBFcnJvcignYmFkIG5hbWUgZm9yIHBlcnNvbicpOwogICAgICAgIH0gZWxzZSBpZiAobmV3TmFtZS5sZW5ndGggPCAyIHx8IG5ld05hbWUubGVuZ3RoID4gMjApIHsKICAgICAgICAgICAgdGhyb3cgbmV3IEVycm9yKCduYW1lIGxlbmd0aCBtdXN0IGJlIGJldHdlZW4gMiBhbmQgMjAnKQogICAgICAgIH0KICAgICAgICB0aGlzLl9uYW1lID0gbmV3TmFtZTsgICAKICAgIH0KCiAgICB3YWxrKCkgewogICAgICAgIGFsZXJ0KHRoaXMuX25hbWUgKyAnIGlzIHdhbGtpbmcuJyk7CiAgICB9Cn0KCmNvbnN0IGJvYiA9IG5ldyBQZXJzb24oJ0JvYicpOwpjb25zb2xlLmxvZyhib2IubmFtZSk7ICAvLyBPdXRwdXRzICdCT0InCi8qIFRoaXMgd2lsbCBjYWxsIHRoZSBuYW1lIHNldHRlciBmaXJzdCBhbmQgdGhyb3cgYW4gZXJyb3IgYmVjYXVzZSB0aGUKICAgbmFtZSBpcyB0b28gbG9uZyAqLwpib2IubmFtZSA9ICdSb2JlcnRvIEFndXN0aW4gTWlndWVsIFNhbnRpYWdvIFNhbXVlbCBUcnVqaWxsbyBWZXJhY3J1eic7Cg==">
+                </iframe>
+            </div>
+            <!-- End Getters and Setters -->
+
+            <!-- Inheritance -->
+            <div id="js-class-inheritance" style="display:block">
+                <h4 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                        aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                        style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                    Inheritance</h4>
+                <p> <code class="inline">ES6</code> has made <code class="inline">JavaScript</code> look a lot simpler
+                    with the
+                    <code class="inline">class syntax</code> and its additional features.
+                    In the example below we are going to combine the <code class="inline">class syntax feature</code>
+                    with the
+                    concept of <code class="inline">inheritance</code>
+                </p>
+                <p>We'll combine all things that we achieve and learn so far to exemplify better the
+                    inheritance.
+                </p>
+                <iframe class="editor"
+                    src="content/editor.html?value=Y2xhc3MgUGVyc29uIHsKICAgIGNvbnN0cnVjdG9yKG5hbWUpIHsKICAgICAgICB0aGlzLm5hbWUgPSBuYW1lOwogICAgfQoKICAgIHdhbGsoKSB7CiAgICAgICAgY29uc29sZS5sb2codGhpcy5uYW1lICsgJyBpcyB3YWxraW5nLicpOwogICAgfQp9Ci8vIFByb2dyYW1tZXIgZXh0ZW5kcyBwZXJzb24gYmVjYXVzZSB3ZSB3YW50IGhpbSB0byBiZSBhYmxlIHRvIHdhbGsKY2xhc3MgUHJvZ3JhbW1lciBleHRlbmRzIFBlcnNvbiB7CiAgICBjb25zdHJ1Y3RvcihuYW1lLCBwcm9ncmFtbWluZ0xhbmd1YWdlKSB7CiAgICAgICAgc3VwZXIobmFtZSk7IC8vIENhbGwgdGhlIHBhcmVudCBjb25zdHJ1Y3RvciB3aXRoIHRoZSBuYW1lIHBhcmFtCiAgICAgICAgdGhpcy5wcm9ncmFtbWluZ0xhbmd1YWdlID0gcHJvZ3JhbW1pbmdMYW5ndWFnZTsKICAgIH0KCiAgICB3cml0ZUNvZGUoKSB7CiAgICAgICAgY29uc29sZS5sb2codGhpcy5uYW1lKycgaXMgY29kaW5nIGluICcrdGhpcy5wcm9ncmFtbWluZ0xhbmd1YWdlKTsKICAgIH0KfQoKY29uc3QgdmFzaWxlID0gbmV3IFBlcnNvbignVmFzaWxlIFVtYnJlbGEnKTsgLy8gVGhpcyBpcyBqdXN0IGEgcGVyc29uCnZhc2lsZS53YWxrKCk7IC8vIHRoZSBwZXJzb24gY2FuIG9ubHkgd2FsawoKY29uc3QgaW9uID0gbmV3IFByb2dyYW1tZXIoJ0lvbmljYSBTa3l3YWxrZXInLCAnSmF2YVNjcmlwdCcpOwppb24ud2FsaygpOyAvLyBUaGUgUHJvZ3JhbW1lciBpcyBhbHNvIGEgUGVyc29uIHNvIGhlIGNhbiB3YWxrCmlvbi53cml0ZUNvZGUoKTsgLy8gT25seSBwcm9ncmFtbWVycyBjYW4gd3JpdGUgY29kZQ==">
+                </iframe>
+            </div>
+            <!-- End Inheritance -->
+
+            <!-- Math Library -->
+            <div id="js-math" style="display:block">
+                <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                        aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                        style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                    Math library</h2>
+                <p><code class="inline"><b>Math</b></code> is a built-in object that has properties and methods for
+                    mathematical
+                    constants and functions.
+                    Not a function object.</p>
+                <h4><b>Methods</b></h4>
+                <p>Note that the trigonometric functions
+                    (<code class="inline">sin(), cos(), tan(), asin(), acos(), atan(), atan2()</code>) expect
+                    or return angles in <code class="inline">radians</code>. </p>
+                <p>To convert <code class="inline">radians</code> to degrees, <code
+                        class="inline">divide by (Math.PI / 180)</code>, and
+                    multiply
+                    by this to convert the other way.</p>
+                <p>
+                    Note that many math functions have a precision that's implementation-dependent. This means
+                    that
+                    different browsers can give a different result
+                </p>
+                <dl>
+                    <dt><a
+                            title="The Math.abs() function returns the absolute value of a number, that is"><code>Math.abs(x)</code></a>
+                    </dt>
+                    <dd>Returns the absolute value of a number.</dd>
+                    <dt><a
+                            title="The Math.ceil() function returns the smallest integer greater than or equal to a given number."><code>Math.ceil(x)</code></a>
+                    </dt>
+                    <dd>Returns the smallest integer greater than or equal to a number.</dd>
+                    <dt><a
+                            title="The Math.floor() function returns the largest integer less than or equal to a given number."><code>Math.floor(x)</code></a>
+                    </dt>
+                    <dd>Returns the largest integer less than or equal to a number.</dd>
+                    <dt><a
+                            title="The Math.random() function returns a floating-point, pseudo-random number in the range 0–1 (inclusive of 0, but not 1) with approximately uniform distribution over that range — which you can then scale to your desired range. The implementation selects the initial seed to the random number generation algorithm; it cannot be chosen or reset by the user."><code>Math.random()</code></a>
+                    </dt>
+                    <dd>Returns a pseudo-random number between 0 and 1.</dd>
+                </dl>
+                <iframe class="editor"
+                    src="content/editor.html?value=Y29uc3QgbmVnYXRpdmVJbnRlZ2VyID0gLTIzNDsKLy8gVHJhbnNmb3JtcyB0aGUgdmFsdWUgdG8gcG9zaXRpdmUKY29uc29sZS5sb2coJ01hdGguYWJzKC0yMzQpID0gJyArIE1hdGguYWJzKG5lZ2F0aXZlSW50ZWdlcikpOwoKY29uc3QgZmxvYXRpbmdOdW1iZXIgPSAzLjE0MTU5MjY1MzU5OwovLyBSb3VuZHMgdXAgdGhlIG51bWJlcgpjb25zb2xlLmxvZygnTWF0aC5jZWlsKDMuMTQxNTkyNjUzNTkpID0gJyArIE1hdGguY2VpbCgzLjE0MTU5MjY1MzU5KSk7Ci8vIFJvdW5kcyBkb3duIHRoZSBudW1iZXIKY29uc29sZS5sb2coJ01hdGguZmxvb3IoMy4xNDE1OTI2NTM1OSkgPSAnICsgTWF0aC5mbG9vcigzLjE0MTU5MjY1MzU5KSk7Ci8vIEdlbmVyYXRlcyBhIHJhbmRvbSBmbG9hdCBudW1iZXIKY29uc29sZS5sb2coJ01hdGgucmFuZG9tKCkgPSAnICsgTWF0aC5yYW5kb20oKSkKCi8vIFRoaXMgZnVuY3Rpb24gZ2VuZXJhdGVzIGEgcmFuZG9tIGludGVnZXIgYmV0d2VlbiBtaW4gYW5kIG1heApmdW5jdGlvbiBnZXRSYW5kb21JbnQobWluLCBtYXgpIHsKICAgIHJldHVybiBNYXRoLmZsb29yKE1hdGgucmFuZG9tKCkgKiAobWF4IC0gbWluICsgMSkpICsgbWluOwp9Cgpjb25zb2xlLmxvZygnUmFuZG9tIGludGVnZXIgPSAnICsgZ2V0UmFuZG9tSW50KDAsIDEwKSk7">
+                </iframe>
+            </div>
+            <!-- End Math Library -->
+        </div>
+
+        <!-- Sidemenu -->
+        <div class="sticky col-md-3" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top">
+                <p><strong>Summary</strong></p>
+                <ul class="nav bs-docs-sidenav">
+                    <li>
+                        <a href="#js-whatIsAFunction" onclick="showHiddenList(this)">Functions</a>
+                        <ul class="arrow" style="display:none">
+                            <li><a href="#js-whatIsAFunction">What is a Function?</a></li>
+                            <li><a href="#js-defineAfunction">Define a Function</a></li>
+                            <li><a href="#js-invokeAFunction">Invoking a Function</a></li>
+                            <li><a href="#js-functionReturn">Function Return</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#context">Context</a>
+                        <ul class="arrow" style="display:none">
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#js-classes" onclick="showHiddenList(this)">Classes (ES6 syntax)</a>
+                        <ul class="arrow" style="display:none">
+                            <li><a href="#js-define-classes">Define a class</a></li>
+                            <li><a href="#js-class-constructor">Constructors</a></li>
+                            <li><a href="#js-class-methods">Methods/ Static Methods</a></li>
+                            <li><a href="#js-arrow-function">Arrow function</a></li>
+                            <li><a href="#js-getset-methods">Getters and Setters</a></li>
+                            <li><a href="#js-class-inheritance">Inheritance</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#js-math" onclick="showHiddenList(this)">Math Library</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- End Sidemenu -->
+    </div>
+</div>
+<script type="text/javascript">
+    document.querySelectorAll('code').forEach((block) => {
+        let hasInline = block.className && block.className === 'inline';
+        !hasInline && hljs.highlightBlock(block);
+    });
+
+    const btn = document.querySelector('button');
+
+    function random(number) {
+        return Math.floor(Math.random() * (number+1));
+    }
+
+    btn.onclick = function() {
+        const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+        document.body.style.backgroundColor = rndCol;
+    }
+</script>
