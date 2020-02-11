@@ -1174,7 +1174,6 @@ function sum(a, b) {
                         </iframe>
                     </div>
                 <code><h5 class="page-header">this</h4></code> 
-                    <!-- WIP -->
                 <div>
                     <p>The handling of <code class="inline">this</code> is also different in arrow functions compared to regular functions. In short, with arrow functions there are no binding of this. Let us take a look at two examples to understand the difference.</p>
                     <p>The result shows that the first example returns two different objects (window and button), and the second example returns the window object twice, because the window object is the "owner" of the function.</p>
@@ -1292,16 +1291,51 @@ function sum(a, b) {
                 <p>The live output of the example above is as folows:
                     <iframe frameborder="2px" height="200" width="100%" src="https://mdn.mozillademos.org/en-US/docs/Learn/JavaScript/Building_blocks/Events$samples/A_simple_example?revision=1605792"></iframe>
                 </p>
-
                 <h4><strong>keydown</strong></h4>
                 <p>The keydown and keyup events provide a code indicating which key is pressed, while keypress indicates which character was entered. For example, a lowercase "a" will be reported as 65 by keydown and keyup, but as 97 by keypress. An uppercase "A" is reported as 65 by all events.</p>
                 <p>This example logs the KeyboardEvent.code value whenever you press down a key.</p>
-                <iframe class="editor"
-                    src="content/editor.html?value=ZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcigna2V5ZG93bicsIGxvZ0tleSk7CgpmdW5jdGlvbiBsb2dLZXkoZSkgewogIGxvZy50ZXh0Q29udGVudCArPSBgICR7ZS5jb2RlfWA7Cn0K">
-                </iframe>
+                <pre><code>
+                    document.addEventListener('keydown', logKey);<br>
+                    &nbsp;function logKey(e) {<br>
+                    &nbsp;&nbsp;log.textContent += ` ${e.code}`;<br>
+                    &nbsp;}<br>
+                </code></pre>
                 <p>The live output of the example above is as folows:
                     <iframe frameborder="2px" height="200" width="100%" src="https://mdn.mozillademos.org/en-US/docs/Web/API/Document/keydown_event$samples/addEventListener_keydown_example?revision=1566468"></iframe>
                 </p>
+            </div>
+
+            <div id="js-timing-events" style="display:block">
+                <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                        aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                        style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                    Timing Events</h2>
+                <p>We may decide to execute a function not right now, but at a certain time later. That’s called “scheduling a call”.</p>
+                <p>There are two methods for it:
+                    <ul>
+                        <li>setTimeout allows us to run a function once after the interval of time.</li>
+                        <li>setInterval allows us to run a function repeatedly, starting after the interval of time, then repeating continuously at that interval.</li>
+                    </ul>
+                </p>
+                <p>These methods are not a part of JavaScript specification. But most environments have the internal scheduler and provide these methods. In particular, they are supported in all browsers and Node.js.</p>
+                <h4><strong>setTimeout</strong></h4>
+                <p>The syntax:</p>
+                <code>let timerId = setTimeout(func|code, [delay], [arg1], [arg2], ...)</code>
+                <p><code class="inline">func|code</code> - function or a string of code to execute. Usually, that’s a function. For historical reasons, a string of code can be passed, but that’s not recommended.</p>
+                <p><code class="inline">delay</code class="inline"> - the delay before run, in milliseconds (1000 ms = 1 second), by default 0.</p>
+                <p><code class="inline">arg1, arg2…</code class="inline"> - arguments for the function (not supported in IE9-)</p>
+                <iframe class="editor"
+                    src="content/editor.html?value=ZnVuY3Rpb24gc2F5SGkocGhyYXNlLCB3aG8pIHsKICBjb25zb2xlLmxvZyggcGhyYXNlICsgJywgJyArIHdobyApOwp9CgpzZXRUaW1lb3V0KHNheUhpLCAxMDAwLCAiSGVsbG8iLCAiSm9obiIpOyAvLyBIZWxsbywgSm9obgoK">
+                </iframe>
+                <h4><strong>setInterval</strong></h4>
+                <p>The <code> setInterval </code> method has the same syntax as <code> setTimeout</code>:</p>
+                <code>let timerId = setInterval(func|code, [delay], [arg1], [arg2], ...)</code>
+                <p>All arguments have the same meaning. But unlike <code> setTimeout</code> it runs the function not only once, but regularly after the given interval of time.</p>
+                <p>To stop further calls, we should call <code>clearInterval(timerId)</code>.</p>
+                <p>The following example will show the message every 2 seconds. After 5 seconds, the output is stopped:</p>
+                <iframe class="editor"
+                    src="content/editor.html?value=Ly8gcmVwZWF0IHdpdGggdGhlIGludGVydmFsIG9mIDIgc2Vjb25kcwpsZXQgdGltZXJJZCA9IHNldEludGVydmFsKCgpID0+IGNvbnNvbGUubG9nKCd0aWNrJyksIDIwMDApOwoKLy8gYWZ0ZXIgNSBzZWNvbmRzIHN0b3AKc2V0VGltZW91dCgoKSA9PiB7IGNsZWFySW50ZXJ2YWwodGltZXJJZCk7IGNvbnNvbGUubG9nKCdzdG9wJyk7IH0sIDUwMDApOwo=">
+                </iframe>
             </div>
         </div>
         <div class="sticky col-md-3" role="complementary">
@@ -1395,6 +1429,9 @@ function sum(a, b) {
 
                     <li>
                         <a href="#js-events" onclick="showHiddenList(this)">Events</a>
+                        <ul class="arrow" style="display:none">
+                            <li><a href="#js-timing-events">Timing Events</a></li>
+                        </ul>
                     </li>
                 </ul>
             </nav>
