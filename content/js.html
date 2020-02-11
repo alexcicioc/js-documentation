@@ -550,6 +550,28 @@ let z = true;</code></pre>
                     <iframe class="editor"
                         src="content/editor.html?value=Y29uc3QgbXlDYXJzID0gWydEYWNpYScsICdTa29kYSddOwpjb25zb2xlLmxvZyhteUNhcnMpOwpteUNhcnMucHVzaCgnT3BlbCcpOwpjb25zb2xlLmxvZyhteUNhcnMpOwpteUNhcnMucG9wKCk7CmNvbnNvbGUubG9nKG15Q2Fycyk7">
                     </iframe>
+
+                    <h4><strong>Multidimensional Arrays</strong></h4>
+                    <p>JavaScript does not provide the multidimensional array natively. However, you can create a multidimensional array by defining an <code class="inline">array</code> of elements, where each element is also another array.</p>
+                    <p>For this reason, we can say that a JavaScript multidimensional array is an array of arrays. The easiest way to define a multidimensional array is to use the array literal notation.</p>
+                    <p>The following example defines a two-dimensional array named <code class="inline">activities</code>.</p>
+                    <p><code>var activities = [
+                        ['Work', 9],
+                        ['Eat', 2],
+                        ['Commute', 2],
+                        ['Play Game', 2],
+                        ['Sleep', 7]
+                    ];
+                    </code></p>
+                    <p>To <strong>access</strong> an element of the multidimensional array, you first use square brackets to access an element of the outer array that returns an inner array; and use another square bracket to access the element of the inner array. The following example returns the second element of the first inner array in the activities array above.</p>
+                    <p><code>console.log(activities[0][1]); // will return/log in console => 9</code></p>
+
+                    <p>You can <strong>use the array methods to manipulate a multidimensional array</strong> as normal. For example, to add a new element to a multidimensional array, you use the <code>push</code> method as in the following example.</p>
+                    <p><code>activities.push(['Study',2]);</code></p>
+
+                    <iframe class="editor"
+                        src="content/editor.html?value=dmFyIGFjdGl2aXRpZXMgPSBbCiAgICBbJ1dvcmsnLCA5XSwKICAgIFsnRWF0JywgMl0sCiAgICBbJ0NvbW11dGUnLCAyXSwKICAgIFsnUGxheSBHYW1lJywgMl0sCiAgICBbJ1NsZWVwJywgN10KXTsKCmZvciAodmFyIGkgPSAwOyBpIDwgYWN0aXZpdGllcy5sZW5ndGg7IGkrKykgewogICAgdmFyIHBlcmNlbnRhZ2UgPSAoKGFjdGl2aXRpZXNbaV1bMV0gLyAyNCkgKiAxMDApLnRvRml4ZWQoKTsKICAgIGFjdGl2aXRpZXNbaV1bMl0gPSBwZXJjZW50YWdlICsgJyUnOwp9Cgpmb3IgKHZhciBpID0gMDsgaSA8IGFjdGl2aXRpZXMubGVuZ3RoOyBpKyspIHsKICAgIGNvbnNvbGUubG9nKGFjdGl2aXRpZXNbaV0pOwp9Cg==">
+                    </iframe>
                 </div>
                 <div id="js-object" style="display:block">
                     <h3 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
@@ -580,6 +602,28 @@ let z = true;</code></pre>
 
                     <iframe class="editor"
                         src="content/editor.html?value=Ly8gT2JqZWN0IExpdGVyYWwKY29uc3QgVG95b3RhID0gewogICAgYnJhbmQ6ICdUb3lvdGEnLAogICAgY29sb3I6ICdibGFjaycsCiAgICBkb29yczogNSwKICAgIHN0YXJ0OiBmdW5jdGlvbigpewogICAgICAgIC8vIHN0YXJ0IGNhciBjb2RlCiAgICB9Cn07CiAgICAKY29uc29sZS5sb2coVG95b3RhKTsKICAgIAogICAgCi8vVGhlIHNhbWUgZXhhbXBsZSBhcyBhYm92ZSBidXQgdXNpbmcgW09iamVjdCBjb25zdHJ1Y3RvcnMgZnVuY3Rpb25dCmZ1bmN0aW9uIENhcihicmFuZCwgY29sb3IsIGRvb3JzKXsKICAgIHRoaXMuYnJhbmQgPSBicmFuZDsKICAgIHRoaXMuY29sb3IgPSBjb2xvcjsKICAgIHRoaXMuZG9vcnMgPSBkb29yczsKICAgIHRoaXMuc3RhcnQgPSBmdW5jdGlvbigpIHsKICAgICAgICAvLyBzdGFydCBjYXIgY29kZQogICAgfQp9CiAgICAKbGV0IG15Q2FyID0gbmV3IENhcigiQXVkaSIsICJzaWx2ZXIiLCA0KTsKbXlDYXIuc3RhcnQoKTsKY29uc29sZS5sb2cobXlDYXIpOw==">
+                    </iframe>
+
+                    <h4><strong>Object Properties</strong></h4>
+                    <p>Properties are the values associated with a JavaScript object.</p>
+                    <p>A JavaScript object is a collection of unordered properties.</p>
+                    <p>Properties can usually be changed, added, and deleted, but some are read only.</p>
+
+                    <h4><strong>Property Attributes</strong></h4>
+                    <p>All properties have a name. In addition they also have a value.</p>
+                    <p>The value is <strong>one of the property's</strong> attributes.</p>
+                    <p>Other attributes are: enumerable, configurable, and writable. These attributes define how the property can be accessed (is it readable?, is it writable?).</p>
+                    <p>In JavaScript, all attributes can be read, but only the value attribute can be changed (and only if the property is writable).</p>
+
+                    <h4><strong>Adding New Properties</strong></h4>
+                    <p>You can add new properties to an existing object by simply giving it a value.</p>
+                    <p>Assume that the person object already exists - you can then give it new properties.</p>
+
+                    <h4><strong>Deleting Properties</strong></h4>
+                    <p>The <code>delete</code> keyword deletes a property from an object.</p>
+
+                    <iframe class="editor"
+                        src="content/editor.html?value=dmFyIHBlcnNvbiA9IHtmbmFtZToiSm9obiIsIGxuYW1lOiJEb2UiLCBhZ2U6MjV9OwoKLy8gb2JqZWN0TmFtZS5wcm9wZXJ0eQpjb25zb2xlLmxvZyhwZXJzb24uZm5hbWUgKyAnIGlzICcgKyBwZXJzb24uYWdlICsgJ3llYXJzIG9sZCcpOwoKLy8gb2JqZWN0TmFtZVsicHJvcGVydHknXQpjb25zb2xlLmxvZyhwZXJzb25bImxuYW1lIl0gKyAnIGlzIGtub3duIHRvIGJlICcgKyBwZXJzb25bImFnZSJdICsgJ3kuby4nKTsKCi8vIG9iamVjdE5hbWVbZXhwcmVzc2lvbl0KeCA9ICJhZ2UiOwpjb25zb2xlLmxvZyhwZXJzb25beF0gKyAnIGlzIGhpcyBhZ2UgOyknKTsKCmNvbnNvbGUubG9nKHBlcnNvbik7CgovLyBBZGRpbmcgTmV3IFByb3BlcnRpZXMKcGVyc29uLm5hdGlvbmFsaXR5ID0gIkVuZ2xpc2giOwpjb25zb2xlLmxvZyhwZXJzb24pOwoKLy8gRGVsZXRpbmcgUHJvcGVydGllcwpkZWxldGUgcGVyc29uLmFnZTsgICAvLyBvciBkZWxldGUgcGVyc29uWyJhZ2UiXTsKY29uc29sZS5sb2cocGVyc29uKTsK">
                     </iframe>
                 </div>
                 <div id="blocks" style="display:block">
@@ -1220,6 +1264,45 @@ function sum(a, b) {
                     src="content/editor.html?value=Y29uc3QgbmVnYXRpdmVJbnRlZ2VyID0gLTIzNDsKLy8gVHJhbnNmb3JtcyB0aGUgdmFsdWUgdG8gcG9zaXRpdmUKY29uc29sZS5sb2coJ01hdGguYWJzKC0yMzQpID0gJyArIE1hdGguYWJzKG5lZ2F0aXZlSW50ZWdlcikpOwoKY29uc3QgZmxvYXRpbmdOdW1iZXIgPSAzLjE0MTU5MjY1MzU5OwovLyBSb3VuZHMgdXAgdGhlIG51bWJlcgpjb25zb2xlLmxvZygnTWF0aC5jZWlsKDMuMTQxNTkyNjUzNTkpID0gJyArIE1hdGguY2VpbCgzLjE0MTU5MjY1MzU5KSk7Ci8vIFJvdW5kcyBkb3duIHRoZSBudW1iZXIKY29uc29sZS5sb2coJ01hdGguZmxvb3IoMy4xNDE1OTI2NTM1OSkgPSAnICsgTWF0aC5mbG9vcigzLjE0MTU5MjY1MzU5KSk7Ci8vIEdlbmVyYXRlcyBhIHJhbmRvbSBmbG9hdCBudW1iZXIKY29uc29sZS5sb2coJ01hdGgucmFuZG9tKCkgPSAnICsgTWF0aC5yYW5kb20oKSkKCi8vIFRoaXMgZnVuY3Rpb24gZ2VuZXJhdGVzIGEgcmFuZG9tIGludGVnZXIgYmV0d2VlbiBtaW4gYW5kIG1heApmdW5jdGlvbiBnZXRSYW5kb21JbnQobWluLCBtYXgpIHsKICAgIHJldHVybiBNYXRoLmZsb29yKE1hdGgucmFuZG9tKCkgKiAobWF4IC0gbWluICsgMSkpICsgbWluOwp9Cgpjb25zb2xlLmxvZygnUmFuZG9tIGludGVnZXIgPSAnICsgZ2V0UmFuZG9tSW50KDAsIDEwKSk7">
                 </iframe>
             </div>
+
+            <div id="js-events" style="display:block">
+                <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                        aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                        style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                    Events</h2>
+                <p><b>Events</b> are actions or occurrences that happen in the system you are programming — the system produces (or "fires") a signal of some kind when an event occurs, and also provides a mechanism by which some kind of action can be automatically taken (that is, some code running) when the event occurs. For example in an airport when the runway is clear for a plane to take off, a signal is communicated to the pilot, and as a result, they commence piloting the plane.</p>
+                <p><img alt="" src="https://mdn.mozillademos.org/files/14077/MDN-mozilla-events-runway.png" style="display: block; margin: 0px auto;"></p>
+                <p>There are a lot of different types of events that can occur, for example:
+                    <ul>
+                        <li>The user clicking the mouse over a certain element or hovering the cursor over a certain element.</li>
+                        <li>The user pressing a key on the keyboard.</li>
+                        <li>The user resizing or closing the browser window.</li>
+                        <li>A web page finishing loading.</li>
+                        <li>A form being submitted.</li>
+                        <li>A video being played, or paused, or finishing play.</li>
+                        <li>An error occurring.</li>
+                    </ul>
+                </p>
+                <h4><strong>onclick</strong></h4>
+                <p>Let's look at a simple example to explain what we mean here. You've already seen events and event handlers used in many of the examples in this course already, but let's recap just to cement our knowledge. In the following example, we have a single <code class="inline">button</code>, which when pressed, makes the background change to a random color:</p>
+                <p>The JavaScript looks like so:</p>
+                <iframe class="editor"
+                    src="content/editor.html?value=Y29uc3QgYnRuID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcignYnV0dG9uJyk7CgpmdW5jdGlvbiByYW5kb20obnVtYmVyKSB7CiAgcmV0dXJuIE1hdGguZmxvb3IoTWF0aC5yYW5kb20oKSAqIChudW1iZXIrMSkpOwp9CgpidG4ub25jbGljayA9IGZ1bmN0aW9uKCkgewogIGNvbnN0IHJuZENvbCA9ICdyZ2IoJyArIHJhbmRvbSgyNTUpICsgJywnICsgcmFuZG9tKDI1NSkgKyAnLCcgKyByYW5kb20oMjU1KSArICcpJzsKICBjb25zb2xlLmxvZyhybmRDb2wpOwp9Cg==">
+                </iframe>
+                <p>The live output of the example above is as folows:
+                    <iframe frameborder="2px" height="200" width="100%" src="https://mdn.mozillademos.org/en-US/docs/Learn/JavaScript/Building_blocks/Events$samples/A_simple_example?revision=1605792"></iframe>
+                </p>
+
+                <h4><strong>keydown</strong></h4>
+                <p>The keydown and keyup events provide a code indicating which key is pressed, while keypress indicates which character was entered. For example, a lowercase "a" will be reported as 65 by keydown and keyup, but as 97 by keypress. An uppercase "A" is reported as 65 by all events.</p>
+                <p>This example logs the KeyboardEvent.code value whenever you press down a key.</p>
+                <iframe class="editor"
+                    src="content/editor.html?value=ZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcigna2V5ZG93bicsIGxvZ0tleSk7CgpmdW5jdGlvbiBsb2dLZXkoZSkgewogIGxvZy50ZXh0Q29udGVudCArPSBgICR7ZS5jb2RlfWA7Cn0K">
+                </iframe>
+                <p>The live output of the example above is as folows:
+                    <iframe frameborder="2px" height="200" width="100%" src="https://mdn.mozillademos.org/en-US/docs/Web/API/Document/keydown_event$samples/addEventListener_keydown_example?revision=1566468"></iframe>
+                </p>
+            </div>
         </div>
         <div class="sticky col-md-3" role="complementary">
             <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top">
@@ -1311,18 +1394,8 @@ function sum(a, b) {
 
 
                     <li>
-                        <a href="#js-classes" onclick="showHiddenList(this)">Classes (ES6 syntax)</a>
-                        <ul class="arrow" style="display:none">
-                            <li><a href="#js-define-classes">Define a class</a></li>
-                            <li><a href="#js-class-constructor">Constructors</a></li>
-                            <li><a href="#js-class-methods">Methods/ Static Methods</a></li>
-                            <li><a href="#js-getset-methods">Getters and Setters</a></li>
-                            <li><a href="#js-class-inheritance">Inheritance</a></li>
-                        </ul>
+                        <a href="#js-events" onclick="showHiddenList(this)">Events</a>
                     </li>
-
-
-
                 </ul>
             </nav>
         </div>
@@ -1333,4 +1406,15 @@ function sum(a, b) {
         let hasInline = block.className && block.className === 'inline';
         !hasInline && hljs.highlightBlock(block);
     });
+
+    const btn = document.querySelector('button');
+
+    function random(number) {
+        return Math.floor(Math.random() * (number+1));
+    }
+
+    btn.onclick = function() {
+        const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+        document.body.style.backgroundColor = rndCol;
+    }
 </script>
