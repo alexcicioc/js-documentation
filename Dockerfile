@@ -4,9 +4,6 @@ FROM debian:latest
 RUN apt-get update
 RUN apt-get -y install software-properties-common
 
-# # Adding the PPA
-# RUN add-apt-repository ppa:ondrej/apache2
-
 # clean and update sources
 RUN apt-get clean && apt-get update
 
