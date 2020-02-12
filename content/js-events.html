@@ -109,19 +109,21 @@
     </div>
 </div>
 <script type="text/javascript">
-    document.querySelectorAll('code').forEach((block) => {
-        let hasInline = block.className && block.className === 'inline';
-        !hasInline && hljs.highlightBlock(block);
-    });
+    $(document).ready(() => {
+        document.querySelectorAll('code').forEach((block) => {
+            let hasInline = block.className && block.className === 'inline';
+            !hasInline && hljs.highlightBlock(block);
+        });
 
-    const btn = document.querySelector('button');
+        const btn = document.querySelector('button');
 
-    function random(number) {
-        return Math.floor(Math.random() * (number+1));
-    }
+        function random(number) {
+            return Math.floor(Math.random() * (number+1));
+        }
 
-    btn.onclick = function() {
-        const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
-        document.body.style.backgroundColor = rndCol;
-    }
+        btn.onclick = function() {
+            const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+            document.body.style.backgroundColor = rndCol;
+        }
+    })
 </script>
