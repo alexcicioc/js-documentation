@@ -1,0 +1,89 @@
+<div class="bs-docs-header" id="content" tabindex="-1">
+
+    <div id="js-overview" class="container">
+        <h1>HTML Canvas</h1>
+        <div id="carbonads-js">
+            <span>
+                <span class="carbon-wrap">
+                    <img src="images/js-events.png" alt="" style="border-radius: 10px;" width="75%" />
+                </span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div id="js-details" class="container bs-docs-container footer-space">
+    <div class="row">
+        <div class="col-md-9" role="main">
+            <!-- Canvas -->
+            <div id="canvas-generics" style="display:block">
+                <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                        aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                        style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                    Canvas</h2>
+                <p>The HTML <code class="inline"> &lt;canvas&gt;</code> element is used to draw graphics on a web page.</p>
+                <p>TML canvas has various methods for drawing paths, circles, boxes, shapes, texts, adding images. The HTML <code class="inline"> &lt;canvas&gt;</code> has only a container of graphics that can be used to draw the graphics that can be done by scripting (<strong>JavaScript</strong>).</p>
+                <h3>Finding the canvas element</h3>
+                <p>The first thing you have to do is that, find the canvas element using the HTML DOM (Document Object Model: root node of HTML document) method <strong>getElementById()</strong>.</p>
+                <p>The <strong>getElementById()</strong> method returns the element that has ID attribute with the specified value.</p>
+                <code>var canvas=document.getElementById('MyCanvasID') ;</code>
+                <p>Here ID is <code class="inline">MyCanvasID</code> and <code class="inline">canvas</code> is variable name.</p>
+            </div>
+            <!-- End Canvas -->
+
+            <!-- Drawing on the canvas -->
+            <div id="canvas-drawing" style="display:block">
+                <h2 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                        aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                        style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        Drawing on the canvas</h2>
+                <p>Now, you need a drawing object for the canvas. The <code class="inline">getContext()</code> method used to returns an object that provides methods and properties for drawing on the canvas.</p>
+                <code>var context=canvas.getContext(“2d”);</code>
+
+                <p>Now, in final step you can draw what you want on the canvas by setting fill style of the drawing object to the various colors. The fillStyle is a property that can be a CSS color, a gradient, or a pattern and the default color for fillStyle is black. The fillRect(x, y, width, height) is a method used to draw a rectangle filled with fillStyle on the canvas.</p>
+                <code>
+                    Context.fillStyle=”green”;</br>
+                    Context.fillRect(0,0,150,20);
+                </code>
+                <p>You can draw paths, circles, boxes, shapes, texts, adding images, etc. on the canvas.</p>
+                <code>
+                    var canvas = document.getElementById("MyCanvasID");</br>
+                    var context = canvas.getContext("2d");</br>
+                    context.fillStyle = "skyblue";</br>
+                    context.fillRect(50,0,250,120);
+                </code>
+                <p>Code sample above, will output the following:</p>
+                <canvas id="MyCanvasID" style="border: 2px red solid;"></canvas>
+            </div>
+            <!-- End Drawing on the canvas -->
+        </div>
+        <div class="sticky col-md-3" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top">
+                <p><strong>Summary</strong></p>
+                <ul class="nav bs-docs-sidenav">
+                    <li>
+                        <a href="#canvas-generics">Canvas</a>
+                    </li>
+                    <li>
+                        <a href="#canvas-drawing">Drawing</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(() => {
+        document.querySelectorAll('code').forEach((block) => {
+            let hasInline = block.className && block.className === 'inline';
+            !hasInline && hljs.highlightBlock(block);
+        });
+
+        var canvas = document.getElementById("MyCanvasID");
+        var context = canvas.getContext("2d");
+        context.fillStyle = "skyblue";
+        context.fillRect(50,0,250,120);
+
+        editor.setOptions({readOnly: true});
+    })
+</script>

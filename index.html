@@ -25,17 +25,14 @@
             <li><a href="content/js-events.html">JS Events</a></li>
           </ul>
         </li>
-        <li role="presentation">
-          <a href="content/jquery.html">jQuery</a>
-        </li>
-        <li role="presentation">
-          <a href="content/http.html">HTTP</a>
-        </li>
+        <li role="presentation"><a href="content/canvas.html">Canvas</a></li>
         <li class="dropdown">
           <span class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Good to have <span class="caret"></span></span>
           <ul class="dropdown-menu">
             <li><a href="content/html.html">HTML</a></li>
             <li><a href="content/css.html">CSS</a></li>
+            <li><a href="content/jquery.html">jQuery</a></li>
+            <li><a href="content/http.html">HTTP</a></li>
           </ul>
         </li>
       </ul>
@@ -49,7 +46,7 @@
     $(document).ready(() => {
       const urlSplit = window.location.href.split('/');
       const fileName = urlSplit[urlSplit.length - 1];
-      let contentUrl = `content/${fileName ? fileName : 'html.html'}`;
+      let contentUrl = `content/${fileName ? fileName : 'js-basics.html'}`;
       contentUrl += '?ts=' + new Date().getTime();
       $("#content").load(contentUrl);
       $(".nav li.active").removeClass("active");
@@ -66,6 +63,7 @@
       $(this)
         .parent()
         .addClass("active");
+      $(window).scrollTop(0);
       window.history.pushState("", "", $(this).attr("href").split('/')[1]);
     });
   </script>
