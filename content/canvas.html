@@ -46,6 +46,12 @@
                     Context.fillRect(0,0,150,20);
                 </code>
                 <p>You can draw paths, circles, boxes, shapes, texts, adding images, etc. on the canvas.</p>
+            </div>
+            <div id="canvas-examples" style="display:block">
+                <h3 class="page-header"><a class="anchorjs-link " href="#overview-mobile"
+                        aria-label="Anchor link for: overview mobile" data-anchorjs-icon=""
+                        style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        Examples</h3>
                 <code>
                     var canvas = document.getElementById("MyCanvasID");</br>
                     var context = canvas.getContext("2d");</br>
@@ -53,9 +59,34 @@
                     context.fillRect(50,0,250,120);
                 </code>
                 <p>Code sample above, will output the following:</p>
-                <canvas id="MyCanvasID" style="border: 2px red solid;"></canvas>
+                <canvas id="MyCanvasID" style="border: 2px black solid;"></canvas>
+                <hr>
+                <code>
+                    var c = document.getElementById("MyCanvasCircle");</br>
+                    var ctx = c.getContext("2d");</br>
+                    ctx.beginPath();</br>
+                    ctx.strokeStyle = "red"</br>
+                    ctx.arc(95,50,40,0,2*Math.PI);</br>
+                    ctx.stroke();
+                </code>
+                <p>Code sample above, will output the following:</p>
+                <canvas id="MyCanvasCircle" style="border: 2px black solid;"></canvas>
+                <hr>
+                <code>
+                    var gr = document.getElementById("MyCanvasGradient");</br>
+                    var ctx = gr.getContext("2d");</br>
+                    // Create gradient</br>
+                    var grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);</br>
+                    grd.addColorStop(0, "red");</br>
+                    grd.addColorStop(1, "white");</br>
+                    // Fill with gradient</br>
+                    ctx.fillStyle = grd;</br>
+                    ctx.fillRect(10, 10, 150, 80);
+                </code>
+                <p>Code sample above, will output the following:</p>
+                <canvas id="MyCanvasGradient" style="border: 2px black solid;"></canvas>
             </div>
-            <!-- End Drawing on the canvas -->
+            <!-- End Canvas examples -->
         </div>
         <div class="sticky col-md-3" role="complementary">
             <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top">
@@ -66,6 +97,9 @@
                     </li>
                     <li>
                         <a href="#canvas-drawing">Drawing</a>
+                    </li>
+                    <li>
+                        <a href="#canvas-examples">Examples</a>
                     </li>
                 </ul>
             </nav>
@@ -84,6 +118,21 @@
         context.fillStyle = "skyblue";
         context.fillRect(50,0,250,120);
 
-        editor.setOptions({readOnly: true});
-    })
+        var c = document.getElementById("MyCanvasCircle");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.strokeStyle = "red"
+        ctx.arc(95,50,40,0,2*Math.PI);
+        ctx.stroke();
+
+        var gr = document.getElementById("MyCanvasGradient");
+        var ctx = gr.getContext("2d");
+        // Create gradient
+        var grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+        grd.addColorStop(0, "red");
+        grd.addColorStop(1, "white");
+        // Fill with gradient
+        ctx.fillStyle = grd;
+        ctx.fillRect(10, 10, 150, 80);
+})
 </script>
